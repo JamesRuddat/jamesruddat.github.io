@@ -1,47 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>James Ruddat</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James website</title>
-    <link rel="stylesheet" href="/style.css">
-    <script src="/site.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="Image/x-favicon">
 </head>
 <body>
-    <header>
-        <h1>James Ruddat's site</h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-		<a href="#">Login</a>
-    </nav>
-    <main>
-        <section>
-            <div id="welcome">
-                <p>Test</p>
-            </div>
-        </section>
-        <section>
-            <h2>About me!</h2>
-            <img src="/img/jamesRuddat.jpg" alt="Image of James" width="200" height="250">
-            <p>I really love the outdoors and going on backpacking trips. I have been to nine states and spent 3 days on the Appalachian trail in Pennsylvania.</p>
-            <p>Outside of the great outdoors, I volunteer for Civil Air Patrol (CAP). CAP is an auxiliary of the U.S. Air Force and is a premier public service organization for carrying out emergency services and disaster relief missions nationwide.</p>
-        </section>
-        <section>
-            <h2>Favorite books!</h2>
-            <ul>
-                <li>Outbound flight</li>
-                <li>Pride And Prejudice</li>
-                <li>The Lord Of the Rings</li>
-                <li>Harry Potter (Series)</li>
-                <li>To Kill A Mockingbird</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p class="copyright">&copy; 2024 James website.</p>
-    </footer>
+
+<!-- Header -->
+<div class="header">
+    <h1>.JER SITE</h1>
+    <p>With a <b>flexible</b> look.</p>
+</div>
+
+<canvas width="100" height="100" id="canvas"></canvas>
+<script defer src="js/app.js" type="module"></script>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#blog">Blog</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+    <div class="side">
+        <h2>About Me</h2>
+        <h5>Photo of me:</h5>
+        <img src="images/jamesRuddat.jpg" alt="" width="250" height="300">
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div>
+    </div>
+    <div class="main">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <br>
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <div class="fakeimg">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <img src="images/android-chrome-512x512.png" alt="" width="40" height="40">
+    <div class="contact-info">
+        <p>
+            <a href="https://www.linkedin.com/in/james-ruddat-103b48290/" target="_blank" class="blue-button">LinkedIn</a>
+            <a href="https://github.com/JamesRuddat" target="_blank" class="blue-button">GitHub</a>
+            <a href="https://www.facebook.com/james.ruddat.16" target="_blank" class="blue-button">Facebook</a>
+            <a href="https://www.instagram.com/alfreddo_55/" target="_blank" class="blue-button">Instagram</a>
+        </p>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            <a href="mailto:james@ruddatfam.net" class="gray-button">Contact Me</a>
+            <a href="#privacy" class="gray-button">Privacy Policy</a> 
+            <a href="#terms" class="gray-button">Terms of Service</a>
+        </p>
+    </div>
+    <p>© <script>document.write(new Date().getFullYear())</script> James Ruddat - Software Developer</p>
+</footer>
 </body>
 </html>
