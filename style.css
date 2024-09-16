@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 /* Style the body */
 body {
 	font-family: Arial;
@@ -9,39 +8,49 @@ body {
 }
 /* Header/logo Title */
 .header {
-	padding: 30px;
+	padding: 20px;
 	text-align: center;
-	background: #F45B69;
+	background: #13315C;
 	color: #EBEBEB;
 }
 /* Style the top navigation bar */
 .navbar {
 	display: flex;
-	background-color: #ddd;
+	background-color: #0B2545;
 	padding: 10px;
 }
-
 .navbar a{
 	margin-left: 5px;
+	margin-top: 5px;
 }
-
 /* Column container */
 .row {
 	display: flex;
-	flex-wrap: wrap;
 }
-
 /* Sidebar/left column */
 .side {
 	flex: 1 1 30%;
-	background-color: whitesmoke;
+	background-color: #134074;
 	padding: 20px;
 }
 /* Main column */
 .main {
 	flex: 70%;
-	background-color: #EBEBEB;
+	background-color: #13315C;
 	padding: 20px;
+}
+/* Footer */
+.footer {
+	padding: 15px;
+	text-align: center;
+	background: #0B2545;
+}
+p, h1, h2, h3, h4, h5 {
+	color: #EEF4ED;
+}
+.row img {
+	border-radius: .375rem;
+	align-self: center;
 }
 /* boxes */
 .pink-box {
@@ -52,30 +61,28 @@ body {
 	padding: 15px;
 }
 .blue-box {
-	background-color: #4062BB;
+	background-color: #134074;
 	color: #EBEBEB;
 	border-radius: .375rem;
 	width: 100%;
 	padding: 15px;
 }
-
-/* Footer */
-.footer {
-	padding: 15px;
-	text-align: center;
-	background: #ddd;
-}
-
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-	.row, .navbar, .side{
+	.row, .navbar {
 		flex-direction: column;
 		max-width: auto;
 	}
+	.side {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.navbar a {
+		text-align: center;
+	}
 }
-
 .pink-button {
-    background: #F45B69;
+    background: #134074;
     color: #EBEBEB;
     font-style: normal;
     text-decoration: none;
@@ -84,22 +91,19 @@ body {
     cursor: pointer;
     display: inline-block;
     padding: 5px;
+	
 }
-
 .pink-button:not(:disabled):hover {
     transform: scale(1.05);
 }
-
 .pink-button:not(:disabled):hover:active {
 	transform: scale(1.05) translateY(.125rem);
 }
-
 .pink-button:not(:disabled):active {
     transform: translateY(.125rem);
 }
-
 .blue-button {
-	background: #4062BB;
+	background: #13315C;
 	color: #EBEBEB;
 	font-style: normal;
 	text-decoration: none;
@@ -109,19 +113,15 @@ body {
 	display: inline-block;
 	padding: 15px;
 }
-
 .blue-button:not(:disabled):hover {
 	transform: scale(1.05);
 }
-
 .blue-button:not(:disabled):hover:active {
 	transform: scale(1.05) translateY(.125rem);
 }
-
 .blue-button:not(:disabled):active {
 	transform: translateY(.125rem);
 }
-
 /* Style the navigation bar links */
 .blue-button a {
 	color: #EBEBEB;
