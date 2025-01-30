@@ -5,24 +5,19 @@
 body {
 	font-family: Arial;
 	margin: 0;
+	background-color: #000000;
 }
 /* Header/logo Title */
 .header {
 	padding: 20px;
 	text-align: center;
-	background: #13315C;
 	color: #EBEBEB;
 }
 /* Style the top navigation bar */
 .navbar {
-	display: flex;
-	background-color: #0B2545;
 	padding: 10px;
 }
-.navbar a{
-	margin-left: 5px;
-	margin-top: 5px;
-}
+
 /* Column container */
 .row {
 	display: flex;
@@ -30,20 +25,18 @@ body {
 /* Sidebar/left column */
 .side {
 	flex: 1 1 30%;
-	background-color: #134074;
+	background-color: #041a33;
 	padding: 20px;
 }
 /* Main column */
 .main {
 	flex: 70%;
-	background-color: #13315C;
 	padding: 20px;
 }
 /* Footer */
 .footer {
 	padding: 15px;
 	text-align: center;
-	background: #0B2545;
 }
 p, h1, h2, h3, h4, h5 {
 	color: #EEF4ED;
@@ -61,7 +54,7 @@ p, h1, h2, h3, h4, h5 {
 	padding: 15px;
 }
 .blue-box {
-	background-color: #134074;
+	background-color: #041a33;
 	color: #EBEBEB;
 	border-radius: .375rem;
 	width: 100%;
@@ -82,7 +75,7 @@ p, h1, h2, h3, h4, h5 {
 	}
 }
 .pink-button {
-    background: #134074;
+    background: #041a33;
     color: #EBEBEB;
     font-style: normal;
     text-decoration: none;
@@ -103,7 +96,7 @@ p, h1, h2, h3, h4, h5 {
     transform: translateY(.125rem);
 }
 .blue-button {
-	background: #13315C;
+	background: #041a33;
 	color: #EBEBEB;
 	font-style: normal;
 	text-decoration: none;
