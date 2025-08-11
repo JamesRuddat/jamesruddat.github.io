@@ -15,13 +15,37 @@ main {
 	flex: 1;
 }
 
+/* The alert message box */
+.alert {
+	padding: 20px;
+	background-color: #ff6600;
+	color: white;
+}
+
+/* The close button */
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+	color: black;
+}
+
 /* Headings */
 h1 {
 	color: white;
 	font-family: 'Rajdhani', sans-serif;
 	font-weight: 700;
 	font-size: 3rem;
-	margin-bottom: 1rem;
+	margin: 0;
 }
 
 h2 {
