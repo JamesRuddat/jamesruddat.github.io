@@ -1,0 +1,232 @@
+/* Font setup */
+html,
+body {
+	font-family: 'Ubuntu', sans-serif;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+/* Headings */
+h1 {
+	color: white;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	color: #ba0c2f;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+	font-size: 2.4rem;
+	margin: 0;
+}
+
+h3 {
+	color: #001871;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+	font-size: 1.8rem;
+	margin: 0;
+}
+
+p {
+	font-weight: 100;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/* Table form layout */
+.form-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.form-table th,
+.form-table td {
+	border: 1px solid black;
+	padding: 8px 12px;
+	vertical-align: top;
+}
+
+.form-table th {
+	width: 15%;
+	padding-right: 15px;
+}
+
+.form-table td {
+	width: auto;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+ul li a {
+	background-color: #ba0c2f;
+	color: white;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 1.2rem;
+	padding: 1px 15px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+ul li a:hover,
+ul li a:focus {
+	background-color: #8a0822;
+	outline: none;
+	text-decoration: none;
+}
+
+
+
+/* Style selects and labels */
+label {
+	font-weight: 600;
+	color: #001871;
+	font-size: 1.1rem;
+}
+
+select {
+	width: auto;
+	padding: 4px 4px;
+	font-size: 1rem;
+	border: 2px solid #001871;
+	border-radius: 5px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/* Button */
+button {
+	background-color: #ba0c2f;
+	color: white;
+	font-size: 1.2rem;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #8a0822;
+}
+
+/* Header section */
+.header {
+	background-color: #001871;
+	color: white;
+	text-align: center;
+	padding: 20px 10px;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header h1 {
+	font-size: 2.5rem;
+}
+
+.header h3 {
+	font-weight: 400;
+	color: #ffcd00;
+}
+
+/* Links and buttons */
+a {
+	color: #001871;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button,
+.blue-button,
+.pink-button {
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+.blue-button {
+	background-color: #001871;
+	color: #ffffff;
+	padding: 8px 15px;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+
+.blue-button:hover {
+	background-color: #041e42;
+	/* Navy Blue */
+}
+
+.pink-button {
+	background-color: #ba0c2f;
+	color: #ffffff;
+	padding: 8px 15px;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+
+.pink-button:hover {
+	background-color: #8a0822;
+}
+
+/* Content sections */
+.side {
+	background: #ffffff;
+	padding: 15px;
+}
+
+.main {
+	flex: 1 0 auto;
+	background: #ffffff;
+	padding: 15px;
+}
+
+/* Highlight boxes */
+.blue-box {
+	background-color: #b7c9d3;
+	padding: 10px;
+	border-left: 5px solid #001871;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+/* Footer */
+.footer {
+	background-color: #001871;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	border-top: 5px solid #ba0c2f;
+	flex-shrink: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 645px) {
+	.row {
+		flex-direction: column;
+	}
+}
