@@ -13,12 +13,14 @@ body {
 	flex-direction: column;
 }
 
-/* Content container (1200px max) */
-.container {
-	max-width: 1200px;
+/* ===== FULL-WIDTH BACKGROUND SECTIONS ===== */
+.full-width {
+	width: 100%;
+}
+
+.container-inner {
+	max-width: 1150px;
 	margin: 0 auto;
-	padding: 0 15px;
-	/* Small padding for mobile */
 }
 
 main {
@@ -40,7 +42,7 @@ h5 {
 }
 
 h1 {
-	color: white;
+	color: #001871;
 	font-size: 3rem;
 }
 
@@ -50,7 +52,7 @@ h2 {
 }
 
 h3 {
-	color: #001871;
+	color: #808080;
 	font-size: 1.8rem;
 }
 
@@ -62,7 +64,7 @@ h5 {
 
 /* ===== ALERT BOX ===== */
 .alert {
-	padding: 20px;
+	padding: 10px;
 	background-color: #ff6600;
 	color: white;
 }
@@ -127,10 +129,6 @@ nav li a {
 
 nav li a:hover {
 	background-color: #002a80;
-}
-
-nav li a.active {
-	background-color: #04AA6D;
 }
 
 /* ===== GENERAL LIST LINKS ===== */
@@ -226,7 +224,7 @@ button:hover {
 /* ===== HEADER ===== */
 .header {
 	background-color: #f2f4f5;
-	padding: 20px 50px;
+	padding: 10px 10px;
 	text-align: left;
 }
 

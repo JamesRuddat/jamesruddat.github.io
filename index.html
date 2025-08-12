@@ -13,45 +13,39 @@
 
 <body>
     <div class="wrapper">
-        <div class="alert container" aria-live="assertive" aria-atomic="true">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';" aria-label="Close alert">&times;</span>
-            <strong>Warning:</strong> This is a draft uniform creator. Please use extra caution as placements and tolerances may
-            be inaccurate and not fully compliant with <em>CAPR 39-1</em> uniform standards.
-            <marquee behavior="scroll" direction="left" scrollamount="5" aria-hidden="true">
-                This tool is a work in progress — verify all uniform details carefully!
-            </marquee>
+        <div class="alert " aria-live="assertive" aria-atomic="true">
+            <div class="container-inner">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';" aria-label="Close alert">&times;</span>
+                <strong>Warning:</strong> This is a draft uniform creator. Please use extra caution as placements and tolerances may
+                be inaccurate and not fully compliant with <em>CAPR 39-1</em> uniform standards.
+                <marquee behavior="scroll" direction="left" scrollamount="5" aria-hidden="true">
+                    This tool is a work in progress — verify all uniform details carefully!
+                </marquee>
+            </div>
         </div>
 
-        <header class="header container">
-            <h1>Civil Air Patrol Uniform Builder</h1>
-            <h3>CAP Uniform Reference Tool</h3>
+        <header class="header full-width">
+            <div class="container-inner">
+                <h1>Civil Air Patrol Uniform Builder</h1>
+                <h3>CAP Uniform Reference Tool</h3>
+            </div>
         </header>
 
         <main>
-            <div class="row container">
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li style="float:right"><a class="active" href="#about">About</a></li>
-                    </ul>
+            <div class="row">
+                <nav class="">
+                    <div class="container-inner">
+                        <ul>
+                            <li><a href="index.html">Uniform Builder</a></li>
+                            <li><a href="/capPages/faq.html">FAQ</a></li>
+                            <li><a href="#contact">Inspection Checkbook</a></li>
+                            <li style="float:right"><a class="active" href="#about">About</a></li>
+                        </ul>
+                    </div>
                 </nav>
                 
-                <!-- Sidebar for references -->
-                <div class="side">
-                    <h2>Quick References</h2>
-                        <ul>
-                            <li><a href="https://www.gocivilairpatrol.com/media/cms/CAPR_391_90e08bf91538b.pdf" target="_blank">CAPR 39-1
-                                    Uniform Regulation</a></li>
-                            <li><a href="https://www.gocivilairpatrol.com/members/publications/indexes-regulations-and-manuals-1700"
-                                    target="_blank">Indexes, Regulations, and Manuals</a></li>
-                            <li><a href="https://www.gocivilairpatrol.com" target="_blank">CAP National Website</a></li>
-                        </ul>
-                </div>
-
                 <!-- Main builder -->
-                <div class="main">
+                <div class="main container-inner">
                     <h2>Build Your Uniform</h2>
                     <p>Select your member type, grade, and uniform to view wear guidelines.</p>
                     <form id="uniformForm" action="" method="post">
@@ -163,15 +157,30 @@
                                 <td id="ncsaPatchesTable"></td>
                             </tr>
 
-
                         </table>
 
+                        <br>
                         <div colspan="2" style="text-align:center; padding-top:20px;">
                             <button id="viewUniform" type="submit" formaction="/uniform.html">Generate Uniform & Wear Guidelines</button>
-                            <button type="reset" id="resetForm" style="background-color: gray;">Reset Form</button>
+                            <button type="reset" id="resetForm" style="background-color: gray; margin-top: 10px;">Reset Form</button>
                         </div>
+                        <br>
                     </form>
                 </div>
+
+<!-- Sidebar for references -->
+<div class="side container-inner">
+    <h2>Quick References</h2>
+    <ul>
+        <li><a href="https://www.gocivilairpatrol.com/media/cms/CAPR_391_90e08bf91538b.pdf" target="_blank">CAPR 39-1
+                Uniform Regulation</a></li>
+        <li><a href="https://www.gocivilairpatrol.com/members/publications/indexes-regulations-and-manuals-1700"
+                target="_blank">Indexes & Regulations</a></li>
+        <li><a href="https://www.gocivilairpatrol.com" target="_blank">CAP National Website</a></li>
+    </ul>
+</div>
+
+
             </div>
         </main>
 <footer class="footer">
@@ -181,22 +190,14 @@
                 <h5>CAPR 39-1</h5>
             </th>
             <th>
-                <h5>MISSION STATEMENT</h5>
-            </th>
-            <th>
                 <h5>QUICK LINKS</h5>
             </th>
         </tr>
         <tr>
             <td>
-                <p>Civil Air Patrol Uniform Regulation</p>
-                <p><a
-                        href="https://www.gocivilairpatrol.com/media/cms/R_391_with_ICL_2101_Incorporated_5660EEB90E0DB.pdf">Interim
-                        Change Letter - CAPR 39-1, Civil Air Patrol Uniform Regulation.</a></p>
+                <p>Civil Air Patrol Uniform Regulation:</p>
+                <a href="https://www.gocivilairpatrol.com/media/cms/R_391_with_ICL_2101_Incorporated_5660EEB90E0DB.pdf">Interim Change Letter - CAPR 39-1, Civil Air Patrol Uniform Regulation.</a>
                 <p>Dated: 16 April 2025.</p>
-            </td>
-            <td>
-                <p>Volunteers serving America's communities, saving lives, and shaping futures.</p>
             </td>
             <td>
                 <p><a href=""></a></p>
