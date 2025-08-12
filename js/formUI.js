@@ -106,4 +106,36 @@ document.addEventListener('DOMContentLoaded', () => {
         memberTypeSelect.selectedIndex = 1;
     }
     memberTypeSelect.dispatchEvent(new Event('change'));
+
+
+    const form = document.getElementById('uniformForm');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // prevent actual form submission
+
+        const gradeValue = document.getElementById('grade').value;
+        // Find full grade object by value
+        const gradeObj = uniformData.grades.find(g => g.value === gradeValue);
+        const gradeImg = gradeObj ? gradeObj.img : null;
+
+        const selections = {
+            memberType: document.getElementById('memberType').value,
+            grade: gradeObj ? gradeObj.label : gradeValue,
+            gradeImg: gradeImg,
+            uniformType: document.getElementById('uniformType').value,
+            genderType: document.getElementById('genderType').value,
+            serviceBadges: document.getElementById('serviceBadges').value,
+            commandInsigniaPin: document.getElementById('commandInsigniaPin').value,
+            aviationBadges: document.getElementById('aviationBadgesContainer').textContent.trim(),
+            shoulderCords: document.getElementById('shoulderCords').value,
+            patches: document.getElementById('patches').value,
+            ncsaPatches: document.getElementById('ncsaPatchesContainer').textContent.trim(),
+        };
+
+        // Save to sessionStorage
+        sessionStorage.setItem('uniformSelections', JSON.stringify(selections));
+
+        // Redirect
+        window.location.href = '/uniform.html';
+    });
 });

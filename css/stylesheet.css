@@ -1,28 +1,72 @@
-/* Font setup */
-html,
-body {
+/* ===== GLOBAL SETUP ===== */
+html {
 	font-family: 'Ubuntu', sans-serif;
 	height: 100%;
 	margin: 0;
+	background-color: #f2f4f5;
 }
 
 body {
+	height: 100%;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
+}
+
+/* Content container (1200px max) */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	/* Small padding for mobile */
 }
 
 main {
 	flex: 1;
 }
 
-/* The alert message box */
+p {
+	font-weight: 100;
+}
+
+/* ===== HEADINGS ===== */
+h1,
+h2,
+h3,
+h5 {
+	margin: 0;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	color: white;
+	font-size: 3rem;
+}
+
+h2 {
+	color: #ba0c2f;
+	font-size: 2.4rem;
+}
+
+h3 {
+	color: #001871;
+	font-size: 1.8rem;
+}
+
+h5 {
+	color: #f2f4f5;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+/* ===== ALERT BOX ===== */
 .alert {
 	padding: 20px;
 	background-color: #ff6600;
 	color: white;
 }
 
-/* The close button */
 .closebtn {
 	margin-left: 15px;
 	color: white;
@@ -34,42 +78,11 @@ main {
 	transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
 .closebtn:hover {
 	color: black;
 }
 
-/* Headings */
-h1 {
-	color: white;
-	font-family: 'Rajdhani', sans-serif;
-	font-weight: 700;
-	font-size: 3rem;
-	margin: 0;
-}
-
-h2 {
-	color: #ba0c2f;
-	font-family: 'Rajdhani', sans-serif;
-	font-weight: 700;
-	font-size: 2.4rem;
-	margin: 0;
-}
-
-h3 {
-	color: #001871;
-	font-family: 'Rajdhani', sans-serif;
-	font-weight: 700;
-	font-size: 1.8rem;
-	margin: 0;
-}
-
-p {
-	font-weight: 100;
-	font-family: 'Ubuntu', sans-serif;
-}
-
-/* Table form layout */
+/* ===== TABLE FORM LAYOUT ===== */
 .form-table {
 	width: 100%;
 	border-collapse: collapse;
@@ -87,39 +100,68 @@ p {
 	padding-right: 15px;
 }
 
-.form-table td {
-	width: auto;
+/* ===== NAVIGATION BAR ===== */
+nav {
+	background-color: #001871;
 }
 
-ul {
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 0;
+}
+
+nav li a:hover {
+	background-color: #002a80;
+}
+
+nav li a.active {
+	background-color: #04AA6D;
+}
+
+/* ===== GENERAL LIST LINKS ===== */
+ul:not(nav ul) {
 	list-style-type: none;
 }
 
-li {
+ul:not(nav ul) li {
 	margin-bottom: 10px;
 }
 
-ul li a {
+ul:not(nav ul) li a {
+	display: inline-block;
 	background-color: #ba0c2f;
 	color: white;
 	font-family: 'Rajdhani', sans-serif;
-	font-size: 1.2rem;
-	padding: 1px 15px;
+	font-size: 1.1rem;
+	padding: 5px 15px;
 	border-radius: 6px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
 
-ul li a:hover,
-ul li a:focus {
+ul:not(nav ul) li a:hover,
+ul:not(nav ul) li a:focus {
 	background-color: #8a0822;
 	outline: none;
 	text-decoration: none;
 }
 
-
-
-/* Style selects and labels */
+/* ===== FORMS ===== */
 label {
 	font-weight: 600;
 	color: #001871;
@@ -128,14 +170,24 @@ label {
 
 select {
 	width: auto;
-	padding: 4px 4px;
+	padding: 4px;
 	font-size: 1rem;
 	border: 2px solid #001871;
 	border-radius: 5px;
 	font-family: 'Ubuntu', sans-serif;
 }
 
-/* Button */
+/* ===== BUTTONS ===== */
+button,
+.blue-button,
+.pink-button {
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
 button {
 	background-color: #ba0c2f;
 	color: white;
@@ -143,38 +195,108 @@ button {
 	padding: 12px 20px;
 	border: none;
 	border-radius: 6px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
 }
 
 button:hover {
 	background-color: #8a0822;
 }
 
-/* Header section */
-.header {
+.blue-button {
 	background-color: #001871;
 	color: white;
-	text-align: center;
-	padding: 20px 10px;
+	padding: 8px 15px;
+	border-radius: 4px;
 }
 
+.blue-button:hover {
+	background-color: #041e42;
+}
+
+.pink-button {
+	background-color: #ba0c2f;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 4px;
+}
+
+.pink-button:hover {
+	background-color: #8a0822;
+}
+
+/* ===== HEADER ===== */
+.header {
+	background-color: #f2f4f5;
+	padding: 20px 50px;
+	text-align: left;
+}
+
+.header h1 {
+	font-size: 2.5rem;
+	color: #001871;
+}
+
+.header h2 {
+	font-weight: 400;
+	color: #ffcd00;
+}
+
+.header h3 {
+	font-weight: 400;
+	color: #a0a2a3;
+}
+
+/* ===== CONTENT AREAS ===== */
 .wrapper {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
-.header h1 {
-	font-size: 2.5rem;
+.side,
+.main {
+	background: #ffffff;
+	padding: 15px;
 }
 
-.header h3 {
-	font-weight: 400;
-	color: #ffcd00;
+.main {
+	flex: 1 0 auto;
 }
 
-/* Links and buttons */
+main img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* ===== HIGHLIGHT BOX ===== */
+.blue-box {
+	background-color: #b7c9d3;
+	padding: 10px;
+	border-left: 5px solid #001871;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+	background-color: #383a3d;
+	color: #cfcfcf;
+	flex-shrink: 0;
+}
+
+.footer table {
+	padding: 10px 30px;
+	margin: auto;
+}
+
+.footer-end {
+	background-color: #222426;
+	padding: 1px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+/* ===== LINKS ===== */
 a {
 	color: #001871;
 	text-decoration: none;
@@ -184,71 +306,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-button,
-.blue-button,
-.pink-button {
-	font-family: 'Rajdhani', sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.5px;
-}
-
-.blue-button {
-	background-color: #001871;
-	color: #ffffff;
-	padding: 8px 15px;
-	border-radius: 4px;
-	transition: background 0.3s ease;
-}
-
-.blue-button:hover {
-	background-color: #041e42;
-	/* Navy Blue */
-}
-
-.pink-button {
-	background-color: #ba0c2f;
-	color: #ffffff;
-	padding: 8px 15px;
-	border-radius: 4px;
-	transition: background 0.3s ease;
-}
-
-.pink-button:hover {
-	background-color: #8a0822;
-}
-
-/* Content sections */
-.side {
-	background: #ffffff;
-	padding: 15px;
-}
-
-.main {
-	flex: 1 0 auto;
-	background: #ffffff;
-	padding: 15px;
-}
-
-/* Highlight boxes */
-.blue-box {
-	background-color: #b7c9d3;
-	padding: 10px;
-	border-left: 5px solid #001871;
-	border-radius: 4px;
-	font-weight: bold;
-}
-
-/* Footer */
-.footer {
-	background-color: #001871;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	border-top: 5px solid #ba0c2f;
-	flex-shrink: 0;
-}
-
-/* Responsive layout */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 645px) {
 	.row {
 		flex-direction: column;
