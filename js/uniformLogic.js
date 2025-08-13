@@ -18,7 +18,7 @@ export function getGendersForUniform(uniformObj) {
     if (isFlightSuit(uniformObj)) {
         return [{ value: 'unisex', label: 'Unisex' }];
     }
-    return uniformData.uniformSexTypes;  // Male & Female
+    return uniformData.genderTypes;  // Male & Female
 }
 
 export function getBadgesAndPatchesForUniform(uniformObj) {

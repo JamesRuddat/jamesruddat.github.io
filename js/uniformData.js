@@ -6,9 +6,9 @@ seniorGrades
 intergroupUniforms
 cadetUniforms
 seniorUniforms
-uniformNameplates
-uniformCollarInsignia
-uniformSexTypes
+nameplates
+collarInsignia
+genderTypes
 
 serviceBadges
 aviationBadges
@@ -87,7 +87,7 @@ export const cadetUniforms = [
     { group: "Cadet Uniforms", value: "hgu", label: "Honor Guard Uniform", uniformCategory: "badge", img: null },
 ];
 
-export const uniformNameplates = [
+export const nameplates = [
     { group: "Uniform Nameplates", value: "blazer_nameplate", label: "Blazer Nameplate", level: null, img: null },
     { group: "Uniform Nameplates", value: "brush_silver_nameplate", label: "Brush Silver Nameplate", level: null, img: null },
     { group: "Uniform Nameplates", value: "cap_nameplate_cadet", label: "CAP Nameplate - Cadets", level: null, img: null },
@@ -99,26 +99,26 @@ export const uniformNameplates = [
     { group: "Uniform Nameplates", value: "abu_cap_tag", label: "ABU CAP Tag", level: null, img: null },
 ];
 
-export const uniformCollarInsignia = [
+export const collarInsignia = [
     { group: "Uniform Collar Insignia", value: "cap", label: "CAP (Cadet Officers)", level: null, img: "cap.png" },
     { group: "Uniform Collar Insignia", value: "cap_nco", label: "CAP (Cadet NCOs)", level: null, img: "cap_nco.png" },
     { group: "Uniform Collar Insignia", value: "us", label: "US (Officers)", level: null, img: "us.png" },
     { group: "Uniform Collar Insignia", value: "us_nco", label: "US (NCOs)", level: null, img: "us_nco.png" },
 ];
 
-export const uniformSexTypes = [
-    { group: "Uniform Sex Types", value: "male", label: "Male", level: null, img: "male.png" },
-    { group: "Uniform Sex Types", value: "female", label: "Female", level: null, img: "female.png" },
-    { group: "Uniform Sex Types", value: "unisex", label: "Unisex", level: null, img: "unisex.png" },
+export const genderTypes = [
+    { group: "Gender Type", value: "male", label: "Male", level: null, img: "male.png" },
+    { group: "Gender Type", value: "female", label: "Female", level: null, img: "female.png" },
+    { group: "Gender Type", value: "unisex", label: "Unisex", level: null, img: "unisex.png" },
 ];
 
 export const serviceBadges = [
-    { group: "Service Badges", value: "csag", label: "CAP Senior Advisory Group Badge", level: null, img: "csag.png" },
-    { group: "Service Badges", value: "cc", label: "CAP Command Council Badge", level: null, img: "cc.png" },
-    { group: "Service Badges", value: "nec", label: "National Executive Committee Badge", level: null, img: "nec.png" },
-    { group: "Service Badges", value: "nb", label: "National Board Badge", level: null, img: "nb.png" },
-    { group: "Service Badges", value: "ns", label: "National Staff/Volunteer Badge", level: null, img: "ns.png" },
-    { group: "Service Badges", value: "vu", label: "Volunteer University Instructor Badge", level: null, img: "vu.png" },
+    { group: "Service Badge", value: "csag", label: "CAP Senior Advisory Group Badge", level: null, img: "csag.png" },
+    { group: "Service Badge", value: "cc", label: "CAP Command Council Badge", level: null, img: "cc.png" },
+    { group: "Service Badge", value: "nec", label: "National Executive Committee Badge", level: null, img: "nec.png" },
+    { group: "Service Badge", value: "nb", label: "National Board Badge", level: null, img: "nb.png" },
+    { group: "National Staff/Volunteer Badge", value: "ns", label: "National Staff/Volunteer Badge", level: null, img: "ns.png" },
+    { group: "Volunteer University Instructor Badge", value: "vu", label: "Volunteer University Instructor Badge", level: null, img: "vu.png" },
 ];
 
 export const commandInsigniaPin = [
@@ -129,30 +129,30 @@ export const commandInsigniaPin = [
 ];
 
 export const aviationBadges = [
-    { group: "Pilot", value: "pilot", label: "Pilot", level: "basic", img: "pilot_basic.png" },
-    { group: "Pilot", value: "senior_pilot", label: "Senior Pilot", level: "senior", img: "pilot_senior.png" },
-    { group: "Pilot", value: "command_pilot", label: "Command Pilot", level: "command", img: "pilot_command.png" },
+    { group: "Pilot Badge", value: "pilot", label: "Pilot", level: "basic", img: "pilot_basic.png" },
+    { group: "Pilot Badge", value: "senior_pilot", label: "Senior Pilot", level: "senior", img: "pilot_senior.png" },
+    { group: "Pilot Badge", value: "command_pilot", label: "Command Pilot", level: "command", img: "pilot_command.png" },
 
-    { group: "Observer", value: "observer", label: "Observer", level: "basic", img: "observer_basic.png" },
-    { group: "Observer", value: "senior_observer", label: "Senior Observer", level: "senior", img: "observer_senior.png" },
-    { group: "Observer", value: "master_observer", label: "Master Observer", level: "master", img: "observer_master.png" },
+    { group: "Observer Badge", value: "observer", label: "Observer", level: "basic", img: "observer_basic.png" },
+    { group: "Observer Badge", value: "senior_observer", label: "Senior Observer", level: "senior", img: "observer_senior.png" },
+    { group: "Observer Badge", value: "master_observer", label: "Master Observer", level: "master", img: "observer_master.png" },
 
-    { group: "Air Crew", value: "air_crew", label: "Air Crew", level: "basic", img: "air_crew_basic.png" },
-    { group: "Air Crew", value: "senior_air_crew", label: "Senior Air Crew", level: "senior", img: "air_crew_senior.png" },
-    { group: "Air Crew", value: "master_air_crew", label: "Master Air Crew", level: "master", img: "air_crew_master.png" },
+    { group: "Air Crew Badge", value: "air_crew", label: "Air Crew", level: "basic", img: "air_crew_basic.png" },
+    { group: "Air Crew Badge", value: "senior_air_crew", label: "Senior Air Crew", level: "senior", img: "air_crew_senior.png" },
+    { group: "Air Crew Badge", value: "master_air_crew", label: "Master Air Crew", level: "master", img: "air_crew_master.png" },
 
-    { group: "Glider Pilot", value: "glider_pilot", label: "Glider Pilot", level: null, img: "glider_pilot.png" },
-    { group: "Balloon Pilot", value: "balloon_pilot", label: "Balloon Pilot", level: null, img: "balloon_pilot.png" },
+    { group: "Glider Pilot Badge", value: "glider_pilot", label: "Glider Pilot", level: null, img: "glider_pilot.png" },
+    { group: "Balloon Pilot Badge", value: "balloon_pilot", label: "Balloon Pilot", level: null, img: "balloon_pilot.png" },
     { group: "Solo Badge", value: "solo_badge", label: "Solo Badge", level: null, img: "solo_badge.png" },
     { group: "Pre-Solo Badge", value: "pre_solo_badge", label: "Pre-Solo Badge", level: null, img: "pre_solo_badge.png" },
 
-    { group: "sUAS Pilot", value: "suas_pilot", label: "sUAS Pilot", level: "basic", img: "suas_pilot_basic.png" },
-    { group: "sUAS Pilot", value: "senior_suas_pilot", label: "Senior sUAS Pilot", level: "senior", img: "suas_pilot_senior.png" },
-    { group: "sUAS Pilot", value: "command_suas_pilot", label: "Command sUAS Pilot", level: "command", img: "suas_pilot_command.png" },
+    { group: "sUAS Pilot Badge", value: "suas_pilot", label: "sUAS Pilot", level: "basic", img: "suas_pilot_basic.png" },
+    { group: "sUAS Pilot Badge", value: "senior_suas_pilot", label: "Senior sUAS Pilot", level: "senior", img: "suas_pilot_senior.png" },
+    { group: "sUAS Pilot Badge", value: "command_suas_pilot", label: "Command sUAS Pilot", level: "command", img: "suas_pilot_command.png" },
 
-    { group: "sUAS Technician", value: "suas_technician", label: "sUAS Technician", level: "basic", img: "suas_technician_basic.png" },
-    { group: "sUAS Technician", value: "senior_suas_technician", label: "Senior sUAS Technician", level: "senior", img: "suas_technician_senior.png" },
-    { group: "sUAS Technician", value: "master_suas_technician", label: "Master sUAS Technician", level: "master", img: "suas_technician_master.png" },
+    { group: "sUAS Technician Badge", value: "suas_technician", label: "sUAS Technician", level: "basic", img: "suas_technician_basic.png" },
+    { group: "sUAS Technician Badge", value: "senior_suas_technician", label: "Senior sUAS Technician", level: "senior", img: "suas_technician_senior.png" },
+    { group: "sUAS Technician Badge", value: "master_suas_technician", label: "Master sUAS Technician", level: "master", img: "suas_technician_master.png" },
 
     { group: "Cadet sUAS Badge", value: "cadet_suas_badge", label: "Cadet sUAS Badge", level: null, img: "cadet_suas_badge.png" },
     { group: "Cadet Model Rocketry Badge", value: "cadet_model_rocketry_badge", label: "Cadet Model Rocketry Badge", level: null, img: "cadet_model_rocketry.png" },
@@ -164,22 +164,22 @@ export const occupationalBadges = [
     { group: "Chaplain Insignia", value: "chaplaininsignia_buddhist", label: "Chaplain Insignia - Buddhist", level: null, img: "chaplain_buddhist.png" },
     { group: "Chaplain Insignia", value: "chaplaininsignia_muslim", label: "Chaplain Insignia - Muslim", level: null, img: "chaplain_muslim.png" },
 
-    { group: "Medical Officer", value: "medical_officer_badge", label: "Medical Officer Badge", level: null, img: "medical_officer.png" },
-    { group: "Medical Officer", value: "nurse_officer_badge", label: "Nurse Officer Badge", level: null, img: "nurse_officer.png" },
+    { group: "Medical Officer Badge", value: "medical_officer_badge", label: "Medical Officer Badge", level: null, img: "medical_officer.png" },
+    { group: "Medical Officer Badge", value: "nurse_officer_badge", label: "Nurse Officer Badge", level: null, img: "nurse_officer.png" },
 
-    { group: "Legal Officer", value: "legal_officer_badge", label: "Legal Officer Badge", level: null, img: "legal_officer.png" },
+    { group: "Legal Officer Badge", value: "legal_officer_badge", label: "Legal Officer Badge", level: null, img: "legal_officer.png" },
 
-    { group: "Ground Team", value: "ground_team_badge_basic", label: "Ground Team Badge - Basic", level: "basic", img: "ground_team_basic.png" },
-    { group: "Ground Team", value: "ground_team_badge_senior", label: "Ground Team Badge - Senior", level: "senior", img: "ground_team_senior.png" },
-    { group: "Ground Team", value: "ground_team_badge_master", label: "Ground Team Badge - Master", level: "master", img: "ground_team_master.png" },
+    { group: "Ground Team Badge", value: "ground_team_badge_basic", label: "Ground Team Badge - Basic", level: "basic", img: "ground_team_basic.png" },
+    { group: "Ground Team Badge", value: "ground_team_badge_senior", label: "Ground Team Badge - Senior", level: "senior", img: "ground_team_senior.png" },
+    { group: "Ground Team Badge", value: "ground_team_badge_master", label: "Ground Team Badge - Master", level: "master", img: "ground_team_master.png" },
 
-    { group: "Incident Commander", value: "incident_commander_badge_1", label: "Incident Commander 1 Badge", level: "1", img: "incident_commander_1.png" },
-    { group: "Incident Commander", value: "incident_commander_badge_2", label: "Incident Commander 2 Badge", level: "2", img: "incident_commander_2.png" },
-    { group: "Incident Commander", value: "incident_commander_badge_3", label: "Incident Commander 3 Badge", level: "3", img: "incident_commander_3.png" },
+    { group: "Incident Commander Badge", value: "incident_commander_badge_1", label: "Incident Commander 1 Badge", level: "1", img: "incident_commander_1.png" },
+    { group: "Incident Commander Badge", value: "incident_commander_badge_2", label: "Incident Commander 2 Badge", level: "2", img: "incident_commander_2.png" },
+    { group: "Incident Commander Badge", value: "incident_commander_badge_3", label: "Incident Commander 3 Badge", level: "3", img: "incident_commander_3.png" },
 
-    { group: "Emergency Medical Technician", value: "emt_badge_basic", label: "EMT Badge - Basic", level: "basic", img: "emt_basic.png" },
-    { group: "Emergency Medical Technician", value: "emt_badge_intermediate", label: "EMT Badge - Intermediate", level: "intermediate", img: "emt_intermediate.png" },
-    { group: "Emergency Medical Technician", value: "emt_badge_paramedic", label: "EMT Badge - Paramedic", level: "paramedic", img: "emt_paramedic.png" },
+    { group: "Emergency Medical Technician Badge", value: "emt_badge_basic", label: "EMT Badge - Basic", level: "basic", img: "emt_basic.png" },
+    { group: "Emergency Medical Technician Badge", value: "emt_badge_intermediate", label: "EMT Badge - Intermediate", level: "intermediate", img: "emt_intermediate.png" },
+    { group: "Emergency Medical Technician Badge", value: "emt_badge_paramedic", label: "EMT Badge - Paramedic", level: "paramedic", img: "emt_paramedic.png" },
 ];
 
 export const specialtyTrackBadges = [
@@ -281,52 +281,52 @@ export const additionalBadges = [
     { group: "NRA Marksmanship", value: "nra_marksman", label: "NRA Marksman Badge", level: "marksman", img: "nra_marksman.png" },
     { group: "NRA Marksmanship", value: "nra_pro_marksman", label: "NRA Pro-Marksman Badge", level: "pro_marksman", img: "nra_pro_marksman.png" },
 
-    { group: "Cadet STEM", value: "cadet_stem_basic", label: "Cadet STEM Badge - Basic (Blue Star)", level: "basic", img: "cadet_stem_basic.png" },
-    { group: "Cadet STEM", value: "cadet_stem_advanced", label: "Cadet STEM Badge - Advanced (Silver Star)", level: "advanced", img: "cadet_stem_advanced.png" },
-    { group: "Cadet STEM", value: "cadet_stem_master", label: "Cadet STEM Badge - Master (Gold Star)", level: "master", img: "cadet_stem_master.png" },
+    { group: "Cadet STEM Badge", value: "cadet_stem_basic", label: "Cadet STEM Badge - Basic (Blue Star)", level: "basic", img: "cadet_stem_basic.png" },
+    { group: "Cadet STEM Badge", value: "cadet_stem_advanced", label: "Cadet STEM Badge - Advanced (Silver Star)", level: "advanced", img: "cadet_stem_advanced.png" },
+    { group: "Cadet STEM Badge", value: "cadet_stem_master", label: "Cadet STEM Badge - Master (Gold Star)", level: "master", img: "cadet_stem_master.png" },
 
-    { group: "Cadet Cyber", value: "cadet_cyber_basic", label: "Cadet Cyber Badge - Basic (Blue Star)", level: "basic", img: "cadet_cyber_basic.png" },
-    { group: "Cadet Cyber", value: "cadet_cyber_advanced", label: "Cadet Cyber Badge - Advanced (Silver Star)", level: "advanced", img: "cadet_cyber_advanced.png" },
-    { group: "Cadet Cyber", value: "cadet_cyber_master", label: "Cadet Cyber Badge - Master (Gold Star)", level: "master", img: "cadet_cyber_master.png" },
+    { group: "Cadet Cyber Badge", value: "cadet_cyber_basic", label: "Cadet Cyber Badge - Basic (Blue Star)", level: "basic", img: "cadet_cyber_basic.png" },
+    { group: "Cadet Cyber Badge", value: "cadet_cyber_advanced", label: "Cadet Cyber Badge - Advanced (Silver Star)", level: "advanced", img: "cadet_cyber_advanced.png" },
+    { group: "Cadet Cyber Badge", value: "cadet_cyber_master", label: "Cadet Cyber Badge - Master (Gold Star)", level: "master", img: "cadet_cyber_master.png" },
 ];
 
 export const patches = [
-    { group: "American Flag", value: "american_flag_patch", label: "American Flag Patch", level: null, img: "american_flag_patch.png" },
-    { group: "CAP Command", value: "cap_command_patch", label: "CAP Command Patch", level: null, img: "cap_command_patch.png" },
-    { group: "National Shoulder Rocker", value: "national_shoulder_rocker", label: "National Shoulder Rocker", level: null, img: "national_shoulder_rocker.png" },
-    { group: "Region Shield", value: "region_shield_patch", label: "Region Shield Patch", level: null, img: "region_shield_patch.png" },
-    { group: "Wing Patch", value: "wing_patch", label: "Wing Patch", level: null, img: "wing_patch.png" },
-    { group: "Overseas Unit", value: "overseas_unit_shoulder_patch", label: "Overseas Unit Shoulder Patch", level: null, img: "overseas_unit_shoulder_patch.png" },
-    { group: "National Check Pilot", value: "national_check_pilot_patch", label: "National Check Pilot Patch", level: null, img: "national_check_pilot_patch.png" },
-    { group: "Pilot Proficiency", value: "pilot_proficiency_patch", label: "Pilot Proficiency Patch", level: null, img: "pilot_proficiency_patch.png" },
-    { group: "AFRCC Basic Inland Search and Rescue Course (BISC)", value: "afrcc_basic_inland_search_rescue_patch", label: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch", level: null, img: "afrcc_basic_inland_search_rescue_patch.png" },
-    { group: "Inland SAR Planning Course", value: "inland_sar_planning_course_patch", label: "Inland SAR Planning Course Patch", level: null, img: "inland_sar_planning_course_patch.png" },
-    { group: "Cadet Orientation Pilot", value: "cadet_orientation_pilot_patch", label: "Cadet Orientation Pilot Patch", level: null, img: "cadet_orientation_pilot_patch.png" },
-    { group: "AFJROTC", value: "afjrotc_patch", label: "AFJROTC Patch", level: null, img: "afjrotc_patch.png" },
-    { group: "Venture/Aviation Explorer", value: "venture_aviation_explorer_patch", label: "Venture/Aviation Explorer Patch", level: null, img: "venture_aviation_explorer_patch.png" },
-    { group: "Communications", value: "communications_patch", label: "Communications Patch", level: null, img: "communications_patch.png" },
+    { group: "American Flag Patch", value: "american_flag_patch", label: "American Flag Patch", level: null, img: "american_flag_patch.png" },
+    { group: "CAP Command Patch", value: "cap_command_patch", label: "CAP Command Patch", level: null, img: "cap_command_patch.png" },
+    { group: "National Shoulder Rocker Patch", value: "national_shoulder_rocker", label: "National Shoulder Rocker", level: null, img: "national_shoulder_rocker.png" },
+    { group: "Region Shield Patch", value: "region_shield_patch", label: "Region Shield Patch", level: null, img: "region_shield_patch.png" },
+    { group: "Wing Patch Patch", value: "wing_patch", label: "Wing Patch", level: null, img: "wing_patch.png" },
+    { group: "Overseas Unit Patch", value: "overseas_unit_shoulder_patch", label: "Overseas Unit Shoulder Patch", level: null, img: "overseas_unit_shoulder_patch.png" },
+    { group: "National Check Pilot Patch", value: "national_check_pilot_patch", label: "National Check Pilot Patch", level: null, img: "national_check_pilot_patch.png" },
+    { group: "Pilot Proficiency Patch", value: "pilot_proficiency_patch", label: "Pilot Proficiency Patch", level: null, img: "pilot_proficiency_patch.png" },
+    { group: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch", value: "afrcc_basic_inland_search_rescue_patch", label: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch", level: null, img: "afrcc_basic_inland_search_rescue_patch.png" },
+    { group: "Inland SAR Planning Course Patch", value: "inland_sar_planning_course_patch", label: "Inland SAR Planning Course Patch", level: null, img: "inland_sar_planning_course_patch.png" },
+    { group: "Cadet Orientation Pilot Patch", value: "cadet_orientation_pilot_patch", label: "Cadet Orientation Pilot Patch", level: null, img: "cadet_orientation_pilot_patch.png" },
+    { group: "AFJROTC Patch", value: "afjrotc_patch", label: "AFJROTC Patch", level: null, img: "afjrotc_patch.png" },
+    { group: "Venture/Aviation Explorer Patch", value: "venture_aviation_explorer_patch", label: "Venture/Aviation Explorer Patch", level: null, img: "venture_aviation_explorer_patch.png" },
+    { group: "Communications Patch", value: "communications_patch", label: "Communications Patch", level: null, img: "communications_patch.png" },
     { group: "Safety Patch", value: "safety_patch", label: "Safety Patch", level: null, img: "safety_patch.png" },
-    { group: "Model Rocketry", value: "model_rocketry_patch", label: "Model Rocketry Patch", level: null, img: "model_rocketry_patch.png" },
+    { group: "Model Rocketry Patch", value: "model_rocketry_patch", label: "Model Rocketry Patch", level: null, img: "model_rocketry_patch.png" },
     { group: "Emergency Services Patch", value: "emergency_services_patch", label: "Emergency Services Patch (style 1 & 2)", level: null, img: "emergency_services_patch.png" },
-    { group: "CPR", value: "cpr_patch", label: "Cardiopulmonary Resuscitation (CPR) Patch", level: null, img: "cpr_patch.png" },
-    { group: "ARCHER", value: "archer_patch", label: "ARCHER Patch", level: null, img: "archer_patch.png" },
-    { group: "CISM", value: "cism_patch", label: "Critical Incident Stress Management (CISM) Patch", level: null, img: "cism_patch.png" },
-    { group: "NASAR", value: "nasar_patch", label: "National Association for Search and Rescue (NASAR) Patch", level: null, img: "nasar_patch.png" },
+    { group: "CPR Patch", value: "cpr_patch", label: "Cardiopulmonary Resuscitation (CPR) Patch", level: null, img: "cpr_patch.png" },
+    { group: "ARCHER Patch", value: "archer_patch", label: "ARCHER Patch", level: null, img: "archer_patch.png" },
+    { group: "CISM Patch", value: "cism_patch", label: "Critical Incident Stress Management (CISM) Patch", level: null, img: "cism_patch.png" },
+    { group: "NASAR Patch", value: "nasar_patch", label: "National Association for Search and Rescue (NASAR) Patch", level: null, img: "nasar_patch.png" },
 ];
 
 export const ncsaPatches = [
-    { group: "NCSA AFSCFC", value: "air_force_space_command_familiarization_course", label: "Air Force Space Command Familiarization Course", level: null, img: "af_space_command_familiarization.png" },
-    { group: "NCSA AFCEA", value: "air_force_civil_engineering_academy", label: "Air Force Civil Engineering Academy", level: null, img: "af_civil_engineering_academy.png" },
-    { group: "NCSA COS", value: "cadet_officer_school", label: "Cadet Officer School", level: null, img: "cadet_officer_school.png" },
-    { group: "NCSA NESA", value: "national_emergency_services_academy", label: "National Emergency Services Academy", level: null, img: "national_emergency_services_academy.png" },
-    { group: "NCSA HMRS", value: "hawk_mountain_ranger_school", label: "Hawk Mountain Ranger School", level: null, img: "hawk_mountain_ranger_school.png" },
-    { group: "NCSA QT", value: "hawk_mountain_ranger_qualification_tabs", label: "Hawk Mountain Ranger Qualification Tabs", level: null, img: "hawk_mountain_ranger_qualification_tabs.png" },
-    { group: "NCSA HGA", value: "honor_guard_academy", label: "Honor Guard Academy", level: null, img: "honor_guard_academy.png" },
-    { group: "NCSA NBB", value: "national_blue_beret", label: "National Blue Beret", level: null, img: "national_blue_beret.png" },
-    { group: "NCSA EA", value: "engineering_academy", label: "Engineering Academy", level: null, img: "engineering_academy.png" },
-    { group: "NCSA NFA", value: "national_flight_academy", label: "National Flight Academy", level: null, img: "national_flight_academy.png" },
-    { group: "NCSA POC", value: "pararescue_orientation_course", label: "Pararescue Orientation Course", level: null, img: "pararescue_orientation_course.png" },
-    { group: "NCSA SUPTFC", value: "specialized_undergraduate_pilot_training_familiarization_course", label: "Specialized Undergraduate Pilot Training Familiarization Course", level: null, img: "specialized_undergraduate_pilot_training.png" },
+    { group: "NCSA AFSCFC Patch", value: "air_force_space_command_familiarization_course", label: "Air Force Space Command Familiarization Course", level: null, img: "af_space_command_familiarization.png" },
+    { group: "NCSA AFCEA Patch", value: "air_force_civil_engineering_academy", label: "Air Force Civil Engineering Academy", level: null, img: "af_civil_engineering_academy.png" },
+    { group: "NCSA COS Patch", value: "cadet_officer_school", label: "Cadet Officer School", level: null, img: "cadet_officer_school.png" },
+    { group: "NCSA NESA Patch", value: "national_emergency_services_academy", label: "National Emergency Services Academy", level: null, img: "national_emergency_services_academy.png" },
+    { group: "NCSA HMRS Patch", value: "hawk_mountain_ranger_school", label: "Hawk Mountain Ranger School", level: null, img: "hawk_mountain_ranger_school.png" },
+    { group: "NCSA QT Patch", value: "hawk_mountain_ranger_qualification_tabs", label: "Hawk Mountain Ranger Qualification Tabs", level: null, img: "hawk_mountain_ranger_qualification_tabs.png" },
+    { group: "NCSA HGA Patch", value: "honor_guard_academy", label: "Honor Guard Academy", level: null, img: "honor_guard_academy.png" },
+    { group: "NCSA NBB Patch", value: "national_blue_beret", label: "National Blue Beret", level: null, img: "national_blue_beret.png" },
+    { group: "NCSA EA Patch", value: "engineering_academy", label: "Engineering Academy", level: null, img: "engineering_academy.png" },
+    { group: "NCSA NFA Patch", value: "national_flight_academy", label: "National Flight Academy", level: null, img: "national_flight_academy.png" },
+    { group: "NCSA POC Patch", value: "pararescue_orientation_course", label: "Pararescue Orientation Course", level: null, img: "pararescue_orientation_course.png" },
+    { group: "NCSA SUPTFC Patch", value: "specialized_undergraduate_pilot_training_familiarization_course", label: "Specialized Undergraduate Pilot Training Familiarization Course", level: null, img: "specialized_undergraduate_pilot_training.png" },
 ];
 
 export const shoulderCords = [

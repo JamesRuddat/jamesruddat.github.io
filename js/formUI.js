@@ -27,83 +27,102 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Combine all arrays from uniformData into a single array
-    const allItems = [
-        ...(uniformData.memberTypes || []),
-        ...(uniformData.cadetGrades || []),
-        ...(uniformData.seniorGrades || []),
-        ...(uniformData.intergroupUniforms || []),
-        ...(uniformData.cadetUniforms || []),
-        ...(uniformData.seniorUniforms || []),
-        ...(uniformData.uniformNameplates || []),
-        ...(uniformData.uniformCollarInsignia || []),
-        ...(uniformData.uniformSexTypes || []),
+    // Map of arrays to their display names
+    const allDataArrays = {
+        memberTypes: "Member Types",
+        cadetGrades: "Cadet Grades",
+        seniorGrades: "Senior Grades",
+        intergroupUniforms: "Intergroup Uniforms",
+        cadetUniforms: "Cadet Uniforms",
+        seniorUniforms: "Senior Uniforms",
+        nameplates: "Nameplates",
+        collarInsignia: "Collar Insignia",
+        genderTypes: "Gender Types",
 
-        ...(uniformData.serviceBadges || []),
-        ...(uniformData.aviationBadges || []),
-        ...(uniformData.occupationalBadges || []),
-        ...(uniformData.ncsaPatches || []),
-        ...(uniformData.patches || []),
-        ...(uniformData.commandInsigniaPin || []),
-        ...(uniformData.shoulderCords || []),
-        ...(uniformData.specialtyTrackBadges || [])
-    ];
+        serviceBadges: "Service Badges",
+        aviationBadges: "Aviation Badges",
+        occupationalBadges: "Occupational Badges",
+        ncsaPatches: "NCSA Patches",
+        patches: "Patches",
+        commandInsigniaPin: "Command Insignia Pin",
+        shoulderCords: "Shoulder Cords",
+        specialtyTrackBadges: "Specialty Track Badges"
+    };
 
-    // Group the items by "group"
-    const groupedData = allItems.reduce((acc, item) => {
-        if (!acc[item.group]) acc[item.group] = [];
-        acc[item.group].push(item);
-        return acc;
-    }, {});
-    
-    //create form with slelections for items
+    const uniformArrays = {
+        serviceBadges: "Service Badges",
+        aviationBadges: "Aviation Badges",
+        occupationalBadges: "Occupational Badges",
+        ncsaPatches: "NCSA Patches",
+        patches: "Patches",
+        commandInsigniaPin: "Command Insignia Pin",
+        shoulderCords: "Shoulder Cords",
+        specialtyTrackBadges: "Specialty Track Badges"
+    };
+
     const container = document.getElementById("form-container");
 
-    Object.entries(groupedData).forEach(([groupName, items]) => {
-        const wrapper = document.createElement("div");
-        wrapper.classList.add("form-group");
+    Object.entries(uniformArrays).forEach(([arrayKey, displayName]) => {
+        const arrayItems = uniformData[arrayKey] || [];
+        if (!arrayItems.length) return; // skip empty arrays
 
-        if (items.length > 1) {
-            // Multiple items → dropdown
-            const label = document.createElement("label");
-            label.textContent = groupName + " ";
-            const br = document.createElement("br");
-            const select = document.createElement("select");
+        // Create header for this array
+        const header = document.createElement("h4");
+        header.textContent = displayName;
+        container.appendChild(header);
 
-            // Add generic placeholder as first option
-            const placeholder = document.createElement("option");
-            placeholder.value = "";
-            placeholder.textContent = `Select ${groupName}`;
-            placeholder.selected = true;
-            select.appendChild(placeholder);
+        // Group items by "group"
+        const groupedData = arrayItems.reduce((acc, item) => {
+            if (!acc[item.group]) acc[item.group] = [];
+            acc[item.group].push(item);
+            return acc;
+        }, {});
 
-            items.forEach(item => {
-                const option = document.createElement("option");
-                option.value = item.value;
-                option.textContent = item.label;
-                select.appendChild(option);
-            });
+        // Render each group
+        Object.entries(groupedData).forEach(([groupName, items]) => {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("form-group");
 
-            wrapper.appendChild(label);
-            wrapper.appendChild(br);
-            wrapper.appendChild(select);
-        } else {
-            // Only one item → checkbox
-            const item = items[0];
-            const label = document.createElement("label");
+            if (items.length > 1) {
+                const label = document.createElement("label");
+                label.textContent = groupName;
+                wrapper.appendChild(label);
+                wrapper.appendChild(document.createElement("br"));
 
-            const checkbox = document.createElement("input");
-            checkbox.type = "checkbox";
-            checkbox.value = item.value;
+                const select = document.createElement("select");
+                // Add generic placeholder
+                const placeholder = document.createElement("option");
+                placeholder.value = "";
+                placeholder.textContent = `Select ${groupName}`;
+                placeholder.selected = true;
+                select.appendChild(placeholder);
 
-            label.appendChild(checkbox);
-            label.appendChild(document.createTextNode(" " + item.label));
+                items.forEach(item => {
+                    const option = document.createElement("option");
+                    option.value = item.value;
+                    option.textContent = item.label;
+                    select.appendChild(option);
+                });
 
-            wrapper.appendChild(label);
-        }
+                wrapper.appendChild(select);
+            } else {
+                const item = items[0];
+                const label = document.createElement("label");
 
-        container.appendChild(wrapper);
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.value = item.value;
+
+                label.appendChild(checkbox);
+                label.appendChild(document.createTextNode(" " + item.label));
+
+                wrapper.appendChild(label);
+            }
+
+            container.appendChild(wrapper);
+        });
     });
+
 
     // When member type changes, load grades & uniforms
     memberTypeSelect.addEventListener('change', () => {
@@ -153,11 +172,17 @@ document.addEventListener('DOMContentLoaded', () => {
     memberTypeSelect.dispatchEvent(new Event('change'));
 
 
-
-
-
-
-
+    //--- GRAB UNIFORM selections AND ADD IT TO sessionStorage ---
+    // Create a lookup map: value → full object
+    const itemMap = {};
+    
+    // Loop through all uniform arrays
+    Object.keys(allDataArrays).forEach(arrayKey => {
+        const arrayItems = uniformData[arrayKey] || [];
+        arrayItems.forEach(item => {
+            itemMap[item.value] = item;
+        });
+    });
 
 
     const form = document.getElementById('uniform-form');
@@ -165,17 +190,28 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // prevent actual form submission
 
-        const selections = {
-            memberType: document.getElementById('member-type').value,
-            grade: document.getElementById('grade').value,
-            uniformType: document.getElementById('uniform-type').value,
-            genderType: document.getElementById('gender-type').value,
-        };
+        const selectedObjects = [];
 
-        // Save to sessionStorage
-        sessionStorage.setItem('uniformSelections', JSON.stringify(selections));
+        // Collect selected values from all selects
+        document.querySelectorAll('select').forEach(select => {
+            if (select.value) {
+                const item = itemMap[select.value];
+                if (item) selectedObjects.push(item);
+            }
+        });
 
-        // Redirect
+        // Collect checked checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            if (checkbox.checked) {
+                const item = itemMap[checkbox.value];
+                if (item) selectedObjects.push(item);
+            }
+        });
+
+        // Save the full objects to sessionStorage
+        sessionStorage.setItem('uniformSelections', JSON.stringify(selectedObjects));
+
+        // Redirect to next page
         window.location.href = '/capPages/uniform.html';
     });
 });
