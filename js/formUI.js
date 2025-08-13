@@ -2,10 +2,10 @@ import * as uniformData from '/js/uniformData.js';
 import { getGradesForMemberType, getUniformsForMemberType, getGendersForUniform, getBadgesAndPatchesForUniform, isFlightSuit } from '/js/uniformLogic.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const memberTypeSelect = document.getElementById('memberType');
-    const gradeSelect = document.getElementById('grade');
-    const uniformSelect = document.getElementById('uniformType');
-    const genderSelect = document.getElementById('genderType');
+    const memberTypeSelect = document.getElementById('member-type');
+    const gradeSelect = document.getElementById('grade-type');
+    const uniformSelect = document.getElementById('uniform-type');
+    const genderSelect = document.getElementById('gender-type');
 
     // Badge/Patch containers
     const badgeTable = document.getElementById('badgeTable');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         while (elem.firstChild) elem.removeChild(elem.firstChild);
     }
 
-    function populateSelect(selectElem, options, includePlaceholder = true, placeholderText = 'Select...') {
+    function populateSelect(selectElem, options, includePlaceholder = true, placeholderText = 'Select') {
         clearElement(selectElem);
         if (includePlaceholder) {
             const opt = document.createElement('option');
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     memberTypeSelect.addEventListener('change', () => {
         const memberType = memberTypeSelect.value;
         if (!memberType) {
-            populateSelect(gradeSelect, [], true, 'Select Member Type First');
+            populateSelect(gradeSelect, [], true, 'Select Member First');
             populateSelect(uniformSelect, [], true, 'Select Member Type First');
             populateSelect(genderSelect, [], true, 'Select Uniform First');
             return;
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // On page load, initialize member types and defaults
-    populateSelect(memberTypeSelect, uniformData.memberTypes, true, 'Select Member Type');
+    populateSelect(memberTypeSelect, uniformData.memberTypes, true, 'Select Member');
     if (memberTypeSelect.options.length > 1) {
         memberTypeSelect.selectedIndex = 1;
     }

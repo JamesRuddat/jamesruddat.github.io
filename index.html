@@ -26,20 +26,20 @@
 
         <header class="header full-width">
             <div class="container-inner">
-                <h1>Civil Air Patrol Uniform Builder</h1>
-                <h3>CAP Uniform Reference Tool</h3>
+                <h1>CAP Uniform Builder</h1>
+                <h3>Uniform Reference & Creator</h3>
             </div>
         </header>
 
         <main>
             <div class="row">
-                <nav class="">
+                <nav>
                     <div class="container-inner">
                         <ul>
                             <li><a href="index.html">Uniform Builder</a></li>
                             <li><a href="/capPages/faq.html">FAQ</a></li>
-                            <li><a href="#contact">Inspection Checkbook</a></li>
-                            <li style="float:right"><a class="active" href="#about">About</a></li>
+                            <li><a href="#contact">Inspections</a></li>
+                            <li style="float:right"><a class="active" href="#about">Test</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -48,168 +48,85 @@
                 <div class="main container-inner">
                     <h2>Build Your Uniform</h2>
                     <p>Select your member type, grade, and uniform to view wear guidelines.</p>
-                    <form id="uniformForm" action="" method="post">
-
-                        <table class="form-table">
-                            <th rowspan="2">
-                                <h2>Step 1</h2>
-                                <h3>Profile</h3>
-                            </th>
-                            <tr>
-                                <td>
-                                    <label for="memberType"><strong>Member Type:</strong></label><br>
-                                    <select id="memberType">
-                                        <option value="cadet">Cadet</option>
-                                        <option value="adult">Adult</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <label for="grade"><strong>Grade/Rank:</strong></label><br>
-                                    <select id="grade"></select>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="form-table">
-                            <th rowspan="2">
-                                <h2>Step 2</h2>
-                                <h3>Uniform</h3>
-                            </th>
-                            <tr>
-                                <td>
-                                    <label for="uniformType"><strong>Uniform Type:</strong></label><br>
-                                    <select id="uniformType"></select>
-                                </td>
-                                <td>
-                                    <label for="genderType"><strong>Male/Female:</strong></label><br>
-                                    <select id="genderType"></select>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="form-table">
-                            <th rowspan="4">
-                                <h2>Step 3</h2>
-                                <h3>Items</h3>
-                            </th>
-                            <tr>
-                                <td>
-                                    <label for="aviationBadgesContainer"><strong>Aviation Badges:</strong></label><br>
-                                    <div id="aviationBadgesContainer"></div>
-                                </td>
-                                <td>
-                                    <label for="occupationalBadgesContainer"><strong>Occupational Badges:</strong></label><br>
-                                    <div id="occupationalBadgesContainer"></div>
-                                </td>
-                                <td>
-                                    <label for="specialtyTrackBadges"><strong>Specialty Track Badges:</strong></label><br>
-                                    <div id="specialtyTrackBadges"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="group">
-                                    <label for="Stem"><strong>Cadet Badges:</strong></label><br>
-                                    <select id="Stem">
-                                        <option value="">Lable</option>
-                                    </select>
-                                </td>
-                                <td id="group">
-                                    <label for="cadetBadges"><strong>Cadet Badges:</strong></label><br>
-                                    <select id="cadetBadges">
-                                        <option value="">Lable</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="serviceBadges"><strong>Service Badges:</strong></label><br>
-                                    <select id="serviceBadges"></select>
-                                </td>
-                                <td>
-                                    <label for="commandInsigniaPin"><strong>Command Insignia Pin:</strong></label><br>
-                                    <select id="commandInsigniaPin"></select>
-                                </td>
-                                
-                                <td>
-                                    <label for="shoulderCords"><strong>Shoulder Cords:</strong></label><br>
-                                    <select id="shoulderCords"></select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="patches"><strong>Patches:</strong></label><br>
-                                    <select id="patches"></select>
-                                </td>
-                                <td>
-                                    <label for="ncsaPatchesContainer"><strong>NCSA Patches:</strong></label><br>
-                                    <div id="ncsaPatchesContainer"></div>
-                                </td>
-                                <td>
-                                    <label for="a"><strong>ex:</strong></label><br>
-                                    <select id="a"></select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td id="badgeTable"></td>
-                                <td id="aviationBadgesTable"></td>
-                                <td id="occupationalBadgesTable"></td>
-                                <td id="ncsaPatchesTable"></td>
-                            </tr>
-
-                        </table>
-
-                        <br>
-                        <div colspan="2" style="text-align:center; padding-top:20px;">
-                            <button id="viewUniform" type="submit" formaction="/uniform.html">Generate Uniform & Wear Guidelines</button>
-                            <button type="reset" id="resetForm" style="background-color: gray; margin-top: 10px;">Reset Form</button>
-                        </div>
-                        <br>
-                    </form>
+                    
+                    <div class="container">
+                        <form class="form-background" id="uniformForm" action="" method="post">
+                            <h2>Step 1</h2>
+                            <h3>Uniform</h3>
+                            <br>
+                            <div class="form-group">
+                                <div class="form-item">
+                                    <label for="member-type">Grade &amp; Name</label>
+                                    <div class="dual">
+                                        <select id="member-type"></select>
+                                        <select id="grade-type"></select>
+                                        <input type="text" id="name" placeholder="Jane Doe">
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for="uniform-type">Uniform</label>
+                                    <div class="dual">
+                                        <select id="uniform-type"></select>
+                                        <select id="gender-type"></select>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <h2>Step 2</h2>
+                            <h3>Accouterments</h3>
+                            <div class="form-group">
+                                <div class="form-item">
+                                    <label for="uniform-type">Uniform</label>
+                                    <div class="dual">
+                                        <select id="grade-type"></select>
+                                        <select id="grade"></select>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for="grade">Grade</label>
+                                    <div class="dual">
+                                        <select id="grade" name="grade"></select>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for="uniform-type">Type</label>
+                                    <div class="dual">
+                                        <div id="badgeTable"></div>
+                                        <div id="aviationBadgesTable"></div>
+                                        <div id="occupationalBadgesTable"></div>
+                                        <div id="ncsaPatchesTable"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h2>Step 3</h2>
+                            <h3>Create</h3>
+                            <br>
+                            <div style="text-align: center;">
+                                <button type="submit">Genreate Uniform</button>
+                                <button type="reset" style="background-color: gray;">Reset</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
-<!-- Sidebar for references -->
-<div class="side container-inner">
-    <h2>Quick References</h2>
-    <ul>
-        <li><a href="https://www.gocivilairpatrol.com/media/cms/CAPR_391_90e08bf91538b.pdf" target="_blank">CAPR 39-1
-                Uniform Regulation</a></li>
-        <li><a href="https://www.gocivilairpatrol.com/members/publications/indexes-regulations-and-manuals-1700"
-                target="_blank">Indexes & Regulations</a></li>
-        <li><a href="https://www.gocivilairpatrol.com" target="_blank">CAP National Website</a></li>
-    </ul>
-</div>
-
-
             </div>
         </main>
-<footer class="footer">
-    <table>
-        <tr>
-            <th>
-                <h5>CAPR 39-1</h5>
-            </th>
-            <th>
-                <h5>QUICK LINKS</h5>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <p>Civil Air Patrol Uniform Regulation:</p>
-                <a href="https://www.gocivilairpatrol.com/media/cms/R_391_with_ICL_2101_Incorporated_5660EEB90E0DB.pdf">Interim Change Letter - CAPR 39-1, Civil Air Patrol Uniform Regulation.</a>
-                <p>Dated: 16 April 2025.</p>
-            </td>
-            <td>
-                <p><a href=""></a></p>
-            </td>
-        </tr>
-    </table>
-
+<footer>
+    <div class="footer">
+        <h5>CAPR 39-1</h5>
+        <p>Civil Air Patrol Uniform Regulation. Dated: 16 April 2025.</p>
+        <ul>
+            <li><a href="https://www.gocivilairpatrol.com/media/cms/CAPR_391_90e08bf91538b.pdf" target="_blank">CAPR 39-1
+                    Uniform Regulation</a></li>
+            <li><a href="https://www.gocivilairpatrol.com/members/publications/indexes-regulations-and-manuals-1700"
+                    target="_blank">Indexes & Regulations</a></li>
+            <li><a href="https://www.gocivilairpatrol.com" target="_blank">CAP National Website</a></li>
+        </ul>
+    </div>
     <div class="footer-end">
         <p>Unofficial reference tool - for educational purposes only. Always consult CAPR 39-1 for official guidance.
         </p>
     </div>
-
 </footer>
         
     </div>

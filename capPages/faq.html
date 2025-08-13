@@ -8,34 +8,80 @@
     <title>Document</title>
 </head>
 <body>
-    <li><a href="index.html">Uniform Builder</a></li>
+    <li><a href="/index.html">Uniform Builder</a></li>
     
     <div class="container">
-        <form class="uniform-form">
+        <form class="form-background">
             <div class="form-group">
-                <label for="rank">Rank:</label>
-                <input type="text" id="rank" name="rank">
+                <div class="form-item">
+                    <label for="grade">Grade &amp; Name</label>
+                    <div class="dual">
+                        <select id="grade-type">
+                            <option value="Adult" selected="">Adult</option>
+                            <option value="Cadet">Cadet</option>
+                        </select>
+                    
+                        <select id="grade"></select>
+                        <input type="text" id="name" placeholder="Jane Doe">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="uniform-type">Uniform</label>
+                    <div class="dual">
+                        <select id="uniform-type">
+                            <option value="Adult" selected="">ABUs</option>
+                            <option value="Cadet">Cadet</option>
+                        </select>
+                
+                        <select id="gender">
+                            <option value="Cadet">Male</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="uniform-type">Uniform</label>
+                    <div class="dual">
+                        <select id="grade-type">
+                            <option value="Adult" selected="">ABUs</option>
+                            <option value="Cadet">Cadet</option>
+                        </select>
+                    
+                        <select id="grade">
+                            <option value="Cadet">Male</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="grade">Grade</label>
+                    <div class="dual">
+                        <select id="grade" name="grade">
+                            <option value="service">Service Dress</option>
+                            <option value="blues">Blues</option>
+                            <option value="bdus">BDUs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="uniform-type">Type</label>
+                    <div class="dual">
+                    <select id="uniform-type" name="uniform-type">
+                        <option value="service">Item Dress</option>
+                        <option value="blues">Blues</option>
+                        <option value="bdus">BDUs</option>
+                    </select>
+                    </div>
+                </div>
             </div>
     
             <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name">
-            </div>
-    
-            <div class="form-group">
-                <label for="uniform-type">Uniform Type:</label>
-                <select id="uniform-type" name="uniform-type">
-                    <option value="service">Service Dress</option>
-                    <option value="blues">Blues</option>
-                    <option value="bdus">BDUs</option>
-                </select>
-            </div>
-    
-            <div class="form-group">
-                <button type="submit">Submit</button>
+                <button type="submit">Build Uniform</button>
             </div>
         </form>
     </div>
+
 </body>
 </html>
 
