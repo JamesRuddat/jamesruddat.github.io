@@ -1,3 +1,25 @@
+//types of items
+/*
+memberTypes
+cadetGrades
+seniorGrades
+intergroupUniforms
+cadetUniforms
+seniorUniforms
+uniformNameplates
+uniformCollarInsignia
+uniformSexTypes
+
+serviceBadges
+aviationBadges
+occupationalBadges
+ncsaPatches
+patches
+commandInsigniaPin
+shoulderCords
+specialtyTrackBadges
+*/
+
 export const memberTypes = [
     { group: "Member Types", value: "cadet", label: "Cadet", level: null, img: null },
     { group: "Member Types", value: "adult", label: "Adult", level: null, img: null },
@@ -269,52 +291,52 @@ export const additionalBadges = [
 ];
 
 export const patches = [
-    { group: "Patches", value: "american_flag_patch", label: "American Flag Patch", level: null, img: "american_flag_patch.png" },
-    { group: "Patches", value: "cap_command_patch", label: "CAP Command Patch", level: null, img: "cap_command_patch.png" },
-    { group: "Patches", value: "national_shoulder_rocker", label: "National Shoulder Rocker", level: null, img: "national_shoulder_rocker.png" },
-    { group: "Patches", value: "region_shield_patch", label: "Region Shield Patch", level: null, img: "region_shield_patch.png" },
-    { group: "Patches", value: "wing_patch", label: "Wing Patch", level: null, img: "wing_patch.png" },
-    { group: "Patches", value: "overseas_unit_shoulder_patch", label: "Overseas Unit Shoulder Patch", level: null, img: "overseas_unit_shoulder_patch.png" },
-    { group: "Patches", value: "national_check_pilot_patch", label: "National Check Pilot Patch", level: null, img: "national_check_pilot_patch.png" },
-    { group: "Patches", value: "pilot_proficiency_patch", label: "Pilot Proficiency Patch", level: null, img: "pilot_proficiency_patch.png" },
-    { group: "Patches", value: "afrcc_basic_inland_search_rescue_patch", label: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch", level: null, img: "afrcc_basic_inland_search_rescue_patch.png" },
-    { group: "Patches", value: "inland_sar_planning_course_patch", label: "Inland SAR Planning Course Patch", level: null, img: "inland_sar_planning_course_patch.png" },
-    { group: "Patches", value: "cadet_orientation_pilot_patch", label: "Cadet Orientation Pilot Patch", level: null, img: "cadet_orientation_pilot_patch.png" },
-    { group: "Patches", value: "afjrotc_patch", label: "AFJROTC Patch", level: null, img: "afjrotc_patch.png" },
-    { group: "Patches", value: "venture_aviation_explorer_patch", label: "Venture/Aviation Explorer Patch", level: null, img: "venture_aviation_explorer_patch.png" },
-    { group: "Patches", value: "communications_patch", label: "Communications Patch", level: null, img: "communications_patch.png" },
-    { group: "Patches", value: "safety_patch", label: "Safety Patch", level: null, img: "safety_patch.png" },
-    { group: "Patches", value: "model_rocketry_patch", label: "Model Rocketry Patch", level: null, img: "model_rocketry_patch.png" },
-    { group: "Patches", value: "emergency_services_patch", label: "Emergency Services Patch (style 1 & 2)", level: null, img: "emergency_services_patch.png" },
-    { group: "Patches", value: "cpr_patch", label: "Cardiopulmonary Resuscitation (CPR) Patch", level: null, img: "cpr_patch.png" },
-    { group: "Patches", value: "archer_patch", label: "ARCHER Patch", level: null, img: "archer_patch.png" },
-    { group: "Patches", value: "cism_patch", label: "Critical Incident Stress Management (CISM) Patch", level: null, img: "cism_patch.png" },
-    { group: "Patches", value: "nasar_patch", label: "National Association for Search and Rescue (NASAR) Patch", level: null, img: "nasar_patch.png" },
+    { group: "American Flag", value: "american_flag_patch", label: "American Flag Patch", level: null, img: "american_flag_patch.png" },
+    { group: "CAP Command", value: "cap_command_patch", label: "CAP Command Patch", level: null, img: "cap_command_patch.png" },
+    { group: "National Shoulder Rocker", value: "national_shoulder_rocker", label: "National Shoulder Rocker", level: null, img: "national_shoulder_rocker.png" },
+    { group: "Region Shield", value: "region_shield_patch", label: "Region Shield Patch", level: null, img: "region_shield_patch.png" },
+    { group: "Wing Patch", value: "wing_patch", label: "Wing Patch", level: null, img: "wing_patch.png" },
+    { group: "Overseas Unit", value: "overseas_unit_shoulder_patch", label: "Overseas Unit Shoulder Patch", level: null, img: "overseas_unit_shoulder_patch.png" },
+    { group: "National Check Pilot", value: "national_check_pilot_patch", label: "National Check Pilot Patch", level: null, img: "national_check_pilot_patch.png" },
+    { group: "Pilot Proficiency", value: "pilot_proficiency_patch", label: "Pilot Proficiency Patch", level: null, img: "pilot_proficiency_patch.png" },
+    { group: "AFRCC Basic Inland Search and Rescue Course (BISC)", value: "afrcc_basic_inland_search_rescue_patch", label: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch", level: null, img: "afrcc_basic_inland_search_rescue_patch.png" },
+    { group: "Inland SAR Planning Course", value: "inland_sar_planning_course_patch", label: "Inland SAR Planning Course Patch", level: null, img: "inland_sar_planning_course_patch.png" },
+    { group: "Cadet Orientation Pilot", value: "cadet_orientation_pilot_patch", label: "Cadet Orientation Pilot Patch", level: null, img: "cadet_orientation_pilot_patch.png" },
+    { group: "AFJROTC", value: "afjrotc_patch", label: "AFJROTC Patch", level: null, img: "afjrotc_patch.png" },
+    { group: "Venture/Aviation Explorer", value: "venture_aviation_explorer_patch", label: "Venture/Aviation Explorer Patch", level: null, img: "venture_aviation_explorer_patch.png" },
+    { group: "Communications", value: "communications_patch", label: "Communications Patch", level: null, img: "communications_patch.png" },
+    { group: "Safety Patch", value: "safety_patch", label: "Safety Patch", level: null, img: "safety_patch.png" },
+    { group: "Model Rocketry", value: "model_rocketry_patch", label: "Model Rocketry Patch", level: null, img: "model_rocketry_patch.png" },
+    { group: "Emergency Services Patch", value: "emergency_services_patch", label: "Emergency Services Patch (style 1 & 2)", level: null, img: "emergency_services_patch.png" },
+    { group: "CPR", value: "cpr_patch", label: "Cardiopulmonary Resuscitation (CPR) Patch", level: null, img: "cpr_patch.png" },
+    { group: "ARCHER", value: "archer_patch", label: "ARCHER Patch", level: null, img: "archer_patch.png" },
+    { group: "CISM", value: "cism_patch", label: "Critical Incident Stress Management (CISM) Patch", level: null, img: "cism_patch.png" },
+    { group: "NASAR", value: "nasar_patch", label: "National Association for Search and Rescue (NASAR) Patch", level: null, img: "nasar_patch.png" },
 ];
 
 export const ncsaPatches = [
-    { group: "NCSA Patches", value: "air_force_space_command_familiarization_course", label: "Air Force Space Command Familiarization Course", level: null, img: "af_space_command_familiarization.png" },
-    { group: "NCSA Patches", value: "air_force_civil_engineering_academy", label: "Air Force Civil Engineering Academy", level: null, img: "af_civil_engineering_academy.png" },
-    { group: "NCSA Patches", value: "cadet_officer_school", label: "Cadet Officer School", level: null, img: "cadet_officer_school.png" },
-    { group: "NCSA Patches", value: "national_emergency_services_academy", label: "National Emergency Services Academy", level: null, img: "national_emergency_services_academy.png" },
-    { group: "NCSA Patches", value: "hawk_mountain_ranger_school", label: "Hawk Mountain Ranger School", level: null, img: "hawk_mountain_ranger_school.png" },
-    { group: "NCSA Patches", value: "hawk_mountain_ranger_qualification_tabs", label: "Hawk Mountain Ranger Qualification Tabs", level: null, img: "hawk_mountain_ranger_qualification_tabs.png" },
-    { group: "NCSA Patches", value: "honor_guard_academy", label: "Honor Guard Academy", level: null, img: "honor_guard_academy.png" },
-    { group: "NCSA Patches", value: "national_blue_beret", label: "National Blue Beret", level: null, img: "national_blue_beret.png" },
-    { group: "NCSA Patches", value: "engineering_academy", label: "Engineering Academy", level: null, img: "engineering_academy.png" },
-    { group: "NCSA Patches", value: "national_flight_academy", label: "National Flight Academy", level: null, img: "national_flight_academy.png" },
-    { group: "NCSA Patches", value: "pararescue_orientation_course", label: "Pararescue Orientation Course", level: null, img: "pararescue_orientation_course.png" },
-    { group: "NCSA Patches", value: "specialized_undergraduate_pilot_training_familiarization_course", label: "Specialized Undergraduate Pilot Training Familiarization Course", level: null, img: "specialized_undergraduate_pilot_training.png" },
+    { group: "NCSA AFSCFC", value: "air_force_space_command_familiarization_course", label: "Air Force Space Command Familiarization Course", level: null, img: "af_space_command_familiarization.png" },
+    { group: "NCSA AFCEA", value: "air_force_civil_engineering_academy", label: "Air Force Civil Engineering Academy", level: null, img: "af_civil_engineering_academy.png" },
+    { group: "NCSA COS", value: "cadet_officer_school", label: "Cadet Officer School", level: null, img: "cadet_officer_school.png" },
+    { group: "NCSA NESA", value: "national_emergency_services_academy", label: "National Emergency Services Academy", level: null, img: "national_emergency_services_academy.png" },
+    { group: "NCSA HMRS", value: "hawk_mountain_ranger_school", label: "Hawk Mountain Ranger School", level: null, img: "hawk_mountain_ranger_school.png" },
+    { group: "NCSA QT", value: "hawk_mountain_ranger_qualification_tabs", label: "Hawk Mountain Ranger Qualification Tabs", level: null, img: "hawk_mountain_ranger_qualification_tabs.png" },
+    { group: "NCSA HGA", value: "honor_guard_academy", label: "Honor Guard Academy", level: null, img: "honor_guard_academy.png" },
+    { group: "NCSA NBB", value: "national_blue_beret", label: "National Blue Beret", level: null, img: "national_blue_beret.png" },
+    { group: "NCSA EA", value: "engineering_academy", label: "Engineering Academy", level: null, img: "engineering_academy.png" },
+    { group: "NCSA NFA", value: "national_flight_academy", label: "National Flight Academy", level: null, img: "national_flight_academy.png" },
+    { group: "NCSA POC", value: "pararescue_orientation_course", label: "Pararescue Orientation Course", level: null, img: "pararescue_orientation_course.png" },
+    { group: "NCSA SUPTFC", value: "specialized_undergraduate_pilot_training_familiarization_course", label: "Specialized Undergraduate Pilot Training Familiarization Course", level: null, img: "specialized_undergraduate_pilot_training.png" },
 ];
 
 export const shoulderCords = [
-    { group: "Shoulder Cords", value: "gold", label: "Gold - National Cadet Advisory Council", level: null, img: "gold_cord.png" },
-    { group: "Shoulder Cords", value: "blue", label: "Blue - Region Cadet Advisory Council", level: null, img: "blue_cord.png" },
-    { group: "Shoulder Cords", value: "red", label: "Red - Wing Cadet Advisory Council", level: null, img: "red_cord.png" },
-    { group: "Shoulder Cords", value: "green", label: "Green - Group Cadet Advisory Council", level: null, img: "green_cord.png" },
-    { group: "Shoulder Cords", value: "white", label: "White - Drill or Color Guard Competition/Team", level: null, img: "white_cord.png" },
-    { group: "Shoulder Cords", value: "silver", label: "Silver - Honor Guard Academy graduate or member", level: null, img: "silver_cord.png" },
-    { group: "Shoulder Cords", value: "gray", label: "Gray - USAF Aide de Camp", level: null, img: "gray_cord.png" },
-    { group: "Shoulder Cords", value: "black", label: "Cadet of the Month/Quarter", level: null, img: "black_cord.png" },
-    { group: "Shoulder Cords", value: "mix", label: "Region/Wing Supplmented Cord", level: null, img: "mix_cord.png" },
+    { group: "Shoulder Cord", value: "gold", label: "Gold - National Cadet Advisory Council", level: null, img: "gold_cord.png" },
+    { group: "Shoulder Cord", value: "blue", label: "Blue - Region Cadet Advisory Council", level: null, img: "blue_cord.png" },
+    { group: "Shoulder Cord", value: "red", label: "Red - Wing Cadet Advisory Council", level: null, img: "red_cord.png" },
+    { group: "Shoulder Cord", value: "green", label: "Green - Group Cadet Advisory Council", level: null, img: "green_cord.png" },
+    { group: "Shoulder Cord", value: "white", label: "White - Drill or Color Guard Competition/Team", level: null, img: "white_cord.png" },
+    { group: "Shoulder Cord", value: "silver", label: "Silver - Honor Guard Academy graduate or member", level: null, img: "silver_cord.png" },
+    { group: "Shoulder Cord", value: "gray", label: "Gray - USAF Aide de Camp", level: null, img: "gray_cord.png" },
+    { group: "Shoulder Cord", value: "black", label: "Cadet of the Month/Quarter", level: null, img: "black_cord.png" },
+    { group: "Shoulder Cord", value: "mix", label: "Region/Wing Supplmented Cord", level: null, img: "mix_cord.png" },
 ];

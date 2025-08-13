@@ -4,7 +4,7 @@
 <head>
     <title>CAP Uniform Builder</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="Image/x-favicon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
                             <li><a href="index.html">Uniform Builder</a></li>
                             <li><a href="/capPages/faq.html">FAQ</a></li>
                             <li><a href="#contact">Inspections</a></li>
-                            <li style="float:right"><a class="active" href="#about">Test</a></li>
+                            <li><a href="#about">Test</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -50,7 +50,7 @@
                     <p>Select your member type, grade, and uniform to view wear guidelines.</p>
                     
                     <div class="container">
-                        <form class="form-background" id="uniformForm" action="" method="post">
+                        <form class="form-background" id="uniform-form" action="" method="post">
                             <h2>Step 1</h2>
                             <h3>Uniform</h3>
                             <br>
@@ -60,7 +60,7 @@
                                     <div class="dual">
                                         <select id="member-type"></select>
                                         <select id="grade-type"></select>
-                                        <input type="text" id="name" placeholder="Jane Doe">
+                                        <input type="text" id="name" autocomplete="name" placeholder="Jane Doe">
                                     </div>
                                 </div>
                                 <div class="form-item">
@@ -74,29 +74,9 @@
                     
                             <h2>Step 2</h2>
                             <h3>Accouterments</h3>
-                            <div class="form-group">
-                                <div class="form-item">
-                                    <label for="uniform-type">Uniform</label>
-                                    <div class="dual">
-                                        <select id="grade-type"></select>
-                                        <select id="grade"></select>
-                                    </div>
-                                </div>
-                                <div class="form-item">
-                                    <label for="grade">Grade</label>
-                                    <div class="dual">
-                                        <select id="grade" name="grade"></select>
-                                    </div>
-                                </div>
-                                <div class="form-item">
-                                    <label for="uniform-type">Type</label>
-                                    <div class="dual">
-                                        <div id="badgeTable"></div>
-                                        <div id="aviationBadgesTable"></div>
-                                        <div id="occupationalBadgesTable"></div>
-                                        <div id="ncsaPatchesTable"></div>
-                                    </div>
-                                </div>
+                            <br>
+                            <div id="form-container">
+                                <!-- The grouped dropdowns / checkboxes will be inserted here -->
                             </div>
                             
                             <h2>Step 3</h2>

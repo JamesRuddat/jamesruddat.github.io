@@ -7,12 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const uniformSelect = document.getElementById('uniform-type');
     const genderSelect = document.getElementById('gender-type');
 
-    // Badge/Patch containers
-    const badgeTable = document.getElementById('badgeTable');
-    const aviationBadgesTable = document.getElementById('aviationBadgesTable');
-    const occupationalBadgesTable = document.getElementById('occupationalBadgesTable');
-    const ncsaPatchesTable = document.getElementById('ncsaPatchesTable');
-
     function clearElement(elem) {
         while (elem.firstChild) elem.removeChild(elem.firstChild);
     }
@@ -33,32 +27,90 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderBadgeCategory(container, items) {
-        clearElement(container);
-        if (Array.isArray(items) && items.length > 0) {
-            items.forEach(item => {
-                const row = document.createElement('tr');
-                const cell = document.createElement('td');
-                cell.textContent = item.label;
-                row.appendChild(cell);
-                container.appendChild(row);
-            });
-        }
-    }
+    // Combine all arrays from uniformData into a single array
+    const allItems = [
+        ...(uniformData.memberTypes || []),
+        ...(uniformData.cadetGrades || []),
+        ...(uniformData.seniorGrades || []),
+        ...(uniformData.intergroupUniforms || []),
+        ...(uniformData.cadetUniforms || []),
+        ...(uniformData.seniorUniforms || []),
+        ...(uniformData.uniformNameplates || []),
+        ...(uniformData.uniformCollarInsignia || []),
+        ...(uniformData.uniformSexTypes || []),
 
-    function renderBadgesAndPatches(badgeConfig) {
-        renderBadgeCategory(badgeTable, badgeConfig.specialtyTrackBadges);
-        renderBadgeCategory(aviationBadgesTable, badgeConfig.aviationBadges);
-        renderBadgeCategory(occupationalBadgesTable, badgeConfig.occupationalBadges);
-        renderBadgeCategory(ncsaPatchesTable, badgeConfig.ncsaPatches);
-    }
+        ...(uniformData.serviceBadges || []),
+        ...(uniformData.aviationBadges || []),
+        ...(uniformData.occupationalBadges || []),
+        ...(uniformData.ncsaPatches || []),
+        ...(uniformData.patches || []),
+        ...(uniformData.commandInsigniaPin || []),
+        ...(uniformData.shoulderCords || []),
+        ...(uniformData.specialtyTrackBadges || [])
+    ];
+
+    // Group the items by "group"
+    const groupedData = allItems.reduce((acc, item) => {
+        if (!acc[item.group]) acc[item.group] = [];
+        acc[item.group].push(item);
+        return acc;
+    }, {});
+    
+    //create form with slelections for items
+    const container = document.getElementById("form-container");
+
+    Object.entries(groupedData).forEach(([groupName, items]) => {
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("form-group");
+
+        if (items.length > 1) {
+            // Multiple items → dropdown
+            const label = document.createElement("label");
+            label.textContent = groupName + " ";
+            const br = document.createElement("br");
+            const select = document.createElement("select");
+
+            // Add generic placeholder as first option
+            const placeholder = document.createElement("option");
+            placeholder.value = "";
+            placeholder.textContent = `Select ${groupName}`;
+            placeholder.selected = true;
+            select.appendChild(placeholder);
+
+            items.forEach(item => {
+                const option = document.createElement("option");
+                option.value = item.value;
+                option.textContent = item.label;
+                select.appendChild(option);
+            });
+
+            wrapper.appendChild(label);
+            wrapper.appendChild(br);
+            wrapper.appendChild(select);
+        } else {
+            // Only one item → checkbox
+            const item = items[0];
+            const label = document.createElement("label");
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.value = item.value;
+
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(" " + item.label));
+
+            wrapper.appendChild(label);
+        }
+
+        container.appendChild(wrapper);
+    });
 
     // When member type changes, load grades & uniforms
     memberTypeSelect.addEventListener('change', () => {
         const memberType = memberTypeSelect.value;
         if (!memberType) {
             populateSelect(gradeSelect, [], true, 'Select Member First');
-            populateSelect(uniformSelect, [], true, 'Select Member Type First');
+            populateSelect(uniformSelect, [], true, 'Select Member First');
             populateSelect(genderSelect, [], true, 'Select Uniform First');
             return;
         }
@@ -66,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const uniforms = getUniformsForMemberType(memberType);
         populateSelect(gradeSelect, grades, true, 'Select Grade');
         populateSelect(uniformSelect, uniforms, true, 'Select Uniform');
-        populateSelect(genderSelect, [], true, 'Select Uniform First');
+        populateSelect(genderSelect, [], true, 'Select Gender');
     });
 
     // When uniform changes, load genders and badges/patches
@@ -74,11 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const memberType = memberTypeSelect.value;
         const uniformValue = uniformSelect.value;
         if (!uniformValue) {
-            populateSelect(genderSelect, [], true, 'Select Uniform First');
-            clearElement(badgeTable);
-            clearElement(aviationBadgesTable);
-            clearElement(occupationalBadgesTable);
-            clearElement(ncsaPatchesTable);
+            populateSelect(genderSelect, [], true, 'Select Gender');
             return;
         }
         const uniforms = getUniformsForMemberType(memberType);
@@ -95,9 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isFlightSuit(uniformObj)) {
             genderSelect.value = 'male';
         }
-
-        const badgeConfig = getBadgesAndPatchesForUniform(uniformObj);
-        renderBadgesAndPatches(badgeConfig);
     });
 
     // On page load, initialize member types and defaults
@@ -108,34 +153,29 @@ document.addEventListener('DOMContentLoaded', () => {
     memberTypeSelect.dispatchEvent(new Event('change'));
 
 
-    const form = document.getElementById('uniformForm');
+
+
+
+
+
+
+
+    const form = document.getElementById('uniform-form');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // prevent actual form submission
 
-        const gradeValue = document.getElementById('grade').value;
-        // Find full grade object by value
-        const gradeObj = uniformData.grades.find(g => g.value === gradeValue);
-        const gradeImg = gradeObj ? gradeObj.img : null;
-
         const selections = {
-            memberType: document.getElementById('memberType').value,
-            grade: gradeObj ? gradeObj.label : gradeValue,
-            gradeImg: gradeImg,
-            uniformType: document.getElementById('uniformType').value,
-            genderType: document.getElementById('genderType').value,
-            serviceBadges: document.getElementById('serviceBadges').value,
-            commandInsigniaPin: document.getElementById('commandInsigniaPin').value,
-            aviationBadges: document.getElementById('aviationBadgesContainer').textContent.trim(),
-            shoulderCords: document.getElementById('shoulderCords').value,
-            patches: document.getElementById('patches').value,
-            ncsaPatches: document.getElementById('ncsaPatchesContainer').textContent.trim(),
+            memberType: document.getElementById('member-type').value,
+            grade: document.getElementById('grade').value,
+            uniformType: document.getElementById('uniform-type').value,
+            genderType: document.getElementById('gender-type').value,
         };
 
         // Save to sessionStorage
         sessionStorage.setItem('uniformSelections', JSON.stringify(selections));
 
         // Redirect
-        window.location.href = '/uniform.html';
+        window.location.href = '/capPages/uniform.html';
     });
 });

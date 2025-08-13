@@ -30,13 +30,17 @@ export function getBadgesAndPatchesForUniform(uniformObj) {
         ncsaPatches: []
     };
 
-    if (category === 'badge' || category === 'flight') {
+    if (category === 'badge') {
         result.specialtyTrackBadges = uniformData.specialtyTrackBadges;
         result.aviationBadges = uniformData.aviationBadges;
         result.occupationalBadges = uniformData.occupationalBadges;
     }
 
-    if (category === 'patch' || category === 'flight') {
+    if (category === 'patch') {
+        result.ncsaPatches = uniformData.ncsaPatches;
+    }
+
+    if (category === 'flight') {
         result.ncsaPatches = uniformData.ncsaPatches;
     }
 
