@@ -30,11 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Map of arrays to their display names
     const allDataArrays = {
         memberTypes: "Member Types",
-        cadetGrades: "Cadet Grades",
-        seniorGrades: "Senior Grades",
-        intergroupUniforms: "Intergroup Uniforms",
-        cadetUniforms: "Cadet Uniforms",
-        seniorUniforms: "Senior Uniforms",
+        allGrades: "Grades",
+        allUniforms: "Uniforms",
         nameplates: "Nameplates",
         collarInsignia: "Collar Insignia",
         genderTypes: "Gender Types",
@@ -51,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const uniformArrays = {
         classB: "Class B",
+        classA: "Class A",
         serviceBadges: "Service Badges",
         aviationBadges: "Aviation Badges",
         occupationalBadges: "Occupational Badges",
@@ -170,6 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (memberTypeSelect.options.length > 1) {
         memberTypeSelect.selectedIndex = 1;
     }
+    populateSelect(gradeSelect, uniformData.allGrades, true, 'Select Grade');
+    if (memberTypeSelect.options.length > 1) {
+        memberTypeSelect.selectedIndex = 1;
+    } //Not working
+
+    gradeSelect.dispatchEvent(new Event('change'));
     memberTypeSelect.dispatchEvent(new Event('change'));
 
 

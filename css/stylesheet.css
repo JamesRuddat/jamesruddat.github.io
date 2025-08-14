@@ -260,12 +260,6 @@ button:hover {
 	flex: 1 0 auto;
 }
 
-main img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
-
 /* ===== HIGHLIGHT BOX ===== */
 .blue-box {
 	background-color: #b7c9d3;

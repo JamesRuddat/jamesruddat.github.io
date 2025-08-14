@@ -1,13 +1,19 @@
 import * as uniformData from '/js/uniformData.js';
 
 export function getGradesForMemberType(memberType) {
-    return memberType === 'cadet' ? uniformData.cadetGrades : uniformData.seniorGrades;
+    const groups = memberType === 'cadet'
+        ? ['Cadet Grades']
+        : ['Senior Grades'];
+
+    return uniformData.allGrades.filter(u => groups.includes(u.group));
 }
 
 export function getUniformsForMemberType(memberType) {
-    return memberType === 'cadet'
-        ? [...uniformData.intergroupUniforms, ...uniformData.cadetUniforms]
-        : [...uniformData.intergroupUniforms, ...uniformData.seniorUniforms];
+    const groups = memberType === 'cadet'
+        ? ['Cadet Uniforms', 'Base Uniforms']
+        : ['Senior Uniforms', 'Base Uniforms'];
+
+    return uniformData.allUniforms.filter(u => groups.includes(u.group));
 }
 
 export function isFlightSuit(uniformObj) {
@@ -15,10 +21,11 @@ export function isFlightSuit(uniformObj) {
 }
 
 export function getGendersForUniform(uniformObj) {
-    if (isFlightSuit(uniformObj)) {
+    if (uniformObj.uniformCategory === 'flight') {
         return [{ value: 'unisex', label: 'Unisex' }];
     }
-    return uniformData.genderTypes;  // Male & Female
+    
+    return uniformData.genderTypes.filter(u => "Gender Type".includes(u.group));
 }
 
 export function getBadgesAndPatchesForUniform(uniformObj) {

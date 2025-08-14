@@ -25,7 +25,14 @@ export const memberTypes = [
     { group: "Member Types", value: "adult", label: "Adult", level: null, image: null },
 ];
 
-export const cadetGrades = [
+export const genderTypes = [
+    { group: "Gender Type", value: "male", label: "Male", level: null, image: null },
+    { group: "Gender Type", value: "female", label: "Female", level: null, image: null },
+    { group: "Unisex Type", value: "unisex", label: "Unisex", level: null, image: null },
+];
+
+export const allGrades = [
+    // Cadet Grades
     { group: "Cadet Grades", value: "cadet_airman_basic", label: "Cadet Airman Basic (C/AB)", level: null, image: `/uniformImages/A1C.png` },
     { group: "Cadet Grades", value: "cadet_airman", label: "Cadet Airman (C/Amn)", level: null, image: `/uniformImages/grade/cadetGrades/Cadet_Amn_Insignia.png` },
     { group: "Cadet Grades", value: "cadet_airman_first_class", label: "Cadet Airman First Class (C/A1C)", level: null, image: `/uniformImages/grade/cadetGrades/Cadet_A1C_Insignia.png` },
@@ -41,11 +48,9 @@ export const cadetGrades = [
     { group: "Cadet Grades", value: "cadet_major", label: "Cadet Major (C/Maj)", level: null, image: `/uniformImages/grade/cadetGrades/Cadet_Maj_Insignia.png` },
     { group: "Cadet Grades", value: "cadet_lieutenant_colonel", label: "Cadet Lieutenant Colonel (C/Lt Col)", level: null, image: `/uniformImages/grade/cadetGrades/Cadet_Lt_Col_Insignia.png` },
     { group: "Cadet Grades", value: "cadet_colonel", label: "Cadet Colonel (C/Col)", level: null, image: `/uniformImages/grade/cadetGrades/Cadet_Col_Insignia.png` },
-];
-
-export const seniorGrades = [
-    {
-        group: "Senior Grades", value: "senior_member_no_grade", label: "Senior Member (No Grade)", level: null, image: `/uniformImages/A1C.png` },
+    
+    // Senior Grades
+    { group: "Senior Grades", value: "senior_member_no_grade", label: "Senior Member (No Grade)", level: null, image: `/uniformImages/A1C.png` },
     { group: "Senior Grades", value: "staff_sergeant", label: "Staff Sergeant (SSgt)", level: null, image: `/uniformImages/grade/ncoGrades/SSgt_Insignia.png` },
     { group: "Senior Grades", value: "technical_sergeant", label: "Technical Sergeant (TSgt)", level: null, image: `/uniformImages/grade/ncoGrades/TSgt_Insignia.png` },
     { group: "Senior Grades", value: "master_sergeant", label: "Master Sergeant (MSgt)", level: null, image: `/uniformImages/grade/ncoGrades/MSgt_Insignia.png` },
@@ -65,69 +70,68 @@ export const seniorGrades = [
     { group: "Senior Grades", value: "major_general", label: "Major General (Maj Gen)", level: null, image: `/uniformImages/grade/officerGrades/US-O8_insignia.png` },
 ];
 
-export const intergroupUniforms = [
-    { group: "Intergroup Uniforms", value: "class_a", label: "Service Dress Uniform (Class A)", uniformCategory: "badge", image: `/uniformImages/classB/ClassB_S_M_Tie.svg` },
-    { group: "Intergroup Uniforms", value: "class_b", label: "Blue Service Uniform (Class B)", uniformCategory: "badge", image: `/uniformImages/classB/ClassB_S_M_Tie.svg` },
-    { group: "Intergroup Uniforms", value: "abu", label: "Airman Battle Uniform (ABU)", uniformCategory: "patch", image: null },
-    { group: "Intergroup Uniforms", value: "fdu", label: "Flight Duty Uniform (FDU)", uniformCategory: "flight", image: null },
-    { group: "Intergroup Uniforms", value: "cfdu", label: "Corporate Flight Duty Uniform (CFDU)", uniformCategory: "flight", image: null },
-    { group: "Intergroup Uniforms", value: "corporate_field", label: "Corporate Field Uniform", uniformCategory: "patch", image: null },
-    { group: "Intergroup Uniforms", value: "aviator_shirt", label: "Aviator Shirt Uniform", uniformCategory: "badge", image: null },
-    { group: "Intergroup Uniforms", value: "bdu", label: "Battle Dress Uniform (BDU)", uniformCategory: "patch", image: null },
-    { group: "Intergroup Uniforms", value: "ocp", label: "Operational Camouflage Pattern (OCP)", uniformCategory: "patch", image: null },
-];
+export const allUniforms = [
+    // Both
+    { group: "Base Uniforms", value: "class_a", label: "Service Dress Uniform (Class A)", uniformCategory: "badge", image: `/uniformImages/classB/ClassB_S_M_Tie.svg` },
+    { group: "Base Uniforms", value: "class_b", label: "Blue Service Uniform (Class B)", uniformCategory: "badge", image: `/uniformImages/classB/ClassB_S_M_Tie.svg` },
+    { group: "Base Uniforms", value: "abu", label: "Airman Battle Uniform (ABU)", uniformCategory: "patch", image: null },
+    { group: "Base Uniforms", value: "fdu", label: "Flight Duty Uniform (FDU)", uniformCategory: "flight", image: null },
+    { group: "Base Uniforms", value: "cfdu", label: "Corporate Flight Duty Uniform (CFDU)", uniformCategory: "flight", image: null },
+    { group: "Base Uniforms", value: "corporate_field", label: "Corporate Field Uniform", uniformCategory: "patch", image: null },
+    { group: "Base Uniforms", value: "aviator_shirt", label: "Aviator Shirt Uniform", uniformCategory: "badge", image: null },
+    { group: "Base Uniforms", value: "bdu", label: "Battle Dress Uniform (BDU)", uniformCategory: "patch", image: null },
+    { group: "Base Uniforms", value: "ocp", label: "Operational Camouflage Pattern (OCP)", uniformCategory: "patch", image: null },
 
-export const seniorUniforms = [
+    // Cadet Uniforms
+    { group: "Cadet Uniforms", value: "semi_formal_dress", label: "Semi-Formal Dress Uniform", uniformCategory: "badge", image: null },
+    { group: "Cadet Uniforms", value: "hgu", label: "Honor Guard Uniform", uniformCategory: "badge", image: null },
+
+    // Senior Uniforms
     { group: "Senior Uniforms", value: "mess_dress", label: "Mess Dress Uniform", uniformCategory: "badge", image: null },
     { group: "Senior Uniforms", value: "corporate_semi_formal", label: "Corporate Semi-Formal Uniform", uniformCategory: "badge", image: null },
     { group: "Senior Uniforms", value: "corporate_service_dress", label: "Corporate Service Dress Uniform", uniformCategory: "badge", image: null },
     { group: "Senior Uniforms", value: "corporate_working", label: "Corporate Working Uniform", uniformCategory: "patch", image: null },
 ];
 
-export const cadetUniforms = [
-    { group: "Cadet Uniforms", value: "semi_formal_dress", label: "Semi-Formal Dress Uniform", uniformCategory: "badge", image: null },
-    { group: "Cadet Uniforms", value: "hgu", label: "Honor Guard Uniform", uniformCategory: "badge", image: null },
-];
-
 export const nameplates = [
-    { group: "Uniform Nameplates", value: "blazer_nameplate", label: "Blazer Nameplate", level: null, image: null },
-    { group: "Uniform Nameplates", value: "brush_silver_nameplate", label: "Brush Silver Nameplate", level: null, image: null },
-    { group: "Uniform Nameplates", value: "cap_nameplate_cadet", label: "CAP Nameplate - Cadets", level: null, image: null },
-    { group: "Uniform Nameplates", value: "cap_nameplate_adult", label: "CAP Nameplate - Adults", level: null, image: null },
-    { group: "Uniform Nameplates", value: "flight_suit_embroidered_name_tag", label: "Dark Blue Embroidered Flight Suit Name Tag", level: null, image: null },
-    { group: "Uniform Nameplates", value: "black_leather_jacket_name_tag", label: "Black Leather Jacket Name Tag", level: null, image: null },
-    { group: "Uniform Nameplates", value: "black_leather_flight_suit_name_tag", label: "Black Leather Flight Suit Name Tag", level: null, image: null },
-    { group: "Uniform Nameplates", value: "abu_name_tag", label: "ABU Name Tag", level: null, image: null },
-    { group: "Uniform Nameplates", value: "abu_cap_tag", label: "ABU CAP Tag", level: null, image: null },
+    { group: "Uniform Nameplates", value: "blazer_nameplate", label: "Blazer Nameplate", uniformCategory: "adult_corporate", image: `/uniformImages/items/Blazer_Name_Plate.svg` },
+    { group: "Uniform Nameplates", value: "brush_silver_nameplate", label: "Brush Silver Nameplate", uniformCategory: "adult_classA", image: `/uniformImages/items/ClassA_Adult_Name_Plate.svg` },
+    { group: "Uniform Nameplates", value: "cap_nameplate_cadet", label: "CAP Nameplate - Cadets", uniformCategory: "Cadets_blues", image: `/uniformImages/items/Cadet_Name_Plate.svg` },
+    { group: "Uniform Nameplates", value: "cap_nameplate_adult", label: "CAP Nameplate - Adults", uniformCategory: "adult_classB", image: `/uniformImages/items/ClassB_Adult_Name_Plate.svg` },
+    { group: "Uniform Nameplates", value: "flight_suit_embroidered_name_tag", label: "Dark Blue Embroidered Flight Suit Name Tag", uniformCategory: null, image: `/uniformImages/items/Blue_Leather_Name_Patch.svg` },
+    { group: "Uniform Nameplates", value: "black_leather_jacket_name_tag", label: "Black Leather Jacket Name Tag", uniformCategory: null, image: `/uniformImages/items/Brown_Leather_Name_Patch.svg` },
+    { group: "Uniform Nameplates", value: "black_leather_flight_suit_name_tag", label: "Black Leather Flight Suit Name Tag", uniformCategory: null, image: `/uniformImages/items/Brown_Leather_Name_Patch.svg` },
+    { group: "Uniform Nameplates", value: "abu_name_tag", label: "ABU Name Tag", uniformCategory: "ABU", image: null },
+    { group: "Uniform Nameplates", value: "abu_cap_tag", label: "ABU CAP Tag", uniformCategory: "ABU", image: null },
 ];
 
 export const classB = [
     // Male Slacks & Shirts
-    { group: "Class B Male Slacks", value: "male_slacks", label: "Male Slacks", level: null, image: `/uniformImages/classB/Slacks_M.svg` },
-    { group: "Class B Male Short Sleeve Shirt", value: "short_sleeve_no_tie", label: "Short Sleeve Shirt - No Tie", level: null, image: `/uniformImages/classB/ClassB_S_M.svg` },
-    { group: "Class B Male Short Sleeve Shirt", value: "short_sleeve_with_tie", label: "Short Sleeve Shirt - With Tie", level: null, image: `/uniformImages/classB/ClassB_S_M_Tie.svg` },
-    { group: "Class B Male Long Sleeve Shirt", value: "long_sleeve_no_tie", label: "Long Sleeve Shirt - No Tie", level: null, image: `/uniformImages/classB/ClassB_L_M.svg` },
-    { group: "Class B Male Long Sleeve Shirt", value: "long_sleeve_with_tie", label: "Long Sleeve Shirt - With Tie", level: null, image: `/uniformImages/classB/ClassB_L_M_Tie.svg` },
+    { group: "Male Slacks", value: "male_slacks", label: "Male Slacks", level: null, image: `/uniformImages/classB/Slacks_M.svg` },
+    { group: "Male Shirt", value: "short_sleeve_no_tie", label: "Short Sleeve Shirt - No Tie", level: null, image: `/uniformImages/classB/ClassB_S_M.svg` },
+    { group: "Male Shirt", value: "short_sleeve_with_tie", label: "Short Sleeve Shirt - With Tie", level: null, image: `/uniformImages/classB/ClassB_S_M_Tie.svg` },
+    { group: "Male Shirt", value: "long_sleeve_no_tie", label: "Long Sleeve Shirt - No Tie", level: null, image: `/uniformImages/classB/ClassB_L_M.svg` },
+    { group: "Male Shirt", value: "long_sleeve_with_tie", label: "Long Sleeve Shirt - With Tie", level: null, image: `/uniformImages/classB/ClassB_L_M_Tie.svg` },
 
     // Female Slacks & Shirts (no tie / tie tab)
-    { group: "Class B Female Slacks", value: "female_slacks", label: "Female Slacks", level: null, image: `/uniformImages/classB/Slacks_F.svg` },
-    { group: "Class B Female Slacks", value: "female_slacks_princess", label: "Female Slacks Princess", level: null, image: `/uniformImages/classB/Slacks_U.svg` },
-    { group: "Class B Female Short Sleeve Shirt", value: "short_sleeve_no_tietab", label: "Short Sleeve Shirt - No Tie Tab", level: null, image: `/uniformImages/classB/ClassB_S_F.svg` },
-    { group: "Class B Female Short Sleeve Shirt", value: "short_sleeve_with_tietab", label: "Short Sleeve Shirt - With Tie Tab", level: null, image: `/uniformImages/classB/ClassB_S_F_Tie.svg` },
-    { group: "Class B Female Long Sleeve Shirt", value: "long_sleeve_no_tietab", label: "Long Sleeve Shirt - No Tie Tab", level: null, image: `/uniformImages/classB/ClassB_L_F.svg` },
-    { group: "Class B Female Long Sleeve Shirt", value: "long_sleeve_with_tietab", label: "Long Sleeve Shirt - With Tie Tab", level: null, image: `/uniformImages/classB/ClassB_L_F_Tie.svg` },
-    { group: "Class B Female Skirt", value: "female_skirt", label: "Skirt", level: null, image: `/uniformImages/classB/Skirt.svg` },
-    { group: "Class B Female Skirt", value: "female_skirt_princess", label: "Skirt - Princess", level: null, image: `/uniformImages/classB/Skirt_U.svg` },
+    { group: "Female Slacks", value: "female_slacks", label: "Female Slacks", level: null, image: `/uniformImages/classB/Slacks_F.svg` },
+    { group: "Female Slacks", value: "female_slacks_princess", label: "Female Slacks - Princess", level: null, image: `/uniformImages/classB/Slacks_U.svg` },
+    { group: "Female Shirt", value: "short_sleeve_no_tietab", label: "Short Sleeve Shirt - No Tie Tab", level: null, image: `/uniformImages/classB/ClassB_S_F.svg` },
+    { group: "Female Shirt", value: "short_sleeve_with_tietab", label: "Short Sleeve Shirt - With Tie Tab", level: null, image: `/uniformImages/classB/ClassB_S_F_Tie.svg` },
+    { group: "Female Shirt", value: "long_sleeve_no_tietab", label: "Long Sleeve Shirt - No Tie Tab", level: null, image: `/uniformImages/classB/ClassB_L_F.svg` },
+    { group: "Female Shirt", value: "long_sleeve_with_tietab", label: "Long Sleeve Shirt - With Tie Tab", level: null, image: `/uniformImages/classB/ClassB_L_F_Tie.svg` },
+    { group: "Female Skirt", value: "female_skirt", label: "Skirt", level: null, image: `/uniformImages/classB/Skirt.svg` },
+    { group: "Female Skirt", value: "female_skirt_princess", label: "Skirt - Princess", level: null, image: `/uniformImages/classB/Skirt_U.svg` },
 ];
 
 export const classA = [
     // Male
-    { group: "Class A Male Service Coat (New Style)", value: "male_service_coat_new", label: "Male Service Coat - New Style", level: null, image: `/uniformImages/classA/New_M.svg` },
-    { group: "Class A Male Service Coat (Old Style)", value: "male_service_coat_old", label: "Male Service Coat - Old Style", level: null, image: `/uniformImages/classA/Old_M.svg` },
+    { group: "Male Service Coat", value: "male_service_coat_new", label: "Male Service Coat - New Style", level: null, image: `/uniformImages/classA/New_M.svg` },
+    { group: "Male Service Coat", value: "male_service_coat_old", label: "Male Service Coat - Old Style", level: null, image: `/uniformImages/classA/Old_M.svg` },
 
     // Female
-    { group: "Class A Female Service Coat (New Style)", value: "male_service_coat_new", label: "Female Service Coat - New Style", level: null, image: `/uniformImages/classA/New_F.svg` },
-    { group: "Class A Female Service Coat (Old Style)", value: "male_service_coat_old", label: "Female Service Coat - Old Style", level: null, image: `/uniformImages/classA/Old_F.svg` },
+    { group: "Female Service Coat", value: "male_service_coat_new", label: "Female Service Coat - New Style", level: null, image: `/uniformImages/classA/New_F.svg` },
+    { group: "Female Service Coat", value: "male_service_coat_old", label: "Female Service Coat - Old Style", level: null, image: `/uniformImages/classA/Old_F.svg` },
 ];
 
 export const collarInsignia = [
@@ -137,11 +141,7 @@ export const collarInsignia = [
     { group: "Uniform Collar Insignia", value: "us_nco", label: "US (NCOs)", level: null, image: null },
 ];
 
-export const genderTypes = [
-    { group: "Gender Type", value: "male", label: "Male", level: null, image: null },
-    { group: "Gender Type", value: "female", label: "Female", level: null, image: null },
-    { group: "Gender Type", value: "unisex", label: "Unisex", level: null, image: null },
-];
+
 
 export const serviceBadges = [
     { group: "Service Badge", value: "csag", label: "CAP Senior Advisory Group Badge", level: null, image: null },

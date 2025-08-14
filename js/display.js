@@ -3,11 +3,8 @@ import * as uniformData from '/js/uniformData.js';
 // Map of arrays to their display names
 const allDataArrays = {
     memberTypes: "Member Types",
-    cadetGrades: "Cadet Grades",
-    seniorGrades: "Senior Grades",
-    intergroupUniforms: "Intergroup Uniforms",
-    cadetUniforms: "Cadet Uniforms",
-    seniorUniforms: "Senior Uniforms",
+    allGrades: "Grades",
+    allUniforms: "Uniforms",
     classB: "Class B Options",
     classA: "Class A Options",
     nameplates: "Nameplates",
