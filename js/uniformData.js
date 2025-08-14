@@ -26,7 +26,7 @@ export const memberTypes = [
 ];
 
 export const cadetGrades = [
-    { group: "Cadet Grades", value: "cadet_airman_basic", label: "Cadet Airman Basic (C/AB)", level: null, img: null },
+    { group: "Cadet Grades", value: "cadet_airman_basic", label: "Cadet Airman Basic (C/AB)", level: null, img: `/uniformImages/A1C.png` },
     { group: "Cadet Grades", value: "cadet_airman", label: "Cadet Airman (C/Amn)", level: null, img: `/uniformImages/grade/cadetGrades/Cadet_Amn_Insignia.png` },
     { group: "Cadet Grades", value: "cadet_airman_first_class", label: "Cadet Airman First Class (C/A1C)", level: null, img: `/uniformImages/grade/cadetGrades/Cadet_A1C_Insignia.png` },
     { group: "Cadet Grades", value: "cadet_senior_airman", label: "Cadet Senior Airman (C/SrA)", level: null, img: `/uniformImages/grade/cadetGrades/Cadet_SrA_Insignia.png` },
@@ -44,15 +44,16 @@ export const cadetGrades = [
 ];
 
 export const seniorGrades = [
-    { group: "Senior Grades", value: "senior_member_no_grade", label: "Senior Member (No Grade)", level: null, img: null },
+    {
+        group: "Senior Grades", value: "senior_member_no_grade", label: "Senior Member (No Grade)", level: null, img: `/uniformImages/A1C.png` },
     { group: "Senior Grades", value: "staff_sergeant", label: "Staff Sergeant (SSgt)", level: null, img: `/uniformImages/grade/ncoGrades/SSgt_Insignia.png` },
     { group: "Senior Grades", value: "technical_sergeant", label: "Technical Sergeant (TSgt)", level: null, img: `/uniformImages/grade/ncoGrades/TSgt_Insignia.png` },
     { group: "Senior Grades", value: "master_sergeant", label: "Master Sergeant (MSgt)", level: null, img: `/uniformImages/grade/ncoGrades/MSgt_Insignia.png` },
     { group: "Senior Grades", value: "senior_master_sergeant", label: "Senior Master Sergeant (SMSgt)", level: null, img: `/uniformImages/grade/ncoGrades/SMSgt_Insignia.png` },
     { group: "Senior Grades", value: "chief_master_sergeant", label: "Chief Master Sergeant (CMSgt)", level: null, img: `/uniformImages/grade/ncoGrades/CMSgt_Insignia.png` },
-    { group: "Senior Grades", value: "flight_officer", label: "Flight Officer (FO)", level: null, img: null },
-    { group: "Senior Grades", value: "technical_flight_officer", label: "Technical Flight Officer (TFO)", level: null, img: null },
-    { group: "Senior Grades", value: "senior_flight_officer", label: "Senior Flight Officer (SFO)", level: null, img: null },
+    { group: "Senior Grades", value: "flight_officer", label: "Flight Officer (FO)", level: null, img: `/uniformImages/grade/officerGrades/FO.png` },
+    { group: "Senior Grades", value: "technical_flight_officer", label: "Technical Flight Officer (TFO)", level: null, img: `/uniformImages/grade/officerGrades/TFO.png` },
+    { group: "Senior Grades", value: "senior_flight_officer", label: "Senior Flight Officer (SFO)", level: null, img: `/uniformImages/grade/officerGrades/SFO.png` },
     { group: "Senior Grades", value: "second_lieutenant", label: "Second Lieutenant (2d Lt)", level: null, img: `/uniformImages/grade/officerGrades/US-O1_insignia.png` },
     { group: "Senior Grades", value: "first_lieutenant", label: "First Lieutenant (1st Lt)", level: null, img: `/uniformImages/grade/officerGrades/US-O2_insignia.png` },
     { group: "Senior Grades", value: "captain", label: "Captain (Capt)", level: null, img: `/uniformImages/grade/officerGrades/US-O3_insignia.png` },
@@ -65,27 +66,27 @@ export const seniorGrades = [
 ];
 
 export const intergroupUniforms = [
-    { group: "Intergroup Uniforms", value: "class_a", label: "Service Dress Uniform (Class A)", uniformCategory: "badge", img: null },
-    { group: "Intergroup Uniforms", value: "class_b", label: "Blue Service Uniform (Class B)", uniformCategory: "badge", img: null },
-    { group: "Intergroup Uniforms", value: "abu", label: "Airman Battle Uniform (ABU)", uniformCategory: "patch", img: null },
-    { group: "Intergroup Uniforms", value: "fdu", label: "Flight Duty Uniform (FDU)", uniformCategory: "flight", img: null },
-    { group: "Intergroup Uniforms", value: "cfdu", label: "Corporate Flight Duty Uniform (CFDU)", uniformCategory: "flight", img: null },
-    { group: "Intergroup Uniforms", value: "corporate_field", label: "Corporate Field Uniform", uniformCategory: "patch", img: null },
-    { group: "Intergroup Uniforms", value: "aviator_shirt", label: "Aviator Shirt Uniform", uniformCategory: "badge", img: null },
-    { group: "Intergroup Uniforms", value: "bdu", label: "Battle Dress Uniform (BDU)", uniformCategory: "patch", img: null },
-    { group: "Intergroup Uniforms", value: "ocp", label: "Operational Camouflage Pattern (OCP)", uniformCategory: "patch", img: null },
+    { group: "Intergroup Uniforms", value: "class_a", label: "Service Dress Uniform (Class A)", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "class_b", label: "Blue Service Uniform (Class B)", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "abu", label: "Airman Battle Uniform (ABU)", uniformCategory: "patch", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "fdu", label: "Flight Duty Uniform (FDU)", uniformCategory: "flight", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "cfdu", label: "Corporate Flight Duty Uniform (CFDU)", uniformCategory: "flight", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "corporate_field", label: "Corporate Field Uniform", uniformCategory: "patch", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "aviator_shirt", label: "Aviator Shirt Uniform", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "bdu", label: "Battle Dress Uniform (BDU)", uniformCategory: "patch", img: `/uniformImages/A1C.png` },
+    { group: "Intergroup Uniforms", value: "ocp", label: "Operational Camouflage Pattern (OCP)", uniformCategory: "patch", img: `/uniformImages/A1C.png` },
 ];
 
 export const seniorUniforms = [
-    { group: "Senior Uniforms", value: "mess_dress", label: "Mess Dress Uniform", uniformCategory: "badge", img: null },
-    { group: "Senior Uniforms", value: "corporate_semi_formal", label: "Corporate Semi-Formal Uniform", uniformCategory: "badge", img: null },
-    { group: "Senior Uniforms", value: "corporate_service_dress", label: "Corporate Service Dress Uniform", uniformCategory: "badge", img: null },
-    { group: "Senior Uniforms", value: "corporate_working", label: "Corporate Working Uniform", uniformCategory: "patch", img: null },
+    { group: "Senior Uniforms", value: "mess_dress", label: "Mess Dress Uniform", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Senior Uniforms", value: "corporate_semi_formal", label: "Corporate Semi-Formal Uniform", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Senior Uniforms", value: "corporate_service_dress", label: "Corporate Service Dress Uniform", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Senior Uniforms", value: "corporate_working", label: "Corporate Working Uniform", uniformCategory: "patch", img: `/uniformImages/A1C.png` },
 ];
 
 export const cadetUniforms = [
-    { group: "Cadet Uniforms", value: "semi_formal_dress", label: "Semi-Formal Dress Uniform", uniformCategory: "badge", img: null },
-    { group: "Cadet Uniforms", value: "hgu", label: "Honor Guard Uniform", uniformCategory: "badge", img: null },
+    { group: "Cadet Uniforms", value: "semi_formal_dress", label: "Semi-Formal Dress Uniform", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
+    { group: "Cadet Uniforms", value: "hgu", label: "Honor Guard Uniform", uniformCategory: "badge", img: `/uniformImages/A1C.png` },
 ];
 
 export const nameplates = [
