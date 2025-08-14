@@ -17,10 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerHTML = `<strong>${item.group || 'Item'}:</strong> ${item.label || item.value || 'N/A'}`;
 
     // Optional: if your objects have an `img` property
-    if (item.img) {
+    if (item.image) {
       const img = document.createElement('img');
-      img.src = item.img;
-      img.alt = item.label || '';
+      img.src = item.image;
+      img.alt = item.label || "Item Image";
+      img.style.maxHeight = '100px';
+      li.appendChild(document.createElement('br'));
+      li.appendChild(img);
+    }
+    else {
+      const img = document.createElement("img");
+      img.src = "../uniformImages/A1C.png";
+      img.alt = item.label || "Image";
       img.style.maxHeight = '100px';
       li.appendChild(document.createElement('br'));
       li.appendChild(img);

@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const uniformArrays = {
+        classB: "Class B",
         serviceBadges: "Service Badges",
         aviationBadges: "Aviation Badges",
         occupationalBadges: "Occupational Badges",
