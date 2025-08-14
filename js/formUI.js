@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         patches: "Patches",
         commandInsigniaPin: "Command Insignia Pin",
         shoulderCords: "Shoulder Cords",
-        specialtyTrackBadges: "Specialty Track Badges"
+        specialtyTrackBadges: "Specialty Track Badges",
+        additionalBadges: "More",
     };
 
     const container = document.getElementById("form-container");
