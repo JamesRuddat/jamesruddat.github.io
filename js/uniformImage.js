@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   overview.style.textAlign = 'center';
 
   const grade = selections.find(item => item.group && item.group.toLowerCase().includes('grade'));
-  const baseUniform = selections.find(item => item.group === 'Base Uniforms');
+  const baseUniform = selections.find(item => item.group && (
+    item.group === 'Base Uniforms' ||
+    item.group === 'Cadet Uniforms' ||
+    item.group === 'Senior Uniforms' ||
+    item.group === '18+ Uniforms'
+  ));
   const memberType = selections.find(item => item.group && item.group.toLowerCase().includes('member'));
 
   const rankText = grade ? grade.label : 'No Grade Selected';
@@ -28,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Grade + image span
   const gradeSpan = document.createElement('span');
   gradeSpan.innerHTML = `<strong>Grade:</strong> ${rankText}`;
-
   if (grade?.image) {
     const gradeImg = document.createElement('img');
     gradeImg.src = grade.image;
@@ -38,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gradeImg.style.marginLeft = '5px';
     gradeSpan.appendChild(gradeImg);
   }
-
   overview.appendChild(gradeSpan);
 
   // Uniform name
@@ -48,22 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Nameplate selection ---
   let nameplateItem = null;
-
   if (memberType?.value === 'cadet') {
-    // Cadets get the CAP nameplate
-    nameplateItem = uniformData.nameplates.find(n => n.value === 'cap_nameplate_cadet');
+    nameplateItem = uniformData.allNameplates.find(n => n.value === 'cap_nameplate_cadet');
   } else if (memberType?.value === 'adult') {
-    // Adults: pick based on Class A or Class B uniform
-    if (baseUniform?.value === 'class_a') {
-      nameplateItem = uniformData.nameplates.find(n => n.value === 'brush_silver_nameplate');
-    } else if (baseUniform?.value === 'class_b') {
-      nameplateItem = uniformData.nameplates.find(n => n.value === 'cap_nameplate_adult');
-    } else {
-      // fallback for other uniforms
-      nameplateItem = uniformData.nameplates.find(n => n.uniformCategory && n.uniformCategory.toLowerCase().includes('adult'));
-    }
+    if (baseUniform?.value === 'class_a') nameplateItem = uniformData.nameplates.find(n => n.value === 'brush_silver_nameplate');
+    else if (baseUniform?.value === 'class_b') nameplateItem = uniformData.nameplates.find(n => n.value === 'cap_nameplate_adult');
+    else nameplateItem = uniformData.nameplates.find(n => n.uniformCategory && n.uniformCategory.toLowerCase().includes('adult'));
   }
-
   if (nameplateItem?.image) {
     const nameplateImg = document.createElement('img');
     nameplateImg.src = nameplateItem.image;
@@ -79,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Uniform Container ---
   const uniformContainer = document.createElement('div');
   uniformContainer.style.position = 'relative';
-  uniformContainer.style.width = '500px';
-  uniformContainer.style.height = '800px';
+  uniformContainer.style.width = '200px';
+  uniformContainer.style.height = '600px';
   uniformContainer.style.margin = 'auto';
 
   const genderSelection = selections.find(item => item.group === 'Gender Type');
@@ -88,17 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Extra items (shirts, slacks, etc.)
   let extraItems = [];
-  if (baseUniform?.value === 'class_a') extraItems = uniformData.classA;
-  else if (baseUniform?.value === 'class_b') extraItems = uniformData.classB;
+  if (baseUniform?.value === 'class_a') extraItems = uniformData.classA || [];
+  else if (baseUniform?.value === 'class_b') extraItems = uniformData.classB || [];
 
   // Filter by gender
   extraItems = extraItems.filter(u => {
     if (!u.group) return true;
     const groupLower = u.group.toLowerCase();
-    if (groupLower.startsWith('male') && gender === 'male') return true;
-    if (groupLower.startsWith('female') && gender === 'female') return true;
-    if (groupLower.includes('unisex')) return true;
-    return false;
+    return (groupLower.startsWith('male') && gender === 'male') ||
+      (groupLower.startsWith('female') && gender === 'female') ||
+      groupLower.includes('unisex');
   });
 
   // Sort: shirts first, pants/slacks after
@@ -114,34 +107,47 @@ document.addEventListener('DOMContentLoaded', () => {
     img.src = item.image || "../uniformImages/A1C.png";
     img.alt = item.label || 'Item Image';
     img.style.position = 'absolute';
-    img.style.width = '300px';
-    img.style.top = item.group.toLowerCase().includes('shirt') ? '0px' : '150px';
+    img.style.width = '200px';
+    img.style.top = item.group.toLowerCase().includes('shirt') ? '0px' : '250px';
     img.style.zIndex = index + 1;
     uniformContainer.appendChild(img);
   });
 
   displayDiv.appendChild(uniformContainer);
-
   // --- Regulation Quotes ---
   const quotesDiv = document.createElement('div');
-
   quotesDiv.style.marginTop = '20px';
   quotesDiv.style.padding = '10px';
   quotesDiv.style.borderTop = '1px solid #ccc';
   quotesDiv.style.borderBottom = '1px solid #ccc';
   quotesDiv.style.textAlign = 'center';
+
+  // Filter for items that have a reference and show them in order
+  const allRegulations = selections
+    .filter(item => item.Reference && item.Reference.trim() !== "")
+    .map(item => {
+      return `
+      <div style="margin-bottom: 10px; text-align: left;">
+        <strong>${item.label}:</strong><br>
+        <small>${item.Reference}</small>
+      </div>
+    `;
+    });
+
   quotesDiv.innerHTML = `
-    <h3>CAPR 39-1 Details</h3>
-    <em>"Always maintain your uniform to the highest standard."</em>
-    <br>
-    <em>"Professionalism is reflected in your appearance and conduct."</em>
-  `;
+  <h3>CAPR 39-1 Details</h3>
+  ${allRegulations.length > 0
+      ? allRegulations.join('')
+      : '<em>No regulations for selected items.</em>'
+    }
+`;
+
   displayDiv.appendChild(quotesDiv);
 
   // --- Outerwear Section ---
   const outerwearDiv = document.createElement('div');
   outerwearDiv.style.marginTop = '20px';
   outerwearDiv.style.textAlign = 'center';
-  outerwearDiv.innerHTML = `<strong>Outerwear:</strong> No outerwear selected`; // Add logic if needed
+  outerwearDiv.innerHTML = `<strong>Outerwear:</strong> No outerwear selected`;
   displayDiv.appendChild(outerwearDiv);
 });

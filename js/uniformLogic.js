@@ -3,15 +3,15 @@ import * as uniformData from '/js/uniformData.js';
 export function getGradesForMemberType(memberType) {
     const groups = memberType === 'cadet'
         ? ['Cadet Grades']
-        : ['Senior Grades'];
+        : ['Officer Grades', 'NCO Grades', 'Flight Officer Grades'];
 
     return uniformData.allGrades.filter(u => groups.includes(u.group));
 }
 
 export function getUniformsForMemberType(memberType) {
     const groups = memberType === 'cadet'
-        ? ['Cadet Uniforms', 'Base Uniforms']
-        : ['Senior Uniforms', 'Base Uniforms'];
+        ? ['Cadet Uniforms', 'Base Uniforms', '18+ Uniforms']
+        : ['Senior Uniforms', 'Base Uniforms', '18+ Uniforms'];
 
     return uniformData.allUniforms.filter(u => groups.includes(u.group));
 }
