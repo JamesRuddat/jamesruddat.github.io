@@ -9,8 +9,8 @@ uniformImage.js → takes results and visually builds the uniform.
 
 exaple
 export const memberTypes = [
-    { group: "Member Types", value: "cadet", label: "Cadet", level: null, img: null },
-    { group: "Member Types", value: "adult", label: "Adult", level: null, img: null },
+    { group: "Member Types", value: "Cadet", label: "Cadet", level: null, img: null },
+    { group: "Member Types", value: "Senior", label: "Adult", level: null, img: null },
 ];
 
 export const cadetGrades = [

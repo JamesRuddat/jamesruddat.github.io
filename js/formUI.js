@@ -1,5 +1,5 @@
-import * as uniformData from '/js/uniformData.js';
-import { getGradesForMemberType, getUniformsForMemberType, getGendersForUniform, getBadgesAndPatchesForUniform, isFlightSuit } from '/js/uniformLogic.js';
+import * as uniformData from '/js/data/uniformData.js';
+import { getGradesForMemberType, getUniformsForMemberType, getGendersForUniform, getBadgesAndPatchesForUniform, isFlightSuit } from '/js/data/uniformLogic.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const memberTypeSelect = document.getElementById('member-type');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messDressUniform: "Mess Dress Uniform",
         semiFormalUniform: "Semi-Formal Uniform",
         corporateSemiFormalUniform: "Corporate Semi-Formal Uniform",
-        
+
         serviceDressUniform: "Service Dress Uniform (Class A)",
         blueServiceUniform: "Blue Service Uniform (Class B)",
         corporateServiceDressUniform: "Corporate Semi-Formal",
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderUniformItems(memberType, gender) {
+    function renderUniformItems(members, gender) {
         clearElement(container);
 
         Object.entries(badgeArrays).forEach(([arrayKey, displayName]) => {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Filter by wearer and gender
             const filteredItems = arrayItems.filter(
-                item => item.wearer === memberType || item.wearer === 'all'
+                item => item.wearer === members || item.wearer === 'All'
             ).filter(
                 item => !item.gender || item.gender === gender || item.gender === 'unisex'
             );
@@ -199,33 +199,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize member types
     populateSelect(memberTypeSelect, uniformData.memberTypes, true, 'Select Member');
-    memberTypeSelect.value = 'cadet';
+    memberTypeSelect.value = 'Cadet';
     memberTypeSelect.dispatchEvent(new Event('change'));
 
     //--- Prepare sessionStorage itemMap ---
-    const allDataArrays = {
-        memberTypes: "Member Types",
-        allGrades: "Grades",
-        allUniforms: "Uniforms",
-        allNameplates: "Nameplates",
-        collarInsignia: "Collar Insignia",
-        genderTypes: "Gender Types",
-        serviceBadges: "Service Badges",
-        aviationBadges: "Aviation Badges",
-        occupationalBadges: "Occupational Badges",
-        ncsaPatches: "NCSA Patches",
-        patches: "Patches",
-        commandInsigniaPin: "Command Insignia Pin",
-        shoulderCords: "Shoulder Cords",
-        specialtyTrackBadges: "Specialty Track Badges"
-    };
-
     const itemMap = {};
-    Object.keys(allDataArrays).forEach(arrayKey => {
-        const arrayItems = uniformData[arrayKey] || [];
-        arrayItems.forEach(item => {
-            itemMap[item.value] = item;
-        });
+
+    // Loop over every property in uniformData
+    Object.entries(uniformData).forEach(([key, arrayItems]) => {
+        if (Array.isArray(arrayItems)) {
+            arrayItems.forEach(item => {
+                // Only add items with a value
+                if (item.value) itemMap[item.value] = item;
+            });
+        }
     });
 
     //--- Form submit ---

@@ -1,4 +1,4 @@
-import * as uniformData from '/js/uniformData.js';
+import * as uniformData from '/js/data/uniformData.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const selectionsString = sessionStorage.getItem('uniformSelections');
@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Nameplate selection ---
   let nameplateItem = null;
-  if (memberType?.value === 'cadet') {
-    nameplateItem = uniformData.allNameplates.find(n => n.value === 'cap_nameplate_cadet');
-  } else if (memberType?.value === 'adult') {
+  if (memberType?.value === 'Cadet') {
+    nameplateItem = uniformData.nameplates.find(n => n.value === 'cap_nameplate_cadet');
+  } else if (memberType?.value === 'Senior') {
     if (baseUniform?.value === 'class_a') nameplateItem = uniformData.nameplates.find(n => n.value === 'brush_silver_nameplate');
     else if (baseUniform?.value === 'class_b') nameplateItem = uniformData.nameplates.find(n => n.value === 'cap_nameplate_adult');
-    else nameplateItem = uniformData.nameplates.find(n => n.uniformCategory && n.uniformCategory.toLowerCase().includes('adult'));
+    else nameplateItem = uniformData.nameplates.find(n => n.uniformCategory && n.uniformCategory.toLowerCase().includes('Senior'));
   }
   if (nameplateItem?.image) {
     const nameplateImg = document.createElement('img');

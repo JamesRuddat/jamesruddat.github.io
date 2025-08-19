@@ -1,7 +1,7 @@
-export const members = [
+export default [
         {
             group: "Cadet Members",
-            value: "cadet",
+            value: "Cadet",
             label: "Cadet",
             reference: "CAPR 39-2 § 2.1."
         },
