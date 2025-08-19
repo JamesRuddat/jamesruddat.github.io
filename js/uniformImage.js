@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Extra items (shirts, slacks, etc.)
   let extraItems = [];
-  if (baseUniform?.value === 'class_a') extraItems = uniformData.classA || [];
-  else if (baseUniform?.value === 'class_b') extraItems = uniformData.classB || [];
+  if (baseUniform?.value === 'class_a') extraItems = uniformData.serviceDressUniform || [];
+  else if (baseUniform?.value === 'class_b') extraItems = uniformData.blueServiceUniform || [];
 
   // Filter by gender
   extraItems = extraItems.filter(u => {
@@ -124,12 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Filter for items that have a reference and show them in order
   const allRegulations = selections
-    .filter(item => item.Reference && item.Reference.trim() !== "")
+    .filter(item => item.reference && item.reference.trim() !== "")
     .map(item => {
       return `
       <div style="margin-bottom: 10px; text-align: left;">
-        <strong>${item.label}:</strong><br>
-        <small>${item.Reference}</small>
+        <strong>${item.label}:</strong>
+        <small>${item.reference}</small>
       </div>
     `;
     });

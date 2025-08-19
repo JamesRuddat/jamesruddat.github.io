@@ -9,8 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById("form-container");
 
     const uniformArrays = {
-        classB: "Class B",
-        classA: "Class A",
+        messDressUniform: "Mess Dress Uniform",
+        semiFormalUniform: "Semi-Formal Uniform",
+        corporateSemiFormalUniform: "Corporate Semi-Formal Uniform",
+        
+        serviceDressUniform: "Service Dress Uniform (Class A)",
+        blueServiceUniform: "Blue Service Uniform (Class B)",
+        corporateServiceDressUniform: "Corporate Semi-Formal",
+        aviatorShirtUniform: "Aviator Shirt Uniform",
+        corporateWorkingUniform: "Corporate Working Uniform",
+
+        airmanBattleUniform: "Airman Battle Uniform",
+        battleDressUniform: "Battle Dress Uniform",
+        flightDutyUniform: "Flight Duty Uniform",
+        corporateWorkingUniform: "Corporate Working Uniform",
+        corporateFlightDutyUniform: "Corporate Flight Duty Uniform",
+        corporateFieldUniform: "Corporate Field Uniform",
+
+        OCPs: "OCPs",
+    };
+
+    const badgeArrays = {
         serviceBadges: "Service Badges",
         aviationBadges: "Aviation Badges",
         occupationalBadges: "Occupational Badges",
@@ -19,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         commandInsigniaPin: "Command Insignia Pin",
         shoulderCords: "Shoulder Cords",
         specialtyTrackBadges: "Specialty Track Badges",
-        cadetBadges: "More",
+        cadetBadges: "Cadet Badges",
     };
 
     function clearElement(elem) {
@@ -45,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderUniformItems(memberType, gender) {
         clearElement(container);
 
-        Object.entries(uniformArrays).forEach(([arrayKey, displayName]) => {
+        Object.entries(badgeArrays).forEach(([arrayKey, displayName]) => {
             const arrayItems = uniformData[arrayKey] || [];
             if (!arrayItems.length) return;
 
