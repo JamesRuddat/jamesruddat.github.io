@@ -1,8 +1,8 @@
 export default [
     // Both
-    { wearer: "All", group: "USAF Uniforms", value: "class_a", label: "Service Dress Uniform (Class A)", uniformCategory: "badge", image: null, reference: null },
-    { wearer: "All", group: "USAF Uniforms", value: "class_b", label: "Blue Service Uniform (Class B)", uniformCategory: "badge", image: null, reference: null },
-    { wearer: "All", group: "USAF Uniforms", value: "abu", label: "Airman Battle Uniform (ABU)", uniformCategory: "patch", image: null, reference: null },
+    { wearer: "All", group: "USAF Uniforms", value: "ClassA", label: "Service Dress Uniform (Class A)", uniformCategory: "badge", image: null, reference: null },
+    { wearer: "All", group: "USAF Uniforms", value: "ClassB", label: "Blue Service Uniform (Class B)", uniformCategory: "badge", image: null, reference: null },
+    { wearer: "All", group: "USAF Uniforms", value: "ABU", label: "Airman Battle Uniform (ABU)", uniformCategory: "patch", image: null, reference: null },
     { wearer: "All", group: "USAF Uniforms", value: "fdu", label: "Flight Duty Uniform (FDU)", uniformCategory: "flight", image: null, reference: null },
     { wearer: "All", group: "18+ Uniforms", value: "cfdu", label: "Corporate Flight Duty Uniform (CFDU)", uniformCategory: "flight", image: null, reference: null },
     { wearer: "All", group: "18+ Uniforms", value: "cfu", label: "Corporate Field Uniform (CFU)", uniformCategory: "patch", image: null, reference: null },

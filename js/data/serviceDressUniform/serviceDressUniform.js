@@ -7,10 +7,7 @@ export default [
         label: "Male Slacks",
         level: null,
         image: `/js/data/blueServiceUniform/images/Slacks_M.svg`,
-        reference: "4.1.11.1.1.4. Trousers. Trousers will be blue and trim-fitted with no bunching at the waist or bagging at the seat.The trousers will be full cut, straight hanging and without cuffs or additional alterations to further taper the leg.The front of the trouser legs will rest on the front of the shoes or boots with a slight break in the crease.The back of the trouser legs will be ⅞ inch longer than the front.The trouser material will match the service dress coat in both fabric and shade 4.1.11.1.1.5. Belt and Buckle.The belt will be blue, cotton web or elastic, solid or woven.The belt will have a plain silver(chrome finish) tip and a buckle, except for General Officers who will wear the Wing and Star on the buckle. The silver tip of the belt will extend beyond the buckle facing the wearer’s left; however, no blue fabric will be visible between the silver tip and silver buckle. 4.1.11.1.1.6. Footwear. Black socks and Low Quarters, Dress Boots, or Combat Boots are required with this uniform.",
-        x: 55,
-        y: 280,
-        size: 190
+        reference: "4.1.11.1.1.4. Trousers. Trousers will be blue and trim-fitted with no bunching at the waist or bagging at the seat.The trousers will be full cut, straight hanging and without cuffs or additional alterations to further taper the leg.The front of the trouser legs will rest on the front of the shoes or boots with a slight break in the crease.The back of the trouser legs will be ⅞ inch longer than the front.The trouser material will match the service dress coat in both fabric and shade 4.1.11.1.1.5. Belt and Buckle.The belt will be blue, cotton web or elastic, solid or woven.The belt will have a plain silver(chrome finish) tip and a buckle, except for General Officers who will wear the Wing and Star on the buckle. The silver tip of the belt will extend beyond the buckle facing the wearer’s left; however, no blue fabric will be visible between the silver tip and silver buckle. 4.1.11.1.1.6. Footwear. Black socks and Low Quarters, Dress Boots, or Combat Boots are required with this uniform."
     },
 
     {
@@ -20,10 +17,7 @@ export default [
         label: "Male officer-style Service Coat",
         level: null,
         image: `/js/data/serviceDressUniform/images/ClassA_M_New.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 300
+        reference: null
     },
     {
         wearer: "male",
@@ -32,10 +26,7 @@ export default [
         label: "Male NCO-style Service Coat",
         level: null,
         image: `/js/data/serviceDressUniform/images/ClassA_M_NCO_New.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 0
+        reference: null
     },
     {
         wearer: "male",
@@ -44,10 +35,7 @@ export default [
         label: "Male Service Coat - Old Style",
         level: null,
         image: `/js/data/serviceDressUniform/images/ClassA_M_Old.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 0
+        reference: null
     },
 
     // Female
@@ -58,10 +46,7 @@ export default [
         label: "Female Slacks",
         level: null,
         image: `/js/data/blueServiceUniform/images/Slacks_F.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 0
+        reference: null
     },
     {
         wearer: "female",
@@ -70,10 +55,7 @@ export default [
         label: "Female officer-style Service Coat",
         level: null,
         image: `/js/data/serviceDressUniform/images/New_F.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 0
+        reference: null
     },
     {
         wearer: "female",
@@ -82,10 +64,7 @@ export default [
         label: "Female NCO-style Service Coat",
         level: null,
         image: `/js/data/serviceDressUniform/images/New_M.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 0
+        reference: null
     },
     {
         wearer: "female",
@@ -94,9 +73,6 @@ export default [
         label: "Female Service Coat - Old Style",
         level: null,
         image: `/js/data/serviceDressUniform/images/Old_F.svg`,
-        reference: null,
-        x: 0,
-        y: 0,
-        size: 0
+        reference: null
     },
 ];

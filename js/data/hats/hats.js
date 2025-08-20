@@ -7,9 +7,7 @@ export default [
         level: null,
         image: null,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -19,9 +17,7 @@ export default [
         level: null,
         image: `/js/data/hats/images/BBDU_Hat.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -31,9 +27,7 @@ export default [
         level: "Basic",
         image: `/js/data/hats/images/M_Flight_Cap.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -43,9 +37,7 @@ export default [
         level: "Intermediate",
         image: `/js/data/hats/images/M_Flight_Cap2.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -55,9 +47,7 @@ export default [
         level: "Master",
         image: `/js/data/hats/images/M_Flight_Cap3.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -67,9 +57,7 @@ export default [
         level: "Basic",
         image: `/js/data/hats/images/F_Flight_Cap.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -79,9 +67,7 @@ export default [
         level: "Intermediate",
         image: `/js/data/hats/images/F_Flight_Cap2.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -91,9 +77,7 @@ export default [
         level: "Master",
         image: `/js/data/hats/images/F_Flight_Cap4.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -103,9 +87,7 @@ export default [
         level: "Basic",
         image: `/js/data/hats/images/M_Service_Cap.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -115,9 +97,7 @@ export default [
         level: "Intermediate",
         image: `/js/data/hats/images/M_Service_Cap2.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -127,9 +107,7 @@ export default [
         level: "Master",
         image: `/js/data/hats/images/M_Service_Cap3.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -139,9 +117,7 @@ export default [
         level: "Basic",
         image: `/js/data/hats/images/F_Service_Cap.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -151,9 +127,7 @@ export default [
         level: "Intermediate",
         image: `/js/data/hats/images/F_Service_Cap2.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
     {
         wearer: "All",
@@ -163,8 +137,6 @@ export default [
         level: "Master",
         image: `/js/data/hats/images/F_Service_Cap3.svg`,
         reference: null,
-        x: 15,
-        y: 10,
-        size: 100
+
     },
 ];
