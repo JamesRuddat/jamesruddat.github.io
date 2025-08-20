@@ -1,11 +1,11 @@
 import * as uniformData from '/js/data/uniformData.js';
-import { getGradesForMemberType, getUniformsForMemberType, getGendersForUniform, getBadgesAndPatchesForUniform, isFlightSuit } from '/js/data/uniformLogic.js';
+import { getGrades, getUniforms, getGenders, getBadgesAndPatches, isFlightSuit } from '/js/data/uniformLogic.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const memberTypeSelect = document.getElementById('member-type');
-    const gradeSelect = document.getElementById('grade-type');
-    const uniformSelect = document.getElementById('uniform-type');
-    const genderSelect = document.getElementById('gender-type');
+    const memberSelect = document.getElementById('member');
+    const gradeSelect = document.getElementById('grade');
+    const uniformSelect = document.getElementById('uniform');
+    const genderSelect = document.getElementById('gender');
     const container = document.getElementById("form-container");
 
     const uniformArrays = {
@@ -33,9 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         serviceBadges: "Service Badges",
         aviationBadges: "Aviation Badges",
         occupationalBadges: "Occupational Badges",
+        commandInsigniaPin: "Command Insignia Pin",
+
+        //abus
         ncsaPatches: "NCSA Patches",
         patches: "Patches",
-        commandInsigniaPin: "Command Insignia Pin",
+        
+        //blues
         shoulderCords: "Shoulder Cords",
         specialtyTrackBadges: "Specialty Track Badges",
         cadetBadges: "Cadet Badges",
@@ -47,18 +51,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function populateSelect(selectElem, options, includePlaceholder = true, placeholderText = 'Select') {
         clearElement(selectElem);
+
         if (includePlaceholder) {
             const opt = document.createElement('option');
             opt.value = '';
             opt.textContent = placeholderText;
+            opt.selected = true;
             selectElem.appendChild(opt);
         }
-        options.forEach(optData => {
-            const opt = document.createElement('option');
-            opt.value = optData.value;
-            opt.textContent = optData.label;
-            selectElem.appendChild(opt);
-        });
+
+        // Detect if options have groups
+        const grouped = options.reduce((acc, opt) => {
+            const group = opt.group || "Other"; // if no group, fallback
+            if (!acc[group]) acc[group] = [];
+            acc[group].push(opt);
+            return acc;
+        }, {});
+
+        // If multiple groups exist, use <optgroup>
+        if (Object.keys(grouped).length > 1) {
+            Object.entries(grouped).forEach(([groupName, groupItems]) => {
+                const optgroup = document.createElement("optgroup");
+                optgroup.label = groupName;
+
+                groupItems.forEach(optData => {
+                    const opt = document.createElement('option');
+                    opt.value = optData.value;
+                    opt.textContent = optData.label;
+                    optgroup.appendChild(opt);
+                });
+
+                selectElem.appendChild(optgroup);
+            });
+        } else {
+            // Flat options
+            options.forEach(optData => {
+                const opt = document.createElement('option');
+                opt.value = optData.value;
+                opt.textContent = optData.label;
+                selectElem.appendChild(opt);
+            });
+        }
     }
 
     function renderUniformItems(members, gender) {
@@ -68,11 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const arrayItems = uniformData[arrayKey] || [];
             if (!arrayItems.length) return;
 
-            // Filter by wearer and gender
-            const filteredItems = arrayItems.filter(
-                item => item.wearer === members || item.wearer === 'All'
-            ).filter(
-                item => !item.gender || item.gender === gender || item.gender === 'unisex'
+            // Filter by wearer
+            const filteredItems = arrayItems.filter(item => {
+                // if item is "All", it applies to everyone
+                if (item.wearer === "All") return true;
+
+                // otherwise, only show if it matches the current member group
+                return item.wearer === member.value;
+            }).filter(item =>
+                !item.gender || item.gender === gender || item.gender === "unisex"
             );
 
             if (!filteredItems.length) return;
@@ -92,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const wrapper = document.createElement("div");
                 wrapper.classList.add("form-group");
 
+                // If multiple items exist, create dropdown with optgroups
                 if (items.length > 1) {
                     const label = document.createElement("label");
                     label.textContent = groupName;
@@ -99,43 +137,58 @@ document.addEventListener('DOMContentLoaded', () => {
                     wrapper.appendChild(document.createElement("br"));
 
                     const select = document.createElement("select");
+
+                    // Placeholder
                     const placeholder = document.createElement("option");
                     placeholder.value = "";
                     placeholder.textContent = `Select ${groupName}`;
                     placeholder.selected = true;
                     select.appendChild(placeholder);
 
-                    items.forEach(item => {
-                        const option = document.createElement("option");
-                        option.value = item.value;
-                        option.textContent = item.label;
-                        select.appendChild(option);
+                    // 🔥 Grouped options
+                    const grouped = items.reduce((acc, item) => {
+                        const group = item.group || "Other"; // assuming you have `group` in item
+                        if (!acc[group]) acc[group] = [];
+                        acc[group].push(item);
+                        return acc;
+                    }, {});
+
+                    Object.entries(grouped).forEach(([subGroup, subItems]) => {
+                        const optgroup = document.createElement("optgroup");
+                        optgroup.label = subGroup;
+
+                        subItems.forEach(item => {
+                            const option = document.createElement("option");
+                            option.value = item.value;
+                            option.textContent = item.label;
+                            optgroup.appendChild(option);
+                        });
+                        select.appendChild(optgroup);
                     });
 
                     wrapper.appendChild(select);
                 } else {
+                    // Single checkbox fallback
                     const item = items[0];
                     const label = document.createElement("label");
-
                     const checkbox = document.createElement("input");
                     checkbox.type = "checkbox";
                     checkbox.value = item.value;
 
                     label.appendChild(checkbox);
                     label.appendChild(document.createTextNode(" " + item.label));
-
+                    
                     wrapper.appendChild(label);
                 }
-
                 container.appendChild(wrapper);
             });
         });
     }
 
     // When member type changes, update grades & uniforms
-    memberTypeSelect.addEventListener('change', () => {
-        const memberType = memberTypeSelect.value;
-        if (!memberType) {
+    memberSelect.addEventListener('change', () => {
+        const member = memberSelect.value;
+        if (!member) {
             populateSelect(gradeSelect, [], true, 'Select Member First');
             populateSelect(uniformSelect, [], true, 'Select Member First');
             populateSelect(genderSelect, [], true, 'Select Uniform First');
@@ -143,8 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const grades = getGradesForMemberType(memberType);
-        const uniforms = getUniformsForMemberType(memberType);
+        const grades = getGrades(member);
+        const uniforms = getUniforms(member);
         populateSelect(gradeSelect, grades, true, 'Select Grade');
         populateSelect(uniformSelect, uniforms, true, 'Select Uniform');
         populateSelect(genderSelect, [], true, 'Select Gender');
@@ -153,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // When uniform changes, update gender
     uniformSelect.addEventListener('change', () => {
-        const memberType = memberTypeSelect.value;
+        const member = memberSelect.value;
         const uniformValue = uniformSelect.value;
         if (!uniformValue) {
             populateSelect(genderSelect, [], true, 'Select Gender');
@@ -161,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const uniforms = getUniformsForMemberType(memberType);
+        const uniforms = getUniforms(member);
         const uniformObj = uniforms.find(u => u.value === uniformValue);
         if (!uniformObj) {
             populateSelect(genderSelect, [], true, 'Select Gender');
@@ -169,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const genders = getGendersForUniform(uniformObj);
+        const genders = getGenders(uniformObj);
         populateSelect(genderSelect, genders, true, 'Select Gender');
 
         // Default gender if not flight suit
@@ -187,20 +240,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // When gender changes, render the items
     genderSelect.addEventListener('change', () => {
-        const memberType = memberTypeSelect.value;
+        const member = memberSelect.value;
         const gender = genderSelect.value;
         if (!gender) {
             clearElement(container);
             return;
         }
-
-        renderUniformItems(memberType, gender);
+        renderUniformItems(member, gender);
     });
 
     // Initialize member types
-    populateSelect(memberTypeSelect, uniformData.memberTypes, true, 'Select Member');
-    memberTypeSelect.value = 'Cadet';
-    memberTypeSelect.dispatchEvent(new Event('change'));
+    populateSelect(memberSelect, uniformData.members, true, 'Select Member');
+    memberSelect.value = 'Cadet';
+    memberSelect.dispatchEvent(new Event('change'));
 
     //--- Prepare sessionStorage itemMap ---
     const itemMap = {};

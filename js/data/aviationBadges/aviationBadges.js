@@ -1,29 +1,134 @@
 export default [
-    { wearer: "All", group: "Pilot Badge", value: "pilot", label: "Pilot", level: "basic", image: null, reference: null },
-    { wearer: "All", group: "Pilot Badge", value: "senior_pilot", label: "Senior Pilot", level: "senior", image: null, reference: null },
-    { wearer: "All", group: "Pilot Badge", value: "command_pilot", label: "Command Pilot", level: "command", image: null, reference: null },
+    {
+        wearer: "All", group: "Pilot Badge", value: "pilot", label: "Pilot", level: "basic", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Pilot Badge", value: "senior_pilot", label: "Senior Pilot", level: "senior", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Pilot Badge", value: "command_pilot", label: "Command Pilot", level: "command", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 
-    { wearer: "All", group: "Observer Badge", value: "observer", label: "Observer", level: "basic", image: null, reference: null },
-    { wearer: "All", group: "Observer Badge", value: "senior_observer", label: "Senior Observer", level: "senior", image: null, reference: null },
-    { wearer: "All", group: "Observer Badge", value: "master_observer", label: "Master Observer", level: "master", image: null, reference: null },
+    {
+        wearer: "All", group: "Observer Badge", value: "observer", label: "Observer", level: "basic", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Observer Badge", value: "senior_observer", label: "Senior Observer", level: "senior", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Observer Badge", value: "master_observer", label: "Master Observer", level: "master", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 
-    { wearer: "All", group: "Air Crew Badge", value: "air_crew", label: "Air Crew", level: "basic", image: null, reference: null },
-    { wearer: "All", group: "Air Crew Badge", value: "senior_air_crew", label: "Senior Air Crew", level: "senior", image: null, reference: null },
-    { wearer: "All", group: "Air Crew Badge", value: "master_air_crew", label: "Master Air Crew", level: "master", image: null, reference: null },
+    {
+        wearer: "All", group: "Air Crew Badge", value: "air_crew", label: "Air Crew", level: "basic", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Air Crew Badge", value: "senior_air_crew", label: "Senior Air Crew", level: "senior", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Air Crew Badge", value: "master_air_crew", label: "Master Air Crew", level: "master", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 
-    { wearer: "All", group: "Glider Pilot Badge", value: "glider_pilot", label: "Glider Pilot", level: null, image: null, reference: null },
-    { wearer: "All", group: "Balloon Pilot Badge", value: "balloon_pilot", label: "Balloon Pilot", level: null, image: null, reference: null },
-    { wearer: "All", group: "Solo Badge", value: "solo_badge", label: "Solo Badge", level: null, image: null, reference: null },
-    { wearer: "All", group: "Pre-Solo Badge", value: "pre_solo_badge", label: "Pre-Solo Badge", level: null, image: null, reference: null },
+    {
+        wearer: "All", group: "Glider Pilot Badge", value: "glider_pilot", label: "Glider Pilot", level: null, image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Balloon Pilot Badge", value: "balloon_pilot", label: "Balloon Pilot", level: null, image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Solo Badge", value: "solo_badge", label: "Solo Badge", level: null, image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "Pre-Solo Badge", value: "pre_solo_badge", label: "Pre-Solo Badge", level: null, image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 
-    { wearer: "All", group: "sUAS Pilot Badge", value: "suas_pilot", label: "sUAS Pilot", level: "basic", image: null, reference: null },
-    { wearer: "All", group: "sUAS Pilot Badge", value: "senior_suas_pilot", label: "Senior sUAS Pilot", level: "senior", image: null, reference: null },
-    { wearer: "All", group: "sUAS Pilot Badge", value: "command_suas_pilot", label: "Command sUAS Pilot", level: "command", image: null, reference: null },
+    {
+        wearer: "All", group: "sUAS Pilot Badge", value: "suas_pilot", label: "sUAS Pilot", level: "basic", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "sUAS Pilot Badge", value: "senior_suas_pilot", label: "Senior sUAS Pilot", level: "senior", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "sUAS Pilot Badge", value: "command_suas_pilot", label: "Command sUAS Pilot", level: "command", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 
-    { wearer: "All", group: "sUAS Technician Badge", value: "suas_technician", label: "sUAS Technician", level: "basic", image: null, reference: null },
-    { wearer: "All", group: "sUAS Technician Badge", value: "senior_suas_technician", label: "Senior sUAS Technician", level: "senior", image: null, reference: null },
-    { wearer: "All", group: "sUAS Technician Badge", value: "master_suas_technician", label: "Master sUAS Technician", level: "master", image: null, reference: null },
+    {
+        wearer: "All", group: "sUAS Technician Badge", value: "suas_technician", label: "sUAS Technician", level: "basic", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "sUAS Technician Badge", value: "senior_suas_technician", label: "Senior sUAS Technician", level: "senior", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "All", group: "sUAS Technician Badge", value: "master_suas_technician", label: "Master sUAS Technician", level: "master", image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 
-    { wearer: "Cadet", group: "Cadet sUAS Badge", value: "cadet_suas_badge", label: "Cadet sUAS Badge", level: null, image: null, reference: null },
-    { wearer: "Cadet", group: "Cadet Model Rocketry Badge", value: "cadet_model_rocketry_badge", label: "Cadet Model Rocketry Badge", level: null, image: null, reference: null },
+    {
+        wearer: "Cadet", group: "Cadet sUAS Badge", value: "cadet_suas_badge", label: "Cadet sUAS Badge", level: null, image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
+    {
+        wearer: "Cadet", group: "Cadet Model Rocketry Badge", value: "cadet_model_rocketry_badge", label: "Cadet Model Rocketry Badge", level: null, image: null, reference: null,
+        x: 15,
+        y: 10,
+        size: 100
+    },
 ];
