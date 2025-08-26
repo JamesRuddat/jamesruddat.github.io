@@ -49,7 +49,7 @@
                 <div class="main container-inner">
                     <h2>Your Uniform</h2>
                     <div
-                        style="background-color: yellow; border-left: 4px solid #0073e6; padding: 10px; margin-bottom: 15px;">
+                        style="background-color: yellow; border-left: 4px solid gold; padding: 10px; margin-bottom: 15px;">
                         <strong>Notice:</strong> We are currently updating the uniform images. Updates can be viewed on
                         the Uniforms page.
                         <br><br>
@@ -58,15 +58,36 @@
                         form than a visual preview.
                     </div>
 
-                    <div id="uniformDisplay" style="margin-top:20px;"></div>
+                    <button id="uniformButton">Create Another Uniform</button>
+                    <br><br>
 
-                    <br>
-                    <button id="myButton">Create Another Uniform</button>
-                    <script type="text/javascript">
-                        document.getElementById("myButton").onclick = function () {
-                            location.href = "/../index.html";
-                        };
-                    </script>
+                    <!-- 1. Small full picture + general description -->
+                    <div class="uniform-overview">
+                        <div id="overview-image" class="overview-image">Full Image</div>
+                        <div id="overview-text" class="overview-text">General description</div>
+                    </div>
+                    
+                    <!-- 2. Full-width zoom (chest) -->
+                    <div id="uniform-main" class="uniform-main">Full-width zoom (chest) Image</div>
+                    
+                    <!-- 3. Regulations split into two columns -->
+                    <div class="uniform-regulations">
+                        <div id="reg-left" class="reg-left">Badge Regulations (For image above) ^</div>
+                        <div id="reg-right" class="reg-right">Uniform Regulations</div>
+                    </div>
+                    
+                    <!-- 4. Optional small images + text -->
+                    <div class="uniform-extra">
+                        <div id="extra-left" class="extra-left">Optional Collar Image</div>
+                        <div id="extra-right" class="extra-right">Optional Hat Image</div>
+                        <div id="extra-text" class="extra-text">Optional text</div>
+                    </div>
+                    
+                    <!-- 5. Outdoor/Outerwear images -->
+                    <div class="uniform-overview">
+                        <div id="outerwear-image" class="outerwear-image">Outerwear Image</div>
+                        <div id="outerwear-text" class="outerwear-text">Outerwear description</div>
+                    </div>
                 </div>
             </div>
         </main>

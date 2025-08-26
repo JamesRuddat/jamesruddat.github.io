@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const genderSelect = document.getElementById('gender');
     const container = document.getElementById("form-container");
 
-    const uniformArrays = {
+    const tempArrays = {
         messDressUniform: "Mess Dress Uniform",
         semiFormalUniform: "Semi-Formal Uniform",
         corporateSemiFormalUniform: "Corporate Semi-Formal Uniform",
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         blueServiceUniform: "Blue Service Uniform (Class B)",
         corporateServiceDressUniform: "Corporate Semi-Formal",
         aviatorShirtUniform: "Aviator Shirt Uniform",
-        corporateWorkingUniform: "Corporate Working Uniform",
 
         airmanBattleUniform: "Airman Battle Uniform",
         battleDressUniform: "Battle Dress Uniform",
@@ -27,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         corporateFieldUniform: "Corporate Field Uniform",
 
         OCPs: "OCPs",
-    };
 
-    const badgeArrays = {
         serviceBadges: "Service Badges",
         aviationBadges: "Aviation Badges",
         occupationalBadges: "Occupational Badges",
@@ -38,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //abus
         ncsaPatches: "NCSA Patches",
         patches: "Patches",
-        
+
         //blues
         shoulderCords: "Shoulder Cords",
         specialtyTrackBadges: "Specialty Track Badges",
@@ -102,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedUniform = uniform.value.toLowerCase();
 
         // Only loop through arrays that match this uniform
-        Object.entries(badgeArrays).forEach(([arrayKey, displayName]) => {
+        Object.entries(tempArrays).forEach(([arrayKey, displayName]) => {
             const arrayItems = (uniformData[arrayKey] || []).filter(item => {
                 // check if item is for this uniform
                 if (item.uniformCategory && !item.uniformCategory.toLowerCase().includes(selectedUniform)) {

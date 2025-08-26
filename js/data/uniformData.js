@@ -19,9 +19,9 @@ export { default as cadetBadges } from './cadetBadges/cadetBadges.js';
 
 export { default as hats } from './hats/hats.js';
 export { default as nameplates } from './nameplates/nameplates.js';
-// export { default as collarInsignia } from './collarInsignia/collarInsignia.js';
+export { default as collars } from './collars/collars.js';
 
-// Uniforms
+// -- Uniforms --
 //export { default as messDressUniform } from './messDressUniform/messDressUniform.js';
 //export { default as semiFormalUniform } from './semiFormalUniform/semiFormalUniform.js';
 //export { default as corporateSemiFormalUniform } from './corporateSemiFormalUniform/corporateSemiFormalUniform.js';

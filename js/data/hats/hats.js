@@ -17,7 +17,6 @@ export default [
         level: null,
         image: `/js/data/hats/images/BBDU_Hat.svg`,
         reference: null,
-
     },
     {
         wearer: "All",

@@ -305,3 +305,69 @@ a:hover {
 		width: 100%;
 	}
 }
+
+
+
+
+
+
+/* uniform page */
+.uniform-overview,
+.uniform-regulations,
+.uniform-extra {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+}
+
+/* Overview section */
+.overview-image {
+	flex: 0 0 300px;
+	height: 800px;
+	position: relative;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.overview-text {
+	flex: 1 1 300px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+/* Main uniform display */
+.uniform-main {
+	width: 100%;
+	border: 1px solid #ccc;
+	height: 500px;
+	position: relative;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+/* Regulations section */
+.reg-left,
+.reg-right {
+	flex: 1 1 1000px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+/* Extra uniform items */
+.extra-left,
+.extra-right,
+.outerwear-image {
+	flex: 0 0 300px;
+	height: 400px;
+	position: relative;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.extra-text,
+.outerwear-text {
+	flex: 1 1 300px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
