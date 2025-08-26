@@ -1,9 +1,21 @@
 export const positions = [
-    { names: ['shirt', 'coat'], x: 0, y: 0, size: 300 },
-    { names: ['pants', 'slacks', 'trousers', 'skirt'], x: 55, y: 280, size: 190 },
-    { names: ['hat'], x: 110, y: 0, size: 60 },
-    { names: ['Cord'], x: 235, y: 34, size: 30 },
-    { names: ['shoes'], x: 100, y: 520, size: 80 },
+    // Back to front
+    { names: ['shoes', 'boots', 'slippers'], x: 100, y: 520, size: 80 },
+    { names: ['t-shirt', 'shirt'], x: 40, y: 160, size: 220 },
+    
+    
+    { names: ['pants', 'slacks', 'trousers', 'skirt'], x: 80, y: 370, size: 140 },
+    { names: ['coat'], x: 40, y: 160, size: 220},
+
+    { names: ['hat', 'Service Uniform'], x: 110, y: 0, size: 60 },
+    { names: ['Cord'], x: 215, y: 192, size: 34 },
     { names: ['Grade'], x: 100, y: 120, size: 50 },
-    { names: ['Nameplate'], x: 65, y: 115, size: 60 },
+    { names: ['Nameplate'], x: 92, y: 235, size: 50 },
+    
+    { names: ['Tie'], x: 100, y: 520, size: 30 },
+    
+    
+    
+    
+    
 ];

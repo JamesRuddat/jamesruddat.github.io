@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Detect if options have groups
         const grouped = options.reduce((acc, opt) => {
-            const group = opt.group || "Other"; // if no group, fallback
+            const group = opt.group || "Other";
             if (!acc[group]) acc[group] = [];
             acc[group].push(opt);
             return acc;
@@ -94,32 +94,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function renderUniformItems(members, gender) {
+    function renderUniformItems(gender) {
         clearElement(container);
 
+        if (!uniform?.value) return; // nothing selected
+
+        const selectedUniform = uniform.value.toLowerCase();
+
+        // Only loop through arrays that match this uniform
         Object.entries(badgeArrays).forEach(([arrayKey, displayName]) => {
-            const arrayItems = uniformData[arrayKey] || [];
+            const arrayItems = (uniformData[arrayKey] || []).filter(item => {
+                // check if item is for this uniform
+                if (item.uniformCategory && !item.uniformCategory.toLowerCase().includes(selectedUniform)) {
+                    return false;
+                }
+
+                // check wearer (cadet/senior)
+                if (item.wearer !== "All" && item.wearer !== member.value) {
+                    return false;
+                }
+
+                // check gender
+                if (item.gender && item.gender !== gender && item.gender !== "unisex") {
+                    return false;
+                }
+
+                return true;
+            });
+
             if (!arrayItems.length) return;
-
-            // Filter by wearer
-            const filteredItems = arrayItems.filter(item => {
-                // if item is "All", it applies to everyone
-                if (item.wearer === "All") return true;
-
-                // otherwise, only show if it matches the current member group
-                return item.wearer === member.value;
-            }).filter(item =>
-                !item.gender || item.gender === gender || item.gender === "unisex"
-            );
-
-            if (!filteredItems.length) return;
 
             const header = document.createElement("h4");
             header.textContent = displayName;
             container.appendChild(header);
 
             // Group by "group"
-            const groupedData = filteredItems.reduce((acc, item) => {
+            const groupedData = arrayItems.reduce((acc, item) => {
                 if (!acc[item.group]) acc[item.group] = [];
                 acc[item.group].push(item);
                 return acc;
@@ -129,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const wrapper = document.createElement("div");
                 wrapper.classList.add("form-group");
 
-                // If multiple items exist, create dropdown with optgroups
                 if (items.length > 1) {
                     const label = document.createElement("label");
                     label.textContent = groupName;
@@ -145,15 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     placeholder.selected = true;
                     select.appendChild(placeholder);
 
-                    // 🔥 Grouped options
-                    const grouped = items.reduce((acc, item) => {
-                        const group = item.group || "Other"; // assuming you have `group` in item
+                    // Group by subgroup
+                    const groupedItems = items.reduce((acc, item) => {
+                        const group = item.group || "Other";
                         if (!acc[group]) acc[group] = [];
                         acc[group].push(item);
                         return acc;
                     }, {});
 
-                    Object.entries(grouped).forEach(([subGroup, subItems]) => {
+                    Object.entries(groupedItems).forEach(([subGroup, subItems]) => {
                         const optgroup = document.createElement("optgroup");
                         optgroup.label = subGroup;
 
@@ -177,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     label.appendChild(checkbox);
                     label.appendChild(document.createTextNode(" " + item.label));
-                    
+
                     wrapper.appendChild(label);
                 }
                 container.appendChild(wrapper);
@@ -196,11 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const grades = getGrades(member);
-        const uniforms = getUniforms(member);
-        populateSelect(gradeSelect, grades, true, 'Select Grade');
-        populateSelect(uniformSelect, uniforms, true, 'Select Uniform');
-        populateSelect(genderSelect, [], true, 'Select Gender');
+        populateSelect(gradeSelect, getGrades(member), true);
+        populateSelect(uniformSelect, getUniforms(member), true);
+        populateSelect(genderSelect, [], true);
         clearElement(container);
     });
 
@@ -209,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const member = memberSelect.value;
         const uniformValue = uniformSelect.value;
         if (!uniformValue) {
-            populateSelect(genderSelect, [], true, 'Select Gender');
+            populateSelect(genderSelect, [], true);
             clearElement(container);
             return;
         }
@@ -217,25 +224,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const uniforms = getUniforms(member);
         const uniformObj = uniforms.find(u => u.value === uniformValue);
         if (!uniformObj) {
-            populateSelect(genderSelect, [], true, 'Select Gender');
+            populateSelect(genderSelect, [], true);
             clearElement(container);
             return;
         }
-
-        const genders = getGenders(uniformObj);
-        populateSelect(genderSelect, genders, true, 'Select Gender');
+        populateSelect(genderSelect, getGenders(uniformObj), true);
 
         // Default gender if not flight suit
-        if (!isFlightSuit(uniformObj)) {
-            genderSelect.value = 'male';
-        } else {
-            // select first available gender if not default
-            genderSelect.selectedIndex = 1;
-        }
+        if (!isFlightSuit(uniformObj)) genderSelect.value = 'male';
+        else genderSelect.selectedIndex = 1;
 
-        // Trigger the rendering after setting the gender
-        const event = new Event('change');
-        genderSelect.dispatchEvent(event);
+        // Trigger after setting the gender
+        genderSelect.dispatchEvent(new Event('change'));
     });
 
     // When gender changes, render the items
@@ -250,42 +250,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize member types
-    populateSelect(memberSelect, uniformData.members, true, 'Select Member');
+    populateSelect(memberSelect, uniformData.members, true);
     memberSelect.value = 'Cadet';
     memberSelect.dispatchEvent(new Event('change'));
 
-    //--- Prepare sessionStorage itemMap ---
+    // --- Prepare itemMap for form submission ---
     const itemMap = {};
-
-    // Loop over every property in uniformData
     Object.entries(uniformData).forEach(([key, arrayItems]) => {
         if (Array.isArray(arrayItems)) {
             arrayItems.forEach(item => {
-                // Only add items with a value
                 if (item.value) itemMap[item.value] = item;
             });
         }
     });
 
-    //--- Form submit ---
+    // Form submit
     const form = document.getElementById('uniform-form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
         const selectedObjects = [];
 
         document.querySelectorAll('select').forEach(select => {
-            if (select.value) {
-                const item = itemMap[select.value];
-                if (item) selectedObjects.push(item);
-            }
+            if (select.value) selectedObjects.push(itemMap[select.value]);
         });
 
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            if (checkbox.checked) {
-                const item = itemMap[checkbox.value];
-                if (item) selectedObjects.push(item);
-            }
+            if (checkbox.checked) selectedObjects.push(itemMap[checkbox.value]);
         });
 
         sessionStorage.setItem('uniformSelections', JSON.stringify(selectedObjects));
