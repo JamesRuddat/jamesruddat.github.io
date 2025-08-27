@@ -1,5 +1,6 @@
 import * as uniformData from '/js/data/uniformData.js';
-import { getGrades, getUniforms, getGenders, getBadgesAndPatches, isFlightSuit } from '/js/data/uniformLogic.js';
+import { getGrades, getUniforms, getGenders, isFlightSuit } from '/js/data/uniformLogic.js';
+import { uniformBadgeMap } from '/js/data/uniforms/uniformBadgeMap.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const memberSelect = document.getElementById('member');
@@ -7,40 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const uniformSelect = document.getElementById('uniform');
     const genderSelect = document.getElementById('gender');
     const container = document.getElementById("form-container");
-
-    const tempArrays = {
-        messDressUniform: "Mess Dress Uniform",
-        semiFormalUniform: "Semi-Formal Uniform",
-        corporateSemiFormalUniform: "Corporate Semi-Formal Uniform",
-
-        serviceDressUniform: "Service Dress Uniform (Class A)",
-        blueServiceUniform: "Blue Service Uniform (Class B)",
-        corporateServiceDressUniform: "Corporate Semi-Formal",
-        aviatorShirtUniform: "Aviator Shirt Uniform",
-
-        airmanBattleUniform: "Airman Battle Uniform",
-        battleDressUniform: "Battle Dress Uniform",
-        flightDutyUniform: "Flight Duty Uniform",
-        corporateWorkingUniform: "Corporate Working Uniform",
-        corporateFlightDutyUniform: "Corporate Flight Duty Uniform",
-        corporateFieldUniform: "Corporate Field Uniform",
-
-        OCPs: "OCPs",
-
-        serviceBadges: "Service Badges",
-        aviationBadges: "Aviation Badges",
-        occupationalBadges: "Occupational Badges",
-        commandInsigniaPin: "Command Insignia Pin",
-
-        //abus
-        ncsaPatches: "NCSA Patches",
-        patches: "Patches",
-
-        //blues
-        shoulderCords: "Shoulder Cords",
-        specialtyTrackBadges: "Specialty Track Badges",
-        cadetBadges: "Cadet Badges",
-    };
 
     function clearElement(elem) {
         while (elem.firstChild) elem.removeChild(elem.firstChild);
@@ -91,78 +58,84 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function renderUniformItems(gender) {
-        clearElement(container);
 
-        if (!uniform?.value) return; // nothing selected
+    // 1️⃣ Filter uniform items based on uniform and gender
+    function getUniformItems(selectedUniform, gender, member) {
+        const uniformObj = uniformBadgeMap[selectedUniform];
 
-        const selectedUniform = uniform.value.toLowerCase();
+        const filteredData = {};
 
-        // Only loop through arrays that match this uniform
-        Object.entries(tempArrays).forEach(([arrayKey, displayName]) => {
-            const arrayItems = (uniformData[arrayKey] || []).filter(item => {
-                // check if item is for this uniform
-                if (item.uniformCategory && !item.uniformCategory.toLowerCase().includes(selectedUniform)) {
+        Object.entries(uniformObj).forEach(([groupKey, groupObj]) => {
+            const { displayName, items } = groupObj;
+            const filteredItems = items.filter(item => {
+                if (item.wearer && item.wearer !== "All" && item.wearer !== member) {
+                    // Allow Male/Female items if member type is Cadet and gender matches
+                    if (item.wearer === "Male" && gender === "Male") return true;
+                    if (item.wearer === "Female" && gender === "Female") return true;
                     return false;
                 }
-
-                // check wearer (cadet/senior)
-                if (item.wearer !== "All" && item.wearer !== member.value) {
-                    return false;
-                }
-
-                // check gender
-                if (item.gender && item.gender !== gender && item.gender !== "unisex") {
-                    return false;
-                }
-
+                if (item.gender && item.gender !== gender && item.gender !== "unisex") return false;
                 return true;
             });
 
-            if (!arrayItems.length) return;
+            if (filteredItems.length) {
+                filteredData[groupKey] = { displayName, items: filteredItems };
+            }
+        });
 
+        console.log("Selected Uniform:", selectedUniform);
+        console.log("Uniform Array:", uniformBadgeMap[selectedUniform]);
+
+        return filteredData;
+    }
+
+    // 2️⃣ Render filtered uniform items to the container
+    function renderUniformItems(filteredData, container) {
+        clearElement(container);
+
+        Object.entries(filteredData).forEach(([groupKey, groupObj]) => {
+            const { displayName, items: arrayItems } = groupObj;
+
+            // Header for the group
             const header = document.createElement("h4");
             header.textContent = displayName;
             container.appendChild(header);
 
-            // Group by "group"
+            // Group items by their "group" property
             const groupedData = arrayItems.reduce((acc, item) => {
-                if (!acc[item.group]) acc[item.group] = [];
-                acc[item.group].push(item);
+                const group = item.group || "Other";
+                if (!acc[group]) acc[group] = [];
+                acc[group].push(item);
                 return acc;
             }, {});
 
-            Object.entries(groupedData).forEach(([groupName, items]) => {
+            Object.entries(groupedData).forEach(([groupName, groupItems]) => {
                 const wrapper = document.createElement("div");
                 wrapper.classList.add("form-group");
 
-                if (items.length > 1) {
+                if (groupItems.length > 1) {
                     const label = document.createElement("label");
                     label.textContent = groupName;
                     wrapper.appendChild(label);
                     wrapper.appendChild(document.createElement("br"));
 
                     const select = document.createElement("select");
-
-                    // Placeholder
                     const placeholder = document.createElement("option");
                     placeholder.value = "";
-                    placeholder.textContent = `Select ${groupName}`;
+                    placeholder.textContent = `Select`;
                     placeholder.selected = true;
                     select.appendChild(placeholder);
 
-                    // Group by subgroup
-                    const groupedItems = items.reduce((acc, item) => {
+                    const subGroups = groupItems.reduce((acc, item) => {
                         const group = item.group || "Other";
                         if (!acc[group]) acc[group] = [];
                         acc[group].push(item);
                         return acc;
                     }, {});
 
-                    Object.entries(groupedItems).forEach(([subGroup, subItems]) => {
+                    Object.entries(subGroups).forEach(([subGroup, subItems]) => {
                         const optgroup = document.createElement("optgroup");
                         optgroup.label = subGroup;
-
                         subItems.forEach(item => {
                             const option = document.createElement("option");
                             option.value = item.value;
@@ -173,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     wrapper.appendChild(select);
+
                 } else {
-                    // Single checkbox fallback
-                    const item = items[0];
+                    const item = groupItems[0];
                     const label = document.createElement("label");
                     const checkbox = document.createElement("input");
                     checkbox.type = "checkbox";
@@ -183,15 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     label.appendChild(checkbox);
                     label.appendChild(document.createTextNode(" " + item.label));
-
                     wrapper.appendChild(label);
                 }
+
                 container.appendChild(wrapper);
             });
         });
     }
 
-    // When member type changes, update grades & uniforms
+    // --- When member changes, update grades & uniforms ---
     memberSelect.addEventListener('change', () => {
         const member = memberSelect.value;
         if (!member) {
@@ -208,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearElement(container);
     });
 
-    // When uniform changes, update gender
+    // --- When uniform changes, update gender ---
     uniformSelect.addEventListener('change', () => {
         const member = memberSelect.value;
         const uniformValue = uniformSelect.value;
@@ -228,25 +201,29 @@ document.addEventListener('DOMContentLoaded', () => {
         populateSelect(genderSelect, getGenders(uniformObj), true);
 
         // Default gender if not flight suit
-        if (!isFlightSuit(uniformObj)) genderSelect.value = 'male';
+        if (!isFlightSuit(uniformObj)) genderSelect.value = 'Male';
         else genderSelect.selectedIndex = 1;
 
         // Trigger after setting the gender
         genderSelect.dispatchEvent(new Event('change'));
     });
 
-    // When gender changes, render the items
+    // --- When gender changes, render the items ---
     genderSelect.addEventListener('change', () => {
         const member = memberSelect.value;
+        const selectedUniform = uniformSelect.value;
+
         const gender = genderSelect.value;
         if (!gender) {
             clearElement(container);
             return;
         }
-        renderUniformItems(member, gender);
+
+        const filteredData = getUniformItems(selectedUniform, gender, member);
+        renderUniformItems(filteredData, container);
     });
 
-    // Initialize member types
+    // --- Initialize member types ---
     populateSelect(memberSelect, uniformData.members, true);
     memberSelect.value = 'Cadet';
     memberSelect.dispatchEvent(new Event('change'));
@@ -261,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form submit
+    // --- Form submit ---
     const form = document.getElementById('uniform-form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();

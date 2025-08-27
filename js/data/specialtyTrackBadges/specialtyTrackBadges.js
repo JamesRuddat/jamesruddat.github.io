@@ -82,11 +82,11 @@ export default [
 
     },
     {
-        wearer: "All", group: "Communication", value: "communication_badge_senior", label: "Communication Badge - Senior", level: "senior", image: null, reference: null,
+        wearer: "Senior", group: "Communication", value: "communication_badge_senior", label: "Communication Badge - Senior", level: "senior", image: null, reference: null,
 
     },
     {
-        wearer: "All", group: "Communication", value: "communication_badge_master", label: "Communication Badge - Master", level: "master", image: null, reference: null,
+        wearer: "Senior", group: "Communication", value: "communication_badge_master", label: "Communication Badge - Master", level: "master", image: null, reference: null,
 
     },
 
@@ -95,11 +95,11 @@ export default [
 
     },
     {
-        wearer: "All", group: "Emergency Services", value: "emergency_services_badge_senior", label: "Emergency Services Badge - Senior", level: "senior", image: null, reference: null,
+        wearer: "Senior", group: "Emergency Services", value: "emergency_services_badge_senior", label: "Emergency Services Badge - Senior", level: "senior", image: null, reference: null,
 
     },
     {
-        wearer: "All", group: "Emergency Services", value: "emergency_services_badge_master", label: "Emergency Services Badge - Master", level: "master", image: null, reference: null,
+        wearer: "Senior", group: "Emergency Services", value: "emergency_services_badge_master", label: "Emergency Services Badge - Master", level: "master", image: null, reference: null,
 
     },
 
@@ -121,11 +121,11 @@ export default [
 
     },
     {
-        wearer: "All", group: "Historian", value: "historian_badge_senior", label: "Historian Badge - Senior", level: "senior", image: null, reference: null,
+        wearer: "Senior", group: "Historian", value: "historian_badge_senior", label: "Historian Badge - Senior", level: "senior", image: null, reference: null,
 
     },
     {
-        wearer: "All", group: "Historian", value: "historian_badge_master", label: "Historian Badge - Master", level: "master", image: null, reference: null,
+        wearer: "Senior", group: "Historian", value: "historian_badge_master", label: "Historian Badge - Master", level: "master", image: null, reference: null,
 
     },
 
@@ -134,11 +134,11 @@ export default [
 
     },
     {
-        wearer: "All", group: "Information Technology", value: "information_technology_badge_senior", label: "Information Technology Badge - Senior", level: "senior", image: null, reference: null,
+        wearer: "Senior", group: "Information Technology", value: "information_technology_badge_senior", label: "Information Technology Badge - Senior", level: "senior", image: null, reference: null,
 
     },
     {
-        wearer: "All", group: "Information Technology", value: "information_technology_badge_master", label: "Information Technology Badge - Master", level: "master", image: null, reference: null,
+        wearer: "Senior", group: "Information Technology", value: "information_technology_badge_master", label: "Information Technology Badge - Master", level: "master", image: null, reference: null,
 
     },
 

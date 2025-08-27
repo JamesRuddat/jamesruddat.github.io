@@ -1,7 +1,7 @@
 export default [
     // Male
     {
-        wearer: "male",
+        wearer: "Male",
         group: "Male Trousers",
         value: "male_trousers",
         label: "Male Trousers",
@@ -11,7 +11,7 @@ export default [
     },
 
     {
-        wearer: "male",
+        wearer: "Male",
         group: "Male Service Coat",
         value: "male_officer_service_coat_new",
         label: "Male officer-style Service Coat",
@@ -20,7 +20,7 @@ export default [
         reference: null
     },
     {
-        wearer: "male",
+        wearer: "Male",
         group: "Male Service Coat",
         value: "male_nco_service_coat_new",
         label: "Male NCO-style Service Coat",
@@ -29,7 +29,7 @@ export default [
         reference: null
     },
     {
-        wearer: "male",
+        wearer: "Male",
         group: "Male Service Coat",
         value: "male_service_coat_old",
         label: "Male Service Coat - Old Style",
@@ -40,7 +40,7 @@ export default [
 
     // Female
     {
-        wearer: "female",
+        wearer: "Female",
         group: "Female Slacks",
         value: "female_slacks",
         label: "Female Slacks",
@@ -49,7 +49,7 @@ export default [
         reference: null
     },
     {
-        wearer: "female",
+        wearer: "Female",
         group: "Female Service Coat",
         value: "female_officer_service_coat_new",
         label: "Female officer-style Service Coat",
@@ -58,7 +58,7 @@ export default [
         reference: null
     },
     {
-        wearer: "female",
+        wearer: "Female",
         group: "Female Service Coat",
         value: "female_nco_service_coat_new",
         label: "Female NCO-style Service Coat",
@@ -67,7 +67,7 @@ export default [
         reference: null
     },
     {
-        wearer: "female",
+        wearer: "Female",
         group: "Female Service Coat",
         value: "female_service_coat_old",
         label: "Female Service Coat - Old Style",

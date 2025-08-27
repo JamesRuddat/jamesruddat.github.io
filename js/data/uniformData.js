@@ -33,6 +33,10 @@ export { default as blueServiceUniform } from './blueServiceUniform/blueServiceU
 //export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBattleUniform.js';
 //export { default as battleDressUniform } from './battleDressUniform/battleDressUniform.js';
 
+//export { default as operationalCamouflagePattern } from './operationalCamouflagePattern/operationalCamouflagePattern.js';
+
+//export { default as honorGuardUniform } from './honorGuardUniform/honorGuardUniform.js';
+
 //export { default as flightDutyUniform } from './flightDutyUniform/flightDutyUniform.js';
 //export { default as corporateWorkingUniform } from './corporateWorkingUniform/corporateWorkingUniform.js';
 //export { default as corporateFlightDutyUniform } from './corporateFlightDutyUniform/corporateFlightDutyUniform.js';

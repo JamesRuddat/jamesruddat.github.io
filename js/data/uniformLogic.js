@@ -27,31 +27,3 @@ export function getGenders(uniformObj) {
     
     return uniformData.genders.filter(u => "Gender Type".includes(u.group));
 }
-
-export function getBadgesAndPatches(uniformObj) {
-    const category = uniformObj?.uniformCategory;
-    const result = {
-        specialtyTrackBadges: [],
-        aviationBadges: [],
-        occupationalBadges: [],
-        ncsaPatches: [],
-        patches: []
-    };
-
-    if (category === 'badge') {
-        result.specialtyTrackBadges = uniformData.specialtyTrackBadges;
-        result.aviationBadges = uniformData.aviationBadges;
-        result.occupationalBadges = uniformData.occupationalBadges;
-    }
-
-    if (category === 'patch') {
-        result.ncsaPatches = uniformData.ncsaPatches;
-        result.patches = uniformData.patches;
-    }
-
-    if (category === 'flight') {
-        result.ncsaPatches = uniformData.ncsaPatches;
-    }
-
-    return result;
-}
