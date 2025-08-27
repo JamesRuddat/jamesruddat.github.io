@@ -10,8 +10,8 @@ function renderUniform() {
   // --- Overview info ---
   const grade = selections.find(i => i.group?.toLowerCase().includes('grade'));
   const uniform = selections.find(i => ['USAF Uniforms', 'Cadet Uniforms', 'Senior Uniforms', '18+ Uniforms'].includes(i.group));
-  const selectedCollar = selections.find(i => i.group === 'Collar');
-  const selectedHat = selections.find(i => i.group === 'Hat');
+  const selectedCollar = selections.find(i => ['Collar', 'Collar', 'Collar'].includes(i.group));
+  const selectedHat = selections.find(i => ['Male Service Cap', 'Female Service Cap', 'Male Flight Cap', 'Female Flight Cap'].includes(i.group));
 
   document.getElementById('overview-text').innerHTML = `
     <strong>Grade:</strong> ${grade?.label || 'No Grade Selected'}<br>
@@ -20,6 +20,16 @@ function renderUniform() {
 
   // --- Gather items to render ---
   const itemsToRender = selections.filter(i => i.image); // only items that have an image
+  itemsToRender.sort((a, b) => {
+    const posA = positions.find(p => p.names.some(n => a.group?.toLowerCase().includes(n.toLowerCase()))) || {};
+    const posB = positions.find(p => p.names.some(n => b.group?.toLowerCase().includes(n.toLowerCase()))) || {};
+
+    const indexA = positions.indexOf(posA);
+    const indexB = positions.indexOf(posB);
+
+    return indexA - indexB;
+  });
+
 
   // Add hat & collar if selected
   if (selectedCollar) itemsToRender.push(selectedCollar);

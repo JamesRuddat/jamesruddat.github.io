@@ -1,17 +1,28 @@
 export const positions = [
-    // Back to front
-    { names: ['shoes', 'boots', 'slippers'], x: 100, y: 520, size: 80 },
-    
-    { names: ['t-shirt', 'shirt'], x: 40, y: 60, size: 220 },
-    { names: ['pants', 'slacks', 'trousers', 'skirt'], x: 80, y: 270, size: 140 },
-    
-    { names: ['coat'], x: 40, y: 60, size: 220},
+    // Back
+    { names: ['shoes'], x: 100, y: 520, size: 80 },
+    { names: ['boots'], x: 100, y: 520, size: 80 },
+    { names: ['slippers'], x: 100, y: 520, size: 80 },
 
-    { names: ['hat', 'Service Uniform'], x: 110, y: 0, size: 60 },
-    { names: ['Cord'], x: 215, y: 192, size: 34 },
-    { names: ['Grade'], x: 100, y: 120, size: 50 },
-    { names: ['Nameplate'], x: 92, y: 135, size: 50 },
+    { names: ['pants'], x: 80, y: 270, size: 140 },
+    { names: ['slacks'], x: 80, y: 270, size: 140 },
+    { names: ['trousers'], x: 80, y: 270, size: 140 },
+    { names: ['skirt'], x: 80, y: 270, size: 140 },
     
-    { names: ['Tie'], x: 40, y: 220, size: 30 },
+    { names: ['shirt'], x: 40, y: 60, size: 220 },
+    { names: ['t-shirt'], x: 40, y: 60, size: 220 },    
     
+    
+    
+    { names: ['coat'], x: 40, y: 60, size: 220 },
+    
+    { names: ['hat', 'flight cap', 'service cap'], x: 110, y: 0, size: 100 },
+    { names: ['device'], x: 110, y: 0, size: 20 },
+    
+    { names: ['cord'], x: 215, y: 92, size: 34 },
+    { names: ['grades'], x: 100, y: 120, size: 70 },
+    { names: ['nameplate'], x: 92, y: 135, size: 50 },
+    { names: ['tie'], x: 40, y: 220, size: 30 },
+    
+    //front
 ];

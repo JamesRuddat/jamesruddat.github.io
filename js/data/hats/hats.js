@@ -56,7 +56,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Flight Cap",
         value: "Flight_Cap",
         label: "Flight Cap",
         level: "Basic",
@@ -65,7 +65,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Flight Cap",
         value: "Flight_Cap",
         label: "Flight Cap",
         level: "Intermediate",
@@ -74,7 +74,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Flight Cap",
         value: "Flight_Cap",
         label: "Flight Cap",
         level: "Master",
@@ -83,7 +83,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Male Flight Cap",
         value: "Male_Flight_Cap",
         label: "Male Flight Cap",
         level: "Basic",
@@ -92,7 +92,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Male Flight Cap",
         value: "Male_Flight_Cap",
         label: "Male Flight Cap",
         level: "Intermediate",
@@ -101,7 +101,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Male Flight Cap",
         value: "Male_Flight_Cap",
         label: "Male Flight Cap",
         level: "Master",
@@ -110,7 +110,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Female Flight Cap",
         value: "Female_Flight_Cap",
         label: "Female Flight Cap",
         level: "Basic",
@@ -119,7 +119,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Female Flight Cap",
         value: "Female_Flight_Cap",
         label: "Female Flight Cap",
         level: "Intermediate",
@@ -128,7 +128,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Female Flight Cap",
         value: "Female_Flight_Cap",
         label: "Female Flight Cap",
         level: "Master",
@@ -137,7 +137,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Male Service Cap",
         value: "Male_Service_Cap",
         label: "Male Service Cap",
         level: "Basic",
@@ -146,7 +146,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Male Service Cap",
         value: "Male_Service_Cap",
         label: "Male Service Cap",
         level: "Intermediate",
@@ -155,7 +155,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Male Service Cap",
         value: "Male_Service_Cap",
         label: "Male Service Cap",
         level: "Master",
@@ -164,7 +164,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Female Service Cap",
         value: "Female_Service_Cap",
         label: "Female Service Cap",
         level: "Basic",
@@ -173,7 +173,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Female Service Cap",
         value: "Female_Service_Cap",
         label: "Female Service Cap",
         level: "Intermediate",
@@ -182,7 +182,7 @@ export default [
     },
     {
         wearer: "All",
-        group: "Service Uniform Cap",
+        group: "Female Service Cap",
         value: "Female_Service_Cap",
         label: "Female Service Cap",
         level: "Master",
