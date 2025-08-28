@@ -7,7 +7,7 @@ export const uniformBadgeMap = {
         collars: { displayName: "Collars", items: uniformData.collars },
         hats: { displayName: "Hats", items: uniformData.hats },
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
-        
+
         serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
         aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
         occupationalBadges: { displayName: "Occupational Badges", items: uniformData.occupationalBadges },
@@ -58,20 +58,20 @@ export const uniformBadgeMap = {
         patches: { displayName: "Patches", items: uniformData.patches },
         cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
     },
-        /*
-    flightDutyUniform: {
-        flightDutyUniform: { displayName: "Uniform Items", items: uniformData.flightDutyUniform },
-        serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
-        aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
-        occupationalBadges: { displayName: "Occupational Badges", items: uniformData.occupationalBadges },
-        commandInsigniaPin: { displayName: "Command Insignia Pin", items: uniformData.commandInsigniaPin },
-        ncsaPatches: { displayName: "NCSA Patches", items: uniformData.ncsaPatches },
-        patches: { displayName: "Patches", items: uniformData.patches },
-        shoulderCords: { displayName: "Shoulder Cords", items: uniformData.shoulderCords },
-        specialtyTrackBadges: { displayName: "Specialty Track Badges", items: uniformData.specialtyTrackBadges },
-        cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
-    },
-    */
+    /*
+flightDutyUniform: {
+    flightDutyUniform: { displayName: "Uniform Items", items: uniformData.flightDutyUniform },
+    serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
+    aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
+    occupationalBadges: { displayName: "Occupational Badges", items: uniformData.occupationalBadges },
+    commandInsigniaPin: { displayName: "Command Insignia Pin", items: uniformData.commandInsigniaPin },
+    ncsaPatches: { displayName: "NCSA Patches", items: uniformData.ncsaPatches },
+    patches: { displayName: "Patches", items: uniformData.patches },
+    shoulderCords: { displayName: "Shoulder Cords", items: uniformData.shoulderCords },
+    specialtyTrackBadges: { displayName: "Specialty Track Badges", items: uniformData.specialtyTrackBadges },
+    cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
+},
+*/
     // ... repeat for each uniform
 };
 
@@ -101,7 +101,7 @@ const tempArrays = {
         occupationalBadges: "Occupational Badges",
         commandInsigniaPin: "Command Insignia Pin",
 
-        //abus
+        //ABUs
         ncsaPatches: "NCSA Patches",
         patches: "Patches",
 

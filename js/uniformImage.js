@@ -92,7 +92,7 @@ function renderUniform() {
     img.style.width = '100%';
     img.style.height = 'auto';
     extraRight.appendChild(img);
-  } else extraRight.textContent = 'Optional Hat';
+  } else extraRight.textContent = "Optional Hat";
 
   document.getElementById('extra-text').textContent = 'Optional text';
 

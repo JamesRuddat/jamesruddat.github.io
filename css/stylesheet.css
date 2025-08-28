@@ -40,7 +40,7 @@ h2,
 h3,
 h5 {
 	margin: 0;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: "Rajdhani", sans-serif;
 	font-weight: 700;
 }
 
@@ -133,7 +133,7 @@ ul:not(nav ul) li a {
 	display: inline-block;
 	background-color: #ba0c2f;
 	color: white;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: "Rajdhani", sans-serif;
 	font-size: 1.1rem;
 	padding: 5px 15px;
 	border-radius: 6px;
@@ -179,7 +179,7 @@ select {
 button,
 .blue-button,
 .pink-button {
-	font-family: 'Rajdhani', sans-serif;
+	font-family: "Rajdhani", sans-serif;
 	font-weight: 700;
 	letter-spacing: 0.5px;
 	cursor: pointer;
@@ -299,6 +299,7 @@ a:hover {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 300px) {
+
 	input,
 	select,
 	button {

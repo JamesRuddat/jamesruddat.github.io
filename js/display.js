@@ -25,6 +25,16 @@ function createItemCard(item) {
     `;
     itemDiv.appendChild(textDiv);
 
+    const linkDiv = document.createElement("div");
+    if (item.link) {
+        linkDiv.innerHTML = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">View on Vanguard</a>`;
+    } else {
+        linkDiv.innerHTML = `<em>Item not sold or found on Vanguard</em>`;
+    }
+    linkDiv.style.marginLeft = "auto";
+    linkDiv.style.textAlign = "right";
+    itemDiv.appendChild(linkDiv);
+
     return itemDiv;
 }
 

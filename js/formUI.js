@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const select = document.createElement("select");
                     const placeholder = document.createElement("option");
                     placeholder.value = "";
-                    placeholder.textContent = `Select`;
+                    placeholder.textContent = "Select";
                     placeholder.selected = true;
                     select.appendChild(placeholder);
 
