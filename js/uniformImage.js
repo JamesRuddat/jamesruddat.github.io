@@ -11,7 +11,7 @@ function renderUniform() {
   const grade = selections.find(i => i.group?.toLowerCase().includes('grade'));
   const uniform = selections.find(i => ['USAF Uniforms', 'Cadet Uniforms', 'Senior Uniforms', '18+ Uniforms'].includes(i.group));
   const selectedCollar = selections.find(i => ['Collar', 'Collar', 'Collar'].includes(i.group));
-  const selectedHat = selections.find(i => ['Male Service Cap', 'Female Service Cap', 'Male Flight Cap', 'Female Flight Cap'].includes(i.group));
+  const selectedHat = selections.find(i => ['Male Service Cap', 'Female Service Cap', 'Male Flight Cap', 'Female Flight Cap', 'ABU', 'CFU'].includes(i.group));
 
   document.getElementById('overview-text').innerHTML = `
     <strong>Grade:</strong> ${grade?.label || 'No Grade Selected'}<br>

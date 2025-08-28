@@ -9,8 +9,8 @@ export default [
     { wearer: "All", group: "18+ Uniforms", value: "corporateSemiFormalUniform", label: "Corporate Semi-Formal Uniform", uniformCategory: "badge", image: null, reference: null },
     { wearer: "All", group: "18+ Uniforms", value: "corporateServiceDressUniform", label: "Corporate Service Dress Uniform", uniformCategory: "badge", image: null, reference: null },
     { wearer: "All", group: "18+ Uniforms", value: "aviatorShirtUniform", label: "Aviator Shirt Uniform", uniformCategory: "badge", image: null, reference: null },
-    //{ wearer: "All", group: "USAF Uniforms", value: "battleDressUniform", label: "Battle Dress Uniform (BDU)", uniformCategory: "patch", image: null , reference: null },
-    //{ wearer: "All", group: "USAF Uniforms", value: "operationalCamouflagePattern", label: "Operational Camouflage Pattern (OCP)", uniformCategory: "patch", image: null , reference: null },
+    { wearer: "All", group: "USAF Uniforms", value: "battleDressUniform", label: "Battle Dress Uniform (BDU)", uniformCategory: "patch", image: null , reference: null },
+    { wearer: "All", group: "USAF Uniforms", value: "operationalCamouflagePattern", label: "Operational Camouflage Pattern (OCP)", uniformCategory: "patch", image: null , reference: null },
 
     // Cadet Uniforms
     { wearer: "Cadet", group: "Cadet Uniforms", value: "semiFormalUniform", label: "Semi-Formal Dress Uniform", uniformCategory: "badge", image: null, reference: null },

@@ -29,8 +29,7 @@ export { default as serviceDressUniform } from './serviceDressUniform/serviceDre
 export { default as blueServiceUniform } from './blueServiceUniform/blueServiceUniform.js';
 //export { default as corporateServiceDressUniform } from './corporateServiceDressUniform/corporateServiceDressUniform.js';
 //export { default as aviatorShirtUniform } from './aviatorShirtUniform/aviatorShirtUniform.js';
-//export { default as corporateWorkingUniform } from './corporateWorkingUniform/corporateWorkingUniform.js';
-//export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBattleUniform.js';
+export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBattleUniform.js';
 //export { default as battleDressUniform } from './battleDressUniform/battleDressUniform.js';
 
 //export { default as operationalCamouflagePattern } from './operationalCamouflagePattern/operationalCamouflagePattern.js';
@@ -40,4 +39,4 @@ export { default as blueServiceUniform } from './blueServiceUniform/blueServiceU
 //export { default as flightDutyUniform } from './flightDutyUniform/flightDutyUniform.js';
 //export { default as corporateWorkingUniform } from './corporateWorkingUniform/corporateWorkingUniform.js';
 //export { default as corporateFlightDutyUniform } from './corporateFlightDutyUniform/corporateFlightDutyUniform.js';
-//export { default as corporateFieldUniform } from './corporateFieldUniform/corporateFieldUniform.js';
+export { default as corporateFieldUniform } from './corporateFieldUniform/corporateFieldUniform.js';

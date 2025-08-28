@@ -1,21 +1,29 @@
 export default [
     {
         wearer: "All",
-        group: "ABU",
-        value: "ABU_Hat",
-        label: "ABU Hat",
+        group: "Navy Blue Tactical Cap",
+        value: "tactical_cap",
+        label: "Navy Blue Tactical Cap",
         level: null,
-        image: null,
+        image: `/js/data/hats/images/Navy_Blue_Tactical_Hat.svg`,
         reference: null,
-
     },
     {
         wearer: "All",
-        group: "BBDU",
-        value: "BBDU_Hat",
-        label: "BBDU Hat",
+        group: "ABU",
+        value: "ABU_Cap",
+        label: "ABU Cap",
         level: null,
-        image: `/js/data/hats/images/BBDU_Hat.svg`,
+        image: `/js/data/hats/images/ABU_Cap.svg`,
+        reference: null,
+    },
+    {
+        wearer: "All",
+        group: "CFU",
+        value: "CFU_Cap",
+        label: "CFU Cap",
+        level: null,
+        image: `/js/data/hats/images/CFU_Cap.svg`,
         reference: null,
     },
     {
