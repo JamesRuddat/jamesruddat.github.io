@@ -6,7 +6,9 @@ export default [
         value: "CFU",
         label: "CFU Collar",
         level: null,
-        image: "/js/data/collars/images/CFU.svg", link: "", reference: null,
+        image: "/js/data/collars/images/CFU.svg",
+        link: "",
+        reference: null,
     },
     {
         type: null,
@@ -15,7 +17,9 @@ export default [
         value: "ABU",
         label: "ABU Collar",
         level: null,
-        image: "/js/data/collars/images/ABU.svg", link: "", reference: null,
+        image: "/js/data/collars/images/ABU.svg",
+        link: "",
+        reference: null,
     },
     {
         type: null,
@@ -24,7 +28,9 @@ export default [
         value: "ClassA",
         label: "Class A Collar",
         level: null,
-        image: "/js/data/collars/images/ClassA.svg", link: "", reference: null,
+        image: "/js/data/collars/images/ClassA.svg",
+        link: "",
+        reference: null,
     },
     {
         type: null,
@@ -33,7 +39,9 @@ export default [
         value: "ClassB",
         label: "Class B Collar",
         level: null,
-        image: "/js/data/collars/images/ClsssB.svg", link: "", reference: null,
+        image: "/js/data/collars/images/ClsssB.svg",
+        link: "",
+        reference: null,
     },
     {
         type: null,
@@ -42,6 +50,8 @@ export default [
         value: "ClassB_Tie",
         label: "Class B Collar With Tie",
         level: null,
-        image: "/js/data/collars/images/ClassB_Tie.svg", link: "", reference: null,
+        image: "/js/data/collars/images/ClassB_Tie.svg",
+        link: "",
+        reference: null,
     },
 ];

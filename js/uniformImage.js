@@ -6,8 +6,11 @@ function renderUniform() {
   if (!selectionsString) return;
 
   const selections = JSON.parse(selectionsString);
+  console.log(selectionsString);
+  
 
   // --- Overview info ---
+  const member = selections.find(i => i.group?.toLowerCase().includes('member'));
   const grade = selections.find(i => i.group?.toLowerCase().includes('grade'));
   const uniform = selections.find(i => ['USAF Uniforms', 'Cadet Uniforms', 'Senior Uniforms', '18+ Uniforms'].includes(i.group));
   const selectedCollar = selections.find(i => ['Collar', 'Collar', 'Collar'].includes(i.group));
@@ -15,6 +18,7 @@ function renderUniform() {
 
   document.getElementById('overview-text').innerHTML = `
     <strong>Grade:</strong> ${grade?.label || 'No Grade Selected'}<br>
+    <strong>Member:</strong> ${member?.label || 'No Member Selected'}<br>
     <strong>Uniform:</strong> ${uniform?.label || 'No Uniform Selected'}
   `;
 
@@ -39,7 +43,7 @@ function renderUniform() {
   function renderItems(container, items) {
     container.innerHTML = '';
 
-    const baseWidth = 300;
+    const baseWidth = 200;
     const baseHeight = 800;
     const rect = container.getBoundingClientRect();
     const scale = Math.min(rect.width / baseWidth, rect.height / baseHeight);
@@ -63,13 +67,34 @@ function renderUniform() {
 
   // --- Render overview and main uniform ---
   renderItems(document.getElementById('overview-image'), itemsToRender);
-  renderItems(document.getElementById('uniform-main'), itemsToRender);
+  //renderItems(document.getElementById('uniform-main'), itemsToRender);
 
   // --- Regulations ---
   const regs = selections.filter(i => i.reference?.trim() !== '');
-  const midpoint = Math.ceil(regs.length / 2);
-  document.getElementById('reg-left').innerHTML = regs.slice(0, midpoint).map(r => `<div><strong>${r.label}:</strong> ${r.reference}</div>`).join('');
-  document.getElementById('reg-right').innerHTML = regs.slice(midpoint).map(r => `<div><strong>${r.label}:</strong> ${r.reference}</div>`).join('');
+  if (regs.length > 0) {
+    const table = `
+    <table border="1" cellpadding="4" style="border-collapse: collapse; border: 1px solid #ccc;">
+      <thead>
+        <tr>
+          <th style="text-align: left;">Item</th>
+          <th style="text-align: left;">Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${regs.map(r => `
+          <tr>
+            <td><strong>${r.label}</strong>${r.link ? `<br><a href="${r.link}" target="_blank" rel="noopener noreferrer">View on Vanguard</a>` : ""}</td>
+            <td>${r.reference ? r.reference : "N/A"}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+
+    document.getElementById('reg-main').innerHTML = table;
+  } else {
+    document.getElementById('reg-extra').innerHTML = "<em>No regulations found</em>";
+  }
 
   // --- Extra divs (collar + hat) ---
   const extraLeft = document.getElementById('extra-left');

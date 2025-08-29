@@ -40,3 +40,6 @@ export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBatt
 //export { default as corporateWorkingUniform } from './corporateWorkingUniform/corporateWorkingUniform.js';
 //export { default as corporateFlightDutyUniform } from './corporateFlightDutyUniform/corporateFlightDutyUniform.js';
 export { default as corporateFieldUniform } from './corporateFieldUniform/corporateFieldUniform.js';
+
+
+export { default as outerwear } from './outerwear/outerwear.js';

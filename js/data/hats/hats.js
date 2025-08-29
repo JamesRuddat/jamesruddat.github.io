@@ -30,7 +30,7 @@ export default [
         level: null,
         image: "/js/data/hats/images/ABU_Cap.svg",
         link: "https://www.vanguardmil.com/collections/cap-hats/products/civil-air-patrol-uniform-abu-cap-flat-top",
-        reference: "",
+        reference: "The navy blue tactical and ABU patrol cap is authorized with this uniform. A cap will be worn outdoors at all times, unless in a designated “no hat” area. Members will wear a cap straight on the head so that the cap band creates a straight line around the head, parallel to the ground. Caps will fit snugly and comfortably around the largest part of the head without bulging or distortion from the intended shape of the headgear and without excessive gaps. No hair will be visible on the forehead beneath the cap. Members are authorized to block the patrol cap. Senior member officers will wear light silver, or for 2d Lt and Majors, gold, embroidered grade insignia on dark blue cloth centered on the front of the ABU cap. CAP Chaplains may substitute the Chaplain insignia for grade insignia on the ABU cap. Cadet Officers will wear embroidered grade insignia on dark blue cloth centered on the front of the cap.",
     },
     {
         type: null,

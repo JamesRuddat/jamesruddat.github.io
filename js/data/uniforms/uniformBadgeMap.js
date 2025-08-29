@@ -8,6 +8,8 @@ export const uniformBadgeMap = {
         hats: { displayName: "Hats", items: uniformData.hats },
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
+        outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
+
         serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
         aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
         occupationalBadges: { displayName: "Occupational Badges", items: uniformData.occupationalBadges },
@@ -21,6 +23,8 @@ export const uniformBadgeMap = {
         collars: { displayName: "Collars", items: uniformData.collars },
         hats: { displayName: "Hats", items: uniformData.hats },
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
+
+        outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
 
         serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
         aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
@@ -36,6 +40,8 @@ export const uniformBadgeMap = {
         hats: { displayName: "Hats", items: uniformData.hats },
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
+        outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
+
         serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
         aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
         occupationalBadges: { displayName: "Occupational Badges", items: uniformData.occupationalBadges },
@@ -49,6 +55,8 @@ export const uniformBadgeMap = {
         collars: { displayName: "Collars", items: uniformData.collars },
         hats: { displayName: "Hats", items: uniformData.hats },
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
+
+        outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
 
         serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
         aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
