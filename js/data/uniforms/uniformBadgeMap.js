@@ -2,10 +2,15 @@
 import * as uniformData from '../uniformData.js';
 
 export const uniformBadgeMap = {
-    serviceDressUniform: {
-        serviceDressUniform: { displayName: "Service Dress Uniform", items: uniformData.serviceDressUniform },
-        collars: { displayName: "Collars", items: uniformData.collars },
+    serviceDressUniform: {        
         hats: { displayName: "Hats", items: uniformData.hats },
+        collars: { displayName: "Collars", items: uniformData.collars },
+        ties: { displayName: "Ties", items: uniformData.ties },
+        coats: { displayName: "Coats", items: uniformData.coats },
+        shirts: { displayName: "Shirts", items: uniformData.shirts },
+        pants: { displayName: "Pants", items: uniformData.pants },
+        shoes: { displayName: "Shoes / Boots", items: uniformData.shoes },
+
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
         outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
@@ -19,9 +24,14 @@ export const uniformBadgeMap = {
         cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
     },
     blueServiceUniform: {
-        blueServiceUniform: { displayName: "Blue Service Uniform", items: uniformData.blueServiceUniform },
-        collars: { displayName: "Collars", items: uniformData.collars },
         hats: { displayName: "Hats", items: uniformData.hats },
+        collars: { displayName: "Collars", items: uniformData.collars },
+        ties: { displayName: "Ties", items: uniformData.ties },
+        coats: { displayName: "Coats", items: uniformData.coats },
+        shirts: { displayName: "Shirts", items: uniformData.shirts },
+        pants: { displayName: "Pants", items: uniformData.pants },
+        shoes: { displayName: "Shoes / Boots", items: uniformData.shoes },
+
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
         outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
@@ -34,10 +44,16 @@ export const uniformBadgeMap = {
         specialtyTrackBadges: { displayName: "Specialty Track Badges", items: uniformData.specialtyTrackBadges },
         cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
     },
+    
     airmanBattleUniform: {
-        airmanBattleUniform: { displayName: "Uniform Items", items: uniformData.airmanBattleUniform },
-        collars: { displayName: "Collars", items: uniformData.collars },
         hats: { displayName: "Hats", items: uniformData.hats },
+        collars: { displayName: "Collars", items: uniformData.collars },
+        ties: { displayName: "Ties", items: uniformData.ties },
+        coats: { displayName: "Coats", items: uniformData.coats },
+        shirts: { displayName: "Shirts", items: uniformData.shirts },
+        pants: { displayName: "Pants", items: uniformData.pants },
+        shoes: { displayName: "Shoes / Boots", items: uniformData.shoes },
+
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
         outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
@@ -51,9 +67,13 @@ export const uniformBadgeMap = {
         cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
     },
     corporateFieldUniform: {
-        corporateFieldUniform: { displayName: "Uniform Items", items: uniformData.corporateFieldUniform },
-        collars: { displayName: "Collars", items: uniformData.collars },
         hats: { displayName: "Hats", items: uniformData.hats },
+        collars: { displayName: "Collars", items: uniformData.collars },
+        coats: { displayName: "Coats", items: uniformData.coats },
+        shirts: { displayName: "Shirts", items: uniformData.shirts },
+        pants: { displayName: "Pants", items: uniformData.pants },
+        shoes: { displayName: "Shoes / Boots", items: uniformData.shoes },
+
         nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
         outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
@@ -66,21 +86,19 @@ export const uniformBadgeMap = {
         patches: { displayName: "Patches", items: uniformData.patches },
         cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
     },
-    /*
-flightDutyUniform: {
-    flightDutyUniform: { displayName: "Uniform Items", items: uniformData.flightDutyUniform },
-    serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
-    aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },
-    occupationalBadges: { displayName: "Occupational Badges", items: uniformData.occupationalBadges },
-    commandInsigniaPin: { displayName: "Command Insignia Pin", items: uniformData.commandInsigniaPin },
-    ncsaPatches: { displayName: "NCSA Patches", items: uniformData.ncsaPatches },
-    patches: { displayName: "Patches", items: uniformData.patches },
-    shoulderCords: { displayName: "Shoulder Cords", items: uniformData.shoulderCords },
-    specialtyTrackBadges: { displayName: "Specialty Track Badges", items: uniformData.specialtyTrackBadges },
-    cadetBadges: { displayName: "Cadet Badges", items: uniformData.cadetBadges },
-},
-*/
-    // ... repeat for each uniform
+    
+    flightDutyUniform: {
+        hats: { displayName: "Hats", items: uniformData.hats },
+        collars: { displayName: "Collars", items: uniformData.collars },
+        coats: { displayName: "Coats", items: uniformData.coats },
+        shirts: { displayName: "Shirts", items: uniformData.shirts },
+        pants: { displayName: "Pants", items: uniformData.pants },
+        shoes: { displayName: "Shoes / Boots", items: uniformData.shoes },
+
+        nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
+
+
+    },// ... repeat for each uniform
 };
 
 

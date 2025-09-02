@@ -7,7 +7,7 @@ export default [
         label: "CAP Senior Advisory Group Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-senior-advisory-group",
         reference: null,
     },
     {
@@ -18,7 +18,7 @@ export default [
         label: "CAP Command Council Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-command-council",
         reference: null,
     },
     {
@@ -29,7 +29,7 @@ export default [
         label: "National Executive Committee Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-national-executive-committee-badge",
         reference: null,
     },
     {
@@ -40,7 +40,7 @@ export default [
         label: "National Board Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-national-board-metal-badge",
         reference: null,
     },
     {

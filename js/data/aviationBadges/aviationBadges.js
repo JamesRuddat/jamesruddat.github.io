@@ -239,7 +239,7 @@ export default [
         label: "Cadet Model Rocketry Badge",
         level: null,
         image: null,
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-model-rocketry-badge?variant=1153421428",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-model-rocketry-badge",
         reference: null,
     },
 

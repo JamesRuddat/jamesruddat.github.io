@@ -7,7 +7,7 @@ export default [
         label: "Blue Beret",
         level: null,
         image: "/js/data/hats/images/",
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-navy-blue-air-force-style-beret?variant=1153418736",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-navy-blue-air-force-style-beret",
         reference: "CAPR 39-1 § 9.4.6.",
     },
     {
@@ -51,7 +51,7 @@ export default [
         label: "Service Cap Cadet",
         level: null,
         image: "/js/data/hats/images/Service_Cap_Cadet_Icon.svg",
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-cadet-officer-service-cap-device-for-male?variant=1153426620",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-cadet-officer-service-cap-device-for-male",
         reference: "",
     },
     {
@@ -84,7 +84,7 @@ export default [
         label: "Service Cap Officer",
         level: null,
         image: "/js/data/hats/images/Service_Cap_Icon.svg",
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-senior-member-officer-service-cap-device-for-male?variant=1153426640",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-senior-member-officer-service-cap-device-for-male",
         reference: "",
     },
     {
@@ -161,7 +161,7 @@ export default [
         label: "Female Flight Cap",
         level: "Basic",
         image: "/js/data/hats/images/F_Flight_Cap.svg",
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-female-airman-flight-cap?variant=1153418596",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-female-airman-flight-cap",
         reference: "",
     },
     {
@@ -172,7 +172,7 @@ export default [
         label: "Female Flight Cap",
         level: "Intermediate",
         image: "/js/data/hats/images/F_Flight_Cap2.svg",
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-female-officer-flight-cap-uniform?variant=1153418524",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-female-officer-flight-cap-uniform",
         reference: "",
     },
     {
@@ -182,7 +182,7 @@ export default [
         value: "Female_Flight_Cap",
         label: "Female Flight Cap",
         level: "Master",
-        image: "/js/data/hats/images/F_Flight_Cap4.svg",
+        image: "/js/data/hats/images/F_Flight_Cap3.svg",
         link: null,
         reference: "",
     },
@@ -205,7 +205,7 @@ export default [
         label: "Male Service Cap",
         level: "Intermediate",
         image: "/js/data/hats/images/M_Service_Cap2.svg",
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-male-field-grade-service-cap-uniform?variant=1153339140",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-male-field-grade-service-cap-uniform",
         reference: "",
     },
     {

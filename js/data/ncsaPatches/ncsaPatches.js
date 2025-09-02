@@ -18,7 +18,7 @@ export default [
         label: "Air Force Civil Engineering Academy",
         level: null,
         image: null,
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-usaf-civil-engineering-academy-usafce-patch?variant=1153348208",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-usaf-civil-engineering-academy-usafce-patch",
         reference: null,
     },
     {
@@ -171,7 +171,7 @@ export default [
         label: "Specialized Undergraduate Pilot Training Familiarization Course",
         level: null,
         image: null,
-        link: "https://www.vanguardmil.com/products/cap-specialized-undergrad-pilot-training-familiarization-course-patch?variant=1153426096",
+        link: "https://www.vanguardmil.com/products/cap-specialized-undergrad-pilot-training-familiarization-course-patch",
         reference: null,
     },
 ];

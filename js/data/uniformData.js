@@ -20,16 +20,20 @@ export { default as cadetBadges } from './cadetBadges/cadetBadges.js';
 export { default as hats } from './hats/hats.js';
 export { default as nameplates } from './nameplates/nameplates.js';
 export { default as collars } from './collars/collars.js';
+export { default as pants } from './pants/pants.js';
+export { default as shirts } from './shirts/shirts.js';
+export { default as coats } from './coats/coats.js';
+export { default as shoes } from './shoes/shoes.js';
 
 // -- Uniforms --
 //export { default as messDressUniform } from './messDressUniform/messDressUniform.js';
 //export { default as semiFormalUniform } from './semiFormalUniform/semiFormalUniform.js';
 //export { default as corporateSemiFormalUniform } from './corporateSemiFormalUniform/corporateSemiFormalUniform.js';
-export { default as serviceDressUniform } from './serviceDressUniform/serviceDressUniform.js';
-export { default as blueServiceUniform } from './blueServiceUniform/blueServiceUniform.js';
+//export { default as serviceDressUniform } from './serviceDressUniform/serviceDressUniform.js';
+//export { default as blueServiceUniform } from './blueServiceUniform/blueServiceUniform.js';
 //export { default as corporateServiceDressUniform } from './corporateServiceDressUniform/corporateServiceDressUniform.js';
 //export { default as aviatorShirtUniform } from './aviatorShirtUniform/aviatorShirtUniform.js';
-export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBattleUniform.js';
+//export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBattleUniform.js';
 //export { default as battleDressUniform } from './battleDressUniform/battleDressUniform.js';
 
 //export { default as operationalCamouflagePattern } from './operationalCamouflagePattern/operationalCamouflagePattern.js';
@@ -39,7 +43,7 @@ export { default as airmanBattleUniform } from './airmanBattleUniform/airmanBatt
 //export { default as flightDutyUniform } from './flightDutyUniform/flightDutyUniform.js';
 //export { default as corporateWorkingUniform } from './corporateWorkingUniform/corporateWorkingUniform.js';
 //export { default as corporateFlightDutyUniform } from './corporateFlightDutyUniform/corporateFlightDutyUniform.js';
-export { default as corporateFieldUniform } from './corporateFieldUniform/corporateFieldUniform.js';
+//export { default as corporateFieldUniform } from './corporateFieldUniform/corporateFieldUniform.js';
 
 
 export { default as outerwear } from './outerwear/outerwear.js';

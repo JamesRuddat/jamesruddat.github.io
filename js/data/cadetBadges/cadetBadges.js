@@ -110,7 +110,7 @@ export default [
         label: "Cadet Cyber Badge - Basic (Blue Star)",
         level: "basic",
         image: null,
-        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-cyber?variant=8885413478454",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-cyber",
         reference: null,
     },
     {
