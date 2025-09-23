@@ -72,6 +72,12 @@ h5 {
 }
 
 /* ===== ALERT BOX ===== */
+.note {
+	padding: 4px;
+	background-color: #808080;
+	color: white;
+}
+
 .alert {
 	padding: 10px;
 	background-color: #ff6600;
