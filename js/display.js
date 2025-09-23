@@ -11,7 +11,7 @@ function createItemCard(item) {
 
     if (item.image) {
         const img = document.createElement("img");
-        img.src = "../" + item.image;
+        img.src = "" + item.image;
         img.alt = item.label || "Image";
         img.style.maxWidth = "100px";
         img.style.maxHeight = "90px";

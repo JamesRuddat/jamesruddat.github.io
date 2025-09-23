@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CAP Uniform Builder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="shortcut icon" href="uniformImages/other/favicon.ico" type="Image/x-favicon">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:700|Ubuntu:400,500" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="alert " aria-live="assertive" aria-atomic="true">
+            <div class="container-inner">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';"
+                    aria-label="Close alert">&times;</span>
+                <strong>Warning:</strong> This is a draft uniform creator. Please use extra caution as placements and
+                tolerances may
+                be inaccurate and not fully compliant with <em>CAPR 39-1</em> uniform standards.
+                <marquee behavior="scroll" direction="left" scrollamount="5" aria-hidden="true">
+                    This tool is a work in progress — verify All uniform details carefully!
+                </marquee>
+            </div>
+        </div>
+
+        <header id="header-placeholder" class="header full-width"></header>
+        <nav id="nav-placeholder"></nav>
+
+        <main>
+            <div class="row">
+                <!-- Main builder -->
+                <div class="main container-inner">
+                    <h2>Build Your Uniform</h2>
+                    <p>Select your member type, grade, and uniform to view wear guidelines.</p>
+
+                    <div class="container">
+                        <form class="form-background" id="uniform-form" action="" method="post">
+                            <h2>Step 1</h2>
+                            <h3>Uniform</h3>
+                            <br>
+                            <div class="form-group">
+                                <div class="form-item">
+                                    <label for="member">Membership &amp; Grade</label>
+                                    <div class="dual">
+                                        <select id="member"></select>
+                                        <select id="grade"></select>
+                                        <!-- <input type="text" id="name" autocomplete="name" placeholder="Jane Doe"> -->
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label for="uniform">Uniform</label>
+                                    <div class="dual">
+                                        <select id="uniform"></select>
+                                        <select id="gender"></select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>Step 2</h2>
+                            <h3>Accouterments</h3>
+                            <div id="form-container">
+                                <!-- The grouped dropdowns / checkboxes will be inserted here -->
+                            </div>
+
+                            <h2>Step 3</h2>
+                            <h3>Create</h3>
+                            <br>
+                            <div>
+                                <button type="submit">Genreate Uniform</button>
+                                <button type="reset" style="background-color: gray;">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer-placeholder"></footer>
+    </div>
+</body>
+
+<!-- External JS -->
+<script type="module" src="/js/data/uniformData.js"></script>
+<script type="module" src="/js/data/uniformLogic.js"></script>
+<script type="module" src="/js/formUI.js"></script>
+<script src="/partials/partials.js"></script>
+
+</html>

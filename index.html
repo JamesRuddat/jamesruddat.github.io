@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>CAP Uniform Builder</title>
+    <title>Cadet Tools</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylesheet.css">
@@ -12,111 +12,35 @@
 
 <body>
     <div class="wrapper">
-        <div class="alert " aria-live="assertive" aria-atomic="true">
-            <div class="container-inner">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';"
-                    aria-label="Close alert">&times;</span>
-                <strong>Warning:</strong> This is a draft uniform creator. Please use extra caution as placements and
-                tolerances may
-                be inaccurate and not fully compliant with <em>CAPR 39-1</em> uniform standards.
-                <marquee behavior="scroll" direction="left" scrollamount="5" aria-hidden="true">
-                    This tool is a work in progress — verify All uniform details carefully!
-                </marquee>
-            </div>
-        </div>
 
-        <header class="header full-width">
-            <div class="container-inner">
-                <h1>Uniform Builder</h1>
-                <h3>Uniform Reference & Creator</h3>
-            </div>
-        </header>
+        <header id="header-placeholder" class="header full-width"></header>
+        <nav id="nav-placeholder"></nav>
 
         <main>
             <div class="row">
-                <nav>
-                    <div class="container-inner">
-                        <ul>
-                            <li><a href="/../index.html">Builder</a></li>
-                            <li><a href="/capPages/faq.html">FAQ</a></li>
-                            <li><a href="/capPages/inspections.html">Inspections</a></li>
-                            <li><a href="/capPages/pictures.html">Uniforms</a></li>
-                        </ul>
-                    </div>
-                </nav>
-
                 <!-- Main builder -->
                 <div class="main container-inner">
-                    <h2>Build Your Uniform</h2>
-                    <p>Select your member type, grade, and uniform to view wear guidelines.</p>
-
-                    <div class="container">
-                        <form class="form-background" id="uniform-form" action="" method="post">
-                            <h2>Step 1</h2>
-                            <h3>Uniform</h3>
-                            <br>
-                            <div class="form-group">
-                                <div class="form-item">
-                                    <label for="member">Membership &amp; Grade</label>
-                                    <div class="dual">
-                                        <select id="member"></select>
-                                        <select id="grade"></select>
-                                        <!-- <input type="text" id="name" autocomplete="name" placeholder="Jane Doe"> -->
-                                    </div>
-                                </div>
-                                <div class="form-item">
-                                    <label for="uniform">Uniform</label>
-                                    <div class="dual">
-                                        <select id="uniform"></select>
-                                        <select id="gender"></select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h2>Step 2</h2>
-                            <h3>Accouterments</h3>
-                            <div id="form-container">
-                                <!-- The grouped dropdowns / checkboxes will be inserted here -->
-                            </div>
-
-                            <h2>Step 3</h2>
-                            <h3>Create</h3>
-                            <br>
-                            <div>
-                                <button type="submit">Genreate Uniform</button>
-                                <button type="reset" style="background-color: gray;">Reset</button>
-                            </div>
-                        </form>
-                    </div>
+                    <h2>Welcome to the Cadet Resource Hub!</h2>
+                    <iframe src="https://www.youtube.com/embed/O8onxUMqrsw" allowfullscreen></iframe>
+                    <p>
+                        This site is designed for Civil Air Patrol members to explore all aspects of cadet life,
+                        including uniforms, drill, bugle calls, FAQs, and other resources created to help you succeed.
+                    </p>
+                    <p>
+                        Navigate through the different sections to learn, practice, and stay up to date with CAP standards.
+                        Whether you're a cadet or senior member, you'll find helpful guides, interactive tools, and reference material.
+                    </p>
+                    <p>
+                        <strong>Tip:</strong> Click on the sections below to get started, or explore the FAQs for quick answers.
+                    </p>
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="footer">
-                <h5>CAPR 39-1</h5>
-                <p>Civil Air Patrol Uniform Regulation. Dated: 16 April 2025.</p>
-                <ul>
-                    <li><a href="https://www.gocivilairpatrol.com/media/cms/CAPR_391_90e08bf91538b.pdf"
-                            target="_blank">CAPR 39-1
-                            Uniform Regulation</a></li>
-                    <li><a href="https://www.gocivilairpatrol.com/members/publications/indexes-regulations-and-manuals-1700"
-                            target="_blank">Indexes & Regulations</a></li>
-                    <li><a href="https://www.gocivilairpatrol.com" target="_blank">CAP National Website</a></li>
-                </ul>
-            </div>
-            <div class="footer-end">
-                <p>Unofficial reference tool - for educational purposes only. Always consult CAPR 39-1 for official
-                    guidance.
-                </p>
-            </div>
-        </footer>
-
+        <footer id="footer-placeholder"></footer>
     </div>
 </body>
 
 <!-- External JS -->
-<script type="module" src="/js/data/uniformData.js"></script>
-<script type="module" src="/js/data/uniformLogic.js"></script>
-<script type="module" src="/js/formUI.js"></script>
+<script src="/partials/partials.js"></script>
 
 </html>

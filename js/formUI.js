@@ -253,6 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         sessionStorage.setItem('uniformSelections', JSON.stringify(selectedObjects));
-        window.location.href = '/capPages/uniform.html';
+        window.location.href = '/pages/uniforms/uniform.html';
     });
 });
