@@ -37,7 +37,7 @@ bugleCalls.forEach(call => {
         controlsHTML = `
             <audio id="${call.id}" src="${call.file}" type="audio/ogg"></audio>
             <button class="small-btn" onclick="playAudio('${call.id}')">Play</button>
-            <button class="small-btn" onclick="stopAudio('${call.id}')">Stop Audio</button>
+            <button class="small-btn" onclick="stopAudio('${call.id}')">Stop</button>
             <input type="time" id="${call.id}Time">
             <button class="small-btn" onclick="scheduleFromInput('${call.id}', '${call.id}Time')">Schedule Daily</button>
             <button class="small-btn" onclick="stopScheduled('${call.id}')">Stop Schedule</button>
@@ -73,12 +73,14 @@ function stopAudio(id) {
     }
 }
 
+const lastPlayed = {}; // Track last play date per audio
+
 function scheduleFromInput(audioId, inputId) {
     const audio = document.getElementById(audioId);
     const timeInput = document.getElementById(inputId).value;
     if (!timeInput) return alert("Please select a time!");
 
-    // If already scheduled, clear previous interval
+    // Clear previous interval if exists
     if (scheduledIntervals[audioId]) {
         clearInterval(scheduledIntervals[audioId]);
     }
@@ -87,14 +89,18 @@ function scheduleFromInput(audioId, inputId) {
 
     function checkTime() {
         const now = new Date();
+        const today = now.toDateString();
+
+        // Only play if scheduled time matches and hasn't played today
         if (now.getHours() === hour && now.getMinutes() === minute) {
-            audio.loop = true; // loop until user stops it
-            playAudio(audioId);
+            if (lastPlayed[audioId] !== today) {
+                playAudio(audioId);
+                lastPlayed[audioId] = today;
+            }
         }
     }
 
-    // Check every 30 seconds
-    scheduledIntervals[audioId] = setInterval(checkTime, 30000);
+    scheduledIntervals[audioId] = setInterval(checkTime, 30000); // check every 30 seconds
 
     alert(`Scheduled ${audioId} daily at ${timeInput}.`);
 }
@@ -106,5 +112,8 @@ function stopScheduled(audioId) {
         delete scheduledIntervals[audioId];
         if (audio) audio.pause();  // stop looping audio
         alert(`Stopped daily schedule for ${audioId}.`);
+        if (timeInput) {
+            timeInput.value = "";
+        }
     }
 }
