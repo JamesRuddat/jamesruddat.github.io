@@ -1,0 +1,37 @@
+export const bugleCalls = [
+    { id: "AdjutantsCall", name: "Adjutant's Call", description: "Indicates that the adjutant is about to form the formation.", file: "/../audio/bugleCalls/AdjutantsCall.ogg" },
+    { id: "Assembly", name: "Assembly", description: "Signals troops to assemble at a designated place.", file: "/../audio/bugleCalls/Assembly.ogg" },
+    { id: "Attention", name: "Attention", description: "Sounded as a warning that troops are about to be called to attention.", file: null },
+    { id: "BootsAndSaddles", name: "Boots and Saddles", description: "Sounded for mounted troops to mount and take their place in line.", file: null },
+    { id: "CallToQuarters", name: "Call to Quarters", description: "Signals all personnel not authorized to be absent to return to their quarters for the night.", file: "/../audio/bugleCalls/CallToQuarters.ogg" },
+    { id: "ChurchCall", name: "Church Call", description: "Signals that religious services are about to begin; may announce formation of a funeral escort.", file: null },
+    { id: "DrillCall", name: "Drill Call", description: "Sounds as a warning to turn out for drill.", file: "/../audio/bugleCalls/DrillCall.ogg" },
+    { id: "FatigueCall", name: "Fatigue Call", description: "Signals all designated personnel to report for fatigue duty.", file: null },
+    { id: "FireCall", name: "Fire Call", description: "Signals a fire on post or in the vicinity; also used for fire drills.", file: "/../audio/bugleCalls/FireCall.mp3" },
+    { id: "FirstCall", name: "First Call", description: "Sounds as a warning that personnel will prepare to assemble for formation.", file: "/../audio/bugleCalls/FirstCall.ogg" },
+    { id: "FirstSergeantsCall", name: "First Sergeant's Call", description: "Signals that the First Sergeant is about to form the formation.", file: null },
+    { id: "MailCall", name: "Mail Call", description: "Signals personnel to assemble for the distribution of mail.", file: "/../audio/bugleCalls/MailCall.ogg" },
+    { id: "MessCall", name: "Mess Call", description: "Signals mealtime.", file: "/../audio/bugleCalls/MessCall.ogg" },
+    { id: "OfficersCall", name: "Officers Call", description: "Signals all officers to assemble at a designated place.", file: "/../audio/bugleCalls/OfficersCall.ogg" },
+    { id: "PayCall", name: "Pay Call", description: "Signals that troops will be paid.", file: null },
+    { id: "Recall", name: "Recall", description: "Signals duties or drills to cease.", file: "/../audio/bugleCalls/Recall.ogg" },
+    { id: "Retreat", name: "Retreat", description: "Signals the end of the official day. Played before 'To The Colors'.", file: "/../audio/bugleCalls/Retreat.ogg" },
+    { id: "Reveille", name: "Reveille", description: "Signals troops to awaken for morning roll call; accompanies raising of the flag.", file: "/../audio/bugleCalls/Reveille.ogg" },
+    { id: "TheRouse", name: "The Rouse", description: "Used in Commonwealth nations to signal soldiers to get out of bed.", file: "/../audio/bugleCalls/Rouse.wav" },
+    { id: "SchoolCall", name: "School Call", description: "Signals school is about to begin.", file: null },
+    { id: "SickCall", name: "Sick Call", description: "Signals all troops needing medical attention to report to the dispensary.", file: null },
+    { id: "Taps", name: "Taps", description: "Signals that unauthorized lights are to be extinguished; also sounded at military funerals.", file: "/../audio/bugleCalls/Taps.ogg" },
+    { id: "Tattoo", name: "Tattoo", description: "Signals lights out and that all loud talking and disturbances be discontinued within 15 minutes.", file: "/../audio/bugleCalls/Tattoo.ogg" },
+    { id: "ToTheColors", name: "To The Colors", description: "Used to render honors to the nation. Played when no band is available, immediately following Retreat.", file: "/../audio/bugleCalls/ToTheColor.ogg" },
+    { id: "ToArms", name: "To Arms", description: "Signals all troops to fall under arms at designated places without delay.", file: null },
+];
+
+export const music = [
+    { id: "ManhattanBeach", name: "Manhattan Beach", description: "A lively march by John Philip Sousa.", file: "/../audio/music/ManhattanBeach.ogg" },
+    { id: "RadetzkyMarch", name: "Radetzky March", description: "A famous Austrian march by Johann Strauss Sr.", file: "/../audio/music/RadetzkyMarch.ogg" },
+    { id: "Revelation", name: "Revelation", description: "A concert march often performed in military bands.", file: "/../audio/music/Revelation.ogg" },
+    { id: "SemperFidelis", name: "Semper Fidelis", description: "The official march of the United States Marine Corps.", file: "/../audio/music/SemperFidelis.ogg" },
+    { id: "StarSpangledBanner", name: "The Star-Spangled Banner", description: "The national anthem of the United States.", file: "/../audio/music/StarSpangledBanner.ogg" },
+    { id: "StarsStripesForever", name: "The Stars and Stripes Forever", description: "The official National March of the United States.", file: "/../audio/music/StarsStripesForever.ogg" },
+    { id: "WashingtonPost", name: "The Washington Post", description: "Another popular march by John Philip Sousa.", file: "/../audio/music/WashingtonPost.ogg" }
+];

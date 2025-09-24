@@ -23,7 +23,7 @@
                     <h2>Bugle Calls</h2>
                     <p>Bugle calls are used to communicate commands and signal activities during Civil Air Patrol events. Some calls are not observed in CAP but are part of military tradition.</p>
                     
-                    <img src="bugleCalls/React During Bugle Calls.jpg" alt="" width="280" height="200">
+                    <img src="/images/React During Bugle Calls.jpg" alt="" width="280" height="200">
 
                     <h3>History of Bugle Calls</h3>
                     <p>Every evening at 1700, soldiers, family members, and civilian employees honor the nation while continuing a tradition
@@ -45,22 +45,11 @@
 
                     <p>Based on U.S. Army Training Center, <em>Fort Jackson Bugle Calls</em>.</p>
                     <p>Reference: <a href="https://home.army.mil/jackson/my-fort/fort-jackson-bugle-calls" target="_blank">Fort Jackson Bugle Calls</a></p>
-
 <br>
-<h2>Bugle Call Scheduler</h2>
-<p>This tool is designed to help you set up bugle calls to play through your PA system at any time of day. Once a bugle call is scheduled, it will automatically play at the chosen time daily. All you need to do is keep this website open and connected to your PA system for it to function.</p>
-
-<h3>How to Use</h3>
 <ul>
-    <li><strong>Play Audio:</strong> Click to immediately play the selected bugle call through your PA system.</li>
-    <li><strong>Stop Audio:</strong> Click to stop the currently playing audio and reset it to the start.</li>
-    <li><strong>Time Picker:</strong> Select a time (HH:MM) to schedule the bugle call to play daily through your PA system.</li>
-    <li><strong>Schedule Daily:</strong> Click after choosing a time to schedule the call to play every day at that time.</li>
-    <li><strong>Stop Schedule:</strong> Click to cancel the daily schedule for the selected call.</li>
+    <li><a href="/pages/guides/builder.html">Bugle Call Scheduler</a></li>
 </ul>
-
-<p>All buttons are small for easier use. The scheduled calls will continue to loop daily until you stop them, ensuring your bugle calls are broadcast automatically at the times you need.</p>
-
+<br>
                     <table id="bugleTable">
                         <thead>
                             <tr>
@@ -73,7 +62,18 @@
                             <!-- JS will populate rows here -->
                         </tbody>
                     </table>
-                    
+                    <table id="musicTable">
+                        <thead>
+                            <tr>
+                                <th>Music</th>
+                                <th>Description</th>
+                                <th>Controls</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JS will populate rows here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
@@ -83,6 +83,6 @@
 
 <!-- External JS -->
 <script src="/partials/partials.js"></script>
-<script src="/pages/guides/bugleCalls/bugleCalls.js"></script>
+<script type="module" src="/js/bugleCalls.js"></script>
 
 </html>
