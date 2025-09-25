@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     timeInput.type = "time";
 
     const addBtn = document.createElement("button");
-    addBtn.textContent = "Add to Schedule";
+    addBtn.textContent = "Add";
     addBtn.className = "small-btn";
     addBtn.onclick = () => {
         const allAudio = [...bugleCalls, ...music];
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const allAudio = [...bugleCalls, ...music];
             const data = allAudio.find(c => c.id === item.id);
             const li = document.createElement("li");
-            li.textContent = `${item.time} - ${data.name}`;
+            li.textContent = `${item.time} - ${data.name} `;
 
             const removeBtn = document.createElement("button");
             removeBtn.textContent = "Remove";
