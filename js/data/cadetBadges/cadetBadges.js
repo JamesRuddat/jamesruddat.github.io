@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
         value: "nra_distinguished_expert",
@@ -11,7 +11,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
         value: "nra_expert",
@@ -22,7 +22,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
         value: "nra_sharpshooter",
@@ -33,7 +33,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
         value: "nra_marksman_first_class",
@@ -44,7 +44,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
         value: "nra_marksman",
@@ -55,7 +55,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
         value: "nra_pro_marksman",
@@ -68,7 +68,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet STEM Badge",
         value: "cadet_stem_basic",
@@ -79,7 +79,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet STEM Badge",
         value: "cadet_stem_advanced",
@@ -90,7 +90,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet STEM Badge",
         value: "cadet_stem_master",
@@ -103,7 +103,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Cyber Badge",
         value: "cadet_cyber_basic",
@@ -114,7 +114,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Cyber Badge",
         value: "cadet_cyber_advanced",
@@ -125,7 +125,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Cyber Badge",
         value: "cadet_cyber_master",

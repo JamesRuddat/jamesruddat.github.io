@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["ClassA", "ClassB", "HGU"],
         wearer: "Male",
         group: "Tie",
         value: "tie",
@@ -11,7 +11,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB", "HGU"],
         wearer: "Female",
         group: "Tie Tab",
         value: "tie_tab",

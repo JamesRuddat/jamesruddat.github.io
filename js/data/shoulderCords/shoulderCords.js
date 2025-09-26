@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "gold",
@@ -11,7 +11,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.1.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "blue",
@@ -22,7 +22,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.2.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "red",
@@ -33,7 +33,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.3.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "green",
@@ -44,7 +44,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.4.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "white",
@@ -55,7 +55,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.2.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "silver",
@@ -66,7 +66,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.3.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Shoulder Cord",
         value: "gray",
@@ -77,7 +77,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.4.",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "mix",
@@ -88,7 +88,7 @@ export default [
         reference: "LEARN TO LEAD Training Tool - Cadet of the Month Award Program",
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "mix",

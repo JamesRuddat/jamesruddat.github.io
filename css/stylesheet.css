@@ -21,7 +21,7 @@
 	--link-hover: #115e2b;
 
 	--text-color: #000000;
-	--alert-color: #d97706;
+	--alert-color: #ff6600;
 	
 	--card-background: #ffffff;
 	--card-shadow: rgba(0, 0, 0, 0.1);
@@ -251,7 +251,7 @@ button,
 	font-family: 'Rajdhani', sans-serif;
 	border: none;
 	border-radius: 6px;
-	padding: 5px 15px;
+	padding: 8px 15px;
 	cursor: pointer;
 	transition: all 0.2s ease;
 	background-color: var(--primary-color);

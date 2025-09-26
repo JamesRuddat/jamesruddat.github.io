@@ -1,5 +1,5 @@
 import * as uniformData from '/js/data/uniformData.js';
-import { positions } from '/js/data/positions.js';
+import { positions } from '/js/data/uniformPositions.js';
 
 function renderUniform() {
   const selectionsString = sessionStorage.getItem('uniformSelections');
@@ -13,8 +13,8 @@ function renderUniform() {
   const member = selections.find(i => i.group?.toLowerCase().includes('member'));
   const grade = selections.find(i => i.group?.toLowerCase().includes('grade'));
   const uniform = selections.find(i => ['USAF Uniforms', 'Cadet Uniforms', 'Senior Uniforms', '18+ Uniforms'].includes(i.group));
-  const selectedCollar = selections.find(i => ['Collar', 'Collar', 'Collar'].includes(i.group));
-  const selectedHat = selections.find(i => ['Male Service Cap', 'Female Service Cap', 'Male Flight Cap', 'Female Flight Cap', 'ABU', 'CFU'].includes(i.group));
+  const collar = selections.find(i => ['Collar', 'Collar', 'Collar'].includes(i.group));
+  const hat = selections.find(i => ['Male Service Cap', 'Female Service Cap', 'Male Flight Cap', 'Female Flight Cap', 'ABU', 'CFU'].includes(i.group));
 
   document.getElementById('overview-text').innerHTML = `
     <strong>Grade:</strong> ${grade?.label || 'No Grade Selected'}<br>
@@ -36,8 +36,8 @@ function renderUniform() {
 
 
   // Add hat & collar if selected
-  if (selectedCollar) itemsToRender.push(selectedCollar);
-  if (selectedHat) itemsToRender.push(selectedHat);
+  if (collar) itemsToRender.push(collar);
+  if (hat) itemsToRender.push(hat);
 
   // --- Dynamic rendering function ---
   function renderItems(container, items) {
@@ -99,10 +99,10 @@ function renderUniform() {
   // --- Extra divs (collar + hat) ---
   const extraLeft = document.getElementById('extra-left');
   extraLeft.innerHTML = '';
-  if (selectedCollar) {
+  if (collar) {
     const img = document.createElement('img');
-    img.src = selectedCollar.image;
-    img.alt = selectedCollar.label;
+    img.src = collar.image;
+    img.alt = collar.label;
     img.style.width = '100%';
     img.style.height = 'auto';
     extraLeft.appendChild(img);
@@ -110,10 +110,10 @@ function renderUniform() {
 
   const extraRight = document.getElementById('extra-right');
   extraRight.innerHTML = '';
-  if (selectedHat) {
+  if (hat) {
     const img = document.createElement('img');
-    img.src = selectedHat.image;
-    img.alt = selectedHat.label;
+    img.src = hat.image;
+    img.alt = hat.label;
     img.style.width = '100%';
     img.style.height = 'auto';
     extraRight.appendChild(img);
@@ -138,4 +138,4 @@ function renderUniform() {
 
 // --- Initialize ---
 document.addEventListener('DOMContentLoaded', renderUniform);
-document.getElementById("uniformButton").onclick = () => location.href = "/../index.html";
+document.getElementById("uniformButton").onclick = () => location.href = "/pages/uniforms/builder.html";

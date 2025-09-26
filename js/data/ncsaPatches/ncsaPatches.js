@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA AFSCFC Patch",
         value: "air_force_space_command_familiarization_course",
@@ -11,7 +11,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA AFCEA Patch",
         value: "air_force_civil_engineering_academy",
@@ -22,7 +22,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA NCC Patch",
         value: "national-cadet-competition",
@@ -33,7 +33,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA SOA Patch",
         value: "space_operations_academy",
@@ -44,7 +44,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA CLA Patch",
         value: "civil_leadership_academy",
@@ -55,7 +55,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA COS Patch",
         value: "cadet_officer_school",
@@ -66,7 +66,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA NESA Patch",
         value: "national_emergency_services_academy",
@@ -76,7 +76,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA HMRS Patch",
         value: "hawk_mountain_ranger_school",
@@ -87,7 +87,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA QT Patch",
         value: "hawk_mountain_ranger_qualification_tabs",
@@ -98,7 +98,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA HGA Patch",
         value: "honor_guard_academy",
@@ -109,7 +109,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA NBB Patch",
         value: "national_blue_beret",
@@ -120,7 +120,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA EA Patch",
         value: "engineering_academy",
@@ -131,7 +131,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA NFA Patch",
         value: "national_flight_academy",
@@ -142,7 +142,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA POC Patch",
         value: "pararescue_orientation_course",
@@ -153,7 +153,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA CA Patch",
         value: "cyber_academy",
@@ -164,7 +164,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "NCSA SUPTFC Patch",
         value: "specialized_undergraduate_pilot_training_familiarization_course",

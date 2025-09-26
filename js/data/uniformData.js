@@ -1,4 +1,4 @@
-// Items
+// uniformData.js
 export { default as members } from './members/members.js';
 export { default as grades } from './grades/grades.js';
 export { default as uniforms } from './uniforms/uniforms.js';
@@ -20,6 +20,7 @@ export { default as cadetBadges } from './cadetBadges/cadetBadges.js';
 export { default as hats } from './hats/hats.js';
 export { default as nameplates } from './nameplates/nameplates.js';
 export { default as collars } from './collars/collars.js';
+export { default as ties } from './ties/ties.js';
 export { default as pants } from './pants/pants.js';
 export { default as shirts } from './shirts/shirts.js';
 export { default as coats } from './coats/coats.js';

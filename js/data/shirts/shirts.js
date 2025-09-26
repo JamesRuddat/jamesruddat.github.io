@@ -1,9 +1,9 @@
 export default [
     {
-        type: null,
+        type: ["ABU", "CFU"],
         wearer: "All",
         group: "ABU Shirt",
-        value: "ABU_shirt",
+        value: "tan_shirt",
         label: "Tan Shirt",
         level: null,
         image: "/js/data/shirts/images/ABU_Shirt.svg",
@@ -11,10 +11,10 @@ export default [
         reference: "A standard Desert Tan short or long-sleeved t-shirt will be worn under the ABU coat. Unit commanders may prescribe unit designation emblems, subject to the approval of the wing commander, not to exceed 5 inches in diameter, in cloth or silk screen, worn on the left side of chest.Logos may also be placed on the back of the t- shirt with the approval of the wing commander. Neither unit designation emblems nor clothing company logos will be visible when wearing the ABU coat. Tan turtlenecks may also be authorized. Thermal undergarments may be desert sand, white or cream colored and are authorized for wear as weather conditions warrant. T-shirts and turtlenecks will not have pockets and all must be tucked into the trousers."
     },
     {
-        type: null,
+        type: ["CFU"],
         wearer: "All",
         group: "CFU Shirt",
-        value: "CFU_black_shirt",
+        value: "black_shirt",
         label: "Black Shirt",
         level: null,
         image: "/js/data/shirts/images/CFU_Shirt.svg",
@@ -24,7 +24,7 @@ export default [
 
     // Male Slacks & Shirts
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "Male",
         group: "Male Shirt",
         value: "short_sleeve",
@@ -35,7 +35,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Male",
         group: "Male Shirt",
         value: "short_sleeve_tie",
@@ -46,7 +46,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "Male",
         group: "Male Shirt",
         value: "long_sleeve",
@@ -57,7 +57,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Male",
         group: "Male Shirt",
         value: "long_sleeve_tie",
@@ -70,7 +70,7 @@ export default [
 
     // Female Slacks & Shirts (no tie / tie tab)
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "short_sleeve",
@@ -81,7 +81,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "short_sleeve_tietab",
@@ -92,7 +92,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "long_sleeve",
@@ -103,7 +103,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "long_sleeve_tietab",
@@ -114,7 +114,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "short_sleeve_princess",
@@ -125,7 +125,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "short_sleeve_princess_tietab",
@@ -136,7 +136,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["Other"],
         wearer: "Female",
         group: "Female Shirt",
         value: "long_sleeve_princess",
@@ -147,7 +147,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Shirt",
         value: "long_sleeve_tietab",

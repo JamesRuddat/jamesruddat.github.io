@@ -1,6 +1,6 @@
+import { allUniformItems } from '/js/data/uniformMapping.js';
 import * as uniformData from '/js/data/uniformData.js';
 import { getGrades, getUniforms, getGenders, isFlightSuit } from '/js/data/uniformLogic.js';
-import { uniformBadgeMap } from '/js/data/uniforms/uniformBadgeMap.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const memberSelect = document.getElementById('member');
@@ -58,34 +58,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     // 1️⃣ Filter uniform items based on uniform and gender
-    function getUniformItems(selectedUniform, gender, member) {
-        const uniformObj = uniformBadgeMap[selectedUniform];
-
+    function getUniformItems(uniform, gender, member) {
         const filteredData = {};
 
-        Object.entries(uniformObj).forEach(([groupKey, groupObj]) => {
+        console.log('--- Filtering Items ---');
+        console.log('Selected Uniform:', uniform, 'Gender:', gender, 'Member:', member);
+
+        Object.entries(allUniformItems).forEach(([categoryKey, groupObj]) => {
             const { displayName, items } = groupObj;
+
+            if (!Array.isArray(items)) { return; }
+
             const filteredItems = items.filter(item => {
+                const types = Array.isArray(item.type) ? item.type : [item.type];
+
+                if (!types.includes(uniform)) { return false; }
+
                 if (item.wearer && item.wearer !== "All" && item.wearer !== member) {
-                    // Allow Male/Female items if member type is Cadet and gender matches
-                    if (item.wearer === "Male" && gender === "Male") return true;
-                    if (item.wearer === "Female" && gender === "Female") return true;
-                    return false;
+                    if ((item.wearer === "Male" && gender !== "Male") ||
+                        (item.wearer === "Female" && gender !== "Female") ||
+                        (item.wearer !== "Male" && item.wearer !== "Female")) {
+                        return false;
+                    }
                 }
-                if (item.gender && item.gender !== gender && item.gender !== "unisex") return false;
+
+                if (item.gender && item.gender !== "unisex" && item.gender !== gender) { return false; }
+
                 return true;
             });
 
             if (filteredItems.length) {
-                filteredData[groupKey] = { displayName, items: filteredItems };
+                filteredData[categoryKey] = { displayName, items: filteredItems };
+                console.log(`Category "${displayName}" has ${filteredItems.length} item(s) after filtering.`);
             }
         });
 
-        console.log("Selected Uniform:", selectedUniform);
-        console.log("Uniform Array:", uniformBadgeMap[selectedUniform]);
-
+        console.log('--- Filtered Data ---', filteredData);
         return filteredData;
     }
 
@@ -211,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- When gender changes, render the items ---
     genderSelect.addEventListener('change', () => {
         const member = memberSelect.value;
-        const selectedUniform = uniformSelect.value;
+        const uniform = uniformSelect.value;
 
         const gender = genderSelect.value;
         if (!gender) {
@@ -219,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const filteredData = getUniformItems(selectedUniform, gender, member);
+        const filteredData = getUniformItems(uniform, gender, member);
         renderUniformItems(filteredData, container);
     });
 

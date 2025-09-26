@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "Gender Type",
         value: "Male",
@@ -11,7 +11,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "Gender Type",
         value: "Female",
@@ -22,7 +22,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "Unisex Type",
         value: "unisex",

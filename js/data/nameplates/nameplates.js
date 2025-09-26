@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: [""],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "blazer_nameplate",
@@ -11,7 +11,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA"],
         wearer: "Senior",
         group: "Uniform Nameplates",
         value: "brush_silver_nameplate",
@@ -22,7 +22,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Uniform Nameplates",
         value: "cap_nameplate_cadet",
@@ -33,7 +33,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "Senior",
         group: "Uniform Nameplates",
         value: "cap_nameplate_adult",
@@ -44,7 +44,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: [""],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "flight_suit_embroidered_name_tag",
@@ -55,7 +55,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: [""],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "black_leather_jacket_name_tag",
@@ -66,7 +66,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: [""],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "black_leather_flight_suit_name_tag",
@@ -77,7 +77,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["BDU"],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "ultramarine_name",
@@ -88,7 +88,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["BDU"],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "ultramarine_cap",
@@ -99,7 +99,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU", "CFU"],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "dark_blue_name",
@@ -110,7 +110,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["ABU", "CFU"],
         wearer: "All",
         group: "Uniform Nameplates",
         value: "dark_blue_cap",
@@ -120,5 +120,5 @@ export default [
         link: "https://www.vanguardmil.com/collections/cap-name-tapes-and-name-plates/products/civil-air-patrol-tape-embroidered-civil-air-patrol-new-insignia",
         reference: null,
     },
-    
+
 ];

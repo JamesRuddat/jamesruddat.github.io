@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Chaplain Insignia",
         value: "chaplaininsignia_jewish",
@@ -11,7 +11,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Chaplain Insignia",
         value: "chaplaininsignia_christian",
@@ -22,7 +22,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Chaplain Insignia",
         value: "chaplaininsignia_buddhist",
@@ -33,7 +33,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Chaplain Insignia",
         value: "chaplaininsignia_muslim",
@@ -46,7 +46,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Medical Officer Badge",
         value: "medical_officer_badge",
@@ -57,7 +57,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Medical Officer Badge",
         value: "nurse_officer_badge",
@@ -70,7 +70,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Legal Officer Badge",
         value: "legal_officer_badge",
@@ -83,7 +83,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Ground Team Badge",
         value: "ground_team_badge_basic",
@@ -94,7 +94,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Ground Team Badge",
         value: "ground_team_badge_senior",
@@ -105,7 +105,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Ground Team Badge",
         value: "ground_team_badge_master",
@@ -118,7 +118,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Incident Commander Badge",
         value: "incident_commander_badge_1",
@@ -129,7 +129,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Incident Commander Badge",
         value: "incident_commander_badge_2",
@@ -140,7 +140,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Incident Commander Badge",
         value: "incident_commander_badge_3",
@@ -153,7 +153,7 @@ export default [
 
 
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Emergency Medical Technician Badge",
         value: "emt_badge_basic",
@@ -164,7 +164,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Emergency Medical Technician Badge",
         value: "emt_badge_intermediate",
@@ -175,7 +175,7 @@ export default [
         reference: null,
     },
     {
-        type: null,
+        type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Emergency Medical Technician Badge",
         value: "emt_badge_paramedic",

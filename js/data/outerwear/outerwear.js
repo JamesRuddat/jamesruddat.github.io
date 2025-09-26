@@ -1,6 +1,6 @@
 export default [
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "ABU Outerwear",
         value: "ABU_gortex_parka",
@@ -11,7 +11,7 @@ export default [
         reference: "Will only be worn with the Airman Battle Uniforms. The jacket will have an ABU print. The jacket will be zipped at least halfway at all times when worn.The hood will rest neatly on the back when not in use. If jacket has a zipper compartment in the collar for the hood, hood will be stowed when not in use.Do not push up or roll up sleeves.The jacket may be worn with or without green fleece lining."
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "ABU Outerwear",
         value: "ABU_green_fleece",

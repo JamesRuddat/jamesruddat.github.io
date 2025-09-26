@@ -24,15 +24,15 @@ README.txt                # This file
 🗂️ Data Format
 Each uniform item is stored as a single JSON object:
 {
-  "type": null,              // cloth or metal
+  "type": null,              // Uniform Type
   "wearer": "Female",        // Gender/member type (Male/Female OR Cadet/Senior/All)
   "group": "Female Skirt",   // Group name (items with same group appear as dropdown/checkbox)
   "value": "female_skirt",   // Shorthand ID (use CAPS acronyms, e.g., FEMALE_ABU_SKIRT)
   "label": "Skirt",          // Text display for UI
   "level": null,             // Type level (basic/intermediate/advanced OR technician/master/senior)
-  "image": "/js/data/blueServiceUniform/images/Skirt.svg", // Image path
-  "link": "https://www.vanguardmil.com/collections/cap-uniform-items/products/civil-air-patrol-skirt-uniform", // Vanguard product link
-  "reference": null          // Regulation reference (CAPM 39-1, etc.)
+  "image": "/images.svg",    // Image path
+  "link": "vanguardmil.com", // Vanguard product link
+  "reference": null          // Regulation reference (CAPR 39-1, etc.)
 }
 
 -----------------------------------------

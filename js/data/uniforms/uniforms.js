@@ -1,172 +1,156 @@
 export default [
-    // Both
     {
-        type: null,
+        type: ["ClassA"],
         wearer: "All",
         group: "USAF Uniforms",
-        value: "serviceDressUniform",
+        value: "ClassA",
         label: "Service Dress Uniform (Class A)",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: "CAPR 39-1 § "
+        reference: "CAPR 39-1 § Men's - 4.1.5. Women's - 4.1.9."
     },
     {
-        type: null,
+        type: ["ClassB"],
         wearer: "All",
         group: "USAF Uniforms",
-        value: "blueServiceUniform",
+        value: "ClassB",
         label: "Blue Service Uniform (Class B)",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § Men's - 4.1.11. Women's - 4.1.12."
     },
     {
-        type: null,
+        type: ["ABU"],
         wearer: "All",
         group: "USAF Uniforms",
-        value: "airmanBattleUniform",
+        value: "ABU",
         label: "Airman Battle Uniform (ABU)",
-        uniformCategory: "patch",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 5.1.1."
     },
     {
-        type: null,
+        type: ["FDU"],
         wearer: "All",
         group: "USAF Uniforms",
-        value: "flightDutyUniform",
+        value: "FDU",
         label: "Flight Duty Uniform (FDU)",
-        uniformCategory: "flight",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 8.2."
     },
     {
-        type: null,
+        type: ["CFDU"],
         wearer: "All",
         group: "18+ Uniforms",
-        value: "corporateFlightDutyUniform",
+        value: "CFDU",
         label: "Corporate Flight Duty Uniform (CFDU)",
-        uniformCategory: "flight",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 8.3."
     },
     {
-        type: null,
+        type: ["CFU"],
         wearer: "All",
         group: "18+ Uniforms",
-        value: "corporateFieldUniform",
+        value: "CFU",
         label: "Corporate Field Uniform (CFU)",
-        uniformCategory: "patch",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 5.2.1."
     },
     {
-        type: null,
+        type: ["CSFU"],
         wearer: "All",
         group: "18+ Uniforms",
-        value: "corporateSemiFormalUniform",
+        value: "CSFU",
         label: "Corporate Semi-Formal Uniform",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § Men's - 4.2.1. Women's - 4.2.2."
     },
     {
-        type: null,
+        type: ["CSDU"],
         wearer: "All",
         group: "18+ Uniforms",
-        value: "corporateServiceDressUniform",
+        value: "CSDU",
         label: "Corporate Service Dress Uniform",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § Men's - 4.2.3. Women's - 4.2.4."
     },
     {
-        type: null,
+        type: ["ASU"],
         wearer: "All",
         group: "18+ Uniforms",
-        value: "aviatorShirtUniform",
+        value: "ASU",
         label: "Aviator Shirt Uniform",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § Men's - 4.2.5. Women's - 4.2.6."
     },
     {
-        type: null,
+        type: ["BDU"],
         wearer: "All",
         group: "USAF Uniforms",
-        value: "battleDressUniform",
+        value: "BDU",
         label: "Battle Dress Uniform (BDU)",
-        uniformCategory: "patch",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 5.1.2."
     },
     {
-        type: null,
+        type: ["OCP"],
         wearer: "All",
         group: "USAF Uniforms",
-        value: "operationalCamouflagePattern",
+        value: "OCP",
         label: "Operational Camouflage Pattern (OCP)",
-        uniformCategory: "patch",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § NONE"
     },
 
     // Cadet Uniforms
     {
-        type: null,
+        type: ["SFDU"],
         wearer: "Cadet",
         group: "Cadet Uniforms",
-        value: "semiFormalUniform",
+        value: "SFDU",
         label: "Semi-Formal Dress Uniform",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § Men's - 4.1.3. Women's - 4.1.4."
     },
     {
-        type: null,
+        type: ["HGU"],
         wearer: "Cadet",
         group: "Cadet Uniforms",
-        value: "honorGuardUniform",
+        value: "HGU",
         label: "Honor Guard Uniform",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 9.6."
     },
 
     // Senior Uniforms
     {
-        type: null,
+        type: ["MDU"],
         wearer: "Senior",
         group: "Senior Uniforms",
-        value: "messDressUniform",
+        value: "MDU",
         label: "Mess Dress Uniform",
-        uniformCategory: "badge",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § Men's - 4.1.1. Women's - 4.1.2."
     },
     {
-        type: null,
+        type: ["CWU"],
         wearer: "Senior",
         group: "Senior Uniforms",
-        value: "corporateWorkingUniform",
+        value: "CWU",
         label: "Corporate Working Uniform",
-        uniformCategory: "patch",
         image: null,
         link: null,
-        reference: null
+        reference: "CAPR 39-1 § 5.3."
     },
 ];
