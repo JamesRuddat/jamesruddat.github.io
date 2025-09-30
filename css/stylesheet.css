@@ -441,6 +441,18 @@ iframe {
 	transition: transform 0.3s ease;
 }
 
+.img-left {
+	float: left;
+	margin: 0 15px 15px 0;
+	max-width: 45%;
+}
+
+.img-right {
+	float: right;
+	margin: 0 0 15px 15px;
+	max-width: 45%;
+}
+
 /* ===== FORMS ===== */
 .form-background {
 	background: white;
