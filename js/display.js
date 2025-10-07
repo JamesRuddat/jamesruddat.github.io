@@ -27,9 +27,19 @@ function createItemCard(item) {
 
     const linkDiv = document.createElement("div");
     if (item.link) {
-        linkDiv.innerHTML = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">View on Vanguard</a>`;
+        let linkText = "View Item";
+        if (item.link.includes("vanguardmil.com")) {
+            linkText = "View on Vanguard";
+        } else if (item.link.includes("nrahq.org")) {
+            linkText = "View on NRA";
+        } else if (item.link.includes("amazon.com")) {
+            linkText = "View on Amazon";
+        } else if (item.link.includes("capranger.org")) {
+            linkText = "View on HMRS store";
+        }
+        linkDiv.innerHTML = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${linkText}</a>`;
     } else {
-        linkDiv.innerHTML = `<em>Item not sold or found on Vanguard</em>`;
+        linkDiv.innerHTML = `<em>Item not sold or found</em>`;
     }
     linkDiv.style.marginLeft = "auto";
     linkDiv.style.textAlign = "right";

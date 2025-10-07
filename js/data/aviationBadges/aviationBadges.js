@@ -8,7 +8,7 @@ export default [
         label: "Pilot",
         level: "basic",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-regulation-size-pilot-wings-insignia",
         reference: null,
     },
     {
@@ -20,7 +20,7 @@ export default [
         label: "Senior Pilot",
         level: "senior",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-regulation-size-senior-pilot-wings-insignia",
         reference: null,
     },
     {
@@ -32,7 +32,7 @@ export default [
         label: "Command Pilot",
         level: "command",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-regulation-size-command-pilot-wings-insignia",
         reference: null,
     },
 
@@ -46,7 +46,7 @@ export default [
         label: "Observer",
         level: "basic",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-regulation-size-observer-wings-insignia",
         reference: null,
     },
     {
@@ -58,7 +58,7 @@ export default [
         label: "Senior Observer",
         level: "senior",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-regulation-size-senior-observer-wings-insignia",
         reference: null,
     },
     {
@@ -70,7 +70,7 @@ export default [
         label: "Master Observer",
         level: "master",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-regulation-size-master-observer-wings-insignia",
         reference: null,
     },
 
@@ -84,7 +84,7 @@ export default [
         label: "Air Crew",
         level: "basic",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-insignia-aircrew-wings-regulation-size",
         reference: null,
     },
     {
@@ -96,7 +96,7 @@ export default [
         label: "Senior Air Crew",
         level: "senior",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-insignia-senior-aircrew-wings-regulation-size",
         reference: null,
     },
     {
@@ -108,7 +108,7 @@ export default [
         label: "Master Air Crew",
         level: "master",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-insignia-master-aircrew-wings-regulation-size",
         reference: null,
     },
 
@@ -146,7 +146,7 @@ export default [
         label: "Solo Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-solo-wings-insignia",
         reference: null,
     },
     {
@@ -158,7 +158,7 @@ export default [
         label: "Pre-Solo Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-pre-solo-wings-insignia",
         reference: null,
     },
 
@@ -172,7 +172,7 @@ export default [
         label: "sUAS Pilot",
         level: "basic",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-suas-basic-pilot",
         reference: null,
     },
     {
@@ -184,7 +184,7 @@ export default [
         label: "Senior sUAS Pilot",
         level: "senior",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/copy-of-civil-air-patrol-badge-suas-senior-pilot",
         reference: null,
     },
     {
@@ -196,7 +196,7 @@ export default [
         label: "Command sUAS Pilot",
         level: "command",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-suas-command-pilot",
         reference: null,
     },
 
@@ -210,7 +210,7 @@ export default [
         label: "sUAS Technician",
         level: "basic",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-suas-basic-technician",
         reference: null,
     },
     {
@@ -222,7 +222,7 @@ export default [
         label: "Senior sUAS Technician",
         level: "senior",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-suas-senior-technician",
         reference: null,
     },
     {
@@ -234,7 +234,7 @@ export default [
         label: "Master sUAS Technician",
         level: "master",
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-suas-command-technician",
         reference: null,
     },
 
@@ -248,7 +248,7 @@ export default [
         label: "Cadet sUAS Badge",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-suas-pre-solo",
         reference: null,
     },
     {

@@ -8,7 +8,7 @@ export default [
         label: "Current Group Commander",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-group-commander-badge",
         reference: null,
     },
     {
@@ -17,10 +17,10 @@ export default [
         wearer: "Senior",
         group: "Command Insignia Pin",
         value: "csg",
-        label: "Current Unit Commander",
+        label: "Current Squadron Commander",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-squadron-commander-badge",
         reference: null,
     },
     {
@@ -32,7 +32,7 @@ export default [
         label: "Past Group Commander",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-group-commander-badge",
         reference: null,
     },
     {
@@ -41,10 +41,10 @@ export default [
         wearer: "Senior",
         group: "Command Insignia Pin",
         value: "psg",
-        label: "Past Unit Commander",
+        label: "Past Squadron Commander",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-squadron-commander-badge",
         reference: null,
     },
 ];

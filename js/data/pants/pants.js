@@ -1,6 +1,6 @@
 export default [
     {
-        required: false,
+        required: true,
         type: ["ClassA"],
         wearer: "Male",
         group: "Male Trousers",
@@ -12,7 +12,7 @@ export default [
         reference: "4.1.11.1.1.4. Trousers. Trousers will be blue and trim-fitted with no bunching at the waist or bagging at the seat.The trousers will be full cut, straight hanging and without cuffs or additional alterations to further taper the leg.The front of the trouser legs will rest on the front of the shoes or boots with a slight break in the crease.The back of the trouser legs will be ⅞ inch longer than the front.The trouser material will match the service dress coat in both fabric and shade 4.1.11.1.1.5.Belt and Buckle.The belt will be blue, cotton web or elastic, solid or woven.The belt will have a plain silver(chrome finish) tip and a buckle, except for General Officers who will wear the Wing and Star on the buckle.The silver tip of the belt will extend beyond the buckle facing the wearer’s left; however, no blue fabric will be visible between the silver tip and silver buckle. 4.1.11.1.1.6.Footwear.Black socks and Low Quarters, Dress Boots, or Combat Boots are required with this uniform.",
     },
     {
-        required: false,
+        required: true,
         type: ["ABU"],
         wearer: "Male",
         group: "Male ABU Trousers",
@@ -24,7 +24,7 @@ export default [
         reference: "Trousers will be with button fastenings and an Air Force digitized tiger stripe print. The trouser waistband will rest on the member's waist. Pockets will be secured and items stowed in pockets will not be visible except pens stowed in the pen pocket. Tucking the ABU trouser into the boot is optional. Whether tucked in or bloused, the trouser must be evenly bloused(gathered in and draped loosely) over the top of the combat boot and must present a bloused appearance."
     },
     {
-        required: false,
+        required: true,
         type: ["ABU"],
         wearer: "Female",
         group: "Female ABU Trousers",
@@ -37,7 +37,7 @@ export default [
     },
 
     {
-        required: false,
+        required: true,
         type: ["CFU"],
         wearer: "Male",
         group: "Male CFU Trousers",
@@ -49,7 +49,7 @@ export default [
         reference: null
     },
     {
-        required: false,
+        required: true,
         type: ["CFU"],
         wearer: "Female",
         group: "Female CFU Trousers",
@@ -62,7 +62,7 @@ export default [
     },
 
     {
-        required: false,
+        required: true,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Slacks",
@@ -74,7 +74,7 @@ export default [
         reference: null,
     },
     {
-        required: false,
+        required: true,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Skirt",
@@ -86,7 +86,7 @@ export default [
         reference: null,
     },
     {
-        required: false,
+        required: true,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Slacks",
@@ -98,7 +98,7 @@ export default [
         reference: null,
     },
     {
-        required: false,
+        required: true,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Skirt",

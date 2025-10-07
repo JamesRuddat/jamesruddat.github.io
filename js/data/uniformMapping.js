@@ -1,7 +1,9 @@
 // uniformBadgeMap.js
 import * as uniformData from './uniformData.js';
 
-export const allUniformItems = {       
+export const allUniformItems = {      
+    grades: { displayName: "Grades", items: uniformData.grades },
+
     hats: { displayName: "Hats", items: uniformData.hats },
     collars: { displayName: "Collars", items: uniformData.collars },
     ties: { displayName: "Ties", items: uniformData.ties },

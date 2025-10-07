@@ -129,6 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     wrapper.appendChild(document.createElement("br"));
 
                     const select = document.createElement("select");
+
+                    // Placeholder
                     const placeholder = document.createElement("option");
                     placeholder.value = "";
                     placeholder.textContent = "Select";
@@ -145,15 +147,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     Object.entries(subGroups).forEach(([subGroup, subItems]) => {
                         const optgroup = document.createElement("optgroup");
                         optgroup.label = subGroup;
+
                         subItems.forEach(item => {
                             const option = document.createElement("option");
                             option.value = item.value;
                             option.textContent = item.label;
+
+                            if (item.required) option.selected = true;
                             optgroup.appendChild(option);
                         });
                         select.appendChild(optgroup);
                     });
-
                     wrapper.appendChild(select);
 
                 } else {
@@ -163,11 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     checkbox.type = "checkbox";
                     checkbox.value = item.value;
 
+                    if (item.required) checkbox.checked = true;
                     label.appendChild(checkbox);
                     label.appendChild(document.createTextNode(" " + item.label));
                     wrapper.appendChild(label);
                 }
-
                 container.appendChild(wrapper);
             });
         });
@@ -255,11 +259,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedObjects = [];
 
         document.querySelectorAll('select').forEach(select => {
-            if (select.value) selectedObjects.push(itemMap[select.value]);
+            const selectedItem = itemMap[select.value];
+            if (selectedItem) selectedObjects.push(selectedItem);
         });
 
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            if (checkbox.checked) selectedObjects.push(itemMap[checkbox.value]);
+            const selectedItem = itemMap[checkbox.value];
+            if (checkbox.checked && selectedItem) selectedObjects.push(selectedItem);
         });
 
         sessionStorage.setItem('uniformSelections', JSON.stringify(selectedObjects));

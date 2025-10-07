@@ -20,7 +20,7 @@ export default [
         label: "Tie Tab",
         level: null,
         image: "/js/data/ties/images/Tie_Tab.svg",
-        link: "https://www.vanguardmil.com/collections/civil-air-patrol-neckties/products/usaf-blue-4inhand-herringbone-necktie",
+        link: "https://www.vanguardmil.com/products/air-force-female-dark-blue-neck-tab-for-overblouse-1",
         reference: null,
     },
 ];

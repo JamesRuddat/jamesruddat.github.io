@@ -625,7 +625,7 @@ export default [
         wearer: "Senior", group: "Standardization & Evaluation", value: "standardization_evaluation_badge_technician", label: "Standardization & Evaluation Badge - Technician",
         level: "technician",
         image: "/js/data/specialtytrackbadges/images",
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-stan-eval-basic-badge",
         reference: null,
 
     },
@@ -635,7 +635,7 @@ export default [
         wearer: "Senior", group: "Standardization & Evaluation", value: "standardization_evaluation_badge_senior", label: "Standardization & Evaluation Badge - Senior",
         level: "senior",
         image: "/js/data/specialtytrackbadges/images",
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-stan-eval-badge-senior",
         reference: null,
 
     },
@@ -645,7 +645,7 @@ export default [
         wearer: "Senior", group: "Standardization & Evaluation", value: "standardization_evaluation_badge_master", label: "Standardization & Evaluation Badge - Master",
         level: "master",
         image: "/js/data/specialtytrackbadges/images",
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-badge-stan-eval-master",
         reference: null,
 
     },

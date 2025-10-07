@@ -1,7 +1,7 @@
 //collars.js
 export default [
     {
-        required: false,
+        required: true,
         type: ["CFU"],
         wearer: "All",
         group: "Collar",
@@ -13,7 +13,7 @@ export default [
         reference: null,
     },
     {
-        required: false,
+        required: true,
         type: ["ABU"],
         wearer: "All",
         group: "Collar",

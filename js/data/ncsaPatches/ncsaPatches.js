@@ -103,7 +103,7 @@ export default [
         label: "Hawk Mountain Ranger Qualification Tabs",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.capranger.org/product-page/ranger-tabs",
         reference: null,
     },
     {

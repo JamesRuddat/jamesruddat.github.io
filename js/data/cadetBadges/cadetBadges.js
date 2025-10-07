@@ -8,7 +8,7 @@ export default [
         label: "NRA Distinguished Expert Badge",
         level: "distinguished",
         image: null,
-        link: "",
+        link: "https://materials.nrahq.org/en-gb/product/qualification-awards/medals/distinguished-expert-qualification-medal",
         reference: null,
     },
     {
@@ -20,7 +20,7 @@ export default [
         label: "NRA Expert Badge",
         level: "expert",
         image: null,
-        link: "",
+        link: "https://materials.nrahq.org/en-gb/product/qualification-awards/medals/expert-medal",
         reference: null,
     },
     {
@@ -32,7 +32,7 @@ export default [
         label: "NRA Sharpshooter Badge",
         level: "sharpshooter",
         image: null,
-        link: "",
+        link: "https://materials.nrahq.org/en-gb/product/qualification-awards/medals/sharpshooter-medal",
         reference: null,
     },
     {
@@ -56,7 +56,7 @@ export default [
         label: "NRA Marksman Badge",
         level: "marksman",
         image: null,
-        link: "",
+        link: "https://materials.nrahq.org/en-gb/product/qualification-awards/medals/marksman-medal",
         reference: null,
     },
     {
@@ -68,7 +68,7 @@ export default [
         label: "NRA Pro-Marksman Badge",
         level: "pro_marksman",
         image: null,
-        link: "",
+        link: "https://materials.nrahq.org/en-gb/product/qualification-awards/medals/pro-marksman-medal",
         reference: null,
     },
 

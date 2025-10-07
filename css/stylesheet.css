@@ -488,6 +488,13 @@ select {
 	border: 1px solid #ccc;
 	overflow: hidden;
 }
+
+.extra-left,
+.extra-right {
+	position: relative;
+	height: 300px;
+}
+
 .uniform-container {
 	display: flex;
 	gap: 20px;

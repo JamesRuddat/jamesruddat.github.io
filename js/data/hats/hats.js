@@ -74,7 +74,7 @@ export default [
     {
         required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Senior Members",
         group: "Cap Device",
         value: "Service_Cap_NCO",
         label: "NCO Service Cap Device",
@@ -86,7 +86,7 @@ export default [
     {
         required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Senior Members",
         group: "Cap Device",
         value: "Service_Cap_Officer",
         label: "Officer Service Cap Device",
@@ -110,7 +110,7 @@ export default [
     {
         required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Senior Members",
         group: "Flight Cap",
         value: "Flight_Cap",
         label: "Flight Cap",
@@ -122,7 +122,7 @@ export default [
     {
         required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Senior Members",
         group: "Flight Cap",
         value: "Flight_Cap",
         label: "Flight Cap",
@@ -218,7 +218,7 @@ export default [
     {
         required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Senior Members",
         group: "Male Service Cap",
         value: "Male_Service_Cap",
         label: "Service Cap - Field Grade",
@@ -230,7 +230,7 @@ export default [
     {
         required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Senior Members",
         group: "Male Service Cap",
         value: "Male_Service_Cap",
         label: "Service Cap - General Officers",

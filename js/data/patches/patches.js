@@ -68,7 +68,7 @@ export default [
         label: "Overseas Unit Shoulder Patch",
         level: null,
         image: null,
-        link: "",
+        link: "https://www.vanguardmil.com/products/civil-air-patrol-patch-national",
         reference: null,
     },
     {
