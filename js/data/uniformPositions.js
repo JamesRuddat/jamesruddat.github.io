@@ -9,6 +9,8 @@ export const positions = [
     { names: ['slacks'], x: 80, y: 270, size: 140 },
     { names: ['skirt'], x: 80, y: 270, size: 140 },
 
+    { names: ['tie'], x: 137, y: 80, size: 24 },
+
     { names: ['coat'], x: 40, y: 60, size: 220 },
     { names: ['blouse'], x: 35, y: 50, size: 232 },
 
@@ -19,7 +21,7 @@ export const positions = [
     { names: ['grades'], x: 100, y: 120, size: 70 },
     { names: ['nameplate'], x: 82, y: 135, size: 50 },
     { names: ['CAP plates'], x: 182, y: 135, size: 50 },
-    { names: ['tie'], x: 137, y: 80, size: 24 },
+    
 
     //front
 ];
