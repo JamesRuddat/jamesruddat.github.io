@@ -1,17 +1,19 @@
 export default [
     // Male
     {
+        required: false,
         type: ["ClassA"],
         wearer: "Male",
         group: "Male Service Coat",
         value: "male_officer_service_coat_new",
-        label: "officer-style Service Coat",
+        label: "Officer-style Service Coat",
         level: null,
         image: "/js/data/coats/images/Service_Coat_M_New.svg",
         link: "",
         reference: null
     },
     {
+        required: false,
         type: ["ClassA"],
         wearer: "Male",
         group: "Male Service Coat",
@@ -23,6 +25,7 @@ export default [
         reference: null
     },
     {
+        required: false,
         type: ["ClassA"],
         wearer: "Male",
         group: "Male Service Coat",
@@ -36,17 +39,19 @@ export default [
 
     // Female
     {
+        required: false,
         type: ["ClassA"],
         wearer: "Female",
         group: "Female Service Coat",
         value: "female_officer_service_coat_new",
-        label: "officer-style Service Coat",
+        label: "Officer-style Service Coat",
         level: null,
         image: "/js/data/coats/images/Service_Coat_F_New.svg",
         link: "",
         reference: null
     },
     {
+        required: false,
         type: ["ClassA"],
         wearer: "Female",
         group: "Female Service Coat",
@@ -58,6 +63,7 @@ export default [
         reference: null
     },
     {
+        required: false,
         type: ["ClassA"],
         wearer: "Female",
         group: "Female Service Coat",
@@ -70,6 +76,7 @@ export default [
     },
 
     {
+        required: false,
         type: ["ABU"],
         wearer: "Male",
         group: "Male ABU Blouse",
@@ -81,6 +88,7 @@ export default [
         reference: "The ABU coat with button fastenings and an Air Force digitized tigerstripe print.The bottom of the ABU coat will rest at the hips.Pockets will be secured and items stowed in pockets will not be visible except pens stowed in the pen pocket on the sleeve. The top button of the ABU coat will not be fastened; however, all other buttons will be secured at all times. Commanders may authorize sleeves to be rolled up on the ABU coat; however, the cuffs will remain visible and the sleeve will rest at, or within 1 inch of, the forearm when the arm is bent at a 90-degree angle. Regardless as to whether the sleeves are rolled up or unrolled, the cuffs will remain visible at all times. The ABU coat may be removed in immediate work area as determined appropriate by local leadership; however, the ABU coat will be worn while interacting with customers/clients. When ABU coat is removed, t-shirt will be worn. All accoutrements with the exception of the nametapes, CAP tapes, grade insignia, aviation badge, and chaplains badge remain optional for wear."
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "Male",
         group: "Male ABU Blouse",
@@ -95,6 +103,7 @@ export default [
     // Female
 
     {
+        required: false,
         type: ["ABU"],
         wearer: "Female",
         group: "Female ABU Blouse",
@@ -106,6 +115,7 @@ export default [
         reference: "The ABU coat with button fastenings and an Air Force digitized tigerstripe print.The bottom of the ABU coat will rest at the hips.Pockets will be secured and items stowed in pockets will not be visible except pens stowed in the pen pocket on the sleeve. The top button of the ABU coat will not be fastened; however, all other buttons will be secured at all times. Commanders may authorize sleeves to be rolled up on the ABU coat; however, the cuffs will remain visible and the sleeve will rest at, or within 1 inch of, the forearm when the arm is bent at a 90-degree angle. Regardless as to whether the sleeves are rolled up or unrolled, the cuffs will remain visible at all times. The ABU coat may be removed in immediate work area as determined appropriate by local leadership; however, the ABU coat will be worn while interacting with customers/clients. When ABU coat is removed, t-shirt will be worn. All accoutrements with the exception of the nametapes, CAP tapes, grade insignia, aviation badge, and chaplains badge remain optional for wear."
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "Female",
         group: "female ABU Blouse",
@@ -118,6 +128,7 @@ export default [
     },
 
     {
+        required: false,
         type: ["CFU"],
         wearer: "Male",
         group: "Male CFU Blouse",
@@ -129,6 +140,7 @@ export default [
         reference: null
     },
     {
+        required: false,
         type: ["CFU"],
         wearer: "Male",
         group: "Male CFU Blouse",
@@ -142,6 +154,7 @@ export default [
 
     // Female
     {
+        required: false,
         type: ["CFU"],
         wearer: "Female",
         group: "Female CFU Blouse",
@@ -153,6 +166,7 @@ export default [
         reference: null
     },
     {
+        required: false,
         type: ["CFU"],
         wearer: "Female",
         group: "Female CFU Blouse",

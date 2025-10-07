@@ -239,9 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Prepare itemMap for form submission ---
     const itemMap = {};
-    Object.entries(uniformData).forEach(([key, arrayItems]) => {
-        if (Array.isArray(arrayItems)) {
-            arrayItems.forEach(item => {
+    Object.entries(allUniformItems).forEach(([categoryKey, groupObj]) => {
+        const { items } = groupObj;
+        if (Array.isArray(items)) {
+            items.forEach(item => {
                 if (item.value) itemMap[item.value] = item;
             });
         }

@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Pilot Badge",
@@ -11,6 +12,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Pilot Badge",
@@ -22,6 +24,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Pilot Badge",
@@ -35,6 +38,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Observer Badge",
@@ -46,6 +50,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Observer Badge",
@@ -57,6 +62,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Observer Badge",
@@ -70,6 +76,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Air Crew Badge",
@@ -81,6 +88,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Air Crew Badge",
@@ -92,6 +100,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Air Crew Badge",
@@ -105,6 +114,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Glider Pilot Badge",
@@ -116,6 +126,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Balloon Pilot Badge",
@@ -127,6 +138,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Solo Badge",
@@ -138,6 +150,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Pre-Solo Badge",
@@ -151,6 +164,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "sUAS Pilot Badge",
@@ -162,6 +176,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "sUAS Pilot Badge",
@@ -173,6 +188,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "sUAS Pilot Badge",
@@ -186,6 +202,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "sUAS Technician Badge",
@@ -197,6 +214,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "sUAS Technician Badge",
@@ -208,6 +226,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "sUAS Technician Badge",
@@ -221,6 +240,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet sUAS Badge",
@@ -232,6 +252,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Model Rocketry Badge",

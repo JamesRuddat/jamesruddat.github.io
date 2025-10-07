@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Service Badge",
@@ -11,6 +12,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Service Badge",
@@ -22,6 +24,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Service Badge",
@@ -33,6 +36,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Service Badge",
@@ -44,6 +48,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "National Staff/Volunteer Badge",
@@ -55,6 +60,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "All",
         group: "Volunteer University Instructor Badge",

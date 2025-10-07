@@ -1,6 +1,7 @@
 //collars.js
 export default [
     {
+        required: false,
         type: ["CFU"],
         wearer: "All",
         group: "Collar",
@@ -12,6 +13,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Collar",
@@ -23,6 +25,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA"],
         wearer: "All",
         group: "Collar",
@@ -34,6 +37,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassB"],
         wearer: "All",
         group: "Collar",
@@ -45,6 +49,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassB"],
         wearer: "All",
         group: "Collar",

@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -11,6 +12,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.1.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -22,6 +24,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.2.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -33,6 +36,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.3.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -44,6 +48,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.1.4.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -55,6 +60,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.2.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -66,6 +72,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.3.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Shoulder Cord",
@@ -77,6 +84,7 @@ export default [
         reference: "CAPR 39-1 § 9.3.4.",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",
@@ -88,6 +96,7 @@ export default [
         reference: "LEARN TO LEAD Training Tool - Cadet of the Month Award Program",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Shoulder Cord",

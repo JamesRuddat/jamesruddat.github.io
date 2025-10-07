@@ -1,7 +1,6 @@
 export const positions = [
     // Back
-    { names: ['shoes'], x: 100, y: 520, size: 80 },
-    { names: ['boots'], x: 100, y: 520, size: 80 },
+    { names: ['shoes'], x: 70, y: 560, size: 160 },
     { names: ['slippers'], x: 100, y: 520, size: 80 },
 
     { names: ['shirt'], x: 40, y: 60, size: 220 },
@@ -13,12 +12,13 @@ export const positions = [
     { names: ['coat'], x: 40, y: 60, size: 220 },
     { names: ['blouse'], x: 35, y: 50, size: 232 },
 
-    { names: ['cap', 'flight cap', 'service cap'], x: 110, y: 0, size: 100 },
+    { names: ['cap'], x: 10, y: 0, size: 120 },
     { names: ['device'], x: 110, y: 0, size: 20 },
 
     { names: ['cord'], x: 215, y: 92, size: 34 },
     { names: ['grades'], x: 100, y: 120, size: 70 },
-    { names: ['nameplate'], x: 92, y: 135, size: 50 },
+    { names: ['nameplate'], x: 82, y: 135, size: 50 },
+    { names: ['CAP plates'], x: 182, y: 135, size: 50 },
     { names: ['tie'], x: 137, y: 80, size: 24 },
 
     //front

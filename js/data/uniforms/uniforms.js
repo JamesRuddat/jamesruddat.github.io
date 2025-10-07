@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["ClassA"],
         wearer: "All",
         group: "USAF Uniforms",
@@ -10,6 +11,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.5. Women's - 4.1.9."
     },
     {
+        required: false,
         type: ["ClassB"],
         wearer: "All",
         group: "USAF Uniforms",
@@ -20,6 +22,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.11. Women's - 4.1.12."
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "USAF Uniforms",
@@ -30,6 +33,7 @@ export default [
         reference: "CAPR 39-1 § 5.1.1."
     },
     {
+        required: false,
         type: ["FDU"],
         wearer: "All",
         group: "USAF Uniforms",
@@ -40,6 +44,7 @@ export default [
         reference: "CAPR 39-1 § 8.2."
     },
     {
+        required: false,
         type: ["CFDU"],
         wearer: "All",
         group: "18+ Uniforms",
@@ -50,6 +55,7 @@ export default [
         reference: "CAPR 39-1 § 8.3."
     },
     {
+        required: false,
         type: ["CFU"],
         wearer: "All",
         group: "18+ Uniforms",
@@ -60,6 +66,7 @@ export default [
         reference: "CAPR 39-1 § 5.2.1."
     },
     {
+        required: false,
         type: ["CSFU"],
         wearer: "All",
         group: "18+ Uniforms",
@@ -70,6 +77,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.1. Women's - 4.2.2."
     },
     {
+        required: false,
         type: ["CSDU"],
         wearer: "All",
         group: "18+ Uniforms",
@@ -80,6 +88,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.3. Women's - 4.2.4."
     },
     {
+        required: false,
         type: ["ASU"],
         wearer: "All",
         group: "18+ Uniforms",
@@ -90,6 +99,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.5. Women's - 4.2.6."
     },
     {
+        required: false,
         type: ["BDU"],
         wearer: "All",
         group: "USAF Uniforms",
@@ -100,6 +110,7 @@ export default [
         reference: "CAPR 39-1 § 5.1.2."
     },
     {
+        required: false,
         type: ["OCP"],
         wearer: "All",
         group: "USAF Uniforms",
@@ -112,6 +123,7 @@ export default [
 
     // Cadet Uniforms
     {
+        required: false,
         type: ["SFDU"],
         wearer: "Cadet",
         group: "Cadet Uniforms",
@@ -122,6 +134,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.3. Women's - 4.1.4."
     },
     {
+        required: false,
         type: ["HGU"],
         wearer: "Cadet",
         group: "Cadet Uniforms",
@@ -134,6 +147,7 @@ export default [
 
     // Senior Uniforms
     {
+        required: false,
         type: ["MDU"],
         wearer: "Senior",
         group: "Senior Uniforms",
@@ -144,6 +158,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.1. Women's - 4.1.2."
     },
     {
+        required: false,
         type: ["CWU"],
         wearer: "Senior",
         group: "Senior Uniforms",

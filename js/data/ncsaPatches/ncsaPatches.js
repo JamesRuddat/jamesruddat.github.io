@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA AFSCFC Patch",
@@ -11,6 +12,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA AFCEA Patch",
@@ -22,6 +24,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA NCC Patch",
@@ -33,6 +36,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA SOA Patch",
@@ -44,6 +48,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA CLA Patch",
@@ -55,6 +60,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA COS Patch",
@@ -66,6 +72,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA NESA Patch",
@@ -76,6 +83,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA HMRS Patch",
@@ -87,6 +95,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA QT Patch",
@@ -98,6 +107,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA HGA Patch",
@@ -109,6 +119,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA NBB Patch",
@@ -120,6 +131,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA EA Patch",
@@ -131,6 +143,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA NFA Patch",
@@ -142,6 +155,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA POC Patch",
@@ -153,6 +167,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA CA Patch",
@@ -164,6 +179,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NCSA SUPTFC Patch",

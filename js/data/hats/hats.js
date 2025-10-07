@@ -1,8 +1,9 @@
 export default [
     {
+        required: false,
         type: ["ABU", "CFU", "BDU"],
         wearer: "All",
-        group: "Blue Beret",
+        group: "Hat",
         value: "beret",
         label: "Blue Beret",
         level: null,
@@ -11,9 +12,10 @@ export default [
         reference: "CAPR 39-1 § 9.4.6.",
     },
     {
+        required: false,
         type: ["ABU", "CFU"],
         wearer: "All",
-        group: "Navy Blue Tactical Cap",
+        group: "Hat",
         value: "tactical_cap",
         label: "Navy Blue Tactical Cap",
         level: null,
@@ -22,9 +24,10 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
-        group: "ABU",
+        group: "Hat",
         value: "ABU_Cap",
         label: "ABU Cap",
         level: null,
@@ -33,9 +36,10 @@ export default [
         reference: "The navy blue tactical and ABU patrol cap is authorized with this uniform. A cap will be worn outdoors at all times, unless in a designated “no hat” area. Members will wear a cap straight on the head so that the cap band creates a straight line around the head, parallel to the ground. Caps will fit snugly and comfortably around the largest part of the head without bulging or distortion from the intended shape of the headgear and without excessive gaps. No hair will be visible on the forehead beneath the cap. Members are authorized to block the patrol cap. Senior member officers will wear light silver, or for 2d Lt and Majors, gold, embroidered grade insignia on dark blue cloth centered on the front of the ABU cap. CAP Chaplains may substitute the Chaplain insignia for grade insignia on the ABU cap. Cadet Officers will wear embroidered grade insignia on dark blue cloth centered on the front of the cap.",
     },
     {
-        type: ["ABU"],
+        required: false,
+        type: ["CFU"],
         wearer: "All",
-        group: "CFU",
+        group: "Hat",
         value: "CFU_Cap",
         label: "CFU Cap",
         level: null,
@@ -44,8 +48,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Cadet",
         group: "Cap Device",
         value: "Service_Cap_Cadet",
         label: "Cadet Service Cap Device",
@@ -55,8 +60,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Cadet",
         group: "Cap Device",
         value: "Flight_Cap_Cadet",
         label: "Cadet Flight Cap Device",
@@ -66,6 +72,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Cap Device",
@@ -77,6 +84,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Cap Device",
@@ -88,6 +96,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Flight Cap",
@@ -99,6 +108,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Flight Cap",
@@ -110,6 +120,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Flight Cap",
@@ -121,8 +132,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Male",
         group: "Male Flight Cap",
         value: "Male_Flight_Cap",
         label: "Flight Cap",
@@ -132,8 +144,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Male",
         group: "Male Flight Cap",
         value: "Male_Flight_Cap",
         label: "Flight Cap",
@@ -143,8 +156,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Male",
         group: "Male Flight Cap",
         value: "Male_Flight_Cap",
         label: "Flight Cap",
@@ -154,8 +168,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Female",
         group: "Female Flight Cap",
         value: "Female_Flight_Cap",
         label: "Flight Cap",
@@ -165,8 +180,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Female",
         group: "Female Flight Cap",
         value: "Female_Flight_Cap",
         label: "Flight Cap",
@@ -176,8 +192,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Female",
         group: "Female Flight Cap",
         value: "Female_Flight_Cap",
         label: "Flight Cap",
@@ -187,6 +204,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Male Service Cap",
@@ -198,6 +216,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Male Service Cap",
@@ -209,6 +228,7 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "All",
         group: "Male Service Cap",
@@ -220,8 +240,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Female",
         group: "Female Service Cap",
         value: "Female_Service_Cap",
         label: "Service Cap - Company Grade",
@@ -231,8 +252,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Female",
         group: "Female Service Cap",
         value: "Female_Service_Cap",
         label: "Service Cap - Field Grade",
@@ -242,8 +264,9 @@ export default [
         reference: "",
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
-        wearer: "All",
+        wearer: "Female",
         group: "Female Service Cap",
         value: "Female_Service_Cap",
         label: "Service Cap - General Officers",

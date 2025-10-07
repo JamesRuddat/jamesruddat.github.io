@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Command Insignia Pin",
@@ -11,6 +12,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["MDU", "ClassA", "ClassB", "ABU", "BDU", "FDU", "CSU", "ASU", "CFU", "CFDU"],
         wearer: "Senior",
         group: "Command Insignia Pin",
@@ -22,6 +24,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU", "BDU"],
         wearer: "Senior",
         group: "Command Insignia Pin",
@@ -33,6 +36,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU", "BDU"],
         wearer: "Senior",
         group: "Command Insignia Pin",

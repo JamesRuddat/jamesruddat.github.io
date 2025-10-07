@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
@@ -11,6 +12,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
@@ -22,6 +24,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
@@ -33,6 +36,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
@@ -44,6 +48,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
@@ -55,6 +60,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet NRA Marksmanship Badge",
@@ -68,6 +74,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet STEM Badge",
@@ -79,6 +86,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet STEM Badge",
@@ -90,6 +98,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet STEM Badge",
@@ -103,6 +112,7 @@ export default [
 
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Cyber Badge",
@@ -114,6 +124,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Cyber Badge",
@@ -125,6 +136,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Cadet",
         group: "Cadet Cyber Badge",

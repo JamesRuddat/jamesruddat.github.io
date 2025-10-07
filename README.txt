@@ -33,6 +33,7 @@ Each uniform item is stored as a single JSON object:
   "image": "/images.svg",    // Image path
   "link": "vanguardmil.com", // Vanguard product link
   "reference": null          // Regulation reference (CAPR 39-1, etc.)
+  "required": true           // Auto-add this item to uniform
 }
 
 -----------------------------------------

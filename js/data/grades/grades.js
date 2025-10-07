@@ -1,6 +1,7 @@
 export default [
     // Cadet Grades
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -14,6 +15,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -25,6 +27,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -36,6 +39,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -47,6 +51,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -58,6 +63,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -69,6 +75,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -80,6 +87,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -91,6 +99,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -102,6 +111,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -113,6 +123,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -124,6 +135,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -135,6 +147,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -146,6 +159,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -157,6 +171,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Cadet",
         group: "Cadet Grades",
@@ -171,6 +186,7 @@ export default [
 
     // Adult Grades
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Senior Grades",
@@ -182,6 +198,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "NCO Grades",
@@ -193,6 +210,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "NCO Grades",
@@ -204,6 +222,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "NCO Grades",
@@ -215,6 +234,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "NCO Grades",
@@ -226,6 +246,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "NCO Grades",
@@ -237,6 +258,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Flight Officer Grades",
@@ -248,6 +270,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Flight Officer Grades",
@@ -259,6 +282,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Flight Officer Grades",
@@ -270,6 +294,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -281,6 +306,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -292,6 +318,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -303,6 +330,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -314,6 +342,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -325,6 +354,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -336,6 +366,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -347,6 +378,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",
@@ -358,6 +390,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: null,
         wearer: "Senior",
         group: "Officer Grades",

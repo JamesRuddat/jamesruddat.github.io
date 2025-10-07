@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["FDU", "CFDU"],
         wearer: "All",
         group: "American Flag Patch",
@@ -11,6 +12,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["FDU", "CFDU"],
         wearer: "All",
         group: "CAP Command Patch",
@@ -22,6 +24,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU", "BDU", "CFU", "FDU", "CFDU"],
         wearer: "All",
         group: "National Shoulder Rocker Patch",
@@ -33,6 +36,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Region Shield Patch",
@@ -44,6 +48,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Wing Patch Patch",
@@ -55,6 +60,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Overseas Unit Patch",
@@ -66,6 +72,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "National Check Pilot Patch",
@@ -77,6 +84,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Pilot Proficiency Patch",
@@ -88,6 +96,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch",
@@ -99,6 +108,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Inland SAR Planning Course Patch",
@@ -110,6 +120,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Cadet Orientation Pilot Patch",
@@ -121,6 +132,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "AFJROTC Patch",
@@ -132,6 +144,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Venture/Aviation Explorer Patch",
@@ -143,6 +156,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Communications Patch",
@@ -154,6 +168,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Safety Patch",
@@ -165,6 +180,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Model Rocketry Patch",
@@ -176,6 +192,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["CFU", "BDU"],
         wearer: "All",
         group: "Emergency Services Patch",
@@ -187,6 +204,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["CFU", "BDU"],
         wearer: "All",
         group: "Emergency Services Patch",
@@ -198,6 +216,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "CPR Patch",
@@ -209,6 +228,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "ARCHER Patch",
@@ -220,6 +240,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "CISM Patch",
@@ -231,6 +252,7 @@ export default [
         reference: null,
     },
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "NASAR Patch",

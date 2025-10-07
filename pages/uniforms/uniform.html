@@ -35,43 +35,31 @@
                     <h2>Your Uniform</h2>
                     <div
                         style="background-color: yellow; border-left: 4px solid gold; padding: 10px; margin-bottom: 15px;">
-                        <strong>Notice:</strong> We are currently updating the uniform images. Updates can be viewed on
-                        the Uniforms page.
+                        <strong>Notice:</strong> We are currently updating the uniform images. Updates can be viewed on the Uniforms page.
                         <br><br>
-                        Until the images are updated, the generator will mostly show labels and values, which makes it
-                        more of a functional
-                        form than a visual preview.
+                        Until the images are updated, the generator will mostly show labels and values, which makes it more of a functional form than a visual preview.
                     </div>
 
                     <button id="uniformButton">Create Another Uniform</button>
                     <br><br>
 
-                    <!-- 1. Small full picture + general description -->
-                    <div class="uniform-overview">
-                        <div id="overview-image" class="overview-image">Full Image</div>
-                        <div id="overview-text" class="overview-text">General description</div>
-                    </div>
-
-                    <!-- 2. Full-width zoom (chest) 
-                    <div id="uniform-main" class="uniform-main">Full-width zoom (chest) Image</div>-->
-
-                    <!-- 3. Optional small images + text -->
-                    <div class="uniform-extra">
-                        <div id="extra-left" class="extra-left">Optional Collar Image</div>
-                        <div id="extra-right" class="extra-right">Optional Hat Image</div>
-                        <div id="extra-text" class="extra-text">Optional text</div>
-                    </div>
-
-                    <!-- 4. Outdoor/Outerwear images -->
-                    <div class="uniform-overview">
-                        <div id="outerwear-image" class="outerwear-image">Outerwear Image</div>
-                        <div id="outerwear-text" class="outerwear-text">Outerwear description</div>
-                    </div>
-
-                    <!-- 5. Regulations split into two columns -->
-                    <div class="uniform-regulations">
-                        <div id="reg-main" class="reg-main">Regulations</div>
-                        <div id="reg-extra" class="reg-extra">Badge Regulations</div>
+                    <!-- Full uniform view + extra items -->
+                    <div class="uniform-container">
+                        <!-- Left column: Images -->
+                        <div class="images-column">
+                            <div id="overview-image" class="overview-image">Full Image</div>
+                            <div id="extra-left" class="extra-left">Optional Collar Image</div>
+                            <div id="extra-right" class="extra-right">Optional Hat Image</div>
+                            <div id="outerwear-image" class="outerwear-image">Outerwear Image</div>
+                        </div>
+                    
+                        <!-- Right column: Texts -->
+                        <div class="texts-column">
+                            <div id="overview-text" class="overview-text">General description</div>
+                            <div id="extra-text" class="extra-text">Extra item description</div>
+                            <div id="outerwear-text" class="outerwear-text">Outerwear description</div>
+                            <div id="reg-main" class="reg-main">Regulations</div>
+                        </div>
                     </div>
                 </div>
             </div>

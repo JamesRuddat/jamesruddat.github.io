@@ -1,5 +1,6 @@
 export default [
     {
+        required: false,
         type: ["ABU"],
         wearer: "All",
         group: "Rigger Belt",
@@ -11,6 +12,7 @@ export default [
         reference: "A standard Desert Tan belt will be worn. A rigger-style belt with a hook and loop buckle may be worn."
     },
     {
+        required: false,
         type: ["CFU", "CWU"],
         wearer: "All",
         group: "Rigger Belt",
@@ -23,6 +25,7 @@ export default [
     },
 
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Male",
         group: "blue Elastic Belt",
@@ -34,6 +37,7 @@ export default [
         reference: null
     },
     {
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "blue Elastic Belt",

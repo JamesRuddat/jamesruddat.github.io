@@ -4,6 +4,15 @@ export { default as grades } from './grades/grades.js';
 export { default as uniforms } from './uniforms/uniforms.js';
 export { default as genders } from './genders/genders.js';
 
+export { default as hats } from './hats/hats.js';
+export { default as nameplates } from './nameplates/nameplates.js';
+export { default as collars } from './collars/collars.js';
+export { default as ties } from './ties/ties.js';
+export { default as pants } from './pants/pants.js';
+export { default as shirts } from './shirts/shirts.js';
+export { default as coats } from './coats/coats.js';
+export { default as shoes } from './shoes/shoes.js';
+
 export { default as serviceBadges } from './serviceBadges/serviceBadges.js';
 export { default as aviationBadges } from './aviationBadges/aviationBadges.js';
 export { default as occupationalBadges } from './occupationalBadges/occupationalBadges.js';
@@ -17,14 +26,7 @@ export { default as specialtyTrackBadges } from './specialtyTrackBadges/specialt
 export { default as shoulderCords } from './shoulderCords/shoulderCords.js';
 export { default as cadetBadges } from './cadetBadges/cadetBadges.js';
 
-export { default as hats } from './hats/hats.js';
-export { default as nameplates } from './nameplates/nameplates.js';
-export { default as collars } from './collars/collars.js';
-export { default as ties } from './ties/ties.js';
-export { default as pants } from './pants/pants.js';
-export { default as shirts } from './shirts/shirts.js';
-export { default as coats } from './coats/coats.js';
-export { default as shoes } from './shoes/shoes.js';
+export { default as outerGarments } from './outerGarments/outerGarments.js';
 
 // -- Uniforms --
 //export { default as messDressUniform } from './messDressUniform/messDressUniform.js';
@@ -46,5 +48,3 @@ export { default as shoes } from './shoes/shoes.js';
 //export { default as corporateFlightDutyUniform } from './corporateFlightDutyUniform/corporateFlightDutyUniform.js';
 //export { default as corporateFieldUniform } from './corporateFieldUniform/corporateFieldUniform.js';
 
-
-export { default as outerwear } from './outerwear/outerwear.js';
