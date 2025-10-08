@@ -115,7 +115,7 @@ function renderUniform() {
     container.innerHTML = '';
 
     const baseWidth = 200;
-    const baseHeight = 800;
+    const baseHeight = 665;
     const rect = container.getBoundingClientRect();
     const scale = Math.min(rect.width / baseWidth, rect.height / baseHeight);
 
@@ -130,13 +130,14 @@ function renderUniform() {
         img.style.position = 'absolute';
         img.style.zIndex = posIndex + 1 + itemIndex;
 
-        // Small visual offset for multiple badges/ribbons
-        const offset = itemIndex * 5 * scale;
-
-        img.style.left = ((pos.x ?? item.x ?? 0) * scale + offset) + 'px';
-        img.style.top = ((pos.y ?? item.y ?? 0) * scale + offset) + 'px';
+        img.style.left = ((pos.x ?? item.x ?? 0) * scale) + 'px';
+        img.style.top = ((pos.y ?? item.y ?? 0) * scale) + 'px';
         img.style.width = ((pos.size ?? item.size ?? 30) * scale) + 'px';
         img.style.height = 'auto';
+
+        const rotation = pos?.rotation ?? item.rotation ?? 0;
+        img.style.transformOrigin = 'center center';
+        img.style.transform = `rotate(${rotation}deg)`;
 
         container.appendChild(img);
       });
@@ -145,44 +146,51 @@ function renderUniform() {
 
   renderItems(document.getElementById('overview-image'), itemsToRender);
 
-  // --- Render multi-item groups in extra divs ---
+  // --- Map group names to positions ---
   const multiGroups = [
-    { elementId: 'extra-left', groups: ['collar', 'grade'] },
-    { elementId: 'extra-right', groups: ['hat', 'grade'] },
+    { elementId: 'extra-left', groups: ['collar', 'grades'], positions: ['collar-grade', 'shirt-grade-left'] },
+    { elementId: 'extra-right', groups: ['hat', 'grades'], positions: ['hat-grade', 'shirt-grade-right'] },
   ];
 
-  multiGroups.forEach(({ elementId, groups }) => {
+  multiGroups.forEach(({ elementId, groups, positions: posNamesForContainer }) => {
     const container = document.getElementById(elementId);
     if (!container) return;
     container.innerHTML = '';
 
-    // Get all items matching any of the groups
+    const rect = container.getBoundingClientRect();
+    const baseWidth = 200;
+    const baseHeight = 200;
+    const scale = Math.min(rect.width / baseWidth, rect.height / baseHeight);
+
     const items = selections.filter(i =>
       groups.some(g => i.group && i.group.toLowerCase().includes(g.toLowerCase()))
     );
 
     if (items.length === 0) {
       container.textContent = 'Optional ' + groups.join(', ');
-    } else {
-      items.forEach(item => {
+      return;
+    }
+
+    items.forEach(item => {
+      // Filter only positions relevant for this container
+      posNamesForContainer.forEach(posName => {
+        const pos = positions.find(p => p.names.includes(posName));
+        if (!pos) return;
+
         const img = document.createElement('img');
         img.src = item.image;
         img.alt = item.label || '';
         img.style.position = 'absolute';
-        
-        // Find position from positions JSON
-        const pos = positions.find(p =>
-          p.names.some(n => item.group?.toLowerCase().includes(n.toLowerCase()))
-        );
-
-        img.style.left = (pos?.x ?? 0) + 'px';
-        img.style.top = (pos?.y ?? 0) + 'px';
-        img.style.width = (pos?.size ?? item.size ?? 30) + 'px';
+        img.style.left = ((pos.x ?? 0) * scale) + 'px';
+        img.style.top = ((pos.y ?? 0) * scale) + 'px';
+        img.style.width = ((pos.size ?? item.size ?? 30) * scale) + 'px';
         img.style.height = 'auto';
+        img.style.transformOrigin = 'center center';
+        img.style.transform = `rotate(${pos?.rotation ?? item.rotation ?? 0}deg)`;
 
         container.appendChild(img);
       });
-    }
+    });
   });
 
   // --- Outerwear ---

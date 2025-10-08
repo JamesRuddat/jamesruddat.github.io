@@ -492,6 +492,7 @@ select {
 .extra-left,
 .extra-right {
 	position: relative;
+	overflow: visible;
 	height: 300px;
 }
 
