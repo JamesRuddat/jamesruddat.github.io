@@ -115,7 +115,7 @@ function renderUniform() {
     container.innerHTML = '';
 
     const baseWidth = 200;
-    const baseHeight = 665;
+    const baseHeight = 740;
     const rect = container.getBoundingClientRect();
     const scale = Math.min(rect.width / baseWidth, rect.height / baseHeight);
 
