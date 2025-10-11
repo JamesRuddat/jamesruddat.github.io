@@ -21,7 +21,7 @@ export const positions = [
     { names: ['hat'], x: 108, y: 10, size: 80, rotation: 0 },
     { names: ['device'], x: 137, y: 30, size: 20, rotation: 0 },
 
-    { names: ['cord'], x: 215, y: 52, size: 34, rotation: 0 },
+    { names: ['cord'], x: 218, y: 135, size: 34, rotation: 0 },
     { names: ['ribbons'], x: 100, y: 95, size: 70, rotation: 0 },
     { names: ['nameplate'], x: 81, y: 178, size: 45, rotation: 0 },
     { names: ['cap-nameplate'], x: 174, y: 178, size: 45, rotation: 0 },

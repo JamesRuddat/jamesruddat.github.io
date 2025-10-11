@@ -1,9 +1,10 @@
 =========================================
-        🧢 CAP Uniform Builder
+          CAP Uniform Builder
 =========================================
 This project is a Civil Air Patrol Uniform Builder Tool. 
 It provides structured data, business logic, and a UI for selecting and displaying uniform components (badges, insignia, cloth/metal items, etc.), along with direct links to Vanguard for ordering.
 
+v0.2.0 - Updated ABUs, CFUs, Class As, Class Bs to display and work
 v0.1.2 - Added ABUs, CFUs, Class As, Class Bs and Vanguard links
 v0.1.1 - Full formUI uniform builder and dynamic data mapping
 v0.1.0 - Initial release with (old) formUI and Class B static data
@@ -12,10 +13,10 @@ v0.0.0 - Project start (August 11 2025)
 📂 Project Structure
 /js
   /data
-    uniformData.js        # Static data lists for all uniform items
-    uniformBadgeMap.js    # Rules mapping badges/pins/insignia to uniforms
-  uniformLogic.js         # Rules for what grade/gender/uniforms apply to which member
-  formUI.js               # Builds dropdowns & inputs from uniformData.js
+    uniformData.js        # Data lists for all uniform items
+    uniformLogic.js       # Rules for what grade/gender/uniforms apply to which member
+    uniformMapping.js     # Rules mapping badges/pins/insignia to uniforms
+  uniformForm.js          # Builds dropdowns & inputs from uniformData.js
   uniformImage.js         # Assembles results into a visual uniform builder
 index.html                # Entry point with container elements
 README.txt                # This file
@@ -37,8 +38,8 @@ Each uniform item is stored as a single JSON object:
 }
 
 -----------------------------------------
-🚀 Features
-• Static uniform data lists
+Features
+• Static uniform JSON data lists
 • Logic-based badge & item mapping
 • Dynamic dropdowns & checkboxes
 • Real-time visual uniform builder
@@ -50,18 +51,18 @@ $ git clone <repo>
 $ open index.html
 
 # Add/modify items in /js/data/uniformData.js
-# Update logic rules in uniformLogic.js or uniformBadgeMap.js
+# Update logic rules in uniformLogic.js or uniformMapping.js
 # Open browser to preview uniform builder
 
 -----------------------------------------
 Example Flow:
 
 1) User selects grade & gender
-   → formUI.js populates dropdowns
+   → uniformForm.js populates dropdowns
 
 2) Logic checks:
    → uniformLogic.js applies grade/gender rules
-   → uniformBadgeMap.js maps required badges and uniform items
+   → uniformMapping.js maps required badges and uniform items
 
 3) UI updates:
    → Grouped items appear as dropdowns or checkboxes
