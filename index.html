@@ -18,38 +18,59 @@
 
         <main>
             <div class="main container-inner">
-                <!-- Hero / Welcome -->
-                <h2>Welcome to Cadet Tools Hub!</h2>
-                <h3>We have it all</h3>
-                <p>
-                    Explore everything we have to offer for cadets: uniforms, drill, bugle calls, leadership guides,
-                    events, and interactive tools.
-                </p>
-                <p>
-                    Watch tutorials, tips, and demonstrations to help you excel in all areas of cadet life.
-                </p>
+                <!-- Welcome / Hero -->
+                <h2>Welcome!</h2>
+                <p>Explore everything we have to offer for cadets: uniforms, drill, bugle calls, leadership guides,
+                    events, and interactive tools.</p>
+        
+                <!-- Top Sections -->
+                <div class="top-sections">
+                    <a href="/drill.html" class="section-card">
+                        <img src="/images/drill_icon.svg" alt="Drill & Ceremonies" class="section-icon">
+                        <h3>Drill & Ceremonies</h3>
+                        <p>Learn drills, formations, and ceremonies for cadets.</p>
+                    </a>
+                    <a href="/documents.html" class="section-card">
+                        <img src="/images/doc_icon.svg" alt="Documents" class="section-icon">
+                        <h3>Documents</h3>
+                        <p>Access guides, manuals, regulations, and forms.</p>
+                    </a>
+                    <a href="/tools.html" class="section-card">
+                        <img src="/images/tools_icon.svg" alt="Builders & Tools" class="section-icon">
+                        <h3>Builders & Tools</h3>
+                        <p>Use interactive calculators, builders, and planning tools.</p>
+                    </a>
+                </div>
+        
+                <div class="countdown">
+                    <p id="timer"></p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>Fact / Quote</h3>
+                    <p id="tip">Loading fact / quote...</p>
+                </div>
 
                 <!-- Featured Video -->
                 <h3>Featured Video</h3>
                 <iframe src="https://www.youtube.com/embed/O8onxUMqrsw" allowfullscreen></iframe>
-
+        
+                <br><br>
                 <!-- Latest Updates -->
-                <h2>Latest Updates</h2>
+                <h3>Latest Updates</h3>
                 <ul>
-                    <li>Encampment infomation and training</li>
+                    <li>Encampment information and training</li>
                     <li>New Uniform Builder Tool soon to be released</li>
                     <li>Drill School Updates soon to be released</li>
                 </ul>
-
-                <p><strong>Tip:</strong> Click on the sections above to get started, or explore the FAQs for quick
-                    answers.</p>
             </div>
         </main>
+        
         <footer id="footer-placeholder"></footer>
     </div>
 </body>
 
 <!-- External JS -->
 <script src="/partials/partials.js"></script>
-
+<script src="/js/dailyQuotes.js"></script>
 </html>
