@@ -643,20 +643,3 @@ select {
 		display: none;
 	}
 }
-
-/* fix dark mode */
-.dark-toggle {
-  position: fixed;
-  bottom: 10px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.dark-toggle:hover {
-  color: #ccc;
-}

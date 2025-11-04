@@ -1,16 +1,17 @@
 =========================================
-          CAP Uniform Builder
+          Cadet Tools
 =========================================
-This project is a Civil Air Patrol Uniform Builder Tool. 
+This project started out as a Civil Air Patrol Uniform Builder Tool but has grown to be a tool for cadets to use. 
 It provides structured data, business logic, and a UI for selecting and displaying uniform components (badges, insignia, cloth/metal items, etc.), along with direct links to Vanguard for ordering.
 
+v1.0.0 - Worked on opening website pages up (November 4 2025)
 v0.2.0 - Updated ABUs, CFUs, Class As, Class Bs to display and work
 v0.1.2 - Added ABUs, CFUs, Class As, Class Bs and Vanguard links
 v0.1.1 - Full formUI uniform builder and dynamic data mapping
 v0.1.0 - Initial release with (old) formUI and Class B static data
 v0.0.0 - Project start (August 11 2025)
 -----------------------------------------
-📂 Project Structure
+📂 Project Structure - oudated with Files+ branch
 /js
   /data
     uniformData.js        # Data lists for all uniform items
@@ -22,7 +23,7 @@ index.html                # Entry point with container elements
 README.txt                # This file
 
 -----------------------------------------
-🗂️ Data Format
+🗂️ Uniform Data Format
 Each uniform item is stored as a single JSON object:
 {
   "type": null,              // Uniform Type
