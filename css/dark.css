@@ -4,23 +4,23 @@
 }
 
 :root {
-	--primary-color: #111d59;
-	--secondary-color: #050e35;
-	--red-color: #c40000;
-	--accent-color: #9ea0a2;
+  --primary-color: #00246b;       /* Darker blue */
+  --secondary-color: #001742;     /* Even darker blue */
+  --red-color: #7c2020;           /* Softer red */
+  --accent-color: #979797;           /* Lighter accent */
 
-	--dark-color: #000000;
-	--background-color: #f2f2f2;
-
-	--footer-text: #e7e8e8;
-	--footer-color: #383a3d;
-	--dark-footer-color: #222426;
-
-	--text-color: #000000;
-	--alert-color: #ff6600;
-
-	--card-background: #ffffff;
-	--card-shadow: rgba(0, 0, 0, 0.1);
+  --dark-color: #121212;
+  --background-color: #121212;
+  
+  --footer-text: #ccc;
+  --footer-color: #222;
+  --dark-footer-color: #111;
+  
+  --text-color: #eee;
+  --alert-color: #b43101;
+  
+  --card-background: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.6);
 }
 
 html {
@@ -547,7 +547,6 @@ iframe {
 
 /* ===== FORMS ===== */
 .form-background {
-	background: white;
 	border-radius: 8px;
 }
 
@@ -642,21 +641,4 @@ select {
 	.header-logo img {
 		display: none;
 	}
-}
-
-/* fix dark mode */
-.dark-toggle {
-  position: fixed;
-  bottom: 10px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.dark-toggle:hover {
-  color: #ccc;
 }

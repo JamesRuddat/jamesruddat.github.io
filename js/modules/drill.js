@@ -51,14 +51,14 @@ function buildCadets(flights, numElementLeaders, cadetsPerFlight) {
         cadets.push({
             flight: flight.label,
             position: 1,
-            imageFile: "Guide.svg",
+            imageFile: "Flight_Sergeant.svg",
         });
 
         // Position 2 = Guide
         cadets.push({
             flight: flight.label,
             position: 2,
-            imageFile: "Flight_Sergeant.svg",
+            imageFile: "Guide.svg",
         });
 
         // Element Leaders: positions 3 to (3 + numElementLeaders - 1)
@@ -91,81 +91,64 @@ function calculatePositions(formationType, flights, cadets, numElementLeaders) {
 
     const baseX = 100;
     const baseY = 100;
-    const spacingX = 60;
-    const spacingY = 65;
+    const spacingX = 65;
+    const spacingY = 70;
 
     flights.forEach((flight, flightIndex) => {
-        const flightOffsetX = flightIndex * 400;
-
+        const flightOffsetX = flightIndex * 500;
         const flightCadets = cadets.filter(c => c.flight === flight.label);
 
         const flightSgt = flightCadets.find(c => c.position === 1);
         const guide = flightCadets.find(c => c.position === 2);
-
-        // Cadets excluding staff (from position 3 up)
-        const nonStaffStartPos = 3;
-        const nonStaffCadets = flightCadets.filter(c => c.position >= nonStaffStartPos);
+        const elementLeaders = flightCadets.filter(c => c.imageFile === "Element_Leader.svg");
+        const airmen = flightCadets.filter(c => c.imageFile === "Airman.svg");
 
         const rows = numElementLeaders;
+        const colsPerRow = Math.ceil(airmen.length / rows);
+        const gridCols = colsPerRow + 2; // + ElemLeader + Guide columns
 
-        // Calculate number of columns needed (excluding guide col)
-        const cadetCols = Math.ceil(nonStaffCadets.length / rows);
-        const totalCols = cadetCols + 1; // +1 for guide column
+        // Create an empty grid [rows][cols]
+        const grid = Array.from({ length: rows }, () => Array(gridCols).fill(null));
 
-        // Create grid array: grid[col][row]
-        const grid = Array.from({ length: totalCols }, () => Array(rows).fill(null));
-
-        // Place guide in col 0, bottom row (row = rows - 1)
-        if (guide) {
-            grid[0][rows - 1] = guide;
+        // Fill each row (bottom row fills first)
+        let airmanIndex = 0;
+        for (let r = rows - 1; r >= 0; r--) {
+            for (let c = gridCols - 3; c >= 0; c--) { // leave 2 cols for elem + guide
+                if (airmanIndex < airmen.length) {
+                    grid[r][c] = airmen[airmanIndex++];
+                }
+            }
+            // Place Element Leader in second-to-last col
+            grid[r][gridCols - 2] = elementLeaders[rows - 1 - r] || null;
         }
 
-        // Place cadets in cols 1 to totalCols - 1
-        nonStaffCadets.forEach((cdt, idx) => {
-            const colFromRight = Math.floor(idx / rows) + 1; // starting at 1
-            const canvasCol = totalCols - colFromRight; // convert right-left index to canvas col
-            const posInCol = idx % rows;
+        // Place Guide in top row last col
+        if (guide) grid[0][gridCols - 1] = guide;
 
-            // For leftmost col (canvasCol === 0), fill bottom-up, else top-down
-            let rowIndex;
-            if (canvasCol === 0) {
-                rowIndex = rows - 1 - posInCol; // bottom up
-            } else {
-                rowIndex = posInCol; // top down
-            }
+        // Place Flight Sergeant bottom row, far left
+        if (flightSgt) grid[rows - 1][0] = flightSgt;
 
-            grid[canvasCol][rowIndex] = cdt;
-        });
-
-        // Push all positions including nulls for "none"
-        for (let col = 0; col < totalCols; col++) {
-            for (let row = 0; row < rows; row++) {
-                const cdt = grid[col][row];
+        // Convert grid to coordinates
+        grid.forEach((row, rowIdx) => {
+            row.forEach((cell, colIdx) => {
                 positions.push({
                     flight: flight.label,
-                    position: cdt ? cdt.position : null,
-                    imageFile: cdt ? cdt.imageFile : null, // no image for none
-                    x: baseX + flightOffsetX + spacingX * col,
-                    y: baseY + spacingY * row,
+                    position: cell ? cell.position : null,
+                    imageFile: cell ? cell.imageFile : null,
+                    x: baseX + flightOffsetX + spacingX * colIdx,
+                    y: baseY + spacingY * rowIdx,
                 });
-            }
-        }
-
-        // Flight Sergeant to the right of guide column, bottom row
-        if (flightSgt) {
-            positions.push({
-                ...flightSgt,
-                x: baseX + flightOffsetX + spacingX * (totalCols + 1),
-                y: baseY + spacingY * (rows - 1),
             });
-        }
+        });
     });
 
     return positions;
 }
 
+
 // Draw all cadet images on canvas
 async function drawFormation(positions) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     const uniqueImages = [...new Set(positions.filter(c => c.imageFile).map(c => c.imageFile))];
 
     try {
@@ -176,18 +159,23 @@ async function drawFormation(positions) {
     }
 
     positions.forEach(cdt => {
-        const size = 120;
-        const half = size / 2;
+        const width = 80;
+        const height = 90; // you can adjust this or vary by image if needed
+        const halfWidth = width / 2;
 
-        if (cdt.imageFile && !cdt.isEmpty) {
+        if (cdt.imageFile) {
             const img = loadedImages[cdt.imageFile];
             if (img) {
-                ctx.drawImage(img, cdt.x - half, cdt.y - half, size, size);
+                // Align bottom of image at cdt.y (standing line)
+                ctx.drawImage(img, cdt.x - halfWidth, cdt.y - height, width, height);
             }
         } else {
-            // Draw "none" for empty spots
+            // Optional placeholder for empty spots
+            ctx.strokeStyle = "#aaa";
+            //ctx.strokeRect(cdt.x - halfWidth, cdt.y - height, width, height);
         }
-        // Draw image
+
+        // Optional: label below the "feet"
     });
 }
 
