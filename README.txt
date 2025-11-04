@@ -50,7 +50,7 @@ Features
 $ git clone <repo>
 $ open index.html
 
-# Add/modify items in /js/data/uniformData.js
+# Add/modify items in /js/libraries/uniformData.js
 # Update logic rules in uniformLogic.js or uniformMapping.js
 # Open browser to preview uniform builder
 
