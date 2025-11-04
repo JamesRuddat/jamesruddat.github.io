@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head-placeholder">
+    <!-- This will be filled dynamically -->
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header id="header-placeholder" class="header full-width"></header>
+        <nav id="nav-placeholder"></nav>
+
+        <main>
+            <div class="row">
+                <!-- Main builder -->
+                <div class="main container-inner">
+                    <h2>Bugle Call Scheduler</h2>
+                    <p>This tool is designed to help you set up bugle calls to play through your PA system at any time
+                        of day. Once a bugle call is scheduled, it will automatically play at the chosen time daily. All
+                        you need to do is keep this website open and connected to your PA system for it to function.</p>
+
+                    <h3>How to Use</h3>
+                    <ul>
+                        <li><strong>Audio Dropdown:</strong> Select a bugle call or music track to play daily.</li>
+                        <li><strong>Time Picker:</strong> Select a time (HH:MM) to schedule the bugle call or music
+                            track to play daily through your PA system.</li>
+                        <li><strong>Add:</strong> Click after choosing a time to schedule the call or music to play
+                            every day at that time.</li>
+                        <li><strong>Start Music:</strong> Click to begin background music. The music will automatically
+                            fade down 10 seconds before a bugle call and fade back up after.</li>
+                        <li><strong>Stop Music:</strong> Clickto immediately stop the background music at any time.</li>
+                    </ul>
+
+                    <p>The scheduled calls will continue to loop daily until you stop them, ensuring your bugle calls
+                        are broadcast automatically at the times you need.</p>
+
+                    <div id="builder"></div>
+                    <div id="musicControls">
+                        <button class="small-btn" onclick="startMusic()">Start Music</button>
+                        <button class="small-btn" onclick="stopMusic()">Stop Music</button>
+                    </div>
+                    <br>
+                    <h3>Your Schedule:</h3>
+                    <p id="nowPlaying"></p>
+                    <ul id="mySchedule"></ul>
+                </div>
+            </div>
+        </main>
+        <footer id="footer-placeholder"></footer>
+    </div>
+</body>
+
+<!-- External JS -->
+<script src="/partials/partials.js"></script>
+<script type="module" src="/js/modules/bugleCalls.js"></script>
+
+</html>

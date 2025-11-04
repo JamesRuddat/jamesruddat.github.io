@@ -1,0 +1,26 @@
+export default [
+    {
+        required: false,
+        type: ["ClassA", "ClassB", "HGU"],
+        wearer: "Male",
+        group: "Tie",
+        value: "tie",
+        label: "Tie",
+        level: null,
+        image: "/js/libraries/ties/images/Tie.svg",
+        link: "https://www.vanguardmil.com/collections/civil-air-patrol-neckties/products/usaf-blue-4inhand-herringbone-necktie",
+        reference: null,
+    },
+    {
+        required: false,
+        type: ["ClassA", "ClassB", "HGU"],
+        wearer: "Female",
+        group: "Tie Tab",
+        value: "tie_tab",
+        label: "Tie Tab",
+        level: null,
+        image: "/js/libraries/ties/images/Tie_Tab.svg",
+        link: "https://www.vanguardmil.com/products/air-force-female-dark-blue-neck-tab-for-overblouse-1",
+        reference: null,
+    },
+];
