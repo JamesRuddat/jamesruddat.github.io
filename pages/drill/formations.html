@@ -20,6 +20,33 @@
                 <div class="main container-inner">
                     <h2>Formation Builder</h2>
 
+<label for="formationType">Formation Type</label>
+<select id="formationType">
+    <option value="Line">Line</option>
+    <option value="Column">Column</option>
+</select>
+
+<label for="numElementLeaders">Elements (2-4):</label>
+<input type="number" id="numElementLeaders" min="2" max="4" value="4" />
+
+<label for="numFlights">Flights</label>
+<input type="number" id="numFlights" value="1" min="1" max="12" />
+
+<label for="cadetsPerFlight">Cadets per Flight</label>
+<input type="number" id="cadetsPerFlight" value="8" min="1" max="50" />
+
+<canvas id="formationCanvas" width="900" height="400"></canvas>
+
+<button id="generateBtn">Generate Formation</button>
+
+<label for="flightPrefix">Flight Prefix</label>
+<input type="text" id="flightPrefix" value="A" maxlength="1" />
+
+<button id="exportPNGBtn">Export PNG</button>
+<button id="exportJSONBtn">Export JSON</button>
+
+<script src="/js/Drill.js"></script>
+
                     <p>Based on CAPP 60-33, <em>Civil Air Patrol Drill and Ceremonies</em> (August 2016).</p>
                     <p>Reference: <a
                             href="https://www.gocivilairpatrol.com/media/cms/CAPP6020_5_AUG_16_07A0C6200BA4C.pdf"
