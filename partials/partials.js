@@ -16,36 +16,31 @@ document.addEventListener("DOMContentLoaded", () => {
       loadPartial("nav-placeholder", "/partials/nav.html"),
       loadPartial("footer-placeholder", "/partials/footer.html")
     ]).then(() => {
-      // Setup theme toggle button after nav loads
+      /* ===== DARK / LIGHT TOGGLE ===== */
       const toggleBtn = document.getElementById("darkModeToggle");
-      if (!toggleBtn) return;
+      if (toggleBtn) {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 
-      // Get stored theme or default to light
-      const savedTheme = localStorage.getItem("theme") || "light";
+        toggleBtn.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme");
+          const newTheme = current === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          toggleBtn.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      }
 
-      // Reference to the <link id="themeStylesheet">
-      const themeLink = document.getElementById("themeStylesheet");
-      if (!themeLink) return;
+      /* ===== HAMBURGER MENU TOGGLE ===== */
+      const navToggle = document.getElementById("navToggle");
+      const navMenu   = document.getElementById("navMenu");
 
-      // Apply saved theme CSS file
-      themeLink.href = savedTheme === "dark" ? "/css/dark.css" : "/css/light.css";
-
-      // Update toggle button icon/text
-      toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
-
-      // Add click event to toggle theme
-      toggleBtn.addEventListener("click", () => {
-        const isDark = themeLink.href.includes("dark.css");
-        if (isDark) {
-          themeLink.href = "/css/light.css";
-          toggleBtn.textContent = "🌙";
-          localStorage.setItem("theme", "light");
-        } else {
-          themeLink.href = "/css/dark.css";
-          toggleBtn.textContent = "☀️";
-          localStorage.setItem("theme", "dark");
-        }
-      });
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("show");
+        });
+      }
     });
   });
 });
