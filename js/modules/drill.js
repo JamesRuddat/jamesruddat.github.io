@@ -1,24 +1,19 @@
-// formation.js
-
-// Images folder base path
 const IMG_BASE_PATH = "../../assets/images/diagrams/drill/";
 
 const canvas = document.getElementById("formationCanvas");
 const ctx = canvas.getContext("2d");
 
-// Inputs
 const formationTypeEl = document.getElementById("formationType");
 const numFlightsEl = document.getElementById("numFlights");
 const cadetsPerFlightEl = document.getElementById("cadetsPerFlight");
 const flightPrefixEl = document.getElementById("flightPrefix");
-const numElementLeadersEl = document.getElementById("numElementLeaders"); // New input for element leaders count
+const numElementLeadersEl = document.getElementById("numElementLeaders");
 
-const generateBtn = document.getElementById("generateBtn");
-const exportJSONBtn = document.getElementById("exportJSONBtn");
+const exportPNGBtn = document.getElementById("exportPNGBtn");
 
-let loadedImages = {}; // cache for images
+let loadedImages = {};
 
-// Load image by filename
+// Load image with caching
 function loadImage(filename) {
     if (loadedImages[filename]) return Promise.resolve(loadedImages[filename]);
 
@@ -33,7 +28,6 @@ function loadImage(filename) {
     });
 }
 
-// Build flights array [{label, count}]
 function buildFlights(numFlights, cadetsPerFlight, flightPrefix) {
     const flights = [];
     for (let i = 0; i < numFlights; i++) {
@@ -43,144 +37,75 @@ function buildFlights(numFlights, cadetsPerFlight, flightPrefix) {
     return flights;
 }
 
-// Build cadet list with flight, position, id, and assigned image file
 function buildCadets(flights, numElementLeaders, cadetsPerFlight) {
     const cadets = [];
-    flights.forEach((flight) => {
-        // Position 1 = Flight Sergeant
-        cadets.push({
-            flight: flight.label,
-            position: 1,
-            imageFile: "Flight_Sergeant.svg",
-        });
-
-        // Position 2 = Guide
-        cadets.push({
-            flight: flight.label,
-            position: 2,
-            imageFile: "Guide.svg",
-        });
-
-        // Element Leaders: positions 3 to (3 + numElementLeaders - 1)
+    flights.forEach(flight => {
+        cadets.push({ flight: flight.label, position: 1, imageFile: "Flight_Sergeant.svg" });
+        cadets.push({ flight: flight.label, position: 2, imageFile: "Guide.svg" });
         for (let i = 0; i < numElementLeaders; i++) {
-            cadets.push({
-                flight: flight.label,
-                position: 3 + i,
-                imageFile: "Element_Leader.svg",
-            });
+            cadets.push({ flight: flight.label, position: 3 + i, imageFile: "Element_Leader.svg" });
         }
-
-        // Remaining cadets are Airmen to fill up to cadetsPerFlight total
         const airmenCount = cadetsPerFlight - (1 + numElementLeaders);
-
         for (let i = 0; i < airmenCount; i++) {
-            const pos = 3 + numElementLeaders + i;
-            cadets.push({
-                flight: flight.label,
-                position: pos,
-                imageFile: "Airman.svg",
-            });
+            cadets.push({ flight: flight.label, position: 3 + numElementLeaders + i, imageFile: "Airman.svg" });
         }
     });
     return cadets;
 }
 
-// Calculate positions for formation with explicit none slots
-function calculatePositions(formationType, flights, cadets, numElementLeaders) {
-    const positions = [];
-
-    const baseX = 100;
-    const baseY = 100;
-    const spacingX = 65;
-    const spacingY = 70;
-
-    flights.forEach((flight, flightIndex) => {
-        const flightOffsetX = flightIndex * 500;
-        const flightCadets = cadets.filter(c => c.flight === flight.label);
-
-        const flightSgt = flightCadets.find(c => c.position === 1);
-        const guide = flightCadets.find(c => c.position === 2);
-        const elementLeaders = flightCadets.filter(c => c.imageFile === "Element_Leader.svg");
-        const airmen = flightCadets.filter(c => c.imageFile === "Airman.svg");
-
-        const rows = numElementLeaders;
-        const colsPerRow = Math.ceil(airmen.length / rows);
-        const gridCols = colsPerRow + 2; // + ElemLeader + Guide columns
-
-        // Create an empty grid [rows][cols]
-        const grid = Array.from({ length: rows }, () => Array(gridCols).fill(null));
-
-        // Fill each row (bottom row fills first)
-        let airmanIndex = 0;
-        for (let r = rows - 1; r >= 0; r--) {
-            for (let c = gridCols - 3; c >= 0; c--) { // leave 2 cols for elem + guide
-                if (airmanIndex < airmen.length) {
-                    grid[r][c] = airmen[airmanIndex++];
-                }
-            }
-            // Place Element Leader in second-to-last col
-            grid[r][gridCols - 2] = elementLeaders[rows - 1 - r] || null;
-        }
-
-        // Place Guide in top row last col
-        if (guide) grid[0][gridCols - 1] = guide;
-
-        // Place Flight Sergeant bottom row, far left
-        if (flightSgt) grid[rows - 1][0] = flightSgt;
-
-        // Convert grid to coordinates
-        grid.forEach((row, rowIdx) => {
-            row.forEach((cell, colIdx) => {
-                positions.push({
-                    flight: flight.label,
-                    position: cell ? cell.position : null,
-                    imageFile: cell ? cell.imageFile : null,
-                    x: baseX + flightOffsetX + spacingX * colIdx,
-                    y: baseY + spacingY * rowIdx,
-                });
-            });
-        });
-    });
-
-    return positions;
+// Helper: calculate how many columns for one flight based on airmen count and element leaders count
+function getColsCountPerFlight(numElementLeaders, airmenCount) {
+    const rows = numElementLeaders;
+    const fullColsCount = Math.floor(airmenCount / rows);
+    const partialCount = airmenCount % rows;
+    const hasPartialCol = partialCount > 0;
+    const airmenCols = fullColsCount + (hasPartialCol ? 1 : 0);
+    // Total columns = 1 Flight Sgt + airmenCols + 1 ElemLeader + 1 Guide
+    return 1 + airmenCols + 1 + 1;
 }
 
+// Helper to get center index on a front line with total columns
+function getCenterIndex(totalCols) {
+    if (totalCols % 2 === 1) {
+        // Odd number: center is middle element
+        return Math.floor(totalCols / 2);
+    } else {
+        // Even number: center is right-center element
+        return totalCols / 2;
+    }
+}
 
-// Draw all cadet images on canvas
-async function drawFormation(positions) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const uniqueImages = [...new Set(positions.filter(c => c.imageFile).map(c => c.imageFile))];
+// Updated buildCadets to include Flight Commander (position 0)
+function buildCadets(flights, numElementLeaders, cadetsPerFlight) {
+    const cadets = [];
+    flights.forEach(flight => {
+        // Flight Commander (pos 0)
+        cadets.push({ flight: flight.label, position: 0, imageFile: "Flight_Commander.svg" });
+        // Flight Sergeant (pos 1)
+        cadets.push({ flight: flight.label, position: 1, imageFile: "Flight_Sergeant.svg" });
+        // Guide (pos 2)
+        cadets.push({ flight: flight.label, position: 2, imageFile: "Guide.svg" });
+        // Element Leaders (pos 3+)
+        for (let i = 0; i < numElementLeaders; i++) {
+        cadets.push({ flight: flight.label, position: 3 + i, imageFile: "Element_Leader.svg" });
+        }
+        // Airmen fill remainder
+        const airmenCount = cadetsPerFlight - (1 + numElementLeaders);
+        for (let i = 0; i < airmenCount; i++) {
+        cadets.push({ flight: flight.label, position: 3 + numElementLeaders + i, imageFile: "Airman.svg" });
+        }
+    });
+    return cadets;
+}
 
-    try {
-        await Promise.all(uniqueImages.map(img => loadImage(img)));
-    } catch (e) {
-        alert(e.message);
-        return;
+async function generateAndDraw() {
+    const container = document.querySelector(".main");
+    if (container) {
+        canvas.width = container.clientWidth;
+        const maxHeight = window.innerHeight * 0.7;
+        canvas.height = Math.min(maxHeight, 800);
     }
 
-    positions.forEach(cdt => {
-        const width = 80;
-        const height = 90; // you can adjust this or vary by image if needed
-        const halfWidth = width / 2;
-
-        if (cdt.imageFile) {
-            const img = loadedImages[cdt.imageFile];
-            if (img) {
-                // Align bottom of image at cdt.y (standing line)
-                ctx.drawImage(img, cdt.x - halfWidth, cdt.y - height, width, height);
-            }
-        } else {
-            // Optional placeholder for empty spots
-            ctx.strokeStyle = "#aaa";
-            //ctx.strokeRect(cdt.x - halfWidth, cdt.y - height, width, height);
-        }
-
-        // Optional: label below the "feet"
-    });
-}
-
-// Generate formation and render
-async function generateAndDraw() {
     const formationType = formationTypeEl.value;
     const numFlights = parseInt(numFlightsEl.value);
     const cadetsPerFlight = parseInt(cadetsPerFlightEl.value);
@@ -192,37 +117,220 @@ async function generateAndDraw() {
 
     const flights = buildFlights(numFlights, cadetsPerFlight, flightPrefix);
     const cadets = buildCadets(flights, numElementLeaders, cadetsPerFlight);
-    const positions = calculatePositions(formationType, flights, cadets, numElementLeaders);
 
-    await drawFormation(positions);
+    let maxCols = 0;
+    flights.forEach(flight => {
+        const flightCadets = cadets.filter(c => c.flight === flight.label);
+        const airmen = flightCadets.filter(c => c.imageFile === "Airman.svg");
+        const colsCount = getColsCountPerFlight(numElementLeaders, airmen.length);
+        if (colsCount > maxCols) maxCols = colsCount;
+    });
+
+    const baseSpacingX = 155;
+    const baseSpacingY = 120;
+
+    // Calculate total width needed for all flights side by side
+    const totalFormationWidth = maxCols * baseSpacingX * numFlights;
+    const totalFormationHeight = numElementLeaders * baseSpacingY;
+
+    // Calculate scale factor to fit formation inside canvas with some padding (say 40px)
+    const scaleX = (canvas.width - 100) / totalFormationWidth;
+    const scaleY = (canvas.height - 450) / totalFormationHeight;
+    const scaleFactor = Math.min(scaleX, scaleY, 1); // Don't scale up beyond 1
+
+    // Calculate spacing with scale
+    const spacingX = baseSpacingX * scaleFactor;
+    const spacingY = baseSpacingY * scaleFactor;
+
+    // Calculate baseX and baseY to center formation
+    const formationWidthScaled = maxCols * spacingX * numFlights;
+    const formationHeightScaled = (numElementLeaders - 1) * spacingY;
+
+    const baseX = (canvas.width - formationWidthScaled) / 2;
+    const baseY = (canvas.height - formationHeightScaled) / 2 + spacingY;
+
+    const positions = calculatePositions(
+        formationType,
+        flights,
+        cadets,
+        numElementLeaders,
+        baseX,
+        baseY,
+        spacingX,
+        spacingY
+    );
+
+    await drawFormation(positions, scaleFactor);
 
     window.currentFormationPositions = positions;
 }
 
-// Export JSON helper
-function exportJSON() {
+// Modify calculatePositions to accept scaleFactor parameter but mostly same
+function calculatePositions(formationType, flights, cadets, numElementLeaders, baseX = 100, baseY = 100, spacingX = 155, spacingY = 110, scaleFactor = 1) {
+    const positions = [];
+
+    flights.forEach((flight, flightIndex) => {
+        const gapBetweenFlights = 40; // pixels, adjust as needed
+
+        const colsCount = getColsCountPerFlight(numElementLeaders, cadets.filter(c => c.flight === flight.label && c.imageFile === "Airman.svg").length);
+        const flightOffsetX = flightIndex * ((spacingX * colsCount) + gapBetweenFlights);
+        const flightCadets = cadets.filter(c => c.flight === flight.label);
+
+        const flightCommander = flightCadets.find(c => c.position === 0);
+        const flightSgt = flightCadets.find(c => c.position === 1);
+        const guide = flightCadets.find(c => c.position === 2);
+        const elementLeaders = flightCadets.filter(c => c.imageFile === "Element_Leader.svg");
+        const airmen = flightCadets.filter(c => c.imageFile === "Airman.svg");
+
+        const rows = numElementLeaders;
+        const airmenCount = airmen.length;
+
+        const fullColsCount = Math.floor(airmenCount / rows);
+        const partialCount = airmenCount % rows;
+        const hasPartialCol = partialCount > 0;
+        const airmenCols = fullColsCount + (hasPartialCol ? 1 : 0);
+
+        const airmenStartCol = hasPartialCol ? 2 : 1;
+        const gridCols = 1 + airmenCols + 1 + 1; // Sgt + airmen cols + Elem Leaders + Guide
+
+        const grid = Array.from({ length: rows }, () => Array(gridCols).fill(null));
+
+        if (flightSgt) {
+            grid[rows - 1][0] = flightSgt;
+        }
+
+        let airmanIndex = 0;
+
+        if (hasPartialCol) {
+            const partialCol = 1;
+            for (let i = 0; i < partialCount; i++) {
+                const rowIdx = rows - 1 - i;
+                grid[rowIdx][partialCol] = airmen[airmanIndex++] || null;
+            }
+        }
+
+        for (let c = 0; c < fullColsCount; c++) {
+            const colIdx = airmenStartCol + c;
+            for (let r = rows - 1; r >= 0; r--) {
+                if (airmanIndex < airmenCount) {
+                grid[r][colIdx] = airmen[airmanIndex++];
+                }
+            }
+        }
+
+        const elemLeaderCol = gridCols - 2;
+        for (let r = 0; r < rows; r++) {
+            grid[r][elemLeaderCol] = elementLeaders[rows - 1 - r] || null;
+        }
+
+        const guideCol = gridCols - 1;
+        if (guide) {
+            grid[0][guideCol] = guide;
+        }
+
+        for (let r = 0; r < rows; r++) {
+            let firstAirmanCol = -1;
+            for (let c = 1; c < elemLeaderCol; c++) {
+                if (grid[r][c] && grid[r][c].imageFile === "Airman.svg") {
+                firstAirmanCol = c;
+                break;
+                }
+            }
+            if (firstAirmanCol !== -1) {
+                grid[r][firstAirmanCol].imageFile = "Assistant_Element_Leader.svg";
+            }
+        }
+
+        // Flight Commander positioning
+        const centerCol = getCenterIndex(gridCols);
+
+        if (flightCommander) {
+            positions.push({
+                flight: flight.label,
+                position: flightCommander.position,
+                imageFile: flightCommander.imageFile,
+                x: baseX + flightOffsetX + spacingX * centerCol,
+                y: baseY + spacingY * -2,
+            });
+        }
+
+        // Add all grid cadets to positions
+        grid.forEach((row, rowIdx) => {
+            row.forEach((cell, colIdx) => {
+                positions.push({
+                flight: flight.label,
+                position: cell ? cell.position : null,
+                imageFile: cell ? cell.imageFile : null,
+                x: baseX + flightOffsetX + spacingX * colIdx,
+                y: baseY + spacingY * rowIdx,
+                });
+            });
+        });
+    });
+
+    return positions;
+}
+
+// Updated drawFormation to scale images
+async function drawFormation(positions, scaleFactor = 1) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const uniqueImages = [...new Set(positions.filter(c => c.imageFile).map(c => c.imageFile))];
+
+    try {
+        await Promise.all(uniqueImages.map(img => loadImage(img)));
+    } catch (e) {
+        alert(e.message);
+        return;
+    }
+
+    positions.forEach(cdt => {
+        if (cdt.imageFile) {
+        const img = loadedImages[cdt.imageFile];
+        if (img) {
+            const drawWidth = img.naturalWidth * scaleFactor;
+            const drawHeight = img.naturalHeight * scaleFactor;
+
+            ctx.drawImage(img, cdt.x - drawWidth / 2, cdt.y - drawHeight, drawWidth, drawHeight);
+        }
+        } else {
+        /*// Optional placeholder scaled
+        const boxWidth = 40 * scaleFactor;
+        const boxHeight = 50 * scaleFactor;
+        ctx.fillStyle = "#aaa";
+        ctx.fillRect(cdt.x - boxWidth / 2, cdt.y - boxHeight, boxWidth, boxHeight);
+        */
+        }
+    });
+}
+
+window.addEventListener("resize", () => {
+    generateAndDraw();
+});
+
+function exportPNG() {
     if (!window.currentFormationPositions) return alert("Generate formation first");
 
-    const jsonContent = JSON.stringify(window.currentFormationPositions, null, 2);
-    const blob = new Blob([jsonContent], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
+    // Convert canvas content to data URL (PNG format)
+    const dataURL = canvas.toDataURL("image/png");
 
+    // Create a temporary link element
     const a = document.createElement("a");
-    a.href = url;
-    a.download = "formation.json";
+    a.href = dataURL;
+    a.download = "formation.png";
     a.click();
-
-    URL.revokeObjectURL(url);
 }
 
 // Event listeners
-generateBtn.addEventListener("click", generateAndDraw);
-exportJSONBtn.addEventListener("click", exportJSON);
+exportPNGBtn.addEventListener("click", exportPNG);
 
-// Live update on input changes
-[formationTypeEl, numFlightsEl, cadetsPerFlightEl, flightPrefixEl, numElementLeadersEl].forEach(el => {
-    el.addEventListener("input", generateAndDraw);
-});
+[
+    formationTypeEl,
+    numFlightsEl,
+    cadetsPerFlightEl,
+    flightPrefixEl,
+    numElementLeadersEl,
+].forEach(el => el.addEventListener("input", generateAndDraw));
 
 // Initial draw
 generateAndDraw();
