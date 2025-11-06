@@ -162,6 +162,13 @@ async function generateAndDraw() {
 
     await drawFormation(positions, scaleFactor);
 
+    // Detect dark mode by data attribute
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+
+    if (isDarkMode) {
+        invertCanvasColors();
+    }
+
     window.currentFormationPositions = positions;
 }
 
@@ -308,13 +315,42 @@ window.addEventListener("resize", () => {
     generateAndDraw();
 });
 
+window.addEventListener('themechange', () => {
+    generateAndDraw();
+});
+
+function invertCanvasColors() {
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+        // Invert RGB channels
+        data[i] = 255 - data[i];         // Red
+        data[i + 1] = 255 - data[i + 1]; // Green
+        data[i + 2] = 255 - data[i + 2]; // Blue
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+}
+
 function exportPNG() {
-    if (!window.currentFormationPositions) return alert("Generate formation first");
+    if (!window.currentFormationPositions) {
+        alert("Generate formation first");
+        return;
+    }
+
+    // Detect dark mode by data attribute
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+
+    if (isDarkMode) {
+        const userOk = confirm("You are in dark mode, so your downloaded images will be white. Are you okay with this?");
+        if (!userOk) return;  // User cancelled export
+    }
 
     // Convert canvas content to data URL (PNG format)
     const dataURL = canvas.toDataURL("image/png");
 
-    // Create a temporary link element
+    // Create a temporary link element to trigger download
     const a = document.createElement("a");
     a.href = dataURL;
     a.download = "formation.png";

@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
           document.documentElement.setAttribute("data-theme", newTheme);
           localStorage.setItem("theme", newTheme);
           toggleBtn.textContent = newTheme === "dark" ? "☀️" : "🌙";
+
+          // Notify other parts of the app about theme change
+          window.dispatchEvent(new Event('themechange'));
         });
       }
 
