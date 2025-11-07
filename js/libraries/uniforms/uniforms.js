@@ -6,7 +6,7 @@ export default [
         group: "USAF Uniforms",
         value: "ClassA",
         label: "Service Dress Uniform (Class A)",
-        image: null,
+        image: "/js/libraries/uniforms/images/ClassA.svg",
         link: null,
         reference: "CAPR 39-1 § Men's - 4.1.5. Women's - 4.1.9."
     },
@@ -17,9 +17,20 @@ export default [
         group: "USAF Uniforms",
         value: "ClassB",
         label: "Blue Service Uniform (Class B)",
-        image: null,
+        image: "/js/libraries/uniforms/images/ClassB.svg",
         link: null,
         reference: "CAPR 39-1 § Men's - 4.1.11. Women's - 4.1.12."
+    },
+    {
+        required: false,
+        type: ["OCP"],
+        wearer: "All",
+        group: "USAF Uniforms",
+        value: "OCP",
+        label: "Occupational Camouflage Pattern (OCP)",
+        image: "/js/libraries/uniforms/images/OCP.svg",
+        link: null,
+        reference: "CAPR 39-1 § ICL 25-06. OCPs will be worn in accordance with DAFI 36-2903 unless specifically noted below in subsequent sections and paragraphs."
     },
     {
         required: false,
@@ -28,7 +39,7 @@ export default [
         group: "USAF Uniforms",
         value: "ABU",
         label: "Airman Battle Uniform (ABU)",
-        image: null,
+        image: "/js/libraries/uniforms/images/ABU.svg",
         link: null,
         reference: "CAPR 39-1 § 5.1.1."
     },
@@ -39,7 +50,7 @@ export default [
         group: "USAF Uniforms",
         value: "FDU",
         label: "Flight Duty Uniform (FDU)",
-        image: null,
+        image: "/js/libraries/uniforms/images/FDU.svg",
         link: null,
         reference: "CAPR 39-1 § 8.2."
     },
@@ -108,17 +119,6 @@ export default [
         image: null,
         link: null,
         reference: "CAPR 39-1 § 5.1.2."
-    },
-    {
-        required: false,
-        type: ["OCP"],
-        wearer: "All",
-        group: "USAF Uniforms",
-        value: "OCP",
-        label: "Operational Camouflage Pattern (OCP)",
-        image: null,
-        link: null,
-        reference: "CAPR 39-1 § NONE"
     },
 
     // Cadet Uniforms

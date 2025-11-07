@@ -177,4 +177,29 @@ export default [
         link: "https://www.vanguardmil.com/collections/cap-uniform-items/products/civil-air-patrol-uniform-1corporate-blue-field-shirt-summer-weight",
         reference: null
     },
+
+    {
+        required: false,
+        type: ["OCP"],
+        wearer: "All",
+        group: "OCP Blouse",
+        value: "OCP_blouse",
+        label: "OCP Blouse",
+        level: null,
+        image: "/js/libraries/coats/images/OCP.svg",
+        link: "",
+        reference: "The Non-IHWCU OCP uniforms are not authorized to be worn. DO NOT WEAR THIS!"
+    },
+    {
+        required: true,
+        type: ["OCP"],
+        wearer: "All",
+        group: "OCP Blouse",
+        value: "OCP_IHWCU_blouse",
+        label: "OCP IHWCU Blouse",
+        level: null,
+        image: "/js/libraries/coats/images/IHWCU_OCP.svg",
+        link: "https://www.vanguardmil.com/collections/cap-ocp/products/civil-air-patrol-ocp-uniform-adult-shirt-1",
+        reference: "The non-fire-retardant and improved hot weather combat OCP uniforms are the only OCP uniforms authorized to be worn by all Airmen."
+    },
 ];

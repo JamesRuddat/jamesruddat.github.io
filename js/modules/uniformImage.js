@@ -2,12 +2,8 @@ import * as uniformData from '/js/libraries/uniformData.js';
 import { allUniformItems } from '/js/modules/uniformMapping.js';
 import { positions } from '/js/modules/uniformPositions.js';
 
-function renderUniform() {
-  const selectionsString = sessionStorage.getItem('uniformSelections');
-  if (!selectionsString) return;
-  console.log('selectionsString:', selectionsString);
-
-  const selections = JSON.parse(selectionsString).filter(item => item); // keep all non-null
+export function renderUniform(selections) {
+  if (!selections || selections.length === 0) return;
   console.log('Selections:', selections);
 
   // --- Overview info ---
@@ -16,10 +12,9 @@ function renderUniform() {
   const uniform = selections.find(item =>
     item.group && ['usaf uniforms', 'cadet uniforms', 'senior uniforms', '18+ uniforms'].includes(item.group.toLowerCase())
   );
-  const gradeItem = selections.find(item => item?.group?.toLowerCase().includes('grades'));
+  const gradeItem = grade;
 
   if (gradeItem) {
-    // Positions to show the grade
     const gradePositions = ['collar-grade', 'hat-grade', 'shirt-grade-left', 'shirt-grade-right'];
 
     gradePositions.forEach(posName => {
@@ -27,7 +22,7 @@ function renderUniform() {
       if (!pos) return;
 
       const img = document.createElement('img');
-      img.src = gradeItem.image; // same grade image
+      img.src = gradeItem.image;
       img.alt = gradeItem.label || 'Grade';
       img.style.position = 'absolute';
       img.style.left = (pos.x ?? 0) + 'px';
@@ -46,29 +41,28 @@ function renderUniform() {
     outerwear: selections.find(item => item.group?.toLowerCase().includes('outerwear')),
   };
 
-  // --- Overview / Regulations in one ---
   const overviewText = document.getElementById('overview-text');
-
   if (overviewText) {
     const regs = selections.filter(i => i.reference?.trim() !== '');
 
     if (regs.length > 0) {
       overviewText.innerHTML = `
-      <table border="1" cellpadding="4" style="border-collapse: collapse; border: 1px solid #ccc;">
-        <thead><tr><th>Item</th><th>Reference</th></tr></thead>
-        <tbody>
-          ${regs.map(r => `
-            <tr>
-              <td><strong>${r.label}</strong>${r.link ? `<br><a href="${r.link}" target="_blank" rel="noopener noreferrer">View on Vanguard</a>` : ''}</td>
-              <td>${r.reference || 'N/A'}</td>
-            </tr>`).join('')}
-        </tbody>
-      </table>
-    `;
-    } else { overviewText.textContent = 'No regulations found'; }
+        <table border="1" cellpadding="4" style="border-collapse: collapse; border: 1px solid #ccc;">
+          <thead><tr><th>Item</th><th>Reference</th></tr></thead>
+          <tbody>
+            ${regs.map(r => `
+              <tr>
+                <td><strong>${r.label}</strong>${r.link ? `<br><a href="${r.link}" target="_blank" rel="noopener noreferrer">View on Vanguard</a>` : ''}</td>
+                <td>${r.reference || 'N/A'}</td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      `;
+    } else {
+      overviewText.textContent = 'No regulations found';
+    }
   }
 
-  // --- Gather all items to render (with images) ---
   const itemsToRender = selections.filter(item => item?.image);
 
   itemsToRender.sort((a, b) => {
@@ -77,7 +71,6 @@ function renderUniform() {
     return (positions.indexOf(posA) || 0) - (positions.indexOf(posB) || 0);
   });
 
-  // Include single items separately if not already in list
   ['collar', 'hat'].forEach(key => {
     const item = singleItems[key];
     if (item && !itemsToRender.includes(item)) itemsToRender.push(item);
@@ -90,7 +83,6 @@ function renderUniform() {
       'cap-nameplate': ['CAP plates'],
       'shirt-grade-left': ['Grades'],
       'shirt-grade-right': ['Grades'],
-      // add others here
     };
 
     return selections.filter(item => {
@@ -101,7 +93,6 @@ function renderUniform() {
       );
 
       if (mappedPos) {
-        // Only render if current position matches the mapped position
         return mappedPos[0] === posKey;
       }
 
@@ -109,7 +100,6 @@ function renderUniform() {
     });
   }
 
-  // --- Generic render function ---
   function renderItems(container, selections) {
     if (!container) return;
     container.innerHTML = '';
@@ -117,7 +107,10 @@ function renderUniform() {
     const baseWidth = 200;
     const baseHeight = 740;
     const rect = container.getBoundingClientRect();
-    const scale = Math.min(rect.width / baseWidth, rect.height / baseHeight);
+    const containerWidth = rect.width > 0 ? rect.width : baseWidth;
+    const containerHeight = rect.height > 0 ? rect.height : baseHeight;
+
+    const scale = Math.min(containerWidth / baseWidth, containerHeight / baseHeight);
 
     positions.forEach((pos, posIndex) => {
       const itemsAtPos = getItemsForPosition(pos, selections);
@@ -145,7 +138,6 @@ function renderUniform() {
   }
 
   renderItems(document.getElementById('overview-image'), itemsToRender);
-
   // --- Map group names to positions ---
   const multiGroups = [
     { elementId: 'extra-left', groups: ['collar', 'grades'], positions: ['collar-grade', 'shirt-grade-left'] },
@@ -160,7 +152,11 @@ function renderUniform() {
     const rect = container.getBoundingClientRect();
     const baseWidth = 200;
     const baseHeight = 200;
-    const scale = Math.min(rect.width / baseWidth, rect.height / baseHeight);
+    
+    const containerWidth = rect.width > 0 ? rect.width : baseWidth;
+    const containerHeight = rect.height > 0 ? rect.height : baseHeight;
+
+    const scale = Math.min(containerWidth / baseWidth, containerHeight / baseHeight);
 
     const items = selections.filter(i =>
       groups.some(g => i.group && i.group.toLowerCase().includes(g.toLowerCase()))

@@ -56,12 +56,7 @@ function setupAnnouncement() {
   const title = document.getElementById('announcement-title');
   const message = document.getElementById('announcement-message');
   const marquee = document.getElementById('announcement-marquee');
-
-  console.log({ announcement, title, message, marquee });
-
   const path = window.location.pathname;
-  console.log('Current path:', path);
-
   const announcements = {
     /*
     '/': { // ALL PADGES

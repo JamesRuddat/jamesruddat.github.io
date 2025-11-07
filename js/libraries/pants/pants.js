@@ -13,6 +13,18 @@ export default [
     },
     {
         required: true,
+        type: ["OCP"],
+        wearer: "All",
+        group: "OCP Trousers",
+        value: "OCP_trousers",
+        label: "OCP Trousers",
+        level: null,
+        image: "/js/libraries/pants/images/OCP_Trousers.svg",
+        link: "https://www.vanguardmil.com/collections/cap-ocp/products/civil-air-patrol-ocp-uniform-adult-pants-ocp",
+        reference: "The OCP trousers are worn buttoned and with a belt. The trouser waistband will rest on the member’s waist. Pockets will be secured, and items stowed in pockets will not be visible. Exception: OCP patrol cap or tactical cap may extend outside when placed in the OCP trouser cargo pocket. Members may wear trousers tucked into the top of the boots, bloused using the draw strings at the bottom of the trousers, or use commercial blousing devices if the trousers are not tucked into the boots. Members will not wrap the trouser leg around the leg tightly enough to present a pegged appearance or insert any items inside the trouser leg to create a round appearance at the bottom of the trouser leg. When bloused, the trousers will not extend below the third eyelet from the top of the boot."
+    },
+    {
+        required: true,
         type: ["ABU"],
         wearer: "Male",
         group: "Male ABU Trousers",

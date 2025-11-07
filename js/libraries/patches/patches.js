@@ -1,7 +1,7 @@
 export default [
     {
-        required: false,
-        type: ["FDU", "CFDU"],
+        required: true,
+        type: ["FDU", "CFDU", "OCP"],
         wearer: "All",
         group: "American Flag Patch",
         value: "american_flag_patch",
@@ -9,6 +9,18 @@ export default [
         level: null,
         image: null,
         link: "",
+        reference: null,
+    },
+    {
+        required: true,
+        type: ["OCP"],
+        wearer: "All",
+        group: "AUX Patch",
+        value: "AUX_patch",
+        label: "AUX Patch",
+        level: null,
+        image: null,
+        link: "https://www.vanguardmil.com/collections/cap-ocp/products/civil-air-patrol-aux-with-hook-embroidered-civil-air-patrol-new-insignia",
         reference: null,
     },
     {

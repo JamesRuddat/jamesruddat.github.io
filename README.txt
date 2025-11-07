@@ -1,6 +1,6 @@
-=========================================
-          Cadet Tools
-=========================================
+══════════════════════════════════════════
+               Cadet Tools
+══════════════════════════════════════════
 This project started out as a Civil Air Patrol Uniform Builder Tool but has grown to be a tool for cadets to use. 
 It provides structured data, business logic, and a UI for selecting and displaying uniform components (badges, insignia, cloth/metal items, etc.), along with direct links to Vanguard for ordering.
 
@@ -11,7 +11,7 @@ v0.1.1 - Full formUI uniform builder and dynamic data mapping
 v0.1.0 - Initial release with (old) formUI and Class B static data
 v0.0.0 - Project start (August 11 2025)
 -----------------------------------------
-📂 Project Structure - oudated with Files+ branch
+⎙ Project Structure - oudated with Files+ branch
 /js
   /data
     uniformData.js        # Data lists for all uniform items
@@ -23,7 +23,7 @@ index.html                # Entry point with container elements
 README.txt                # This file
 
 -----------------------------------------
-🗂️ Uniform Data Format
+💻 Uniform Data Format
 Each uniform item is stored as a single JSON object:
 {
   "type": null,              // Uniform Type
@@ -47,7 +47,7 @@ Features
 • Vanguard item links for ordering
 
 -----------------------------------------
-🛠️ Usage
+⛏ Usage
 $ git clone <repo>
 $ open index.html
 
@@ -76,7 +76,7 @@ Example Flow:
    → Vanguard links included for each item
 
 -----------------------------------------
-📖 Notes
+🗒 Notes
 Items in the same group will render as a dropdown or checkbox list.
 Each item can have different variations (cloth/metal, gender-specific, etc.).
 Regulation references (reference) can be used to tie items directly back to CAPR 39-1.
@@ -89,6 +89,8 @@ Email: james@ruddatfam.net
 GitHub: https://github.com/JamesRuddat
 linkedin: https://www.linkedin.com/in/james-ruddat-103b48290/
 
+𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃
+
 -----------------------------------------
 Acknowledgements / References:
 
@@ -96,4 +98,25 @@ Acknowledgements / References:
 • Vanguard Mil - Uniform item source
 • Inspiration: https://www.mcchord.org/rack_builder/ and https://www.reddit.com/user/idklmao1010/
 
-=========================================
+══════════════════════════════════════════
+
+⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⣀⣤⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠠⣿⣿⡀⠀⠀⣿⣿⡇⠀⠀⢠⣿⣷⠄
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣦⡀⠀⠀⢻⣿⣇⣀⣀⣹⣿⣇⣀⡀⣿⣿⠏⠀⠀⣠⣶⣦
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣄⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⣰⣿⣿⠏
+⠀⠀⠀⠀⢀⣴⣶⣄⠀⠀⣨⣿⣿⣿⢟⣟⢝⡞⡮⡊⠀⡳⡵⣝⣝⢟⢿⣿⣿⣿⣁⠀⢀⣤⣶⣦
+⠀⠀⠀⠀⠀⠙⠿⣿⣷⣿⣿⡿⡫⡮⡳⣕⢗⢽⠑⠀⡄⠈⢚⢮⢎⢯⡳⣝⢟⣿⣿⣶⣿⡿⠟⠋
+⠀⠀⢀⣀⣀⠀⠀⣰⣿⣿⢯⢎⢯⢮⡫⡮⡫⠃⠀⢘⢮⠀⠀⠹⣕⢗⣝⢮⡳⣕⢿⣿⣿⡄⠀⢀⣀⣀⡀
+⠀⠀⠺⣿⣿⣿⣶⣿⣿⡳⡳⣝⡕⣗⣝⠮⠁⠀⠀⢸⡪ ⠀⠀⠑⣕⢗⢵⢝⢮⡳⣻⣿⣿⣾⣿⣿⣿⠆
+⠀⠀⠀⠀⠁⠉⣿⣿⣗⣝⢝⢮⡺⡪⡮⠁⠀⠀⠀⢰⢳⠀ ⠀ ⠀⠑⡽⣕⢽⢕⣝⢮⢿⣿⣯⠁⠁
+⠀⢠⣴⣴⣤⣴⣿⣿⢮⣪⡫⡳⣝⠝⠀⠀⠀⠀⠀⢀⣇⠀⠀⠀⠀ ⠀⠘⢮⡳⡳⡵⡹⣽⣿⣿⣤⣴⣴⣤⠄
+⠀⠘⠻⠿⠛⠿⣿⣿⢵⢵⡹⣝⠎⠀⠀⠀⣀⢤⡢⠓⠑⠕⡤⣄⡀⠀⠀⠈⢮⡫⡮⣫⣺⣿⣿⠛⠟⠿⠻⠁
+⠀⠀⠀⠀⠀⡀⣿⣿⣗⢗⣝⠎⠀⡠⣲⡹⠊⠃⠀⠀⠀⠀⠈⠘⠎⣗⢤⢀ ⠀⢯⢺⡪⣾⣿⡯⡀
+⠀⠀⢴⣾⣿⣿⢿⣿⣿⡵⠁⠀⠈⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠊⠀ ⠀ ⠹⢺⣿⣿⢿⣿⣿⣷⡄
+⠀⠀⠈⠛⠉⠈⠀⠹⣿⣿⣕⣗⢕⣗⢕⡗⣗⡳⣕⢗⢗⣕⢗⢗⣕⢗⢵⢕⢧⡳⣽⣿⣿⠃⠀⠈⠙⠛
+⠀⠀⠀⠀⠀⣠⣶⣿⡿⣿⣿⣮⣳⢕⣗⢝⢮⡺⣪⣫⡳⡵⡹⣕⢗⢽⢕⢽⣵⣿⣿⡿⣿⣷⣦⡄
+⠀⠀⠀⠀⠘⢿⠿⠏⠁⠀⢹⣿⣿⣷⣷⣝⡵⣝⢮⢮⡪⡯⣺⡪⣯⣮⣿⣿⣿⣿⠋⠀⠈⠻⢿⡟
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⠋⠛⠿⣿⣿⣿⣿⣷⣿⣿⣷⣿⣿⣿⠟⠛⠹⣿⣷⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⡿⠃⠀⠀⣼⣿⡏⠉⠉⣻⣿⡏⠉⠉⣿⣿⣆⠀⠀⠙⢿⠿
+⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠨⣿⣿⠃⠀⠀⣿⣿⡧⠀⠀⠸⣿⣿⠄
+⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠙⠛⠃⠀⠀⠀⠈

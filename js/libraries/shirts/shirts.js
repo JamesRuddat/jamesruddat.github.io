@@ -12,6 +12,18 @@ export default [
         reference: "A standard Desert Tan short or long-sleeved t-shirt will be worn under the ABU coat. Unit commanders may prescribe unit designation emblems, subject to the approval of the wing commander, not to exceed 5 inches in diameter, in cloth or silk screen, worn on the left side of chest.Logos may also be placed on the back of the t- shirt with the approval of the wing commander. Neither unit designation emblems nor clothing company logos will be visible when wearing the ABU coat. Tan turtlenecks may also be authorized. Thermal undergarments may be desert sand, white or cream colored and are authorized for wear as weather conditions warrant. T-shirts and turtlenecks will not have pockets and all must be tucked into the trousers."
     },
     {
+        required: true,
+        type: ["OCP"],
+        wearer: "All",
+        group: "Coyote Brown Shirt",
+        value: "Coyote_Brown_shirt",
+        label: "Coyote Brown Shirt",
+        level: null,
+        image: "/js/libraries/shirts/images/OCP_Shirt.svg",
+        link: "https://www.vanguardmil.com/collections/cap-ocp/products/civil-air-patrol-uniform-t-shirt-coyote-brown",
+        reference: "T-shirt will be Coyote Brown (Tan 499), long or short sleeve, and will be tucked into OCP trousers. Additionally, unit commanders may allow for display on morale undershirts organizational emblems, as officially and currently approved by the wing commander, not to exceed 5 inches in diameter, in cloth or silk screen. If displayed, organizational emblems will be worn on the left side of the chest of the Coyote Brown (Tan 499) morale undershirts. The morale undershirts may also display the organizational emblem on the back of the undershirt in a larger diameter as authorized by commanders."
+    },
+    {
         required: false,
         type: ["CFU"],
         wearer: "All",
