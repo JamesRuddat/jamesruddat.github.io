@@ -12,10 +12,13 @@ function loadPartial(id, file) {
 document.addEventListener("DOMContentLoaded", () => {
   loadPartial("head-placeholder", "/partials/head.html").then(() => {
     Promise.all([
+      loadPartial("announcement-placeholder", "/partials/announcement.html"),
       loadPartial("header-placeholder", "/partials/header.html"),
       loadPartial("nav-placeholder", "/partials/nav.html"),
       loadPartial("footer-placeholder", "/partials/footer.html")
     ]).then(() => {
+      setupAnnouncement();
+
       /* ===== DARK / LIGHT TOGGLE ===== */
       const toggleBtn = document.getElementById("darkModeToggle");
       if (toggleBtn) {
@@ -47,3 +50,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function setupAnnouncement() {
+  const announcement = document.getElementById('announcement');
+  const title = document.getElementById('announcement-title');
+  const message = document.getElementById('announcement-message');
+  const marquee = document.getElementById('announcement-marquee');
+
+  console.log({ announcement, title, message, marquee });
+
+  const path = window.location.pathname;
+  console.log('Current path:', path);
+
+  const announcements = {
+    /*
+    '/': { // ALL PADGES
+      title: '',
+      message: '',
+      marquee: ''
+    },*/
+    '/pages/builders/uniformBuilder.html': {
+      title: 'Warning:',
+      message: 'This is a draft uniform creator. Please use extra caution as placements and tolerances may be inaccurate and not fully compliant with CAPR 39-1 uniform standards.',
+      marquee: 'This tool is a work in progress — verify All uniform details carefully!'
+    },
+    '/pages/uniforms/faq.html': {
+      title: 'Heads up:',
+      message: 'Civil Air Patrol has approved OCP (Operational Camouflage Pattern) for wear as a uniform, which was authorized starting November 1, 2025. Regulations require specific OCP material, a place for a name tape on the back, and appropriate insignia.',
+      marquee: 'In accordance with DAFI 36-2903 except where noted otherwise in CAPR 39-1.'
+    }
+  };
+
+  const current = announcements[path] || announcements['/'] || null;
+  console.log('Announcement for this page:', current);
+
+  if (current && announcement) {
+    title.textContent = current.title;
+    message.textContent = current.message;
+
+    if (current.marquee) {
+      marquee.textContent = current.marquee;
+      marquee.style.display = 'inline-block';
+    } else {
+      marquee.style.display = 'none';
+    }
+
+    announcement.style.display = 'block';
+  }
+}

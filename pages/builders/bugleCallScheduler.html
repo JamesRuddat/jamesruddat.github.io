@@ -7,14 +7,13 @@
 
 <body>
     <div class="wrapper">
-
+        <div id="announcement-placeholder"></div>
         <header id="header-placeholder" class="header full-width"></header>
         <nav id="nav-placeholder"></nav>
 
         <main>
-            <div class="row">
-                <!-- Main builder -->
-                <div class="main container-inner">
+            <div class="container-inner with-sidebar">
+                <section class="main">
                     <h2>Bugle Call Scheduler</h2>
                     <p>This tool is designed to help you set up bugle calls to play through your PA system at any time
                         of day. Once a bugle call is scheduled, it will automatically play at the chosen time daily. All
@@ -29,7 +28,7 @@
                             every day at that time.</li>
                         <li><strong>Start Music:</strong> Click to begin background music. The music will automatically
                             fade down 10 seconds before a bugle call and fade back up after.</li>
-                        <li><strong>Stop Music:</strong> Clickto immediately stop the background music at any time.</li>
+                        <li><strong>Stop Music:</strong> Click to immediately stop the background music at any time.</li>
                     </ul>
 
                     <p>The scheduled calls will continue to loop daily until you stop them, ensuring your bugle calls
@@ -40,11 +39,13 @@
                         <button class="small-btn" onclick="startMusic()">Start Music</button>
                         <button class="small-btn" onclick="stopMusic()">Stop Music</button>
                     </div>
-                    <br>
-                    <h3>Your Schedule:</h3>
-                    <p id="nowPlaying"></p>
+                </section>
+
+                <aside class="sidebar">
+                <h3>Your Schedule:</h3>
+                    <p id="nowPlaying">Now Playing: None</p>
                     <ul id="mySchedule"></ul>
-                </div>
+                </aside>
             </div>
         </main>
         <footer id="footer-placeholder"></footer>

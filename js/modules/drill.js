@@ -149,7 +149,30 @@ async function generateAndDraw() {
     const baseX = (canvas.width - formationWidthScaled) / 2;
     const baseY = (canvas.height - formationHeightScaled) / 2 + spacingY;
 
-    const positions = calculatePositions(
+    let positions;
+
+if (formationType === "column") {
+    positions = [];
+
+    flights.forEach((flight, flightIndex) => {
+        const flightCadets = cadets.filter(c => c.flight === flight.label);
+
+        const flightOffsetX = flightIndex * (spacingX * 3 + 80); // horizontal spacing between flights
+
+        const columnPositions = calculateColumnFormation(
+            flightCadets,
+            numElementLeaders,
+            cadetsPerFlight,
+            baseX + flightOffsetX,
+            baseY,
+            spacingX,
+            spacingY
+        );
+
+        positions.push(...columnPositions);
+    });
+} else {
+    positions = calculatePositions(
         formationType,
         flights,
         cadets,
@@ -159,6 +182,7 @@ async function generateAndDraw() {
         spacingX,
         spacingY
     );
+}
 
     await drawFormation(positions, scaleFactor);
 
@@ -276,6 +300,62 @@ function calculatePositions(formationType, flights, cadets, numElementLeaders, b
     });
 
     return positions;
+}
+
+function calculateColumnFormation(flightCadets, numElementLeaders, cadetsPerFlight, baseX, baseY, spacingX, spacingY) {
+
+    const fc = flightCadets.find(c => c.position === 0);
+    const sergeant = flightCadets.find(c => c.position === 1);
+    const guide = flightCadets.find(c => c.position === 2);
+    const elementLeaders = flightCadets.filter(c => c.imageFile === "Element_Leader.svg");
+    const airmen = flightCadets.filter(c => c.imageFile === "Airman.svg");
+
+    const cols = numElementLeaders; // number of columns
+    const airmenRows = 3; // fixed 3 rows for airmen, per your layout
+
+    // Total rows: 6 (0 to 5)
+    // Row 0: FC, empty, empty, Guide
+    // Row 1: Element Leaders across all columns
+    // Rows 2-4: Airmen fill columns
+    // Row 5: empty except Flight Sergeant bottom-right
+
+    const totalRows = 6; // fixed
+
+    // Create empty grid
+    const grid = Array.from({ length: totalRows }, () => Array(cols).fill(null));
+
+    // Row 0 placements:
+    if (fc) grid[0][0] = fc;                     // FC top-left
+    if (guide) grid[0][cols - 1] = guide;       // Guide top-right
+
+    // Row 1: Element Leaders fill all columns left to right
+    elementLeaders.forEach((el, i) => {
+        if (i < cols) grid[1][i] = el;
+    });
+
+    // Rows 2-4: Airmen fill columns top-down, left to right
+    let aIndex = 0;
+    for (let c = 0; c < cols; c++) {
+        for (let r = 2; r <= 4; r++) {
+            if (aIndex < airmen.length) {
+                grid[r][c] = airmen[aIndex++];
+            }
+        }
+    }
+
+    // Row 5: Flight Sergeant bottom-right (last col)
+    if (sergeant) grid[5][cols - 1] = sergeant;
+
+    // Now convert grid to positions
+    return grid.flatMap((row, r) =>
+        row.map((cell, c) => ({
+            flight: cell?.flight || null,
+            position: cell?.position || null,
+            imageFile: cell?.imageFile || null,
+            x: baseX + c * spacingX,
+            y: baseY + r * spacingY
+        }))
+    );
 }
 
 // Updated drawFormation to scale images
