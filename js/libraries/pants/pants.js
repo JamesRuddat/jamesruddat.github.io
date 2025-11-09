@@ -1,7 +1,7 @@
 export default [
     {
         required: true,
-        type: ["ClassA"],
+        type: ["ClassA", "ClassB", "HGU"],
         wearer: "Male",
         group: "Male Trousers",
         value: "male_trousers",
@@ -75,7 +75,7 @@ export default [
 
     {
         required: true,
-        type: ["ClassA", "ClassB"],
+        type: ["ClassA", "ClassB", "HGU"],
         wearer: "Female",
         group: "Female Slacks",
         value: "female_slacks",
@@ -86,7 +86,7 @@ export default [
         reference: null,
     },
     {
-        required: true,
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Skirt",
@@ -98,7 +98,7 @@ export default [
         reference: null,
     },
     {
-        required: true,
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Slacks",
@@ -110,7 +110,7 @@ export default [
         reference: null,
     },
     {
-        required: true,
+        required: false,
         type: ["ClassA", "ClassB"],
         wearer: "Female",
         group: "Female Skirt",

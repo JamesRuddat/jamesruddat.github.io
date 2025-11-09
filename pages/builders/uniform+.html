@@ -2,64 +2,57 @@
 <html>
 
 <head id="head-placeholder">
-    <!-- This will be filled dynamically -->
+  <!-- This will be filled dynamically -->
 </head>
 
 <body>
-    <div class="wrapper">
-        <div id="announcement-placeholder"></div>
+  <div id="announcement-placeholder"></div>
+  <header id="header-placeholder" class="header full-width"></header>
+  <nav id="nav-placeholder"></nav>
 
-        <header id="header-placeholder" class="header full-width"></header>
-        <nav id="nav-placeholder"></nav>
+  <main>
+    <div class="container-inner with-sidebar">
+      <section class="main">
+        <h2>Uniform Builder</h2>
+        <p>Select your member type, grade, and uniform to view wear guidelines.</p>
 
-        <main>
-            <div class="main container-inner">
-      <h2>Build Your Uniform</h2>
-      <p>Select your member type, grade, and uniform to view wear guidelines.</p>
+        <form id="uniform-form">
+          <fieldset>
+            <legend>Step 1: Uniform Info</legend>
+            <label for="member"></label>
+            <select id="member"></select>
+            <select id="grade"></select>
 
-      <form id="uniform-form">
-        <fieldset>
-          <legend>Step 1: Uniform Info</legend>
-          <label for="member">Membership & Grade</label>
-          <select id="member"></select>
-          <select id="grade"></select>
-
-          <label for="uniform">Uniform & Gender</label>
+            <label for="uniform"></label>
             <div class="dual">
-                <select id="uniform"></select>
-                <select id="gender"></select>
+              <select id="uniform"></select>
+              <select id="gender"></select>
             </div>
-        </fieldset>
+          </fieldset>
 
-        <fieldset>
-          <legend>Step 2: Accouterments</legend>
-          <div id="form-container"></div>
-        </fieldset>
-      </form>
+          <fieldset>
+            <legend>Step 2: Accouterments</legend>
+            <div id="form-container"></div>
+          </fieldset>
+        </form>
 
-      <section class="uniform-display">
-        <div class="uniform-container">
-          <div class="images-column">
-            <div id="overview-image" class="overview-image">Full Image</div>
-            <!--
-            <div id="extra-left" class="extra-left">Optional Collar Image</div>
-            <div id="extra-right" class="extra-right">Optional Hat Image</div>
-            <div id="outerwear-image" class="outerwear-image">Outerwear Image</div>
-            -->
-          </div>
-
-          <div class="texts-column">
-            <div id="overview-text" class="overview-text">General description</div>
-            <div id="extra-text" class="extra-text">Extra item description</div>
-            <div id="outerwear-text" class="outerwear-text">Outerwear description</div>
-            <div id="reg-main" class="reg-main">Regulations</div>
-          </div>
-        </div>
       </section>
-      </div>
-    </main>
-        <footer id="footer-placeholder"></footer>
+
+      <aside class="sidebar">
+        <h2>Uniform</h2>
+        <div class="uniform-image">
+          <div id="overview-image" class="overview-image">Full Image</div>
+          <!--
+          <div id="extra-left" class="extra-left">Optional Collar Image</div>
+          <div id="extra-right" class="extra-right">Optional Hat Image</div>
+          <div id="outerwear-image" class="outerwear-image">Outerwear Image</div>
+          -->
+        </div>
+
+      </aside>
     </div>
+  </main>
+  <footer id="footer-placeholder"></footer>
 </body>
 
 <!-- External JS -->

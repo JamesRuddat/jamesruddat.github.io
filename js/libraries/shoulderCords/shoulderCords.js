@@ -61,7 +61,7 @@ export default [
     },
     {
         required: false,
-        type: ["ClassA", "ClassB"],
+        type: ["ClassA", "ClassB", "HGU"],
         wearer: "Cadet",
         group: "Shoulder Cord",
         value: "silver",

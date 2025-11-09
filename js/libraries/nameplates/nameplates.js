@@ -25,7 +25,7 @@ export default [
     },
     {
         required: true,
-        type: ["ClassA", "ClassB"],
+        type: ["ClassA", "ClassB", "HGU"],
         wearer: "Cadet",
         group: "Nameplates",
         value: "cap_nameplate_cadet",

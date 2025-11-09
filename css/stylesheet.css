@@ -61,7 +61,7 @@ body {
 }
 
 main {
-	flex: 1;
+	flex: 1 0 auto;
 	padding: 10px;
 }
 
@@ -73,10 +73,6 @@ main {
 .container-inner {
 	max-width: 1150px;
 	margin: 0 auto;
-}
-
-main {
-	flex: 1;
 }
 
 /* ===== HEADINGS ===== */
@@ -361,7 +357,6 @@ button:hover,
 .main {
 	background: var(--card-background);
 	padding: 15px;
-	margin-bottom: 15px;
 	border-radius: 6px;
 }
 
@@ -374,34 +369,27 @@ button:hover,
 	color: var(--accent-text-color);
 	padding: 8px 12px;
 	border-radius: 6px;
-	margin: 10px 0;
-}
-
-/* Default container */
-.container-inner {
-	max-width: 1150px;
 }
 
 /* Flex layout only when sidebar present */
 .container-inner.with-sidebar {
-	display: flex;
-	gap: 10px;
-}
-
-/* Main content */
-.container-inner.with-sidebar .main {
-	flex: 3;
-	background: var(--card-background);
-	padding: 15px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
 }
 
 /* Sidebar styles */
 .container-inner.with-sidebar .sidebar {
-	flex: 0.7;
 	background: var(--card-background);
 	padding: 15px;
 	border-radius: 6px;
-	margin-bottom: 15px;
+}
+
+/* Two columns when screen is wide */
+@media (min-width: 800px) {
+	.container-inner.with-sidebar {
+		grid-template-columns: 2fr 1fr;
+	}
 }
 
 /* ===== CARDS / CONTENT BOXES ===== */
@@ -595,7 +583,6 @@ iframe {
 }
 
 .form-group {
-	max-width: 300;
 }
 
 .form-item {
@@ -615,43 +602,14 @@ select {
 }
 
 /* ===== uniform images ===== */
-
-/* Uniform container: left column with options, right column with preview */
-.uniform-container {
-  display: flex;
-  gap: 20px;
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 10px 15px;
-}
-
-/* Left column: uniform options/images */
-.images-column {
-	position: relative;
-  flex: 0 0 300px; /* fixed width */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.uniform-image {
+position: relative;
   background: var(--card-background);
-  padding: 15px;
+  width: 300px;
+  height: 750px;
   border-radius: 8px;
   box-shadow: 0 4px 10px var(--card-shadow);
-  max-height: calc(100vh - 60px);
-  overflow-y: auto;
-}
-
-/* Right column: preview/details */
-.texts-column {
-  flex: 1; /* take remaining space */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: var(--card-background);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px var(--card-shadow);
-  max-height: calc(100vh - 60px);
-  overflow-y: auto;
+  overflow: auto;
 }
 
 /* Responsive: stack cards on smaller screens */
@@ -718,5 +676,9 @@ select {
 
 	.container-inner.with-sidebar {
     flex-direction: column;
-  }
+  	}
+
+	.container-inner.with-big-sidebar {
+    flex-direction: column;
+  	}
 }

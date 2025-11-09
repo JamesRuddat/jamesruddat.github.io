@@ -1,5 +1,6 @@
 export default [
     {
+        status: "approved",
         required: false,
         type: ["ClassA"],
         wearer: "All",
@@ -11,6 +12,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.5. Women's - 4.1.9."
     },
     {
+        status: "approved",
         required: false,
         type: ["ClassB"],
         wearer: "All",
@@ -22,6 +24,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.11. Women's - 4.1.12."
     },
     {
+        status: "approved",
         required: false,
         type: ["OCP"],
         wearer: "All",
@@ -33,6 +36,7 @@ export default [
         reference: "CAPR 39-1 § ICL 25-06. OCPs will be worn in accordance with DAFI 36-2903 unless specifically noted below in subsequent sections and paragraphs."
     },
     {
+        status: "approved",
         required: false,
         type: ["ABU"],
         wearer: "All",
@@ -41,9 +45,10 @@ export default [
         label: "Airman Battle Uniform (ABU)",
         image: "/js/libraries/uniforms/images/ABU.svg",
         link: null,
-        reference: "CAPR 39-1 § 5.1.1."
+        reference: "CAPR 39-1 § 5.1.1. Elimination of the Airman’s Battle Uniform (ABU) PHASE OUT DATE 31 October 2028."
     },
     {
+        status: "unfinished",
         required: false,
         type: ["FDU"],
         wearer: "All",
@@ -55,6 +60,7 @@ export default [
         reference: "CAPR 39-1 § 8.2."
     },
     {
+        status: "unfinished",
         required: false,
         type: ["CFDU"],
         wearer: "All",
@@ -66,6 +72,7 @@ export default [
         reference: "CAPR 39-1 § 8.3."
     },
     {
+        status: "approved",
         required: false,
         type: ["CFU"],
         wearer: "All",
@@ -77,6 +84,7 @@ export default [
         reference: "CAPR 39-1 § 5.2.1."
     },
     {
+        status: "unfinished",
         required: false,
         type: ["CSFU"],
         wearer: "All",
@@ -88,6 +96,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.1. Women's - 4.2.2."
     },
     {
+        status: "unfinished",
         required: false,
         type: ["CSDU"],
         wearer: "All",
@@ -99,6 +108,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.3. Women's - 4.2.4."
     },
     {
+        status: "unfinished",
         required: false,
         type: ["ASU"],
         wearer: "All",
@@ -110,6 +120,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.5. Women's - 4.2.6."
     },
     {
+        status: "phased out",
         required: false,
         type: ["BDU"],
         wearer: "All",
@@ -118,11 +129,24 @@ export default [
         label: "Battle Dress Uniform (BDU)",
         image: null,
         link: null,
-        reference: "CAPR 39-1 § 5.1.2."
+        reference: "CAPR 39-1 § 5.1.2. Elimination of the Woodland Battle Dress Uniform (BDU) PHASE OUT DATE 15 June 2021."
+    },
+    {
+        status: "phased out",
+        required: false,
+        type: ["OG-107"],
+        wearer: "All",
+        group: "USAF Uniforms",
+        value: "OG-107",
+        label: "Olive Green OG-107 (pickle suit)",
+        image: null,
+        link: null,
+        reference: "Elimination of the Olive Green OG-107 PHASE OUT DATE 1997?"
     },
 
     // Cadet Uniforms
     {
+        status: "unfinished",
         required: false,
         type: ["SFDU"],
         wearer: "Cadet",
@@ -134,6 +158,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.3. Women's - 4.1.4."
     },
     {
+        status: "approved",
         required: false,
         type: ["HGU"],
         wearer: "Cadet",
@@ -147,6 +172,7 @@ export default [
 
     // Senior Uniforms
     {
+        status: "unfinished",
         required: false,
         type: ["MDU"],
         wearer: "Senior",
@@ -158,6 +184,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.1. Women's - 4.1.2."
     },
     {
+        status: "unfinished",
         required: false,
         type: ["CWU"],
         wearer: "Senior",

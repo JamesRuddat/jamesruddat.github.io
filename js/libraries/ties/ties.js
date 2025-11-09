@@ -1,7 +1,7 @@
 export default [
     {
-        required: false,
-        type: ["ClassA", "ClassB", "HGU"],
+        required: true,
+        type: ["ClassA", "ClassB", "HGU", "SFDU"],
         wearer: "Male",
         group: "Tie",
         value: "tie",
@@ -13,7 +13,7 @@ export default [
     },
     {
         required: false,
-        type: ["ClassA", "ClassB", "HGU"],
+        type: ["ClassA", "ClassB", "HGU", "SFDU"],
         wearer: "Female",
         group: "Tie Tab",
         value: "tie_tab",

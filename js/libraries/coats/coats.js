@@ -1,8 +1,8 @@
 export default [
     // Male
     {
-        required: false,
-        type: ["ClassA"],
+        required: true,
+        type: ["ClassA", "HGU"],
         wearer: "Male",
         group: "Male Service Coat",
         value: "male_officer_service_coat_new",
@@ -14,7 +14,7 @@ export default [
     },
     {
         required: false,
-        type: ["ClassA"],
+        type: ["ClassA", "HGU"],
         wearer: "Male",
         group: "Male Service Coat",
         value: "male_nco_service_coat_new",
@@ -39,8 +39,8 @@ export default [
 
     // Female
     {
-        required: false,
-        type: ["ClassA"],
+        required: true,
+        type: ["ClassA", "HGU"],
         wearer: "Female",
         group: "Female Service Coat",
         value: "female_officer_service_coat_new",
@@ -52,7 +52,7 @@ export default [
     },
     {
         required: false,
-        type: ["ClassA"],
+        type: ["ClassA", "HGU"],
         wearer: "Female",
         group: "Female Service Coat",
         value: "female_nco_service_coat_new",

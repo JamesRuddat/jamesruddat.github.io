@@ -6,7 +6,7 @@ export const positions = [
     { names: ['shoes'], x: 70, y: 580, size: 160, rotation: 0 },
     { names: ['slippers'], x: 100, y: 560, size: 80, rotation: 0 },
 
-    { names: ['shirt'], x: 38, y: 100, size: 220, rotation: 0 },
+    { names: ['shirt'], x: 40, y: 100, size: 220, rotation: 0 },
 
     { names: ['trousers'], x: 80, y: 300, size: 140, rotation: 0 },
     { names: ['slacks'], x: 80, y: 300, size: 140, rotation: 0 },
@@ -15,11 +15,10 @@ export const positions = [
     { names: ['tie'], x: 137, y: 120, size: 24, rotation: 0 },
     { names: ['tie-tab'], x: 137, y: 120, size: 124, rotation: 0 },
 
-    { names: ['coat'], x: 27, y: 106, size: 242, rotation: 0 },
+    { names: ['coat'], x: 29, y: 109, size: 242, rotation: 0 },
     { names: ['blouse'], x: 30, y: 90, size: 242, rotation: 0 },
 
-    { names: ['collar'], x: 5, y: 10, size: 70, rotation: 0 },
-    { names: ['hat'], x: 108, y: 10, size: 80, rotation: 0 },
+    { names: ['hat', 'cap'], x: 110, y: 10, size: 80, rotation: 0 },
     { names: ['device'], x: 137, y: 30, size: 20, rotation: 0 },
 
     { names: ['cord'], x: 218, y: 135, size: 34, rotation: 0 },
@@ -29,6 +28,8 @@ export const positions = [
     
     { names: ['blue-nameplate'], x: 174, y: 135, size: 45, rotation: 0 }, //fix
     
+//    { names: ['collar'], x: 5, y: 10, size: 70, rotation: 0 },
+
     { names: ['collar-grade'], x: 10, y: 120, size: 30, rotation: 45 },
     { names: ['hat-grade'], x: 10, y: 10, size: 40, rotation: 45 },
     { names: ['shirt-grade-left'], x: 50, y: 150, size: 35, rotation: 45 },

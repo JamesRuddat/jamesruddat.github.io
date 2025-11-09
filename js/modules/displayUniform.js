@@ -39,26 +39,44 @@ document.addEventListener('DOMContentLoaded', () => {
       return acc;
     }, {});
 
-    if (Object.keys(grouped).length > 1) {
-      Object.entries(grouped).forEach(([groupName, groupItems]) => {
-        const optgroup = document.createElement('optgroup');
-        optgroup.label = groupName;
-        groupItems.forEach(item => {
-          const option = document.createElement('option');
-          option.value = item.value;
-          option.textContent = item.label;
-          optgroup.appendChild(option);
-        });
-        selectElem.appendChild(optgroup);
-      });
+    function createOption(item) {
+    const option = document.createElement('option');
+    option.value = item.value;
+    option.textContent = item.label;
+    
+    if (item.status === 'phased out') {
+    option.disabled = true;                // Disable option
+    option.style.color = '#888';           // Gray text
+    option.textContent += ' (phased out)';// Append note
+    option.title = 'This uniform is phased out and not selectable.';
+    } else if (item.status === 'unfinished') {
+      option.disabled = false;               // Keep enabled
+      option.style.color = '#d2691e';        // Chocolate/orange color
+      option.textContent += ' (unfinished)';
+      option.title = 'This uniform is unfinished and may not be fully available.';
     } else {
-      options.forEach(item => {
-        const option = document.createElement('option');
-        option.value = item.value;
-        option.textContent = item.label;
-        selectElem.appendChild(option);
-      });
+      // status === 'approved' or undefined
+      option.disabled = false;
+      option.style.color = '';               // Default text color
+      option.title = '';
     }
+    return option;
+  }
+
+  if (Object.keys(grouped).length > 1) {
+    Object.entries(grouped).forEach(([groupName, groupItems]) => {
+      const optgroup = document.createElement('optgroup');
+      optgroup.label = groupName;
+      groupItems.forEach(item => {
+        optgroup.appendChild(createOption(item));
+      });
+      selectElem.appendChild(optgroup);
+    });
+  } else {
+    options.forEach(item => {
+      selectElem.appendChild(createOption(item));
+    });
+  }
   }
 
   // --- Get currently selected uniform items from form ---
@@ -133,14 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (groupItems.length > 1) {
           const label = document.createElement('label');
           label.textContent = groupName;
-          wrapper.appendChild(label);
-          wrapper.appendChild(document.createElement('br'));
+          //wrapper.appendChild(label); Optional label above dropdown
+          //wrapper.appendChild(document.createElement('br'));
 
           const select = document.createElement('select');
 
           const placeholder = document.createElement('option');
           placeholder.value = '';
-          placeholder.textContent = 'Select';
+          placeholder.textContent = 'Select ' + groupName;
           placeholder.selected = true;
           select.appendChild(placeholder);
 
@@ -303,10 +321,6 @@ function renderUniform(selections) {
       img.style.height = 'auto';
       img.style.zIndex = 100;
 
-      if (item.reference) {
-        img.classList.add('img-tooltip');
-      }
-
       overviewImage.appendChild(img);
     });
   }
@@ -348,12 +362,6 @@ function renderUniform(selections) {
     const posA = positions.find(p => p.names.some(n => a.group?.toLowerCase().includes(n.toLowerCase()))) || {};
     const posB = positions.find(p => p.names.some(n => b.group?.toLowerCase().includes(n.toLowerCase()))) || {};
     return (positions.indexOf(posA) || 0) - (positions.indexOf(posB) || 0);
-  });
-
-  // Ensure collar and hat items are included last
-  ['collar', 'hat'].forEach(key => {
-    const item = singleItems[key];
-    if (item && !itemsToRender.includes(item)) itemsToRender.push(item);
   });
 
   // Helper: Get items matching a position
