@@ -76,7 +76,7 @@ export default [
     },
 
     {
-        required: false,
+        required: true,
         type: ["ABU"],
         wearer: "Male",
         group: "Male ABU Blouse",
@@ -103,7 +103,7 @@ export default [
     // Female
 
     {
-        required: false,
+        required: true,
         type: ["ABU"],
         wearer: "Female",
         group: "Female ABU Blouse",
@@ -128,7 +128,7 @@ export default [
     },
 
     {
-        required: false,
+        required: true,
         type: ["CFU"],
         wearer: "Male",
         group: "Male CFU Blouse",
@@ -154,7 +154,7 @@ export default [
 
     // Female
     {
-        required: false,
+        required: true,
         type: ["CFU"],
         wearer: "Female",
         group: "Female CFU Blouse",

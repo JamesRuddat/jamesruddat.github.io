@@ -654,12 +654,6 @@ select {
   overflow-y: auto;
 }
 
-
-
-
-
-
-
 /* Responsive: stack cards on smaller screens */
 @media (max-width: 900px) {
 	.section-card {

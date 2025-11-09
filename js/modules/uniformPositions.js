@@ -2,6 +2,7 @@ export const positions = [
     // Back
     { names: ['gender'], x: 5, y: 5, size: 40, rotation: 0 },
 
+    { names: ['boots'], x: 70, y: 580, size: 160, rotation: 0 },
     { names: ['shoes'], x: 70, y: 580, size: 160, rotation: 0 },
     { names: ['slippers'], x: 100, y: 560, size: 80, rotation: 0 },
 

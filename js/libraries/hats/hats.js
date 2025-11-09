@@ -12,7 +12,7 @@ export default [
         reference: "CAPR 39-1 § 9.4.6.",
     },
     {
-        required: false,
+        required: true,
         type: ["OCP"],
         wearer: "All",
         group: "Hat",
@@ -48,7 +48,7 @@ export default [
         reference: "",
     },
     {
-        required: false,
+        required: true,
         type: ["ABU"],
         wearer: "All",
         group: "Hat",
@@ -60,7 +60,19 @@ export default [
         reference: "The navy blue tactical and ABU patrol cap is authorized with this uniform. A cap will be worn outdoors at all times, unless in a designated “no hat” area. Members will wear a cap straight on the head so that the cap band creates a straight line around the head, parallel to the ground. Caps will fit snugly and comfortably around the largest part of the head without bulging or distortion from the intended shape of the headgear and without excessive gaps. No hair will be visible on the forehead beneath the cap. Members are authorized to block the patrol cap. Senior member officers will wear light silver, or for 2d Lt and Majors, gold, embroidered grade insignia on dark blue cloth centered on the front of the ABU cap. CAP Chaplains may substitute the Chaplain insignia for grade insignia on the ABU cap. Cadet Officers will wear embroidered grade insignia on dark blue cloth centered on the front of the cap.",
     },
     {
-        required: false,
+        required: true,
+        type: ["BDU"],
+        wearer: "All",
+        group: "Hat",
+        value: "BDU_Cap",
+        label: "BDU Cap",
+        level: null,
+        image: "/js/libraries/hats/images/BDU_Cap.svg",
+        link: "",
+        reference: "",
+    },
+    {
+        required: true,
         type: ["CFU"],
         wearer: "All",
         group: "Hat",

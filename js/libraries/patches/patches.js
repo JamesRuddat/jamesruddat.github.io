@@ -49,7 +49,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "Region Shield Patch",
         value: "region_shield_patch",
@@ -61,7 +61,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "Wing Patch Patch",
         value: "wing_patch",
@@ -73,7 +73,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "Overseas Unit Patch",
         value: "overseas_unit_shoulder_patch",
@@ -85,7 +85,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "National Check Pilot Patch",
         value: "national_check_pilot_patch",
@@ -97,7 +97,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "Pilot Proficiency Patch",
         value: "pilot_proficiency_patch",
@@ -109,7 +109,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "AFRCC Basic Inland Search and Rescue Course (BISC) Patch",
         value: "afrcc_basic_inland_search_rescue_patch",
@@ -121,7 +121,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "Inland SAR Planning Course Patch",
         value: "inland_sar_planning_course_patch",
@@ -133,7 +133,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "Cadet Orientation Pilot Patch",
         value: "cadet_orientation_pilot_patch",
@@ -205,7 +205,7 @@ export default [
     },
     {
         required: false,
-        type: ["CFU", "BDU"],
+        type: ["CFU", "BDU", "OCP"],
         wearer: "All",
         group: "Emergency Services Patch",
         value: "emergency_services_patch_oval",
@@ -217,7 +217,7 @@ export default [
     },
     {
         required: false,
-        type: ["CFU", "BDU"],
+        type: ["CFU", "BDU", "OCP"],
         wearer: "All",
         group: "Emergency Services Patch",
         value: "emergency_services_patch_round",
@@ -241,7 +241,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "ARCHER Patch",
         value: "archer_patch",
@@ -253,7 +253,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "CISM Patch",
         value: "cism_patch",
@@ -265,7 +265,7 @@ export default [
     },
     {
         required: false,
-        type: ["ABU"],
+        type: ["ABU", "OCP"],
         wearer: "All",
         group: "NASAR Patch",
         value: "nasar_patch",

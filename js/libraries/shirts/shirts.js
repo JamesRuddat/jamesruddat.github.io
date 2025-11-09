@@ -1,9 +1,21 @@
 export default [
     {
-        required: false,
+        required: true,
+        type: ["CFU"],
+        wearer: "All",
+        group: "Shirt",
+        value: "black_shirt",
+        label: "Black Shirt",
+        level: null,
+        image: "/js/libraries/shirts/images/CFU_Shirt.svg",
+        link: "",
+        reference: null
+    },
+    {
+        required: true,
         type: ["ABU", "CFU"],
         wearer: "All",
-        group: "ABU Shirt",
+        group: "Shirt",
         value: "tan_shirt",
         label: "Tan Shirt",
         level: null,
@@ -15,7 +27,7 @@ export default [
         required: true,
         type: ["OCP"],
         wearer: "All",
-        group: "Coyote Brown Shirt",
+        group: "Shirt",
         value: "Coyote_Brown_shirt",
         label: "Coyote Brown Shirt",
         level: null,
@@ -23,19 +35,7 @@ export default [
         link: "https://www.vanguardmil.com/collections/cap-ocp/products/civil-air-patrol-uniform-t-shirt-coyote-brown",
         reference: "T-shirt will be Coyote Brown (Tan 499), long or short sleeve, and will be tucked into OCP trousers. Additionally, unit commanders may allow for display on morale undershirts organizational emblems, as officially and currently approved by the wing commander, not to exceed 5 inches in diameter, in cloth or silk screen. If displayed, organizational emblems will be worn on the left side of the chest of the Coyote Brown (Tan 499) morale undershirts. The morale undershirts may also display the organizational emblem on the back of the undershirt in a larger diameter as authorized by commanders."
     },
-    {
-        required: false,
-        type: ["CFU"],
-        wearer: "All",
-        group: "CFU Shirt",
-        value: "black_shirt",
-        label: "Black Shirt",
-        level: null,
-        image: "/js/libraries/shirts/images/CFU_Shirt.svg",
-        link: "",
-        reference: null
-    },
-
+    
     // Male Slacks & Shirts
     {
         required: false,
