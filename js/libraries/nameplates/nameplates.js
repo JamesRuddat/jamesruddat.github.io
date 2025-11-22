@@ -109,7 +109,7 @@ export default [
     },
     {
         required: true,
-        type: ["ABU", "CFU"],
+        type: ["ABU", "OCP", "CFU"],
         wearer: "All",
         group: "Nameplates",
         value: "dark_blue_name",
@@ -121,7 +121,7 @@ export default [
     },
     {
         required: true,
-        type: ["ABU", "CFU"],
+        type: ["ABU", "OCP", "CFU"],
         wearer: "All",
         group: "CAP plates",
         value: "dark_blue_cap",

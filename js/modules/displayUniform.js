@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+//console.log(itemMap)
+
   // --- Helper: Clear all children from an element ---
   function clearElement(elem) {
     while (elem.firstChild) elem.removeChild(elem.firstChild);
@@ -293,44 +295,9 @@ function renderUniform(selections) {
 
   console.log("All selections:", selections);
 
-  // Find key items by group
-  const member = selections.find(item => item.group?.toLowerCase().includes('member'));
-  const gradeItem = selections.find(item => item.group?.toLowerCase().includes('grades'));
-  const uniform = selections.find(item =>
-    item.group && ['usaf uniforms', 'cadet uniforms', 'senior uniforms', '18+ uniforms'].includes(item.group.toLowerCase())
-  );
-
   // Clear overview image container first
   const overviewImage = document.getElementById('overview-image');
   if (overviewImage) overviewImage.innerHTML = '';
-
-  // Render grade images at specified positions
-  if (gradeItem) {
-    const gradePositions = ['collar-grade', 'hat-grade', 'shirt-grade-left', 'shirt-grade-right'];
-    gradePositions.forEach(posName => {
-      const pos = positions.find(p => p.names.includes(posName));
-      if (!pos) return;
-
-      const img = document.createElement('img');
-      img.src = gradeItem.image;
-      img.alt = gradeItem.label || 'Grade';
-      img.style.position = 'absolute';
-      img.style.left = (pos.x ?? 0) + 'px';
-      img.style.top = (pos.y ?? 0) + 'px';
-      img.style.width = (pos.size ?? 30) + 'px';
-      img.style.height = 'auto';
-      img.style.zIndex = 100;
-
-      overviewImage.appendChild(img);
-    });
-  }
-
-  // Find single items by group
-  const singleItems = {
-    collar: selections.find(item => item.group?.toLowerCase() === 'collar'),
-    hat: selections.find(item => item.group?.toLowerCase() === 'hat'),
-    outerwear: selections.find(item => item.group?.toLowerCase().includes('outerwear')),
-  };
 
   // Render overview text with regulations
   const overviewText = document.getElementById('overview-text');
@@ -478,27 +445,6 @@ function renderUniform(selections) {
       });
     });
   });
-
-  // --- Render outerwear image and text ---
-  const outerImg = document.getElementById('outerwear-image');
-  if (outerImg) {
-    outerImg.innerHTML = '';
-    if (singleItems.outerwear?.image) {
-      const img = document.createElement('img');
-      img.src = singleItems.outerwear.image;
-      img.alt = singleItems.outerwear.label || '';
-      img.style.width = '100%';
-      img.style.height = 'auto';
-      outerImg.appendChild(img);
-    } else {
-      outerImg.textContent = 'Outerwear Image';
-    }
-  }
-
-  const outerText = document.getElementById('outerwear-text');
-  if (outerText) {
-    outerText.textContent = singleItems.outerwear?.label || 'Outerwear description';
-  }
 }
 
 // --- Navigation button ---

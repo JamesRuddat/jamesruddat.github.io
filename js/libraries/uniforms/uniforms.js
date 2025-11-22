@@ -55,7 +55,7 @@ export default [
         group: "USAF Uniforms",
         value: "FDU",
         label: "Flight Duty Uniform (FDU)",
-        image: "/js/libraries/uniforms/images/FDU.svg",
+        image: null,
         link: null,
         reference: "CAPR 39-1 § 8.2."
     },
@@ -79,7 +79,7 @@ export default [
         group: "18+ Uniforms",
         value: "CFU",
         label: "Corporate Field Uniform (CFU)",
-        image: null,
+        image: "/js/libraries/uniforms/images/CFU.svg",
         link: null,
         reference: "CAPR 39-1 § 5.2.1."
     },

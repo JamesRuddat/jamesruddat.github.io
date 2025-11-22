@@ -14,7 +14,7 @@ export const allUniformItems = {
 
     nameplates: { displayName: "Nameplates", items: uniformData.nameplates },
 
-    outerwear: { displayName: "Outerwear", items: uniformData.outerwear },
+    outerwear: { displayName: "Guter Garments", items: uniformData.outerGarments },
 
     serviceBadges: { displayName: "Service Badges", items: uniformData.serviceBadges },
     aviationBadges: { displayName: "Aviation Badges", items: uniformData.aviationBadges },

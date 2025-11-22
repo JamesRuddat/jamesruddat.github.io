@@ -16,7 +16,7 @@ export const positions = [
     { names: ['tie-tab'], x: 137, y: 120, size: 124, rotation: 0 },
 
     { names: ['coat'], x: 29, y: 109, size: 242, rotation: 0 },
-    { names: ['blouse'], x: 30, y: 90, size: 242, rotation: 0 },
+    { names: ['blouse', 'outer'], x: 30, y: 90, size: 242, rotation: 0 },
 
     { names: ['hat', 'cap'], x: 110, y: 10, size: 80, rotation: 0 },
     { names: ['device'], x: 137, y: 30, size: 20, rotation: 0 },
@@ -35,8 +35,12 @@ export const positions = [
     { names: ['shirt-grade-left'], x: 50, y: 150, size: 35, rotation: 45 },
     { names: ['shirt-grade-right'], x: 130, y: 150, size: 35, rotation: -45 },
 
-    { names: ['left-shoulder'], x: 60, y: 40, size: 30, rotation: 0 },
-    { names: ['right-shoulder'], x: 140, y: 40, size: 30, rotation: 0 },
+    { names: ['ABU-left-shoulder'], x: 60, y: 40, size: 30, rotation: 0 },
+    { names: ['ABU-right-shoulder'], x: 140, y: 40, size: 30, rotation: 0 },
+
+    { names: ['OCP-left-shoulder'], x: 60, y: 40, size: 30, rotation: 0 },
+    { names: ['OCP-right-shoulder'], x: 140, y: 40, size: 30, rotation: 0 },
+
     { names: ['left-pocket'], x: 70, y: 160, size: 35, rotation: 0 },
     { names: ['right-pocket'], x: 130, y: 160, size: 35, rotation: 0 },
     { names: ['left-pocket-flap'], x: 70, y: 145, size: 30, rotation: 0 },
