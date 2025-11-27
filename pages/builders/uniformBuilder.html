@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html>
 
-<head id="head-placeholder">
-    <!-- This will be filled dynamically -->
-</head>
+<head id="head-placeholder"><!-- Filled Dynamically --></head>
 
 <body>
-    <div class="wrapper">
-        <div id="announcement-placeholder"></div>
-
-        <header id="header-placeholder" class="header full-width"></header>
-        <nav id="nav-placeholder"></nav>
+    <div id="announcement-placeholder"></div>
+    <header id="header-placeholder" class="header full-width"></header>
+    <nav id="nav-placeholder"></nav>
 
         <main>
-            
-                <!-- Main builder -->
-                <div class="main container-inner">
-                    <h2>Build Your Uniform</h2>
-                    <p>Select your member type, grade, and uniform to view wear guidelines.</p>
+            <!-- Main builder -->
+            <div class="main container-inner">
+                <h2>Build Your Uniform</h2>
+                <p>Select your member type, grade, and uniform to view wear guidelines.</p>
 
-                    <div class="container">
-                        <form class="form-background" id="uniform-form" action="" method="post">
-                            <h2>Step 1</h2>
-                            <h3>Uniform</h3>
-                            <br>
-                            <div class="form-group">
-                                <div class="form-item">
-                                    <label for="member">Membership &amp; Grade</label>
-                                    <div class="dual">
-                                        <select id="member"></select>
-                                        <select id="grade"></select>
-                                        <!-- <input type="text" id="name" autocomplete="name" placeholder="Jane Doe"> -->
-                                    </div>
-                                </div>
-                                <div class="form-item">
-                                    <label for="uniform">Uniform</label>
-                                    <div class="dual">
-                                        <select id="uniform"></select>
-                                        <select id="gender"></select>
-                                    </div>
+                <div class="container">
+                    <form class="form-background" id="uniform-form" action="" method="post">
+                        <h2>Step 1</h2>
+                        <h3>Uniform</h3>
+                        <br>
+                        <div class="form-group">
+                            <div class="form-item">
+                                <label for="member">Membership &amp; Grade</label>
+                                <div class="dual">
+                                    <select id="member"></select>
+                                    <select id="grade"></select>
+                                    <!-- <input type="text" id="name" autocomplete="name" placeholder="Jane Doe"> -->
                                 </div>
                             </div>
-
-                            <h2>Step 2</h2>
-                            <h3>Accouterments</h3>
-                            <div id="form-container">
-                                <!-- The grouped dropdowns / checkboxes will be inserted here -->
+                            <div class="form-item">
+                                <label for="uniform">Uniform</label>
+                                <div class="dual">
+                                    <select id="uniform"></select>
+                                    <select id="gender"></select>
+                                </div>
                             </div>
+                        </div>
 
-                            <h2>Step 3</h2>
-                            <h3>Create</h3>
-                            <br>
-                            <div>
-                                <button type="submit">Genreate Uniform</button>
-                                <button type="reset" style="background-color: gray;">Reset</button>
-                            </div>
-                        </form>
-                    </div>
+                        <h2>Step 2</h2>
+                        <h3>Accouterments</h3>
+                        <div id="form-container">
+                            <!-- The grouped dropdowns / checkboxes will be inserted here -->
+                        </div>
+
+                        <h2>Step 3</h2>
+                        <h3>Create</h3>
+                        <br>
+                        <div>
+                            <button type="submit">Genreate Uniform</button>
+                            <button type="reset" style="background-color: gray;">Reset</button>
+                        </div>
+                    </form>
                 </div>
-
+            </div>
         </main>
         <footer id="footer-placeholder"></footer>
     </div>

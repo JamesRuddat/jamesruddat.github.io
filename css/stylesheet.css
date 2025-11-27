@@ -118,6 +118,15 @@ h5 {
 	line-height: 0.85;
 }
 
+.video-header video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
 .header h3 {
 	font-size: 1.5rem;
 	color: var(--accent-color);
@@ -439,6 +448,13 @@ button:hover,
 .section-card h3 {
 	margin: 15px 0 5px;
 	color: var(--dark-color);
+}
+
+.generic-img {
+	display: block;
+	border-radius: 4px;
+	max-width: 100%;
+	height: auto;
 }
 
 /* ===== FOOTER ===== */
