@@ -25,7 +25,7 @@ export default [
     },
     {
         required: true,
-        type: ["ClassA", "ClassB", "HGU"],
+        type: ["ClassA", "ClassB", "HGU", "ASU"],
         wearer: "Cadet",
         group: "Nameplates",
         value: "cap_nameplate_cadet",
@@ -37,7 +37,7 @@ export default [
     },
     {
         required: true,
-        type: ["ClassB"],
+        type: ["ClassB", "ASU"],
         wearer: "Senior",
         group: "Nameplates",
         value: "cap_nameplate_adult",

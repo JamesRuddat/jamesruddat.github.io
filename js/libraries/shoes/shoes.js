@@ -1,7 +1,7 @@
 export default [
     {
         required: false,
-        type: ["ClassA", "ClassB"],
+        type: ["ClassA", "ClassB", "CWU", "ASU"],
         wearer: "All",
         group: "Shoes",
         value: "Dress_Boots",
@@ -13,9 +13,9 @@ export default [
     },
     {
         required: true,
-        type: ["ABU", "CFU", "FDU", "CFDU"],
+        type: ["ABU", "CFU", "FDU", "CFDU", "CWU", "ASU"],
         wearer: "All",
-        group: "Boots",
+        group: "Shoes",
         value: "Black_Combat_Boots",
         label: "Black Combat Boots",
         level: null,
@@ -27,7 +27,7 @@ export default [
         required: false,
         type: ["ABU"],
         wearer: "All",
-        group: "Boots",
+        group: "Shoes",
         value: "Black_Suede_Boots",
         label: "Black Suede Boots",
         level: null,
@@ -37,9 +37,9 @@ export default [
     },
     {
         required: true,
-        type: ["OCP", "FDU"],
+        type: ["OCP", "FDU", "CFDU"],
         wearer: "All",
-        group: "Boots",
+        group: "Shoes",
         value: "Coyote_Brown_Combat_Boots",
         label: "Coyote Brown Combat Boots",
         level: null,
@@ -49,9 +49,9 @@ export default [
     },
     {
         required: false,
-        type: ["OCP", "FDU"],
+        type: ["OCP", "FDU", "CFDU"],
         wearer: "All",
-        group: "Boots",
+        group: "Shoes",
         value: "Coyote_Brown_Suede_Boots",
         label: "Coyote Brown Suede Boots",
         level: null,
@@ -61,7 +61,7 @@ export default [
     },
     {
         required: true,
-        type: ["ClassA", "ClassB", "HGU", "SFDU"],
+        type: ["ClassA", "ClassB", "HGU", "SFDU", "CWU", "ASU"],
         wearer: "All",
         group: "Shoes",
         value: "Low_Quarters",
@@ -73,7 +73,7 @@ export default [
     },
     {
         required: false,
-        type: ["ClassA", "ClassB"],
+        type: ["ClassA", "ClassB", "ASU"],
         wearer: "All",
         group: "Shoes",
         value: "Pumps",
@@ -85,7 +85,7 @@ export default [
     },
     {
         required: false,
-        type: ["ClassA", "ClassB"],
+        type: ["ClassA", "ClassB", "ASU"],
         wearer: "All",
         group: "Shoes",
         value: "Slipon_Shoes",

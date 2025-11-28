@@ -108,7 +108,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.2.3. Women's - 4.2.4."
     },
     {
-        status: "unfinished",
+        status: "approved",
         required: false,
         type: ["ASU"],
         wearer: "All",
@@ -184,7 +184,7 @@ export default [
         reference: "CAPR 39-1 § Men's - 4.1.1. Women's - 4.1.2."
     },
     {
-        status: "unfinished",
+        status: "approved",
         required: false,
         type: ["CWU"],
         wearer: "Senior",

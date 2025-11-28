@@ -1,6 +1,43 @@
 export default [
     {
         required: true,
+        type: ["CWU"],
+        wearer: "All",
+        group: "CWU Trousers",
+        value: "CWU_trousers",
+        label: "CWU Trousers",
+        level: null,
+        image: "/js/libraries/pants/images/Corporate_Working_Pants.svg",
+        link: "",
+        reference: null
+    },
+    {
+        required: true,
+        type: ["ASU"],
+        wearer: "Male",
+        group: "Gray Trousers",
+        value: "Male_Gray_trousers",
+        label: "Gray Trousers",
+        level: null,
+        image: "/js/libraries/pants/images/Corporate_Gray_Pants_M.svg",
+        link: "",
+        reference: null
+    },
+    {
+        required: true,
+        type: ["ASU"],
+        wearer: "Female",
+        group: "Gray Trousers",
+        value: "Female_Gray_trousers",
+        label: "Gray Trousers",
+        level: null,
+        image: "/js/libraries/pants/images/Corporate_Gray_Pants_F.svg",
+        link: "",
+        reference: null
+    },
+    
+    {
+        required: true,
         type: ["ClassA", "ClassB", "HGU"],
         wearer: "Male",
         group: "Male Trousers",

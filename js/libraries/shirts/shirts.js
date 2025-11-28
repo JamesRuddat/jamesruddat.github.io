@@ -1,7 +1,20 @@
 export default [
     {
         required: true,
-        type: ["CFU"],
+        type: ["CWU"],
+        wearer: "All",
+        group: "Shirt",
+        value: "blue_shirt",
+        label: "Blue Shirt",
+        level: null,
+        image: "/js/libraries/shirts/images/Working_Shirt.svg",
+        link: "",
+        reference: null
+    },
+
+    {
+        required: true,
+        type: ["CFU", "FDU", "CFDU"],
         wearer: "All",
         group: "Shirt",
         value: "black_shirt",
@@ -13,7 +26,7 @@ export default [
     },
     {
         required: true,
-        type: ["ABU", "CFU"],
+        type: ["ABU", "CFU", "FDU", "CFDU"],
         wearer: "All",
         group: "Shirt",
         value: "tan_shirt",
@@ -25,7 +38,7 @@ export default [
     },
     {
         required: true,
-        type: ["OCP"],
+        type: ["OCP", "FDU", "CFDU"],
         wearer: "All",
         group: "Shirt",
         value: "Coyote_Brown_shirt",
@@ -36,6 +49,32 @@ export default [
         reference: "T-shirt will be Coyote Brown (Tan 499), long or short sleeve, and will be tucked into OCP trousers. Additionally, unit commanders may allow for display on morale undershirts organizational emblems, as officially and currently approved by the wing commander, not to exceed 5 inches in diameter, in cloth or silk screen. If displayed, organizational emblems will be worn on the left side of the chest of the Coyote Brown (Tan 499) morale undershirts. The morale undershirts may also display the organizational emblem on the back of the undershirt in a larger diameter as authorized by commanders."
     },
     
+    {
+        required: true,
+        type: ["ASU"],
+        wearer: "Male",
+        group: "Shirt",
+        value: "Male_white_shirt",
+        label: "White Shirt",
+        level: null,
+        image: "/js/libraries/shirts/images/ASU_Shirt_M.svg",
+        link: "",
+        reference: null
+    },
+    {
+        required: true,
+        type: ["ASU"],
+        wearer: "Female",
+        group: "Shirt",
+        value: "Female_white_shirt",
+        label: "White Shirt",
+        level: null,
+        image: "/js/libraries/shirts/images/ASU_Shirt_F.svg",
+        link: "",
+        reference: null
+    },
+
+
     // Male Slacks & Shirts
     {
         required: false,
