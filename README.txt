@@ -1,7 +1,10 @@
 ══════════════════════════════════════════
                Cadet Tools
 ══════════════════════════════════════════
-This project started out as a Civil Air Patrol Uniform Builder Tool but has grown to be a tool for cadets to use. 
+
+Site: https://jamesruddat.github.io/index.html
+
+This project started out as a Civil Air Patrol uniform builder but has grown to be a tool for cadets to use. 
 It provides structured data, business logic, and a UI for selecting and displaying uniform components (badges, insignia, cloth/metal items, etc.), along with direct links to Vanguard for ordering.
 
 v1.0.0 - Worked on opening website pages up (November 4 2025)
@@ -10,6 +13,7 @@ v0.1.2 - Added ABUs, CFUs, Class As, Class Bs and Vanguard links
 v0.1.1 - Full formUI uniform builder and dynamic data mapping
 v0.1.0 - Initial release with (old) formUI and Class B static data
 v0.0.0 - Project start (August 11 2025)
+
 -----------------------------------------
 ⎙ Project Structure - oudated with Files+ branch
 /js
@@ -29,7 +33,7 @@ Each uniform item is stored as a single JSON object:
   "type": null,              // Uniform Type
   "wearer": "Female",        // Gender/member type (Male/Female OR Cadet/Senior/All)
   "group": "Female Skirt",   // Group name (items with same group appear as dropdown/checkbox)
-  "value": "female_skirt",   // Shorthand ID (use CAPS acronyms, e.g., FEMALE_ABU_SKIRT)
+  "value": "female_skirt",   // Shorthand ID (use CAPS acronyms, e.g., FEMALE_SKIRT)
   "label": "Skirt",          // Text display for UI
   "level": null,             // Type level (basic/intermediate/advanced OR technician/master/senior)
   "image": "/images.svg",    // Image path
@@ -87,9 +91,6 @@ Contact / Author Info:
 Author: James Ruddat
 Email: james@ruddatfam.net
 GitHub: https://github.com/JamesRuddat
-linkedin: https://www.linkedin.com/in/james-ruddat-103b48290/
-
-𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃
 
 -----------------------------------------
 Acknowledgements / References:

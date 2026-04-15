@@ -1,4 +1,3 @@
-
 const tips = [
     // Leadership Tips
     "Always lead by example, not by command.",

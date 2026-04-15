@@ -70,7 +70,7 @@ function setupAnnouncement() {
       marquee: 'This tool is a work in progress — verify All uniform details carefully!'
     },
     '/pages/uniforms/faq.html': {
-      title: 'Heads up:',
+      title: 'Update:',
       message: 'Civil Air Patrol has approved OCP (Operational Camouflage Pattern) for wear as a uniform, which was authorized starting November 1, 2025. Regulations require specific OCP material, a place for a name tape on the back, and appropriate insignia.',
       marquee: 'In accordance with DAFI 36-2903 except where noted otherwise in CAPR 39-1.'
     }

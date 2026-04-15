@@ -1,0 +1,233 @@
+/* =========================
+   WIKI STYLE OVERRIDE (NO HTML CHANGES)
+   ========================= */
+
+:root {
+  --wiki-bg: #ffffff;
+  --wiki-panel: #f8f9fa;
+  --wiki-border: #a2a9b1;
+  --wiki-text: #202122;
+  --wiki-link: #0645ad;
+  --wiki-muted: #54595d;
+}
+
+/* =========================
+   BASE PAGE
+   ========================= */
+
+html, body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--wiki-bg);
+  color: var(--wiki-text);
+  margin: 0;
+}
+
+/* =========================
+   YOUR LAYOUT (.app)
+   ========================= */
+
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR (.sidebar)
+   ========================= */
+
+.sidebar {
+  background: var(--wiki-panel);
+  border-right: 1px solid var(--wiki-border);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* section blocks */
+.sec {
+  padding: 8px 0;
+}
+
+.sec-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wiki-muted);
+  margin-bottom: 6px;
+}
+
+/* divider like wiki separators */
+.divider {
+  border-top: 1px solid var(--wiki-border);
+  margin: 6px 0;
+}
+
+/* =========================
+   MAIN PREVIEW (.preview)
+   ========================= */
+
+.preview {
+  background: var(--wiki-bg);
+  padding: 20px 30px;
+}
+
+.preview-label {
+  font-family: "Linux Libertine", Georgia, serif;
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--wiki-border);
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+/* =========================
+   WIKI-LIKE HEADINGS INSIDE APP
+   ========================= */
+
+h1, h2, h3 {
+  font-family: "Linux Libertine", Georgia, serif;
+  font-weight: normal;
+  border-bottom: 1px solid var(--wiki-border);
+  padding-bottom: 3px;
+}
+
+/* =========================
+   BUTTONS (Wikipedia style)
+   ========================= */
+
+button {
+  background: var(--wiki-panel);
+  border: 1px solid var(--wiki-border);
+  color: var(--wiki-text);
+  padding: 5px 8px;
+  font-size: 0.85rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eaecf0;
+}
+
+button.primary {
+  background: var(--wiki-link);
+  border-color: var(--wiki-link);
+  color: white;
+}
+
+/* =========================
+   CHIPS (make them wiki-like toggles)
+   ========================= */
+
+.chip {
+  background: var(--wiki-panel);
+  border: 1px solid var(--wiki-border);
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+
+.chip.on {
+  background: #eaf3ff;
+  border-color: var(--wiki-link);
+}
+
+/* =========================
+   SWATCHES (clean wiki squares)
+   ========================= */
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--wiki-border);
+  margin: 2px;
+  cursor: pointer;
+}
+
+.swatch.on {
+  outline: 2px solid var(--wiki-link);
+}
+
+/* =========================
+   LAYER LIST (wiki table feel)
+   ========================= */
+
+#layer-list {
+  font-size: 0.85rem;
+}
+
+.layer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--wiki-border);
+}
+
+/* =========================
+   INPUTS (wiki clean form)
+   ========================= */
+
+input, select {
+  border: 1px solid var(--wiki-border);
+  padding: 4px 6px;
+  font-size: 0.85rem;
+  background: white;
+}
+
+input:focus {
+  outline: 1px solid var(--wiki-link);
+}
+
+/* =========================
+   SVG AREA (preview box feel)
+   ========================= */
+
+#svg-out {
+  border: 1px solid var(--wiki-border);
+  background: white;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* =========================
+   TEXT STYLE (wiki typography)
+   ========================= */
+
+.preview,
+.sidebar {
+  line-height: 1.5;
+}
+
+/* =========================
+   LINKS (if you add any later)
+   ========================= */
+
+a {
+  color: var(--wiki-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   CLEAN SHADOW REMOVAL (wiki is flat)
+   ========================= */
+
+* {
+  box-shadow: none !important;
+}
