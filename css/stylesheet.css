@@ -4,7 +4,7 @@
 :root[data-theme="light"] {
 	--primary-color: #111d59;
 	--secondary-color: #050e35;
-	--red-color: #c40000;
+	--alt-color: #c40000;
 	--accent-color: #9ea0a2;
 
 	--dark-color: #000000;
@@ -25,7 +25,7 @@
 :root[data-theme="dark"] {
 	--primary-color: #00246b;
 	--secondary-color: #001742;
-	--red-color: #7c2020;
+	--alt-color: #7c2020;
     --accent-color: #979797;
 
 	--dark-color: #121212;
@@ -301,7 +301,7 @@ button,
 .small-btn {
 	border: none;
 	border-radius: 6px;
-	padding: 8px 15px;
+	padding: 8px 12px;
 	cursor: pointer;
 	transition: all 0.2s ease;
 	background-color: var(--primary-color);
@@ -314,22 +314,21 @@ button:hover,
 	background-color: var(--secondary-color);
 }
 
-.blue-btn {
-	background-color: var(--primary-color);
+button,
+.alt-btn {
+	border: none;
+	border-radius: 6px;
+	padding: 8px 12px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	background-color: var(--alt-color);
 	color: var(--accent-text-color);
 }
 
-.blue-btn:hover {
-	background-color: var(--button-hover);
-}
-
-.pink-btn {
-	background-color: var(--secondary-color);
-	color: var(--accent-text-color);
-}
-
-.pink-btn:hover {
-	background-color: #d97706;
+button:hover,
+.alt-btn:hover {
+	transform: scale(1.01);
+	background-color: var(--accent-color);
 }
 
 .subscribe-btn {
@@ -361,7 +360,7 @@ button:hover,
 }
 
 .main h2 {
-	background-color: var(--red-color);
+	background-color: var(--alt-color);
 	color: var(--accent-text-color);
 	padding: 4px 12px;
 	border-radius: 6px;

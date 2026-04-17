@@ -15,32 +15,67 @@
                     of day. Once a bugle call is scheduled, it will automatically play at the chosen time daily. All
                     you need to do is keep this website open and connected to your PA system for it to function.</p>
 
+                <p>The site saves your schedule locally in your browser. Alternatively, you can copy and paste your schedule shorthand into the text box and click <strong>Load Schedule</strong>.</p>
+
                 <h3>How to Use</h3>
                 <ul>
                     <li><strong>Audio Dropdown:</strong> Select a bugle call or music track to play daily.</li>
-                    <li><strong>Time Picker:</strong> Select a time (HH:MM) to schedule the bugle call or music
-                        track to play daily through your PA system.</li>
-                    <li><strong>Add:</strong> Click after choosing a time to schedule the call or music to play
-                        every day at that time.</li>
-                    <li><strong>Start Music:</strong> Click to begin background music. The music will automatically
-                        fade down 10 seconds before a bugle call and fade back up after.</li>
+                    <li><strong>Time Picker:</strong> Select a time (HH:MM) to schedule the bugle call or music track to play daily through your PA system.</li>
+                    <li><strong>Add:</strong> Click after choosing a time to schedule the call or music to play every day at that time.</li>
+                    <li><strong>Start Music:</strong> Click to begin background music. The music will automatically fade down 10 seconds before a bugle call and fade back up after.</li>
                     <li><strong>Stop Music:</strong> Click to immediately stop the background music at any time.</li>
                 </ul>
 
                 <p>The scheduled calls will continue to loop daily until you stop them, ensuring your bugle calls
                     are broadcast automatically at the times you need.</p>
 
-                <div id="builder"></div>
-                <div id="musicControls">
-                    <button class="small-btn" onclick="startMusic()">Start Music</button>
-                    <button class="small-btn" onclick="stopMusic()">Stop Music</button>
+                <div id="builder">
+
+                    <button id="editToggle" class="small-btn">Edit Schedule</button>
                 </div>
+                <div id="volumeControls">
+                    <div>
+                        <label for="musicVolume">Loop Music Volume: </label>
+                        <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="0.85">
+                    </div>
+                    <br>
+                    <div id="musicControls">
+                        <button class="small-btn" onclick="startMusic()">Start Music Loop</button>
+                        <button class="small-btn" onclick="stopMusic()">Stop Music Loop</button>
+                    </div>
+                    <div>
+                        <label for="bugleVolume">Bugle Calls Volume: </label>
+                        <input type="range" id="bugleVolume" min="0" max="1" step="0.01" value="1">
+                    </div>
+                </div>
+                <br>
+                <textarea id="scheduleInput" placeholder="Paste schedule code here..."></textarea>
+                <br><button onclick="importScheduleText()">Load Schedule</button>
+
+                <p>Here are some presets:</p>
+                <table id="schedulePresets">
+                    <thead>
+                        <tr></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
             </section>
 
             <aside class="sidebar">
-            <h3>Your Schedule:</h3>
+            <h1>Schedule:</h1>
                 <p id="nowPlaying">Now Playing: None</p>
-                <ul id="mySchedule"></ul>
+
+                <table id="scheduleTable">
+                    <thead>
+                        <tr>
+                        <th>Call</th>
+                        <th>Time</th>
+                        <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </aside>
         </div>
     </main>

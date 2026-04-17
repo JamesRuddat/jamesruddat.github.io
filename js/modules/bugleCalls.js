@@ -1,4 +1,6 @@
-import { bugleCalls, music } from '/assets/audio/audio.js';
+import { bugleCalls, music, presets } from '/assets/audio/audio.js';
+
+let editMode = false;
 
 let callQueue = [];
 let callPlaying = false;
@@ -10,8 +12,8 @@ let currentMusicIndex = 0;
 let currentMusicAudio = null;
 let fadeInterval = null;
 
-let musicVolume = 1; // Default music volume
-let bugleVolume = 1; // Default bugle volume
+let musicVolume = 1;
+let bugleVolume = 1;
 
 // --- Load persisted schedule ---
 const storedSchedule = localStorage.getItem('callQueue');
@@ -22,6 +24,8 @@ if (storedSchedule) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    loadPresets();
+
     // --- Info Page Tables ---
     const bugleTable = document.querySelector("#bugleTable tbody");
     const musicTable = document.querySelector("#musicTable tbody");
@@ -30,15 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach(item => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${item.name}</td>
-                <td>${item.description}</td>
                 <td>
                     ${item.file ? `
                         <audio id="${item.id}" src="${item.file}"></audio>
                         <button class="small-btn" onclick="playAudio('${item.id}')">Play</button>
                         <button class="small-btn" onclick="stopAudio('${item.id}')">Stop</button>
                     ` : 'No audio file'}
-                </td>
+                    </td>    
+                <td>${item.name}</td>
+                <td>${item.description}</td>
             `;
             table.appendChild(row);
         });
@@ -49,22 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Builder Dropdown ---
     const builderDiv = document.getElementById("builder");
-    const mySchedule = document.getElementById("mySchedule");
     const nowPlaying = document.getElementById("nowPlaying");
-
-    // Add your volume controls HTML to builderDiv or anywhere suitable
-    const volumeControlsHTML = `
-    <div id="volumeControls" style="margin:20px 0;">
-      <div>
-        <label for="musicVolume">Music Volume: </label>
-        <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1">
-      </div>
-      <div style="margin-top:10px;">
-        <label for="bugleVolume">Bugle Calls Volume: </label>
-        <input type="range" id="bugleVolume" min="0" max="1" step="0.01" value="1">
-      </div>
-    </div>`;
-    builderDiv.insertAdjacentHTML('beforeend', volumeControlsHTML);
 
     // Get sliders after insertion
     const musicVolumeSlider = document.getElementById("musicVolume");
@@ -72,6 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Prepare click sound for feedback on volume change
     const clickSound = new Audio('/assets/audio/other/click-box.wav');
+
+    function playClickSound(volume) {
+        clickSound.pause();
+        clickSound.currentTime = 0;
+        clickSound.volume = volume;
+        clickSound.play();
+    }
 
     musicVolumeSlider.addEventListener("input", (e) => {
         musicVolume = parseFloat(e.target.value);
@@ -85,13 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         bugleVolume = parseFloat(e.target.value);
         playClickSound(bugleVolume);
     });
-
-    function playClickSound(volume) {
-        clickSound.pause();
-        clickSound.currentTime = 0;
-        clickSound.volume = volume;
-        clickSound.play();
-    }
 
     // --- Builder dropdown elements ---
     const rowDiv = document.createElement("div");
@@ -153,29 +142,97 @@ document.addEventListener("DOMContentLoaded", () => {
     rowDiv.appendChild(addBtn);
     builderDiv.appendChild(rowDiv);
 
-    // --- Render Schedule ---
-    function renderSchedule() {
-        mySchedule.innerHTML = '';
-        callQueue.sort((a, b) => a.time.localeCompare(b.time));
-        callQueue.forEach(item => {
-            const allAudio = [...bugleCalls, ...music];
-            const data = allAudio.find(c => c.id === item.id);
-            const li = document.createElement("li");
-            li.textContent = ` ${item.time} - ${data.name}`;
+const editBtn = document.getElementById("editToggle");
 
-            const removeBtn = document.createElement("button");
-            removeBtn.textContent = "X";
-            removeBtn.className = "small-btn";
-            removeBtn.onclick = () => {
-                const index = callQueue.findIndex(sc => sc.id === item.id && sc.time === item.time);
-                if (index > -1) callQueue.splice(index, 1);
-                saveSchedule();
-                renderSchedule();
-            };
-            li.prepend(removeBtn);
-            mySchedule.appendChild(li);
-        });
-    }
+editBtn.onclick = () => {
+    editMode = !editMode;
+    editBtn.textContent = editMode ? "Save Schedule" : "Edit Schedule";
+    renderSchedule(); // re-render to apply lock state
+};
+
+    // --- Render Schedule ---
+function renderSchedule() {
+    const tbody = document.querySelector("#scheduleTable tbody");
+    tbody.innerHTML = "";
+
+    callQueue.forEach((item, index) => {
+        const allAudio = [...bugleCalls, ...music];
+        const data = allAudio.find(c => c.id === item.id);
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${data.name}</td>
+            <td>
+                <input type="time" value="${item.time}" ${!editMode ? "disabled" : ""}>
+            </td>
+            <td class="actions"></td>
+        `;
+
+        // Time input
+        const timeInput = row.querySelector("input");
+        timeInput.onchange = (e) => updateTime(index, e.target.value);
+
+        const actionsTd = row.querySelector(".actions");
+
+        if (editMode) {
+            const upBtn = document.createElement("button");
+            upBtn.className = "small-btn"
+            upBtn.textContent = "↑";
+            upBtn.onclick = () => moveUp(index);
+
+            const downBtn = document.createElement("button");
+            downBtn.className = "small-btn"
+            downBtn.textContent = "↓";
+            downBtn.onclick = () => moveDown(index);
+
+            const delBtn = document.createElement("button");
+            delBtn.className = "alt-btn"
+            delBtn.textContent = "X";
+            delBtn.onclick = () => removeItem(index);
+
+            actionsTd.appendChild(upBtn);
+            actionsTd.appendChild(downBtn);
+            actionsTd.appendChild(delBtn);
+        } else {
+            actionsTd.textContent = "...";
+        }
+
+        tbody.appendChild(row);
+        syncScheduleToTextarea();
+    });
+}
+
+function moveUp(index) {
+    if (index === 0) return;
+
+    [callQueue[index - 1], callQueue[index]] =
+        [callQueue[index], callQueue[index - 1]];
+
+    saveSchedule();
+    renderSchedule();
+};
+
+function moveDown(index) {
+    if (index === callQueue.length - 1) return;
+
+    [callQueue[index + 1], callQueue[index]] =
+        [callQueue[index], callQueue[index + 1]];
+
+    saveSchedule();
+    renderSchedule();
+};
+
+function updateTime(index, newTime) {
+    callQueue[index].time = newTime;
+    saveSchedule();
+};
+
+function removeItem(index) {
+    callQueue.splice(index, 1);
+    saveSchedule();
+    renderSchedule();
+};
 
     // --- Daily Scheduler with Music Fade ---
     const FADE_DURATION = 10000; // 10 sec fade
@@ -303,7 +360,7 @@ function playNextMusic() {
 
 window.startMusic = function () {
     if (musicPlaying) return;
-    musicQueue = music.filter(track => track.name !== "The Star-Spangled Banner");
+    musicQueue = music.filter(track => track.sensitive == false);
     if (musicQueue.length === 0) return;
     currentMusicIndex = 0;
     musicPlaying = true;
@@ -347,6 +404,33 @@ function fadeVolume(audioEl, targetVol, duration) {
     }, stepTime);
 }
 
+function loadPresets() {
+    const tbody = document.querySelector("#schedulePresets tbody");
+    tbody.innerHTML = "";
+
+    presets.forEach(preset => {
+        const headerRow = document.createElement("tr");
+        const headerCell = document.createElement("td");
+        headerCell.textContent = preset.name;
+        headerCell.style.fontWeight = "bold";
+
+        headerRow.appendChild(headerCell);
+        tbody.appendChild(headerRow);
+
+        // RAW TEXT ROWS (KEEP "|")
+        const lines = preset.data.trim().split("\n");
+
+        lines.forEach(line => {
+            const row = document.createElement("tr");
+            const cell = document.createElement("td");
+            cell.textContent = line.trim();
+
+            row.appendChild(cell);
+            tbody.appendChild(row);
+        });
+    });
+}
+
 // --- Persist Schedule ---
 function saveSchedule() {
     localStorage.setItem('callQueue', JSON.stringify(callQueue.map(c => ({
@@ -354,3 +438,49 @@ function saveSchedule() {
         time: c.time
     }))));
 }
+
+function syncScheduleToTextarea() {
+    const textarea = document.getElementById("scheduleInput");
+    if (!textarea) return;
+
+    textarea.value = callQueue
+        .map(item => `${item.id}|${item.time}`)
+        .join("\n");
+}
+
+window.importScheduleText = function () {
+    const raw = document.getElementById("scheduleInput").value.trim();
+
+    if (!raw) {
+        alert("No schedule text provided");
+        return;
+    }
+
+    const lines = raw.split("\n");
+    const newSchedule = [];
+
+    for (const line of lines) {
+        const parts = line.split("|");
+
+        if (parts.length < 2) continue;
+
+        const id = parts[0].trim();
+        const time = parts[1].trim();
+
+        if (!id || !time) continue;
+
+        newSchedule.push({
+            id,
+            time
+        });
+    }
+
+    callQueue = newSchedule;
+
+    // persist + update UI
+    saveSchedule();
+    //window.renderSchedule();
+    syncScheduleToTextarea();
+
+    alert("Schedule loaded successfully! Please refresh");
+};
