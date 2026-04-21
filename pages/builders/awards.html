@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head-placeholder"><!-- Filled Dynamically --></head>
+
+<body>
+    <div id="announcement-placeholder"></div>
+    <header id="header-placeholder" class="header full-width"></header>
+    <nav id="nav-placeholder"></nav>
+
+    <main>
+        <div class="main container-inner">
+            <h2>Award Builder</h2>
+
+            <div>Award Name</div>
+            <input id="award-name" placeholder="Meritorious Service Award">
+
+            <div>Reason</div>
+            <input id="award-reason" placeholder="For outstanding service...">
+
+            <div>Awardee</div>
+            <input id="awardee" placeholder="Mr Ruddat, CAP">
+
+            <div>Date(s)</div>
+            <input id="dates" placeholder="1/1/2026 TO 3/1/2027">
+
+            <div>Commanders</div>
+            <select id="unit-commander"></select>
+            <select id="wing-commander"></select>
+
+            <div>Ribbon</div>
+            <select id="ribbon-select">
+                <option value="backdrop">Solid Ribbon</option>
+                <option value="one">One Ribbon</option>
+                <option value="two">Two Ribbon</option>
+                <option value="three">CSA Ribbon</option>
+            </select>
+
+            <div class="preview-label">Preview</div>
+            <button class="btn primary" onclick="dlPNG()">↓ PNG</button>
+
+        
+            <div class="certificate">
+            <svg viewBox="0 0 1000 700">
+
+                <!-- Background -->
+                <rect width="100%" height="100%" fill="#fdfcf5"/>
+                
+                <!-- Curved Header -->
+                <defs>
+                <path id="curve" d="M150,120 Q500,20 850,120" />
+                </defs>
+                <text font-family="Nazanin" font-size="70" font-weight="800" text-anchor="middle">
+                <textPath href="#curve" startOffset="50%">CIVIL AIR PATROL</textPath>
+                </text>
+                
+                <!-- Subtitle -->
+                <text x="500" y="140" font-family="Marco Polo" letter-spacing="5px" font-weight="550" text-anchor="middle" font-size="20">
+                AUXILIARY OF THE U.S. AIR FORCE
+                </text>
+                
+                <!-- Ribbon -->
+                <g id="ribbon"></g>
+
+                <!-- Shield -->
+                <image href="/assets/images/emblems/awards/Shield for awards.svg" x="425" y="148" width="150" height="150"/>
+                
+                <!-- Main Text -->
+                <text x="500" y="320" text-anchor="middle" font-size="15" font-weight="500">This is to certify that</text>
+                <text id="svg-award-name" x="500" y="350" text-anchor="middle" font-size="28"></text>
+                <text x="500" y="370" text-anchor="middle" font-size="15" font-weight="500">Has been presented to</text>
+                <text id="svg-recipient" x="500" y="405" text-anchor="middle" font-size="26"></text>
+                <text id="svg-reason" x="500" y="445" text-anchor="middle" font-size="26"></text>
+                
+                <text x="500" y="520" text-anchor="middle" font-size="15">During the period</text>
+                <text id="svg-date" x="500" y="540" text-anchor="middle" font-size="15"></text>
+                <text id="svg-award-date" x="500" y="560" text-anchor="middle" font-size="15">GIVEN THIS DAY</text>
+                
+                <!-- Sign lines -->
+                <text id="unit-sign-line" x="200" y="643" font-size="16" text-anchor="middle">&#11835;&#11835;&#11835;&#11835</text>
+                <text id="svg-unit" x="200" y="660" font-size="16" text-anchor="middle" font-family="Nazanin"></text>
+                <text id="wing-sign-line" x="800" y="643" font-size="16" text-anchor="middle">&#11835;&#11835;&#11835;&#11835</text>
+                <text id="svg-wing" x="800" y="660" font-size="16" text-anchor="middle" font-family="Nazanin"></text>
+                
+                <image href="/assets/images/emblems/Corps of Cadets.png" x="450" y="570" width="100" height="100"/>
+            </svg>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+<!-- External JS -->
+<script src="/partials/partials.js"></script>
+<script type="module" src="/js/modules/awards.js"></script>
+</html>
